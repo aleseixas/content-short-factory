@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "oasis_backstage",
+      "file": "oasis_backstage.jpg",
+      "url": "https://media.gq.com.mx/photos/66d1fe8eabd9c778bbb21d63/master/w_1024%2Cc_limit/Oasis_gig_85044598.jpg",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "dat_tapes",
+      "file": "dat_tapes.jpg",
+      "url": "https://images.squarespace-cdn.com/content/v1/5fe388feefcd990a12d9ccd9/1615036588186-FP166DPC9AAHU731WT8T/BASF%2BDAT%2BMaster%2Ben%2BSONY%2B2PDP-90A%2Bcassettes",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "sound_recording",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "oasis_studio",
+      "file": "oasis_backstage.jpg",
+      "url": "https://media.gq.com.mx/photos/66d1fe8eabd9c778bbb21d63/master/w_1024%2Cc_limit/Oasis_gig_85044598.jpg",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "live_band",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "concert_gothenburg",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "loch_lomond",
+      "file": "oasis_backstage.jpg",
+      "url": "https://media.gq.com.mx/photos/66d1fe8eabd9c778bbb21d63/master/w_1024%2Cc_limit/Oasis_gig_85044598.jpg",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "lp_vinyl",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "city_night",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "rain",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "oasis_1994_thumb",
+      "file": "oasis_backstage.jpg",
+      "url": "https://media.gq.com.mx/photos/66d1fe8eabd9c778bbb21d63/master/w_1024%2Cc_limit/Oasis_gig_85044598.jpg",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "contract_signing",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "vinyl_demo",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "train",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "street_traffic",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "coin_counter",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "record_store",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "disco_lights",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "oasis_duet_thumb",
+      "file": "oasis_backstage.jpg",
+      "url": "https://media.gq.com.mx/photos/66d1fe8eabd9c778bbb21d63/master/w_1024%2Cc_limit/Oasis_gig_85044598.jpg",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "around_concerts",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "marathon_runners",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "sunrise_timelapse",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "crowd",
+      "file": "oasis_paris_1994.mp4",
+      "credit": "web",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ]
+}

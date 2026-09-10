@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "title": "All Too Well — Taylor Swift: o cachecol que virou investigação de fã",
+  "slug": "all_too_well_taylor_swift",
+  "target_duration_seconds": 78,
+  "segments": [
+    {"id":"hook","text":"All Too Well, de Taylor Swift, virou obsessão dos fãs por causa de um cachecol. Mas começou como um desabafo quase perdido.","delivery":"hook"},
+    {"id":"rehearsal","text":"Taylor contou que, num ensaio da Speak Now Tour, estava abalada e improvisou sobre quatro acordes.","delivery":"emotional"},
+    {"id":"recording","text":"O desabafo passou de dez minutos. Um técnico gravou tudo e preservou aquele momento.","delivery":"reveal"},
+    {"id":"liz_rose","text":"Depois, Taylor chamou Liz Rose para transformar a catarse em uma música estruturada.","delivery":"neutral"},
+    {"id":"original","text":"A versão de 2012 tinha pouco mais de cinco minutos e nem saiu como single.","delivery":"neutral"},
+    {"id":"fans","text":"Mesmo assim, os Swifties adotaram a faixa e pediram por anos a versão completa.","delivery":"curious"},
+    {"id":"ten_minutes","text":"Em 2021, Taylor finalmente lançou a 10 Minute Version, com dez minutos e treze segundos.","delivery":"reveal"},
+    {"id":"cinematic","text":"Ela acrescentou detalhes que deixaram a narrativa mais íntima e cinematográfica.","delivery":"curious"},
+    {"id":"chart","text":"A versão chegou ao número um da Billboard Hot 100.","delivery":"dramatic"},
+    {"id":"record","text":"Naquele momento, tornou-se a música mais longa a alcançar o topo.","delivery":"reveal"},
+    {"id":"scarf","text":"E existe o famoso cachecol. Fãs discutiram por anos onde ele estaria.","delivery":"curious"},
+    {"id":"theory","text":"A teoria virou cultura Swiftie, como se o objeto provasse uma história real.","delivery":"dramatic"},
+    {"id":"metaphor","text":"Mas Taylor revelou no Festival de Toronto que o cachecol é uma metáfora.","delivery":"reveal"},
+    {"id":"payoff","text":"Talvez essa seja a parte mais Swiftie: um detalhe virou investigação, virou mito, e os fãs ajudaram a faixa a renascer quase dez anos depois.","delivery":"payoff"}
+  ]
+}

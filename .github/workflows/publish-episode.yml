@@ -1,0 +1,399 @@
+name: Publish episode
+
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: Episode slug (for example, duckworth)
+        required: true
+        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - ".publish-queue/*.txt"
+      - ".publish-retry/*.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      episode: ${{ steps.episode.outputs.slug }}
+      trigger_kind: ${{ steps.episode.outputs.trigger_kind }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Resolve episode slug
+        id: episode
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_EPISODE: ${{ inputs.episode }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          trigger_kind="manual"
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            episode="$(printf '%s' "$MANUAL_EPISODE" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+          else
+            if [[ "$BEFORE_SHA" == "0000000000000000000000000000000000000000" ]]; then
+              mapfile -t trigger_files < <(
+                git show --pretty='' --name-only --diff-filter=A "$AFTER_SHA" -- \
+                  '.publish-queue/*.txt' '.publish-retry/*.txt'
+              )
+            else
+              mapfile -t trigger_files < <(
+                git diff --name-only --diff-filter=A "$BEFORE_SHA" "$AFTER_SHA" -- \
+                  '.publish-queue/*.txt' '.publish-retry/*.txt'
+              )
+            fi
+
+            if [[ ${#trigger_files[@]} -ne 1 ]]; then
+              echo "::error::Expected exactly one newly added publish trigger file, found ${#trigger_files[@]}."
+              exit 1
+            fi
+
+            trigger_file="${trigger_files[0]}"
+            trigger_value="$(tr -d '\r\n' < "$trigger_file")"
+
+            case "$trigger_file" in
+              .publish-queue/*.txt)
+                trigger_kind="queue"
+                episode="$(basename "$trigger_file" .txt)"
+
+                if [[ -n "$trigger_value" && "$trigger_value" != "$episode" ]]; then
+                  echo "::error::Queue filename slug and file contents do not match."
+                  exit 1
+                fi
+                ;;
+
+              .publish-retry/*.txt)
+                trigger_kind="retry"
+                retry_name="$(basename "$trigger_file" .txt)"
+                episode="$(printf '%s' "$trigger_value" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+
+                if [[ -z "$episode" ]]; then
+                  echo "::error::Retry trigger must contain the episode slug."
+                  exit 1
+                fi
+
+                if [[ "$retry_name" != "${episode}-retry-1" && "$retry_name" != "${episode}-retry-2" && "$retry_name" != "${episode}-retry-3" ]]; then
+                  echo "::error::Retry filename must be <slug>-retry-1.txt, <slug>-retry-2.txt or <slug>-retry-3.txt."
+                  exit 1
+                fi
+                ;;
+
+              *)
+                echo "::error::Unsupported publish trigger path: $trigger_file"
+                exit 1
+                ;;
+            esac
+          fi
+
+          if [[ ! "$episode" =~ ^[a-z0-9]+([_-][a-z0-9]+)*$ ]]; then
+            echo "::error::Invalid episode slug."
+            exit 1
+          fi
+
+          if [[ ! -d "episodes/$episode" ]]; then
+            echo "::error::Episode directory episodes/$episode does not exist."
+            exit 1
+          fi
+
+          echo "slug=$episode" >> "$GITHUB_OUTPUT"
+          echo "trigger_kind=$trigger_kind" >> "$GITHUB_OUTPUT"
+          echo "Publishing episode: $episode (trigger: $trigger_kind)"
+
+  visuals:
+    needs: prepare
+    runs-on: ${{ vars.USE_SELF_HOSTED_VISUALS == 'true' && 'self-hosted' || 'ubuntu-latest' }}
+    env:
+      EPISODE: ${{ needs.prepare.outputs.episode }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Set up Node.js for yt-dlp EJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Ensure FFmpeg on GitHub-hosted runner
+        if: ${{ vars.USE_SELF_HOSTED_VISUALS != 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if command -v ffmpeg >/dev/null 2>&1; then
+            ffmpeg -version | head -n 1
+            exit 0
+          fi
+
+          # Third-party package indexes on hosted runners can briefly be out of
+          # sync with their Release metadata. FFmpeg comes from Ubuntu, so
+          # disable only the Chrome repo if it would make apt-get update fail.
+          while IFS= read -r source; do
+            if sudo grep -q 'dl.google.com/linux/chrome' "$source"; then
+              sudo mv "$source" "${source}.disabled"
+            fi
+          done < <(find /etc/apt/sources.list.d -maxdepth 1 -type f -print)
+
+          sudo apt-get clean
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg
+          ffmpeg -version | head -n 1
+
+      - name: Verify FFmpeg on self-hosted runner
+        if: ${{ vars.USE_SELF_HOSTED_VISUALS == 'true' }}
+        run: ffmpeg -version
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Verify visual download stack
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import yt_dlp
+          print(f"yt-dlp: {yt_dlp.version.__version__}")
+          PY
+          node --version
+          ffmpeg -version | head -n 1
+
+      - name: Show visual runner mode
+        run: python -c "import os, socket; print('Visual runner:', 'self-hosted/residential' if os.getenv('USE_SELF_HOSTED_VISUALS') == 'true' else 'github-hosted'); print('Host:', socket.gethostname())"
+        env:
+          USE_SELF_HOSTED_VISUALS: ${{ vars.USE_SELF_HOSTED_VISUALS }}
+
+      - name: Score and resolve visual candidates
+        id: visuals
+        continue-on-error: true
+        env:
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: python resolve_visual_candidates_web_auth.py "${{ needs.prepare.outputs.episode }}"
+
+      - name: Stage resolved visual handoff
+        if: always()
+        run: python scripts/stage_visual_handoff.py
+
+      - name: Upload resolved visual handoff
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-handoff-${{ needs.prepare.outputs.episode }}
+          path: .visual-handoff
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 1
+          compression-level: 0
+
+  publish:
+    needs:
+      - prepare
+      - visuals
+    if: ${{ always() && needs.prepare.result == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      EPISODE: ${{ needs.prepare.outputs.episode }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Download resolved visual handoff
+        id: visual_handoff
+        continue-on-error: true
+        uses: actions/download-artifact@v7
+        with:
+          name: visual-handoff-${{ needs.prepare.outputs.episode }}
+          path: .visual-handoff
+
+      - name: Apply resolved visual handoff
+        if: ${{ steps.visual_handoff.outcome == 'success' }}
+        shell: bash
+        run: |
+          if [[ -d ".visual-handoff/episodes/$EPISODE" ]]; then
+            cp -R ".visual-handoff/episodes/$EPISODE/." "episodes/$EPISODE/"
+            echo "Applied visual handoff for $EPISODE."
+          else
+            echo "::warning::Visual handoff artifact had no episode payload; using repository assets."
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Ensure FFmpeg
+        shell: bash
+        run: |
+          set -euo pipefail
+          if command -v ffmpeg >/dev/null 2>&1; then
+            ffmpeg -version | head -n 1
+            exit 0
+          fi
+
+          # Third-party package indexes on hosted runners can briefly be out of
+          # sync with their Release metadata. FFmpeg comes from Ubuntu, so
+          # disable only the Chrome repo if it would make apt-get update fail.
+          while IFS= read -r source; do
+            if sudo grep -q 'dl.google.com/linux/chrome' "$source"; then
+              sudo mv "$source" "${source}.disabled"
+            fi
+          done < <(find /etc/apt/sources.list.d -maxdepth 1 -type f -print)
+
+          sudo apt-get clean
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg
+          ffmpeg -version | head -n 1
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Add visual scores to job summary
+        if: always()
+        shell: bash
+        run: |
+          report="episodes/$EPISODE/visual_resolution_report.json"
+          if [[ ! -f "$report" ]]; then
+            echo "## Visual scores" >> "$GITHUB_STEP_SUMMARY"
+            echo "No visual candidate report was produced; existing assets were kept." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          python - "$report" "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          out = Path(sys.argv[2])
+          lines = ["## Visual scores", "", "| Slot | Best score | Candidate | Auto-selected |", "| --- | ---: | --- | --- |"]
+          scores = report.get("candidate_scores", {})
+          selections = report.get("selections", {})
+          for slot, candidates in scores.items():
+              if candidates:
+                  best = candidates[0]
+                  selected = selections.get(slot, {}).get("status") == "selected"
+                  lines.append(f"| {slot} | {best.get('visual_score', 'N/A')} | {best.get('name', 'N/A')} | {'yes' if selected else 'no; existing asset kept'} |")
+              else:
+                  lines.append(f"| {slot} | N/A | N/A | no; existing asset kept |")
+          if not scores:
+              lines.append("| N/A | N/A | N/A | existing assets kept |")
+          out.write_text(out.read_text(encoding="utf-8") + "\n".join(lines) + "\n", encoding="utf-8")
+          PY
+
+      - name: Render episode
+        id: render
+        run: python generate.py "$EPISODE"
+
+      - name: Upload visual usage history
+        uses: actions/upload-artifact@v7
+        with:
+          name: visual-usage-${{ needs.prepare.outputs.episode }}
+          path: episodes/${{ needs.prepare.outputs.episode }}/visual_usage.json
+          if-no-files-found: warn
+          retention-days: 1
+
+      - name: Upload rendered MP4
+        uses: actions/upload-artifact@v7
+        with:
+          name: rendered-${{ needs.prepare.outputs.episode }}
+          path: output/${{ needs.prepare.outputs.episode }}.mp4
+          if-no-files-found: error
+          retention-days: 3
+          compression-level: 0
+
+      - name: Prepare publishing metadata and cover
+        run: python prepare_post.py "$EPISODE"
+
+      - name: Publish to YouTube
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: python publish.py "$EPISODE" --platform youtube --live
+
+      - name: Publish to Instagram
+        if: ${{ !cancelled() && steps.render.outcome == 'success' }}
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          INSTAGRAM_API_HOST: graph.instagram.com
+          META_GRAPH_API_VERSION: v26.0
+          INSTAGRAM_VIDEO_HOST: cloudinary
+        run: python publish.py "$EPISODE" --platform instagram --live
+
+      - name: Upload TikTok draft
+        if: ${{ !cancelled() && steps.render.outcome == 'success' }}
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        run: python publish.py "$EPISODE" --platform tiktok --live
+
+  persist-visual-usage:
+    needs:
+      - prepare
+      - publish
+    if: ${{ always() && needs.prepare.result == 'success' }}
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Download visual usage history
+        id: visual_usage
+        continue-on-error: true
+        uses: actions/download-artifact@v7
+        with:
+          name: visual-usage-${{ needs.prepare.outputs.episode }}
+          path: episodes/${{ needs.prepare.outputs.episode }}
+
+      - name: Set up Python
+        if: ${{ steps.visual_usage.outcome == 'success' }}
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install visual history dependency
+        if: ${{ steps.visual_usage.outcome == 'success' }}
+        run: python -m pip install Pillow==12.1.1
+
+      - name: Persist visual usage history
+        if: ${{ steps.visual_usage.outcome == 'success' }}
+        continue-on-error: true
+        run: python scripts/persist_visual_usage.py "${{ needs.prepare.outputs.episode }}"

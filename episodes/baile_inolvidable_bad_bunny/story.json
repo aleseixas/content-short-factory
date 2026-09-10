@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "title": "Bad Bunny — BAILE INoLVIDABLE: a salsa que ficou guardada desde 2022",
+  "slug": "baile_inolvidable_bad_bunny",
+  "target_duration_seconds": 78,
+  "segments": [
+    {"id":"hook","text":"BAILE INoLVIDABLE nasceu de um som que Bad Bunny ouviu anos antes — e decidiu guardar."},
+    {"id":"uvst","text":"Em 2022, durante Un Verano Sin Ti, ele ouviu um sintetizador e pensou: isso é salsa."},
+    {"id":"later","text":"Como o álbum já misturava estilos, deixou a ideia para depois."},
+    {"id":"return","text":"Ela voltou em 2024, quando Benito passou meses tentando transformar o arranjo da cabeça em música."},
+    {"id":"voice_notes","text":"Ele gravava notas de voz cantarolando por cima do synth."},
+    {"id":"first_salsa","text":"Mas nunca tinha feito uma salsa assim."},
+    {"id":"new_people","text":"Em vez de procurar veteranos famosos, quis trabalhar com gente nova."},
+    {"id":"big_jay","text":"Chegou a Big Jay, músico que havia transformado Narcotics, de Bryant Myers, em salsa por brincadeira."},
+    {"id":"tiktok","text":"Depois, viu no TikTok um garoto tocando bongô com uma orquestra juvenil e pediu que o encontrassem."},
+    {"id":"julito","text":"Era Julito Gastón."},
+    {"id":"age","text":"No vídeo ele tinha cerca de 14 anos; quando trabalharam juntos, estava completando 19."},
+    {"id":"school","text":"Julito reuniu uma banda quase toda formada por jovens da Escuela Libre de Música de Porto Rico."},
+    {"id":"band","text":"Metais, piano, bongô, baixo e percussão deram corpo à faixa."},
+    {"id":"video","text":"No clipe, Bad Bunny aparece aprendendo salsa antes de dançar no salão."},
+    {"id":"favorite","text":"Ele chamou BAILE INoLVIDABLE de melhor música que já fez."},
+    {"id":"payoff","text":"Uma ideia guardada desde 2022 renasceu com uma nova geração de músicos porto-riquenhos."}
+  ]
+}

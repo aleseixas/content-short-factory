@@ -1,0 +1,318 @@
+name: Episode media preflight
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".episode-check/*.json"
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  media-preflight:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Resolve preflight request
+        id: request
+        shell: bash
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$BEFORE_SHA" == "0000000000000000000000000000000000000000" ]]; then
+            mapfile -t files < <(git show --pretty='' --name-only --diff-filter=A "$AFTER_SHA" -- '.episode-check/*.json')
+          else
+            mapfile -t files < <(git diff --name-only --diff-filter=A "$BEFORE_SHA" "$AFTER_SHA" -- '.episode-check/*.json')
+          fi
+          if [[ ${#files[@]} -ne 1 ]]; then
+            echo "::error::PREFLIGHT_REQUEST_INVALID: expected exactly one new .episode-check request; found ${#files[@]}. ACTION: create exactly one new request file and keep the same episode slug."
+            exit 1
+          fi
+          file="${files[0]}"
+          slug="$(python - "$file" <<'PY'
+          import json, sys
+          from pathlib import Path
+          data=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+          slug=str(data.get('slug','')).strip()
+          print(slug)
+          PY
+          )"
+          if [[ ! "$slug" =~ ^[a-z0-9]+([_-][a-z0-9]+)*$ ]]; then
+            echo "::error::PREFLIGHT_SLUG_INVALID: invalid episode slug in request. TARGET: $file. ACTION: fix only the slug format; do not create a new topic."
+            exit 1
+          fi
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          echo "Media preflight episode: $slug"
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Set up Node.js for visual recovery
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes ffmpeg
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Episode media preflight — batch diagnostics and auto-repair
+        id: repair
+        shell: bash
+        env:
+          EPISODE: ${{ steps.request.outputs.slug }}
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: |
+          set -uo pipefail
+          # Each pass collects all independent failures it can observe. Repairs are
+          # applied as one batch before the next full validation. Extra passes remain
+          # only for dependent errors that can become visible after another repair.
+          max_attempts=6
+          diagnostics_dir="ci-diagnostics/media-preflight-${GITHUB_RUN_ID}"
+          mkdir -p "$diagnostics_dir"
+
+          emit_failure_summary() {
+            local log_file="$1"
+            local code detail recoverable target action same_slug error_class error_count errors_json
+
+            code="$(grep '^MEDIA_PREFLIGHT_ERROR_CODE=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            error_class="$(grep '^MEDIA_PREFLIGHT_ERROR_CLASS=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            detail="$(grep '^MEDIA_PREFLIGHT_ERROR_DETAIL=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            recoverable="$(grep '^MEDIA_PREFLIGHT_RECOVERABLE=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            target="$(grep '^MEDIA_PREFLIGHT_TARGET=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            action="$(grep '^MEDIA_PREFLIGHT_RECOMMENDED_ACTION=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            same_slug="$(grep '^MEDIA_PREFLIGHT_SAME_SLUG=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            error_count="$(grep '^MEDIA_PREFLIGHT_ERROR_COUNT=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            errors_json="$(grep '^MEDIA_PREFLIGHT_ERRORS_JSON=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+
+            if [[ "$code" == "UNCLASSIFIED_ENGINE_ERROR" || "$code" == "UNSTRUCTURED_FAILURE" ]]; then
+              code=""
+              recoverable=""
+              target=""
+              action=""
+            fi
+            if [[ "$same_slug" == "UNKNOWN" ]]; then
+              same_slug="$EPISODE"
+            fi
+            same_slug="${same_slug:-$EPISODE}"
+
+            if [[ -n "$detail" && -n "$error_class" && "$detail" == "$error_class" && -z "$code" ]]; then
+              detail=""
+            fi
+
+            echo "MEDIA_PREFLIGHT_STATUS=FAIL"
+            [[ -n "$error_count" ]] && echo "MEDIA_PREFLIGHT_ERROR_COUNT=$error_count"
+            [[ -n "$errors_json" ]] && echo "MEDIA_PREFLIGHT_ERRORS_JSON=$errors_json"
+            [[ -n "$error_class" ]] && echo "MEDIA_PREFLIGHT_ERROR_CLASS=$error_class"
+            [[ -n "$code" ]] && echo "MEDIA_PREFLIGHT_ERROR_CODE=$code"
+            [[ -n "$detail" ]] && echo "MEDIA_PREFLIGHT_ERROR_DETAIL=$detail"
+            [[ -n "$recoverable" ]] && echo "MEDIA_PREFLIGHT_RECOVERABLE=$recoverable"
+            [[ -n "$target" ]] && echo "MEDIA_PREFLIGHT_TARGET=$target"
+            [[ -n "$action" ]] && echo "MEDIA_PREFLIGHT_RECOMMENDED_ACTION=$action"
+            echo "MEDIA_PREFLIGHT_SAME_SLUG=$same_slug"
+
+            if [[ -n "$detail" ]]; then
+              annotation="$detail"
+              [[ -n "$error_class" ]] && annotation="$error_class: $annotation"
+              [[ -n "$code" ]] && annotation="[$code] $annotation"
+              echo "::error::$annotation"
+            else
+              echo "MEDIA_PREFLIGHT_DIAGNOSTIC_MISSING=true"
+            fi
+
+            {
+              echo "MEDIA_PREFLIGHT_STATUS=FAIL"
+              [[ -n "$error_count" ]] && echo "MEDIA_PREFLIGHT_ERROR_COUNT=$error_count"
+              [[ -n "$errors_json" ]] && echo "MEDIA_PREFLIGHT_ERRORS_JSON=$errors_json"
+              [[ -n "$error_class" ]] && echo "MEDIA_PREFLIGHT_ERROR_CLASS=$error_class"
+              [[ -n "$code" ]] && echo "MEDIA_PREFLIGHT_ERROR_CODE=$code"
+              [[ -n "$detail" ]] && echo "MEDIA_PREFLIGHT_ERROR_DETAIL=$detail"
+              [[ -n "$recoverable" ]] && echo "MEDIA_PREFLIGHT_RECOVERABLE=$recoverable"
+              [[ -n "$target" ]] && echo "MEDIA_PREFLIGHT_TARGET=$target"
+              [[ -n "$action" ]] && echo "MEDIA_PREFLIGHT_RECOMMENDED_ACTION=$action"
+              echo "MEDIA_PREFLIGHT_SAME_SLUG=$same_slug"
+              [[ -z "$detail" ]] && echo "MEDIA_PREFLIGHT_DIAGNOSTIC_MISSING=true"
+              echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
+              echo "GITHUB_SHA=$GITHUB_SHA"
+            } > "$diagnostics_dir/final-result.txt"
+
+            {
+              echo "## Media preflight diagnostic"
+              echo ""
+              echo "- **Episode:** \`$same_slug\`"
+              [[ -n "$error_count" ]] && echo "- **Errors collected in final pass:** \`$error_count\`"
+              [[ -n "$code" ]] && echo "- **First exact error code (legacy field):** \`$code\`"
+              [[ -n "$error_class" ]] && echo "- **First exception class:** \`$error_class\`"
+              [[ -n "$detail" ]] && echo "- **First root error detail:** $detail"
+              [[ -n "$recoverable" ]] && echo "- **First recoverable:** \`$recoverable\`"
+              [[ -n "$target" ]] && echo "- **First target to change:** \`$target\`"
+              [[ -n "$action" ]] && echo "- **First recommended action:** $action"
+              if [[ -n "$errors_json" ]]; then
+                echo "- **Batch diagnostics:** available in \`MEDIA_PREFLIGHT_ERRORS_JSON\` and \`MEDIA_PREFLIGHT_ERROR_ITEM\` lines inside the raw attempt log."
+              fi
+              if [[ -z "$detail" ]]; then
+                echo "- **Diagnostic state:** no exact exception detail was captured; no generic cause was substituted."
+              fi
+              echo "- **Raw diagnostics:** artifact \`media-preflight-diagnostics-$GITHUB_RUN_ID\`."
+            } >> "$GITHUB_STEP_SUMMARY"
+          }
+
+          for attempt in $(seq 1 "$max_attempts"); do
+            echo "===== MEDIA PREFLIGHT batch pass $attempt/$max_attempts ====="
+            log_file="$diagnostics_dir/attempt-${attempt}.log"
+            : > "$log_file"
+
+            set +e
+            python check_episode_media_batch.py "$EPISODE" > "$log_file" 2>&1
+            status=$?
+            set -e
+
+            cat "$log_file"
+
+            if [[ $status -eq 0 ]] && grep -q '^MEDIA_PREFLIGHT_RESULT=PASS$' "$log_file"; then
+              echo "MEDIA_AUTO_RECOVERY=PASS attempt=$attempt"
+              {
+                echo "MEDIA_PREFLIGHT_STATUS=PASS"
+                echo "MEDIA_PREFLIGHT_ATTEMPT=$attempt"
+                echo "MEDIA_PREFLIGHT_ERROR_COUNT=0"
+                echo "MEDIA_PREFLIGHT_SAME_SLUG=$EPISODE"
+                echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
+                echo "GITHUB_SHA=$GITHUB_SHA"
+              } > "$diagnostics_dir/final-result.txt"
+              exit 0
+            fi
+
+            error_code="$(grep '^MEDIA_PREFLIGHT_ERROR_CODE=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            recoverable="$(grep '^MEDIA_PREFLIGHT_RECOVERABLE=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            error_count="$(grep '^MEDIA_PREFLIGHT_ERROR_COUNT=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+            errors_json="$(grep '^MEDIA_PREFLIGHT_ERRORS_JSON=' "$log_file" | tail -n 1 | cut -d= -f2- || true)"
+
+            echo "MEDIA_PREFLIGHT_BATCH_COUNT=${error_count:-unknown}"
+
+            if [[ $attempt -ge $max_attempts ]]; then
+              emit_failure_summary "$log_file"
+              exit 1
+            fi
+
+            repaired=0
+
+            if [[ -n "$errors_json" ]]; then
+              echo "AUTO_REPAIR_STRATEGY=BATCH error_count=${error_count:-unknown}"
+              if python scripts/repair_media_preflight_batch.py "$EPISODE" --diagnostic-log "$log_file"; then
+                repaired=1
+              fi
+            else
+              # Backward-compatible single-error fallback for unexpected legacy output.
+              case "$error_code" in
+                BACKGROUND_MUSIC_REUSE|BACKGROUND_MUSIC_INVALID)
+                  echo "AUTO_REPAIR_STRATEGY=BACKGROUND_MUSIC_RESELECT_LEGACY error_code=$error_code"
+                  if python scripts/repair_background_music.py "$EPISODE"; then
+                    repaired=1
+                  fi
+                  ;;
+                VISUAL_ASSET_HTTP_403|VISUAL_ASSET_HTTP_404|VISUAL_ASSET_INVALID|MEDIA_PROBE_OR_CODEC_ERROR)
+                  echo "AUTO_REPAIR_STRATEGY=VISUAL_TARGETED_RESELECT_LEGACY error_code=$error_code"
+                  if python scripts/repair_visual_asset.py "$EPISODE" --diagnostic-log "$log_file"; then
+                    repaired=1
+                  fi
+                  ;;
+                INTRA_EPISODE_VISUAL_REUSE|SHOT_REFERENCES_MISSING_ASSET)
+                  echo "AUTO_REPAIR_STRATEGY=VISUAL_RESELECT_LEGACY error_code=$error_code"
+                  before_diff="$(git diff -- "episodes/$EPISODE" || true)"
+                  python resolve_visual_candidates.py "$EPISODE" || true
+                  python resolve_visual_candidates_web_auth.py "$EPISODE" || true
+                  after_diff="$(git diff -- "episodes/$EPISODE" || true)"
+                  if [[ "$after_diff" != "$before_diff" ]]; then
+                    repaired=1
+                  fi
+                  ;;
+                *)
+                  ;;
+              esac
+
+              if [[ "$recoverable" == "false" ]]; then
+                repaired=0
+              fi
+            fi
+
+            if [[ $repaired -ne 1 ]]; then
+              emit_failure_summary "$log_file"
+              exit 1
+            fi
+
+            echo "Batch recovery applied; re-running full media preflight for SAME_SLUG=$EPISODE only to catch dependent/new errors."
+          done
+
+          echo "::error::Workflow invariant violated: media preflight loop terminated without PASS or a captured failure diagnostic."
+          exit 1
+
+      - name: Upload media preflight diagnostics
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-preflight-diagnostics-${{ github.run_id }}
+          path: ci-diagnostics/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Persist repairs and create publish queue
+        id: queue
+        shell: bash
+        env:
+          EPISODE: ${{ steps.request.outputs.slug }}
+        run: |
+          set -euo pipefail
+
+          queue_file=".publish-queue/$EPISODE.txt"
+          mkdir -p .publish-queue
+          should_dispatch=false
+
+          if [[ ! -f "$queue_file" ]]; then
+            printf '%s\n' "$EPISODE" > "$queue_file"
+            should_dispatch=true
+            echo "Created publish queue: $queue_file"
+          else
+            echo "Publish queue already exists: $queue_file; publication will not be dispatched again."
+          fi
+          echo "should_dispatch=$should_dispatch" >> "$GITHUB_OUTPUT"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "episodes/$EPISODE" "$queue_file"
+
+          if git diff --cached --quiet; then
+            echo "No episode/queue changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Auto-repair media and queue $EPISODE"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Dispatch publish workflow
+        if: ${{ steps.queue.outputs.should_dispatch == 'true' }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EPISODE: ${{ steps.request.outputs.slug }}
+        run: |
+          set -euo pipefail
+          echo "Dispatching Publish episode for $EPISODE after exact media preflight PASS."
+          gh workflow run publish-episode.yml --ref main -f episode="$EPISODE"
