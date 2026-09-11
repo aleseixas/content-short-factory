@@ -142,7 +142,7 @@ class AudioSearchTests(unittest.TestCase):
         self.assertNotIn("cdn.freesound.org", repr(result))
         self.assertEqual(get.call_args.args[0], "https://api.openverse.org/v1/audio/")
         self.assertEqual(get.call_args.kwargs["params"]["license_type"], "commercial,modification")
-        self.assertIn("MusicShortFactory/", get.call_args.kwargs["headers"]["User-Agent"])
+        self.assertIn("ContentShortFactory/", get.call_args.kwargs["headers"]["User-Agent"])
 
     def test_openverse_music_uses_music_category(self):
         response = FakeResponse({"results": []})

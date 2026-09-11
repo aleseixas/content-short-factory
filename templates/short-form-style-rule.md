@@ -4,7 +4,7 @@ Esta regra complementa `templates/editorial-direction-prompt.md` e deve ser apli
 
 ## 1) Objetivo editorial
 
-O objetivo é maximizar retenção, curiosidade, comentários, compartilhamentos e reconhecimento imediato da música sem sacrificar factualidade.
+O objetivo é maximizar retenção, curiosidade, comentários, compartilhamentos e reconhecimento imediato do tópico sem sacrificar factualidade.
 
 O episódio deve parecer um Short/Reel/TikTok pensado por um editor agressivo em retenção: história forte, hook imediato, progressão constante e visual que realmente ajude a contar o que está sendo narrado.
 
@@ -29,13 +29,13 @@ Use com naturalidade, sem quota mecânica, expressões como:
 - `detalhe`;
 - `e não para por aí`.
 
-O narrador deve soar como alguém muito envolvido contando para um amigo uma história musical absurda que acabou de descobrir.
+O narrador deve soar como alguém muito envolvido contando para um amigo uma história marcante que acabou de descobrir.
 
 Evite linguagem acadêmica, enciclopédica, institucional ou excessivamente neutra quando houver uma forma mais viva de dizer a mesma coisa.
 
 ### Hook
 
-A primeira frase deve identificar música + artista e já abrir tensão, conflito, consequência, surpresa ou uma promessa forte.
+A primeira frase deve identificar rapidamente o tópico ou a entidade principal e já abrir tensão, conflito, consequência, surpresa ou uma promessa forte.
 
 Prefira premissa inesperada em vez de resumo seco.
 
@@ -53,18 +53,11 @@ Transforme informação em progressão narrativa:
 
 Evite sequência de fatos independentes. Use conectores conversados quando ajudarem a empurrar a história adiante.
 
-## 3) Primeiro visual — reconhecimento obrigatório
+## 3) Primeiro visual — reconhecimento específico obrigatório
 
-Nos primeiros **0,0–1,5 segundos**, o primeiro visual deve mostrar claramente uma destas opções:
+Nos primeiros **0,0–1,5s**, mostre a entidade principal ou uma evidência diretamente ligada ao hook: pessoa, empresa, produto, logo histórico, documento, interface, lugar, objeto, obra, artista, banda ou capa quando pertinente.
 
-1. **capa oficial do single, música ou álbum** relacionado ao episódio; ou
-2. **artista principal/banda principal claramente reconhecível**.
-
-Essa regra existe para o espectador entender instantaneamente sobre qual música/artista o vídeo fala.
-
-Não abra com B-roll genérico, multidão, instrumento aleatório, rua, estúdio vazio, paisagem, texto abstrato ou outro visual que obrigue o espectador a esperar para reconhecer o assunto.
-
-Quando houver uma boa capa oficial e uma boa imagem/vídeo do artista, escolha o que gerar reconhecimento mais imediato e combinar melhor com o hook.
+A regra existe para o espectador reconhecer imediatamente o assunto. Não use stock genérico se houver representação real adequada. Quando houver mais de uma opção forte, escolha a que comunicar melhor a promessa, funcionar no 9:16 e suportar o texto sem conflito.
 
 ## 4) Ritmo visual: agressivo, mas não aleatório
 
@@ -113,7 +106,7 @@ Hooks, reveals, montagens, reações e viradas podem usar cortes mais rápidos q
 
 Não pesquise apenas a quantidade de assets que entrará no render.
 
-Para cada take/slot importante, mire em média **4–5 candidatos reais**, normalmente 3–6 conforme disponibilidade.
+Para cada take/slot importante, mire em média **4–5 candidatos reais**; em slots visualmente ricos, procure até **8 opções úteis e de fontes distintas**, conforme disponibilidade.
 
 Para episódios com 20–30 takes finais:
 
@@ -130,17 +123,17 @@ O pool visual NÃO pode ser inflado com material genérico apenas para bater qua
 
 Cada candidato precisa ter relação clara com pelo menos um elemento relevante do episódio, como:
 
-- a própria música;
-- o artista ou banda;
-- capa do single/álbum;
-- videoclipe ou performance da música;
+- o próprio tópico ou acontecimento;
+- a entidade principal;
+- produto, logo, obra, documento, interface ou registro diretamente relacionado;
+- demonstração, reportagem, entrevista, performance ou ação ligada ao tópico;
 - pessoa citada na narração;
-- produtor, compositor, músico ou colaborador citado;
-- bastidor de gravação;
+- fundador, pesquisador, criador, técnico, atleta, artista ou colaborador citado;
+- bastidor, arquivo histórico ou processo documentado;
 - entrevista relacionada;
 - época ou evento específico;
-- objeto, instrumento ou lugar citado;
-- prêmio, chart, show, turnê ou acontecimento mencionado;
+- objeto, instrumento, edifício ou lugar citado;
+- prêmio, indicador, evento, lançamento ou acontecimento mencionado;
 - conceito visual que represente diretamente o que está sendo explicado naquele take.
 
 Antes de buscar cada slot, pergunte editorialmente:
@@ -156,11 +149,11 @@ Rebaixe fortemente candidatos que sejam:
 - genéricos;
 - abstratos;
 - decorativos;
-- apenas vagamente ligados ao artista;
+- apenas vagamente ligados à entidade;
 - performances aleatórias que não ajudam a história;
 - multidões/palcos/estúdios sem ligação com o trecho narrado;
 - vídeos visualmente bonitos, mas semanticamente vazios;
-- imagens de qualidade técnica alta que poderiam servir para qualquer música.
+- imagens de qualidade técnica alta que poderiam servir para qualquer tópico.
 
 Em caso de dúvida, prefira **um asset mais contextual e menos bonito** a um asset mais bonito que não tenha conexão clara com a história.
 
@@ -183,9 +176,9 @@ Em ~24 takes, algo como **15–19 vídeos e 5–9 imagens** é uma referência, 
 
 Não escolha vídeo inferior apenas para cumprir proporção. Se imagens mais contextuais contarem melhor determinado trecho, use imagens.
 
-Todo episódio deve ter pelo menos um take em que o artista principal seja claramente reconhecível — além da regra específica do primeiro visual.
+Todo episódio deve mostrar claramente a entidade principal quando houver representação visual real adequada — além da regra específica do primeiro visual.
 
-Nunca reutilize a mesma imagem nem o mesmo vídeo-fonte em dois shots, mesmo com trim/crop/FX diferentes.
+Nunca reutilize a mesma imagem. Uma mesma fonte de vídeo pode alimentar normalmente até 3 shots, somente com trims disjuntos, não sobrepostos e semanticamente próprios; crop/FX sobre o mesmo trecho não cria take novo.
 
 ## 7) Relação com texto na tela
 
@@ -207,7 +200,7 @@ Fluxo esperado:
 
 O payoff deve vir antes do CTA.
 
-O último visual deve continuar sendo um asset real e relevante do episódio — idealmente algo forte ligado à música, ao artista ou ao payoff. O CTA pode ser falado e, quando houver espaço visual claro, reforçado com `text_fx` curto.
+O último visual deve continuar sendo um asset real e relevante do episódio — idealmente algo forte ligado ao tópico, à entidade ou ao payoff. O CTA pode ser falado e, quando houver espaço visual claro, reforçado com `text_fx` curto.
 
 Escolha apenas UMA ação principal no CTA, priorizando comentário ou compartilhamento. Não encerre com pedido triplo genérico.
 
@@ -215,7 +208,7 @@ Escolha apenas UMA ação principal no CTA, priorizando comentário ou compartil
 
 Antes de finalizar, confirme obrigatoriamente:
 
-- primeiro visual = capa oficial ou artista principal claramente reconhecível;
+- primeiro visual = entidade/evidência principal claramente reconhecível;
 - 20–30 takes quando a duração do episódio comportar esse ritmo;
 - **toda imagem estática dura entre 2,0s e 4,0s, sem exceção editorial acima de 4s**;
 - quando uma imagem exigiria >4s, o roteiro foi dividido em segmentos menores e houve troca real do visual principal;
@@ -225,8 +218,8 @@ Antes de finalizar, confirme obrigatoriamente:
 - cada slot possui candidatos relacionados ao que está sendo narrado;
 - visuais genéricos/sem contexto foram rebaixados;
 - maioria dos takes finais é vídeo quando houver vídeos contextuais suficientes;
-- zero reuso de conteúdo visual;
-- artista principal aparece claramente;
+- zero reuso de imagens e do mesmo trecho de vídeo; no máximo 3 trims disjuntos por fonte;
+- entidade principal aparece claramente quando houver representação real adequada;
 - legenda/texto editorial não competem;
 - `assets/branding/end_card_template.jpg` NÃO foi usado;
 - não foi criada end card genérica substituta;
@@ -235,33 +228,31 @@ Antes de finalizar, confirme obrigatoriamente:
 
 ## 10) HARD GATE técnico — duplicate preflight por GitHub Action
 
-Antes da PRIMEIRA escrita em `episodes/<slug>/`, a candidata deve passar também pelo preflight técnico de duplicidade da `main`.
+Antes da PRIMEIRA escrita em `episodes/<slug>/`, a candidata deve passar pelo preflight técnico de duplicidade da `main`.
 
-Fluxo obrigatório para o agente que opera via GitHub, sem terminal local:
+Fluxo obrigatório para o agente via GitHub:
 
-1. depois da checagem determinística de `episodes/`, `.publish-queue/` e `.publish-retry/`, escolha uma candidata real e defina `song`, `artist` e `slug`;
-2. crie exatamente UM arquivo novo `.duplicate-check/<slug>-<nonce>.json` com este formato:
+1. consulte `episodes/`, `.publish-queue/` e `.publish-retry/` semanticamente;
+2. depois de definir o topic final e slug, crie exatamente UM `.duplicate-check/<slug>-<nonce>.json`:
 
 ```json
 {
-  "song": "Nome exato da música",
-  "artist": "Nome do artista",
+  "topic": "Tema específico final",
+  "content_profile": "perfil livre opcional",
   "slug": "slug_normalizado"
 }
 ```
 
-3. essa escrita deve disparar `.github/workflows/duplicate-preflight.yml`;
-4. localize a execução `Duplicate candidate preflight` associada ao commit que criou o arquivo e leia o job/log da Action;
-5. só existem dois resultados editoriais válidos:
-   - `PREFLIGHT_RESULT=UNIQUE_CANDIDATE`: a candidata passou; somente então a autoria em `episodes/<slug>/` pode começar;
-   - `PREFLIGHT_RESULT=DUPLICATE_CANDIDATE`: descarte SOMENTE essa candidata e avance para a próxima música do pool, sem criar `episodes/<slug>/` nem `.publish-queue/<slug>.txt`;
-6. se a Action falhar por infraestrutura, request malformado ou não produzir um dos dois markers acima, considere o preflight `BLOQUEADO` para aquela candidata e NÃO autorize a autoria com base em suposição;
-7. um `GitHub.search` vazio, uma listagem aparentemente vazia ou ausência do slug exato NÃO substituem o preflight técnico;
-8. o arquivo `.duplicate-check/*.json` é apenas um registro de consulta e NÃO conta como episódio criado nem como `.publish-queue`;
-9. não reutilize o mesmo nome de request; use um `<nonce>` curto e único para cada candidata consultada;
-10. HARD GATE: sem evidência real de `PREFLIGHT_RESULT=UNIQUE_CANDIDATE`, é proibido escrever qualquer arquivo em `episodes/<slug>/`.
+3. localize a execução `Duplicate candidate preflight` associada ao commit exato;
+4. só `PREFLIGHT_RESULT=UNIQUE_CANDIDATE` autoriza iniciar o episódio;
+5. `PREFLIGHT_RESULT=DUPLICATE_CANDIDATE` descarta somente a candidata; no Profile Mode, avance no pool;
+6. falha de infraestrutura, request inválido ou ausência de marker deixa a candidata `BLOQUEADA`;
+7. busca vazia e ausência do slug exato não substituem o gate;
+8. o request não conta como episódio ou queue;
+9. use nonce novo por candidata;
+10. sem evidência de unicidade, não escreva `episodes/<slug>/`.
 
-Se o resultado for `DUPLICATE_CANDIDATE`, isso NÃO encerra a execução: continue para a próxima candidata do pool até encontrar uma inédita que passe pelos demais gates ou até esgotar o pool real.
+`song` e `artist` podem ser aceitos por compatibilidade legada, mas novos requests usam `topic`. Profile Mode precisa resolver o tópico antes do preflight.
 
 ## 11) HARD GATE técnico — media preflight antes da publish queue
 

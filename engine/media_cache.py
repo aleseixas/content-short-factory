@@ -14,8 +14,8 @@ import requests
 
 DOWNLOAD_HEADERS = {
     "User-Agent": (
-        "MusicShortFactory/8.1 "
-        "(+https://github.com/aleseixas/music-short-factory; remote-media-cache)"
+        "ContentShortFactory/8.1 "
+        "(+https://github.com/aleseixas/content-short-factory; remote-media-cache)"
     ),
     "Accept": "video/*,audio/*,image/*,application/octet-stream,*/*;q=0.5",
 }

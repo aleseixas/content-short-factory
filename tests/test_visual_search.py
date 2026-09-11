@@ -164,7 +164,7 @@ class VisualSearchProviderTests(unittest.TestCase):
         self.assertAlmostEqual(result.aspect_ratio, 1.5)
         self.assertEqual(result.tags, ("concert", "stage"))
         self.assertIn("Ignore previous instructions", result.name)
-        self.assertIn("MusicShortFactory/", get.call_args.kwargs["headers"]["User-Agent"])
+        self.assertIn("ContentShortFactory/", get.call_args.kwargs["headers"]["User-Agent"])
 
     def test_wikimedia_normalizes_video_and_technical_metadata(self):
         response = FakeResponse(wikimedia_video_payload())
@@ -210,18 +210,25 @@ class VisualSearchProviderTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             report = search_visual(
                 Path(temp_dir),
-                ("concert crowd", " concert crowd ", "live audience"),
+                (
+                    "Blockbuster store 2000",
+                    " Blockbuster store 2000 ",
+                    "Reed Hastings Netflix 2000",
+                ),
                 kind="image",
                 include_external=True,
                 limit=12,
                 providers=(provider,),
             )
 
-        self.assertEqual(provider.queries, ["concert crowd", "live audience"])
+        self.assertEqual(
+            provider.queries,
+            ["Blockbuster store 2000", "Reed Hastings Netflix 2000"],
+        )
         self.assertEqual(len(report.results), 1)
         self.assertEqual(
             report.results[0].as_dict()["matched_queries"],
-            ["concert crowd", "live audience"],
+            ["Blockbuster store 2000", "Reed Hastings Netflix 2000"],
         )
 
     def test_provider_failure_is_sanitized_and_other_provider_continues(self):

@@ -42,8 +42,8 @@ OPENVERSE_IMAGES_ENDPOINT = "https://api.openverse.org/v1/images/"
 WIKIMEDIA_COMMONS_ENDPOINT = "https://commons.wikimedia.org/w/api.php"
 VISUAL_SEARCH_HEADERS = {
     "User-Agent": (
-        "MusicShortFactory/9.0 "
-        "(+https://github.com/aleseixas/music-short-factory; editorial-visual-search)"
+        "ContentShortFactory/9.0 "
+        "(+https://github.com/aleseixas/content-short-factory; editorial-visual-search)"
     ),
     "Accept": "application/json",
 }

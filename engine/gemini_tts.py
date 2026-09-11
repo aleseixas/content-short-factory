@@ -27,9 +27,9 @@ AUDIO_PROFILE = (
 )
 
 SCENE = (
-    "Short-form social media narration about music stories, curiosities and "
-    "behind-the-scenes facts. The narrator speaks directly to the viewer like a "
-    "charismatic creator telling a surprising story."
+    "Short-form social media narration about compelling people, events, ideas, "
+    "discoveries and behind-the-scenes stories. The narrator speaks directly to "
+    "the viewer like a charismatic creator telling a surprising story."
 )
 
 DIRECTOR_NOTES = (

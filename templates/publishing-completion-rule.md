@@ -1,6 +1,6 @@
 # Regra obrigatória — conclusão real da publicação
 
-Esta regra define quando uma execução do **Além do Hit / Music Short Factory** pode ser considerada concluída.
+Esta regra define quando uma execução do **Content Short Factory** pode ser considerada concluída.
 
 Ela é autoritativa para **queue, acompanhamento da Publish Action, status final, recuperação de falhas e verificação por plataforma**. Em qualquer conflito com instruções antigas equivalentes a `queue -> STOP`, `a criação da queue encerra a tarefa`, `não acompanhe a Action`, `pare na primeira falha de workflow` ou `ACTION: SUCESSO` baseado apenas no media preflight, **esta regra prevalece**.
 
@@ -170,28 +170,36 @@ O relatório final deve distinguir claramente criação, preflight e publicaçã
 
 ```text
 STATUS: <PUBLICADO | PUBLICAÇÃO_EM_ANDAMENTO | PUBLICAÇÃO_NÃO_VERIFICADA | FALHA_PUBLICAÇÃO | SEM_CANDIDATO | BLOQUEADO | FALHA>
-TEMA: <assunto central | N/A>
-ARTISTA/BANDA: <nome | N/A>
-MÚSICA RELACIONADA: <música principal se houver | N/A>
+MODO: <TOPIC | PROFILE | N/A>
+TOPIC SOLICITADO: <texto | N/A>
+CONTENT_PROFILE: <texto livre | N/A>
+TOPIC FINAL: <assunto específico | N/A>
+ANGLE: <texto | N/A>
+IDIOMA: <código | N/A>
+INSTRUÇÕES ADICIONAIS: <resumo | N/A>
+ENTIDADES PRINCIPAIS: <lista | N/A>
 SLUG: <slug | N/A>
 PALAVRAS: <número | N/A>
 DURAÇÃO ALVO: <segundos/faixa | N/A>
+DURAÇÃO FINAL: <segundos | NÃO_VERIFICADA>
 TAKES: <quantidade final | N/A>
 POOL VISUAL: <resumo | N/A>
-VÍDEOS BASE: <resumo | N/A>
+VÍDEOS BASE: <resumo e trims reutilizados | N/A>
 IMAGENS BASE: <resumo | N/A>
 VISUAL SCORES: <resumo | N/A>
-BACKGROUND: <resumo | N/A>
+BACKGROUND: <profile/origem | N/A>
 SFX CATÁLOGO: <resumo | N/A>
 EDIÇÃO: <resumo | N/A>
+FONTES FACTUAIS: <quantidade/resumo | N/A>
 COMMIT: <hash/identificador ou N/A>
 MEDIA PREFLIGHT: <SUCESSO | FALHA | EM_ANDAMENTO | NÃO_VERIFICADO | BLOQUEADO>
 QUEUE: <CRIADA | NÃO_CRIADA | BLOQUEADA>
 PUBLISH ACTION: <SUCESSO | FALHA | EM_ANDAMENTO | NÃO_VERIFICADO | BLOQUEADO>
-YOUTUBE: <status real>
-INSTAGRAM: <status real>
-TIKTOK: <status real>
+YOUTUBE: <status real + ID/URL quando disponível>
+INSTAGRAM: <status real + ID/URL quando disponível>
+TIKTOK: <status real + ID/URL quando disponível>
 RETRIES: <número de novas validações/publicações; não quantidade de itens corrigidos | N/A>
+EVIDÊNCIA: <run/job/log/artefato relevante | N/A>
 ERRO/BLOQUEIO: <causa concreta ou resumo do lote; nunca apenas nome genérico de step/status | NENHUM>
 ```
 

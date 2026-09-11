@@ -71,10 +71,25 @@ class Story:
     slug: str
     segments: tuple[ScriptSegment, ...]
     target_duration_seconds: float = 75.0
+    topic: str | None = None
+    content_profile: str | None = None
+    category: str | None = None
+    angle: str | None = None
+    language: str | None = None
+    additional_instructions: str | None = None
+    entities: tuple[str, ...] = ()
+    events: tuple[str, ...] = ()
+    locations: tuple[str, ...] = ()
+    time_period: str | None = None
+    visual_keywords: tuple[str, ...] = ()
 
     @property
     def narration(self) -> str:
         return " ".join(segment.text.strip() for segment in self.segments).strip()
+
+    @property
+    def effective_topic(self) -> str:
+        return self.topic or self.title
 
     @property
     def uses_segment_delivery(self) -> bool:

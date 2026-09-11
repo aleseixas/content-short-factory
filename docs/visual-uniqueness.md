@@ -1,6 +1,6 @@
 # Unicidade visual por conteúdo e segmento
 
-Esta regra é obrigatória para toda autoria de episódio do Music Short Factory e SOBREPÕE qualquer orientação anterior que proíba reutilizar uma fonte de vídeo inteira mesmo quando há trechos diferentes.
+Esta regra é obrigatória para toda autoria de episódio do Content Short Factory e SOBREPÕE qualquer orientação anterior que proíba reutilizar uma fonte de vídeo inteira mesmo quando há trechos diferentes.
 
 ## IMAGENS — ZERO REUSO
 
@@ -36,7 +36,7 @@ Isso significa que reutilizar uma fonte não desativa nem enfraquece o Best Segm
 
 Permitir vários segmentos de um vídeo não significa usar um único clipe no episódio inteiro.
 
-Prefira diversidade de fontes quando houver alternativas igualmente relevantes. Reutilize uma fonte sobretudo quando ela contém vários momentos distintos e úteis — por exemplo, uma entrevista longa, performance, bastidor, videoclipe ou registro de evento com cenas diferentes.
+Prefira diversidade de fontes quando houver alternativas igualmente relevantes. Reutilize uma fonte sobretudo quando ela contém vários momentos distintos e úteis — por exemplo, entrevista longa, demonstração, arquivo histórico, reportagem, performance ou registro de evento com cenas diferentes.
 
 A prioridade editorial permanece:
 

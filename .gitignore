@@ -21,7 +21,7 @@ htmlcov/
 .tox/
 .nox/
 
-# Artefatos regeneráveis do Music Short Factory
+# Artefatos regeneráveis do Content Short Factory
 /work/
 /output/
 /cache/

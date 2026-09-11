@@ -3,24 +3,38 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from engine.duplicates import DUPLICATE_CODE, find_duplicate_candidate, format_duplicate, infer_identity_from_story, normalize_text
+from engine.duplicates import (
+    DUPLICATE_CODE,
+    find_duplicate_candidate,
+    format_duplicate,
+    infer_identity_from_story,
+    infer_topic_from_story,
+    normalize_text,
+)
 
 
-def write_story(root: Path, slug: str, title: str, hook: str) -> Path:
+def write_story(
+    root: Path,
+    slug: str,
+    title: str,
+    hook: str,
+    *,
+    topic: str | None = None,
+) -> Path:
     episode = root / "episodes" / slug
     episode.mkdir(parents=True, exist_ok=True)
     path = episode / "story.json"
+    story = {
+        "schema_version": 1,
+        "title": title,
+        "slug": slug,
+        "target_duration_seconds": 75,
+        "segments": [{"id": "hook", "text": hook}],
+    }
+    if topic is not None:
+        story["topic"] = topic
     path.write_text(
-        json.dumps(
-            {
-                "schema_version": 1,
-                "title": title,
-                "slug": slug,
-                "target_duration_seconds": 75,
-                "segments": [{"id": "hook", "text": hook}],
-            },
-            ensure_ascii=False,
-        ),
+        json.dumps(story, ensure_ascii=False),
         encoding="utf-8",
     )
     return path
@@ -89,7 +103,7 @@ class DuplicateEpisodeTests(unittest.TestCase):
             queue.mkdir()
             retry.mkdir()
             (queue / "song_artist.txt").write_text("song_artist", encoding="utf-8")
-            (retry / "other_artist-retry-1.txt").write_text("other_artist", encoding="utf-8")
+            (retry / "other_artist-retry-27.txt").write_text("other_artist", encoding="utf-8")
 
             queue_match = find_duplicate_candidate(
                 root,
@@ -132,10 +146,113 @@ class DuplicateEpisodeTests(unittest.TestCase):
                 slug="current_slug",
                 exclude_slug="current_slug",
             )
+            older_existed = older.is_file()
 
         self.assertIsNotNone(match)
         self.assertEqual(match.path, "episodes/older_slug")
-        self.assertTrue(older.is_file())
+        self.assertTrue(older_existed)
+
+    def test_finds_same_explicit_topic_with_different_slug(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            path = write_story(
+                root,
+                "old_slug",
+                "Titulo de exibicao",
+                "Uma abertura.",
+                topic="A origem do sistema GPS",
+            )
+
+            match = find_duplicate_candidate(
+                root,
+                topic="a ORIGEM do sistema GPS!",
+                slug="new_slug",
+            )
+            inferred_topic = infer_topic_from_story(path)
+
+        self.assertEqual(inferred_topic, "A origem do sistema GPS")
+        self.assertIsNotNone(match)
+        self.assertEqual(match.reason, "same_topic")
+
+    def test_legacy_title_is_topic_fallback(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            path = write_story(
+                root,
+                "legacy",
+                "Como nasceu o codigo de barras",
+                "Uma abertura.",
+            )
+
+            match = find_duplicate_candidate(
+                root,
+                topic="Como nasceu o codigo de barras",
+                slug="another_slug",
+            )
+            inferred_topic = infer_topic_from_story(path)
+
+        self.assertEqual(inferred_topic, "Como nasceu o codigo de barras")
+        self.assertIsNotNone(match)
+        self.assertEqual(match.reason, "same_topic")
+
+    def test_finds_obvious_blockbuster_netflix_paraphrase(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_story(
+                root,
+                "blockbuster_decision",
+                "Titulo editorial",
+                "Uma abertura.",
+                topic="O dia em que a Blockbuster disse não para a Netflix",
+            )
+
+            match = find_duplicate_candidate(
+                root,
+                topic="Por que a Blockbuster recusou comprar a Netflix?",
+                slug="blockbuster_netflix",
+            )
+
+        self.assertIsNotNone(match)
+        self.assertEqual(match.reason, "semantically_similar_topic")
+
+    def test_does_not_block_a_different_topic_with_the_same_companies(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_story(
+                root,
+                "blockbuster_streaming",
+                "Titulo editorial",
+                "Uma abertura.",
+                topic="Como a Blockbuster competiu com a Netflix no streaming",
+            )
+
+            match = find_duplicate_candidate(
+                root,
+                topic="Por que a Blockbuster recusou comprar a Netflix?",
+                slug="blockbuster_netflix",
+            )
+
+        self.assertIsNone(match)
+
+    def test_empty_topic_and_legacy_identity_defaults_are_supported(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self.assertIsNone(find_duplicate_candidate(root))
+
+    def test_topic_driven_title_with_dash_is_not_parsed_as_music_identity(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            path = write_story(
+                root,
+                "generic_dash",
+                "Knight Capital — o erro de software",
+                "Uma linha de codigo causou uma perda bilionaria.",
+                topic="O erro de software da Knight Capital",
+            )
+
+            identity = infer_identity_from_story(path)
+
+        self.assertEqual(identity, ("", ""))
 
 
 if __name__ == "__main__":

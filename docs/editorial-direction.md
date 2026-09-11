@@ -1,10 +1,16 @@
-# Direção editorial automática
+# Direção editorial automática — Content Short Factory
 
-Este é o contrato de autoria para o GPT/agente externo que prepara episódios do Music Short Factory.
+Este é o contrato de autoria para o agente externo que prepara episódios do Content Short Factory.
 
 O agente é o **diretor + editor criativo**. Python/FFmpeg são o executor determinístico: validam e executam as decisões explícitas registradas nos arquivos do episódio. O objetivo não é “usar features”; é produzir o melhor short possível com as ferramentas reais disponíveis na `main`.
 
 O prompt operacional copiável fica em [`templates/editorial-direction-prompt.md`](../templates/editorial-direction-prompt.md). A política de áudio externo fica em [`docs/audio-search.md`](audio-search.md), a direção de voz por segmento em [`docs/narration-delivery.md`](narration-delivery.md), e o fluxo de pesquisa/inspeção de imagens e vídeos em [`docs/visual-search.md`](visual-search.md).
+
+## Modos e arquitetura topic-driven
+
+Leia `templates/content-topic-rule.md`. Em Topic Mode, o tema fornecido tem prioridade. Em Profile Mode, o agente externo seleciona uma pauta inédita dentro do `content_profile` livre, consultando histórico, diversidade e factualidade. Campos opcionais — `category`, `angle`, `target_duration`, `language` e `additional_instructions` — refinam sem virar requisitos.
+
+Depois da seleção, pessoas, empresas, produtos, países, eventos, tecnologias, obras, artistas, bandas e músicas são entidades do tópico, não campos estruturais obrigatórios. O renderer permanece determinístico e não escolhe pauta.
 
 ## Main é a fonte da verdade
 
@@ -136,7 +142,7 @@ Exemplo:
 ```json
 {
   "id": "hook",
-  "text": "Essa música quase nunca chegou ao público.",
+  "text": "Essa decisão quase derrubou a empresa.",
   "delivery": "hook"
 }
 ```
@@ -170,6 +176,9 @@ um asset local/relevante disponível; busca externa nunca roda no renderer.
 
 Quando houver web, a estratégia é external-first conforme `docs/audio-search.md`. Pesquise e compare candidatas plausíveis. Se uma opção externa for aprovada e o schema atual permitir, use profile/chave dedicada conforme o catálogo de música.
 
+A regra operacional é pesquisar primeiro
+opções externas compatíveis; o catálogo local permanece como fallback.
+
 Se a busca externa falhar ou não houver opção adequada/compatível, use um profile existente na repo.
 
 ### SFX
@@ -185,6 +194,33 @@ Durante a autoria de episódio:
 - não substitua um efeito curado por externo apenas por preferência.
 
 A timeline referencia apenas `type`. URLs/cache são responsabilidade do catálogo/engine.
+
+Um episódio com aproximadamente 15 SFX contextualizados pode ser perfeitamente válido; isso ilustra densidade, não uma quota. Exemplo estrutural usando somente `type` existentes no catálogo:
+
+```json
+{
+  "sfx_cues": [
+    {"time_seconds": 0.4, "type": "impact", "volume": 0.14},
+    {"time_seconds": 3.2, "type": "whoosh", "volume": 0.09},
+    {"time_seconds": 6.5, "type": "ding", "volume": 0.1},
+    {"time_seconds": 10.1, "type": "riser", "volume": 0.11},
+    {"time_seconds": 13.8, "type": "camera_shutter", "volume": 0.09},
+    {"time_seconds": 17.0, "type": "record_scratch", "volume": 0.12},
+    {"time_seconds": 20.6, "type": "cash_register", "volume": 0.11},
+    {"time_seconds": 25.0, "type": "heartbeat_slow", "volume": 0.09},
+    {"time_seconds": 29.4, "type": "notification_iphone", "volume": 0.08},
+    {"time_seconds": 33.1, "type": "punch", "volume": 0.13},
+    {"time_seconds": 37.0, "type": "clock_ticking_fast", "volume": 0.09},
+    {"time_seconds": 42.2, "type": "tape_stop", "volume": 0.11},
+    {"time_seconds": 48.0, "type": "crowd_gasp", "volume": 0.1},
+    {"time_seconds": 54.5, "type": "bass_drop", "volume": 0.14},
+    {"time_seconds": 61.0, "type": "applause", "volume": 0.1}
+  ],
+  "visual_fx_cues": []
+}
+```
+
+Os tempos e volumes acima são meramente ilustrativos. Em um episódio real, cada cue deve coincidir com um beat concreto, usar a duração real e passar pelas validações do schema.
 
 ## Créditos, fontes e copy pública
 
@@ -421,7 +457,7 @@ Não existe obrigação de `1 SFX por shot` nem meta rígida. Ao mesmo tempo, n�
 
 Sincronize a entrada do SFX com o evento que ele reforça. Varie types quando houver alternativas melhores. Não use efeitos aleatórios como preenchimento.
 
-O warning acima de 25 é alerta de excesso, nunca meta.
+O warning para mais de 25 SFX é alerta de excesso, nunca meta.
 
 Tipos `meme_br_` são intervenções editoriais completas. Use com parcimônia, reproduza integralmente (`source_start_seconds=0` e sem `duration_seconds`) e evite sobreposição com outro meme/SFX falado sem motivo editorial claro.
 
@@ -457,6 +493,8 @@ maior peso para os últimos episódios. Veja a política em `docs/visual-search.
 Se faltarem alternativas suficientes, repetição ENTRE episódios pode permanecer
 como fallback diagnosticado; nunca deve impedir a criação ou o render.
 Essa política é diferente da revisão de unicidade entre shots do mesmo episódio.
+
+Dentro do episódio, a mesma imagem nunca se repete. Uma fonte de vídeo pode atender normalmente até **3 shots**, somente com intervalos temporais distintos, seguros e não sobrepostos. Crop, speed, motion ou FX sobre o mesmo intervalo não cria take novo. URL normalizada, provider ID, SHA-256 e hashes perceptuais compartilham identidade; o Best Segment respeita as reservas dos demais shots.
 Speed e Freeze Frame não tornam um trecho já usado inédito.
 
 Vídeo real é prioridade quando houver material bom e reutilizável.

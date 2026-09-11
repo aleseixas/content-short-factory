@@ -17,14 +17,14 @@ A descoberta visual não fica limitada a Wikimedia Commons/Openverse.
 Para cada slot importante, transforme primeiro a fala em uma intenção visual concreta e pesquise a WEB de forma ampla. Exemplos de intenções/queries úteis:
 
 ```text
-Post Malone 2016 interview serious
-Post Malone I Fall Apart live performance
-Post Malone backstage Stoney era
-Taylor Swift Red era interview scarf
-artist recording studio behind the scenes
+Blockbuster Netflix meeting Reed Hastings interview
+Blockbuster store 2000 DVD rental archive
+Netflix 2000 website Wayback Machine
+Knight Capital 2012 software error newsroom
+Roman Empire map fifth century primary source
 ```
 
-Priorize material semanticamente ligado à frase narrada: artista reconhecível, entrevista, performance, backstage, estúdio, evento, época correta, local ou ação coerente. Stock/B-roll serve como contexto quando não deve fingir ser registro do evento real.
+Priorize material semanticamente ligado à frase narrada: entidade reconhecível, pessoa, produto, documento, entrevista, evento, época, local ou ação coerente. Stock/B-roll serve como contexto quando não deve fingir ser registro do evento real.
 
 Fontes atuais do fluxo estruturado:
 
@@ -40,25 +40,25 @@ Wikimedia/Openverse continuam úteis, mas não são mais o teto da busca.
 Com `--external`, a busca é web-first por padrão:
 
 ```powershell
-python search_visual.py "Post Malone old interview" "Post Malone live performance" --kind video --external --limit 20
+python search_visual.py "Blockbuster Netflix Reed Hastings interview" "Blockbuster store archive" --kind video --external --limit 20
 ```
 
 Para imagens:
 
 ```powershell
-python search_visual.py "Post Malone 2016" "Post Malone backstage" --kind image --external --limit 20
+python search_visual.py "Blockbuster store 2000" "Netflix early website" --kind image --external --limit 20
 ```
 
 Para voltar temporariamente ao comportamento restrito a Commons/Openverse:
 
 ```powershell
-python search_visual.py "artist live concert" --kind any --external --no-web --limit 12
+python search_visual.py "Roman Empire map fifth century" --kind any --external --no-web --limit 12
 ```
 
 Para baixar/inspecionar os melhores candidatos quando houver ambiente real com FFmpeg/FFprobe:
 
 ```powershell
-python search_visual.py "artist live interview" "artist backstage" --kind video --external --limit 20 --inspect-top 5 --shot-duration 4.8 --source-start 2.0 --crossfade 0.14
+python search_visual.py "Knight Capital 2012 interview" "Knight Capital trading floor" --kind video --external --limit 20 --inspect-top 5 --shot-duration 4.8 --source-start 2.0 --crossfade 0.14
 ```
 
 A busca simples não deve baixar tudo. Download/inspeção acontece somente para candidatos selecionados para inspeção.
@@ -108,7 +108,7 @@ A autoria deve tornar explícita a relação entre a fala e cada candidato. Em c
 
 ```text
 exact
- direct
+direct
 contextual
 generic
 ```
@@ -118,29 +118,29 @@ Use os níveis assim:
 - `exact`: mostra o evento, ação, pessoa, lugar/objeto e contexto específico mencionado na fala;
 - `direct`: mostra diretamente a entidade/ação principal correta, mesmo que não seja o registro exato do acontecimento;
 - `contextual`: ajuda a explicar a fala de modo legítimo, mas não mostra diretamente o acontecimento principal;
-- `generic`: é apenas do mesmo artista/gênero/vibe ou funciona como B-roll sem relação específica com a frase.
+- `generic`: é apenas do mesmo tema/entidade/vibe ou funciona como B-roll sem relação específica com a frase.
 
-A classificação é editorial e deve ser honesta. Não marque `exact` ou `direct` só para favorecer um vídeo bonito. Quando a justificativa for apenas “é do mesmo artista”, “é um clipe famoso”, “tem movimento”, “combina com a vibe” ou equivalente, use `generic` ou, no máximo, `contextual` quando houver contexto narrativo real.
+A classificação é editorial e deve ser honesta. Não marque `exact` ou `direct` só para favorecer um vídeo bonito. Quando a justificativa for apenas “é sobre a mesma entidade”, “é um material conhecido”, “tem movimento”, “combina com a vibe” ou equivalente, use `generic` ou, no máximo, `contextual` quando houver contexto narrativo real.
 
 Exemplo de slot:
 
 ```json
 {
-  "id": "rain_reveal",
-  "visual_intent": "Calvin Harris ou o público do Rock in Rio 2026 visivelmente sob chuva forte durante o show",
+  "id": "blockbuster_store_reveal",
+  "visual_intent": "Loja Blockbuster operando no período da negociação narrada, com marca e DVDs reconhecíveis",
   "required_seconds": 4.0,
   "inspect_top": 5,
   "candidates": [
     {
       "editorial_rank": 1,
       "semantic_fit": "exact",
-      "name": "Calvin Harris Rock in Rio 2026 rain crowd",
+      "name": "Blockbuster store archive footage from 2000",
       "kind": "video"
     },
     {
       "editorial_rank": 2,
       "semantic_fit": "generic",
-      "name": "Calvin Harris official music video",
+      "name": "Generic person watching television",
       "kind": "video"
     }
   ]
@@ -172,22 +172,20 @@ URLs diretas continua preservando o tipo do asset-base.
 Não compare tipos apenas pelo número bruto do score: primeiro aplique a pertinência semântica explícita, depois os gates
 técnicos do vídeo; por fim respeite a prioridade editorial de movimento real entre opções semanticamente equivalentes.
 
-## REGRA CRÍTICA: nunca repetir imagem ou vídeo entre shots
+## Regra crítica: unicidade por imagem e trecho de vídeo
 
-Cada shot deve terminar com um visual principal ÚNICO no episódio.
+Cada shot deve terminar com conteúdo visual próprio no episódio.
 
 - a mesma imagem NÃO pode ser usada em dois shots;
-- o mesmo vídeo-fonte NÃO pode ser usado em dois shots;
-- mudar `source_start_seconds`, `source_end_seconds`, crop, focus, speed, motion, transition, visual FX, overlay ou qualquer outro tratamento NÃO transforma o mesmo arquivo/fonte em um novo asset;
-- URLs diferentes que resolvem para o mesmo arquivo, upload, `provider_id`, página-fonte ou conteúdo visual devem ser tratadas como duplicata;
-- candidatos podem aparecer em pools de pesquisa enquanto a seleção ainda não foi fechada, mas depois que um visual vence um slot ele fica reservado e não pode vencer outro slot;
-- antes de finalizar `assets.json`/`timeline.json`, faça deduplicação GLOBAL dos visuais escolhidos, não apenas dentro de cada pool;
-- se o melhor candidato de um slot já tiver sido usado, escolha o próximo melhor candidato válido daquele mesmo tipo;
-- prefira procurar uma nova alternativa relevante a reciclar um visual já usado.
+- a mesma fonte de vídeo pode atender normalmente até **3 shots**;
+- cada uso precisa de intervalo temporal distinto, seguro e não sobreposto;
+- mudar crop, focus, speed, motion, transition, visual FX ou overlay sobre o mesmo intervalo NÃO cria outro take;
+- URLs diferentes que resolvem para o mesmo arquivo, upload, `provider_id` ou página-fonte compartilham a mesma contagem e reservas;
+- depois que uma imagem ou intervalo vence um slot, ele fica reservado;
+- Best Segment não pode mover um trim para cima da reserva de outro shot;
+- diversidade de fontes continua preferível quando houver alternativas semanticamente equivalentes.
 
-A regra vale para imagens e vídeos principais do episódio. Reutilizar o mesmo vídeo com outro trecho também é repetição e é proibido.
-
-Somente se for tecnicamente impossível obter qualquer alternativa válida depois de buscas reais e o episódio precisar continuar por fallback, uma repetição pode ser aceita como ÚLTIMO RECURSO. Nesse caso, a repetição deve ser minimizada e nunca pode acontecer por conveniência, economia de busca ou porque outro trim parece diferente.
+Considere o consumo real do shot, speed, freeze e crossfade ao verificar sobreposição. Ao atingir três usos ou esgotar intervalos seguros, selecione outra fonte ou uma imagem relevante.
 
 ## Pool visual recomendado
 
@@ -202,9 +200,9 @@ Para cada necessidade visual importante:
 7. forme shortlist por tipo de mídia;
 8. inspecione os melhores candidatos;
 9. escolha o melhor take real;
-10. reserve o visual vencedor para aquele slot e remova-o da disputa dos demais slots.
+10. reserve a imagem ou o intervalo temporal vencedor e atualize o limite da fonte nos demais slots.
 
-Para episódios de aproximadamente 20–30 takes, o alvo editorial padrão é **100–120 candidatos visuais totais**, normalmente cerca de 4–5 candidatos reais por slot. **80 candidatos é o mínimo aceitável** quando a disponibilidade do tema limitar a busca; temas ricos visualmente podem ultrapassar 120 quando isso aumentar de verdade a qualidade da seleção. Não infle o pool com material genérico apenas para atingir quantidade.
+Para slots visualmente ricos, procure normalmente até **8 candidatos úteis**, preferindo fontes distintas. Pools menores são válidos quando a disponibilidade do tema limita a busca. Não infle o pool com material genérico apenas para atingir quantidade.
 
 ## Web video discovery e ingest durante a Action
 
@@ -255,11 +253,11 @@ Exemplo conceitual:
 {
   "editorial_rank": 1,
   "semantic_fit": "direct",
-  "name": "Artist interview",
+  "name": "Reed Hastings interview about early Netflix",
   "kind": "video",
   "url": "https://www.youtube.com/watch?v=EXEMPLO",
   "source_page_url": "https://www.youtube.com/watch?v=EXEMPLO",
-  "file": "artist_interview.mp4",
+  "file": "reed_hastings_interview.mp4",
   "source": "youtube",
   "search_provider": "youtube_web",
   "provider_id": "EXEMPLO",

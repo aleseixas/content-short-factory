@@ -48,14 +48,14 @@ Para slots visualmente ricos, mire normalmente em **8 candidatos reais por slot*
 
 Regras obrigatórias para montar o pool:
 
-- cada slot deve pesquisar a partir do seu `visual_intent`, e não apenas pelo nome do artista ou da música;
+- cada slot deve pesquisar a partir de `topic`, frase, entidades, evento, local, período e `visual_intent`, não apenas pelo nome da entidade;
 - quando a primeira busca trouxer vídeos repetidos, genéricos ou pouco ligados à fala, faça novas consultas semanticamente diferentes antes de fechar o slot;
 - um mesmo YouTube `provider_id` conta como **uma única fonte** para diversidade do pool, mesmo que apareça com títulos, URLs ou trims diferentes;
 - não deixe 2–3 IDs populares dominarem candidatos de muitos slots sem relação direta entre si;
 - se a mesma fonte começar a aparecer em vários slots, continue pesquisando alternativas antes de aceitá-la novamente;
 - prefira candidatos `exact` e `direct`; use `contextual` conscientemente e `generic` apenas como último recurso real;
-- para pessoas, colaborações, bastidores, eventos ou locais citados na narração, faça buscas específicas com esses nomes/contextos em vez de substituir por um clipe musical genérico do artista;
-- preserve diversidade entre fontes, eventos e momentos: performance, entrevista, bastidor, arquivo histórico, gravação, premiação e contexto documental podem coexistir quando fizerem sentido para a história;
+- para pessoas, empresas, produtos, tecnologias, colaborações, eventos ou locais citados, faça buscas específicas com esses nomes/contextos em vez de substituir por B-roll genérico;
+- preserve diversidade entre fontes, eventos e momentos: demonstração, entrevista, bastidor, reportagem, performance, arquivo histórico, premiação e contexto documental podem coexistir quando fizerem sentido para a história;
 - não trate cinco trims do mesmo vídeo como cinco bons candidatos de vídeo para o slot;
 - antes de fechar `visual_candidates.json`, revise os IDs de vídeo do episódio inteiro. Se poucos IDs estiverem aparecendo repetidamente em muitos slots, reabra as buscas dos slots mais fracos.
 

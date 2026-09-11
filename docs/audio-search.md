@@ -4,10 +4,12 @@ Esta documentação separa explicitamente as estratégias de **background music*
 
 ## Regra principal
 
-- **BACKGROUND MUSIC:** external-first quando houver acesso web; catálogo da repo é fallback.
+- **BACKGROUND MUSIC:** external-first quando houver acesso web; `assets/audio/music/catalog.json` é o catálogo da repo e permanece como fallback.
 - **SFX:** use somente `assets/audio/sfx/catalog.json`; não pesquise, não crie e não substitua SFX por episódio.
 
 A tarefa agendada deve tratar a `main` como fonte da verdade. Se schema, enums ou capacidades mudarem, o código atual prevalece.
+
+Quando a execução tiver acesso à rede/web, use os endpoints HTTP suportados diretamente. GitHub, sozinha, não concede HTTP genérico ao agente: a automação precisa disponibilizar acesso web ou uma ferramenta de rede apropriada.
 
 ---
 
@@ -139,7 +141,7 @@ Se a fonte oficial ou os termos do próprio áudio proibirem explicitamente o us
 
 ### Aprovação e catálogo
 
-Se uma background music externa nova for aprovada e a `main` suportar o fluxo remoto, adicione apenas o profile/chave dedicada necessária no catálogo de música, preferencialmente com uma única entrada `{file, url}` para garantir seleção determinística daquela escolha editorial.
+Se uma background music externa nova for aprovada e a `main` suportar o fluxo remoto, adicione apenas um profile com chave dedicada ao episódio no catálogo de música, preferencialmente com uma única entrada `{file, url}` para garantir seleção determinística daquela escolha editorial.
 
 Exemplo conceitual:
 
@@ -156,7 +158,7 @@ Exemplo conceitual:
 }
 ```
 
-`timeline.json` deve continuar referenciando somente o `profile`, nunca a URL.
+`timeline.json` deve continuar referenciando somente o `profile`, nunca a URL. Adicionar a entrada ao catálogo não garante sua seleção: a timeline precisa apontar explicitamente para a chave aprovada.
 
 Registre em `episodes/<slug>/sources.txt` a origem realmente usada, autoria, atribuição/licença quando aplicável e evidência operacional relevante. Para um `fallback_social_*` já curado, não é necessário refazer toda a pesquisa da faixa a cada episódio; registre a escolha conforme as regras atuais de proveniência do projeto.
 

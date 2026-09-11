@@ -1,6 +1,6 @@
 # TTS provider atual
 
-Este documento descreve a arquitetura de narração atualmente usada pelo Music Short Factory. A `main` continua sendo a fonte da verdade; se o código divergir deste texto, siga o código atual.
+Este documento descreve a arquitetura de narração atualmente usada pelo Content Short Factory. A `main` continua sendo a fonte da verdade; se o código divergir deste texto, siga o código atual.
 
 ## Cadeia de providers
 

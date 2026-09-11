@@ -4,6 +4,7 @@ from typing import Any, Mapping
 
 from .base import ApiError, PublishContext, PublishResult, Publisher, PublishingError
 from .metadata import (
+    DEFAULT_YOUTUBE_CATEGORY_ID,
     PLATFORM_TEXT_LIMITS,
     YOUTUBE_TAGS_LIMIT,
     YOUTUBE_TITLE_LIMIT,
@@ -71,7 +72,9 @@ class YouTubePublisher(Publisher):
                 "title": rendered["title"],
                 "description": rendered.get("description", ""),
                 "tags": list(rendered.get("hashtags", [])),
-                "categoryId": str(rendered.get("category_id", "10")),
+                "categoryId": str(
+                    rendered.get("category_id", DEFAULT_YOUTUBE_CATEGORY_ID)
+                ),
             },
             "status": {
                 "privacyStatus": rendered.get("privacy_status", "private"),

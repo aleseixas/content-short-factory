@@ -1,59 +1,248 @@
-# Music Short Factory
+# Content Short Factory
 
-Base modular para produzir vídeos curtos verticais sobre músicas para TikTok, Instagram Reels e YouTube Shorts. O conteúdo editorial fica em `episodes/`; Python/FFmpeg executam de forma determinística as decisões registradas nos arquivos do episódio.
+Fábrica automatizada de conteúdo short-form com IA, capaz de produzir vídeos verticais sobre praticamente qualquer tema ou nicho para TikTok, Instagram Reels e YouTube Shorts. Um agente editorial externo escolhe ou recebe o tópico, pesquisa, escreve e planeja; Python/FFmpeg executam de forma determinística as decisões registradas no episódio.
 
-A regra principal do projeto é simples:
+> A `main` é a fonte de verdade para schemas, enums, renderer, catálogos, validações e publishers.
 
-> **A `main` é a fonte da verdade.**
+## Arquitetura
 
-Schemas, enums, renderer, publishing, catálogos e validações atuais sempre prevalecem sobre documentação ou prompts antigos.
+```text
+INPUT EDITORIAL
+  ├─ topic presente ───────────────> Topic Mode
+  └─ somente content_profile ──────> Profile Mode / seleção de pauta
+                                      │
+                                      v
+histórico + diversidade + factualidade
+  -> pesquisa/contexto
+  -> roteiro short-form
+  -> entidades + planejamento visual
+  -> candidate pools + busca/inspeção
+  -> assets + trims
+  -> TTS + timings reais
+  -> pacing + captions + background music/SFX
+  -> render determinístico
+  -> validação/media preflight
+  -> metadados + queue
+  -> publicação/retry + relatório terminal
+```
 
-## Filosofia: Editor Mode
+O agente externo é o diretor/editor criativo. O runtime não usa um LLM para improvisar decisões durante o render: recebe `story.json`, `assets.json`, `timeline.json` e configuração, valida tudo e produz a mesma edição declarada.
 
-O GPT/agente externo não deve tratar `timeline.json` como um formulário. Ele atua como **diretor + editor criativo**, usando o código como uma suíte de edição disponível para produzir o melhor short possível.
+## Modos de entrada
 
-Para cada shot, a revisão editorial considera conscientemente:
+### Topic Mode
+
+Use quando o assunto específico já é conhecido:
+
+```json
+{
+  "topic": "Por que a Blockbuster recusou comprar a Netflix"
+}
+```
+
+O agente preserva o tema, pesquisa fatos, extrai entidades e cria o episódio diretamente.
+
+### Profile Mode
+
+Use quando só existe um universo editorial:
+
+```json
+{
+  "content_profile": "economia"
+}
+```
+
+O agente monta um pool de pautas, consulta o histórico, evita duplicatas semânticas, busca diversidade dentro do profile e escolhe um tópico com potencial real de short.
+
+`content_profile` aceita linguagem natural; não é enum:
+
+```json
+{
+  "content_profile": "empresas que cometeram grandes erros",
+  "additional_instructions": "Priorizar decisões surpreendentes com consequências mensuráveis.",
+  "language": "pt-BR"
+}
+```
+
+Outros profiles válidos incluem `tecnologia e histórias de empresas`, `grandes acontecimentos históricos`, `curiosidades científicas visualmente impressionantes` e `música e bastidores da indústria musical`. Trocar esse texto livre prepara a mesma arquitetura para futuros canais sem exigir regras de código por nicho.
+
+Os campos opcionais podem incluir `category`, `angle`, `target_duration`, `language` e `additional_instructions`. Nenhum deles é requisito.
+
+Quando `topic` e `content_profile` aparecem juntos, `topic` tem prioridade:
+
+```json
+{
+  "topic": "Como a BlackBerry perdeu o mercado de smartphones",
+  "content_profile": "empresas e tecnologia",
+  "angle": "decisões estratégicas que levaram à queda"
+}
+```
+
+Pelo menos um entre `topic` e `content_profile` deve existir. Esse objeto é o contrato público de entrada editorial. Depois que o tópico é resolvido, os campos aceitos são preservados em `story.json` para rastreabilidade; rankings, pools e raciocínio temporário não são persistidos.
+
+A regra completa está em [`templates/content-topic-rule.md`](templates/content-topic-rule.md). O caminho antigo [`templates/music-universe-topic-rule.md`](templates/music-universe-topic-rule.md) é apenas uma ponte de compatibilidade. Música continua sendo um `content_profile` válido.
+
+## Seleção e pesquisa editorial
+
+No Profile Mode, o agente compara pautas por hook, conflito, transformação, consequência, payoff, clareza, potencial visual, documentação e distância do histórico recente. A diversidade é inferida do profile; não existe lista hardcoded de categorias por nicho.
+
+Depois que o tópico é definido, o pipeline é topic-driven. Pessoas, empresas, produtos, marcas, países, cidades, eventos, tecnologias, lugares, obras, atletas, artistas, bandas e músicas são entidades do tema, não campos estruturais obrigatórios.
+
+Factualidade prevalece sobre impacto. Rumor, acusação, estatística, valor, data, controvérsia e causalidade exigem fontes e linguagem compatíveis com o nível de certeza. `sources.txt` registra as fontes factuais e de mídia realmente usadas.
+
+## Editor Mode
+
+Para cada shot, o agente avalia:
 
 ```text
 ASSET | TRECHO/TRIM | MOTION | TRANSITION | VISUAL FX | TEXT FX | HIGHLIGHT | OVERLAY | SFX
 ```
 
-Essa matriz é apenas um checklist mental; não é um campo do schema.
+Essa matriz é checklist mental, não campo do schema. A autoria passa por montagem shot a shot, acabamento e polimento global. Uma camada só entra quando melhora retenção, clareza, ritmo, surpresa ou payoff.
 
-O objetivo não é usar todas as features em todos os shots. O objetivo é usar conscientemente qualquer recurso suportado que melhore retenção, ritmo, clareza, surpresa, compreensão, impacto ou payoff. Um shot também pode ficar deliberadamente limpo quando isso produzir resultado melhor.
+Veja [`docs/editorial-direction.md`](docs/editorial-direction.md) e [`templates/editorial-direction-prompt.md`](templates/editorial-direction-prompt.md).
 
-Um beat importante pode combinar várias camadas sincronizadas — por exemplo `punch_zoom` + kinetic text + SFX — quando todas reforçam o mesmo evento editorial.
+## Visual Search
 
-A autoria segue três passadas principais:
+O fluxo de autoria é:
 
-1. **Montagem shot por shot:** asset, trecho/trim, foco/crop, motion e transition.
-2. **Acabamento shot por shot:** visual FX, text FX, highlight, overlay e SFX.
-3. **Polimento global:** remover somente camadas redundantes, conflitantes, repetitivas ou que prejudiquem voz/música.
+```text
+frase + entidades + evento + local + período + visual_intent
+  -> múltiplas queries
+  -> candidate pools
+  -> comparação semântica
+  -> inspeção técnica
+  -> ranking
+  -> asset/trim escolhido
+```
 
-O contrato editorial completo está em [`docs/editorial-direction.md`](docs/editorial-direction.md), e o prompt operacional em [`templates/editorial-direction-prompt.md`](templates/editorial-direction-prompt.md).
+Wikimedia Commons, Openverse Images e descoberta web/YouTube são usados conforme o suporte atual. Vídeo tem preferência quando movimento real acrescenta valor; imagem diretamente ligada à frase vence vídeo genérico.
 
-## Requisitos
+Para slots ricos, até oito candidatos úteis e de fontes distintas é uma boa direção. `semantic_fit` (`exact`, `direct`, `contextual`, `generic`), `visual_intent`, queries, scores e diagnósticos pertencem ao pool/relatório de autoria e não aos JSONs finais.
 
-- Python 3.10 ou mais recente;
-- acesso à internet quando TTS ou mídia remota precisarem ser baixados;
-- FFmpeg com os filtros usados pelo projeto, incluindo `xfade`, `subtitles`, `overlay` e `loudnorm`;
-- `ffprobe` disponível quando o episódio usa vídeo ou áudio remoto.
+Exemplo de busca:
 
-Instalação:
+```bash
+python search_visual.py "Blockbuster Netflix Reed Hastings interview" "Blockbuster store archive" --kind video --external --limit 20 --inspect-top 5
+```
+
+Leia [`docs/visual-search.md`](docs/visual-search.md) e veja [`templates/visual-candidates.example.json`](templates/visual-candidates.example.json).
+
+### Unicidade visual
+
+- uma imagem nunca pode aparecer em dois shots;
+- uma fonte de vídeo pode abastecer normalmente até três shots;
+- cada uso deve ter trim temporal distinto, seguro e não sobreposto;
+- crop, speed, motion ou FX não transformam o mesmo trecho em take novo;
+- URL normalizada, provider ID, SHA-256, hashes perceptuais e histórico ajudam a detectar aliases/repetição.
+
+Best Segment respeita as reservas de outros shots da mesma fonte. Veja [`docs/visual-uniqueness.md`](docs/visual-uniqueness.md).
+
+### Best Segment Selection
+
+`source_start_seconds`/`source_end_seconds` definidos pelo agente são baseline e fallback. Depois dos timings reais, o engine pode comparar janelas próximas e substituir o trim apenas quando encontra ganho material, confiança e segurança.
+
+Ele considera duração do shot, speed, freeze e crossfade; não muda asset, áudio ou duração final, não usa loop e não cria sobreposição entre trims da mesma fonte. Falha, empate ou ganho pequeno preservam o baseline. O diagnóstico temporário fica em `work/<slug>/best_segment_selection.json`.
+
+### Smart Visual Pacing
+
+É opt-in. Quando habilitado, pode redistribuir conservadoramente fronteiras dos shots depois do TTS, sem trocar/reordenar assets, alterar áudio ou mudar a duração total. Não corrige asset ruim, repetição ou trim inválido. Ausente, `null` ou desabilitado preserva o pacing legado.
+
+## Áudio
+
+Background music e SFX têm políticas distintas.
+
+### Background music — external-first
+
+Durante a autoria com web disponível, pesquise e compare trilhas adequadas ao tema. Valide origem, autoria, licença, duração, formato e URL/host compatível. Um profile externo aprovado pode ser registrado em `assets/audio/music/catalog.json` quando o contrato atual permitir. Profiles locais são fallback.
+
+`timeline.json` aponta apenas para o nome do profile. Serviços comerciais podem informar estética/tendência, mas previews não são automaticamente arquivos autorizados para o renderer.
+
+### SFX — catálogo curado
+
+SFX vêm apenas de `assets/audio/sfx/catalog.json` durante a criação do episódio. Use `type` existente; não pesquise nem invente efeitos por episódio. Trims de SFX precisam caber na duração real.
+
+Voz permanece dominante; background e SFX reforçam beats sem prejudicar inteligibilidade. Leia [`docs/audio-search.md`](docs/audio-search.md).
+
+## Requisitos e instalação
+
+- Python 3.10+;
+- FFmpeg e ffprobe;
+- internet quando TTS, busca ou mídia remota forem necessários;
+- credenciais somente para providers/publicações utilizados.
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-## Uso rápido
+## CLI
 
-Crie um episódio:
+Crie o esqueleto de um episódio pelo tópico; o slug é derivado automaticamente:
 
 ```bash
-python new_episode.py nome_do_video
+python new_episode.py --topic "Por que a Blockbuster recusou comprar a Netflix"
 ```
 
-Estrutura esperada:
+Passe contexto opcional quando útil:
+
+```bash
+python new_episode.py --topic "Como a BlackBerry perdeu o mercado de smartphones" --content-profile "empresas e tecnologia" --angle "decisões estratégicas que levaram à queda" --language pt-BR
+```
+
+O mesmo contrato pode vir de um arquivo JSON:
+
+```bash
+python new_episode.py --request request.json
+```
+
+```json
+{
+  "topic": "O erro de software da Knight Capital",
+  "content_profile": "tecnologia e histórias de empresas",
+  "target_duration": 75,
+  "language": "pt-BR"
+}
+```
+
+`new_episode.py` também aceita `--category`, `--target-duration`, `--additional-instructions`, `--entity`, `--event`, `--location`, `--time-period` e `--visual-keyword`. O slug posicional continua disponível como override quando o request informa `topic` ou `content_profile`. A dupla legada completa `--artist` + `--song` também continua aceita e é convertida em tópico.
+
+Profile Mode puro usa um `TopicSelector` externo injetado na API de `main()`; por isso, a CLI standalone não inventa um tópico sem esse agente. O seletor recebe o request livre — inclusive `additional_instructions` — e o histórico de tópicos. O tópico retornado é validado, passa pela checagem de duplicidade e só então cria o episódio. Automações podem chamar `new_episode.main(..., topic_selector=seletor)` com `--content-profile` ou `--request`.
+
+`--song` e `--artist` permanecem apenas para duplicate preflight legado. Não são requisitos editoriais.
+
+Gere o vídeo:
+
+```bash
+python generate.py <slug>
+```
+
+Prepare/valide capa e metadados:
+
+```bash
+python prepare_post.py <slug>
+```
+
+Pesquise visualmente:
+
+```bash
+python search_visual.py "query principal" "query alternativa" --kind any --external
+```
+
+Valide publicação sem enviar:
+
+```bash
+python publish.py <slug> --platform all --dry-run
+```
+
+Publicação real exige autorização explícita e credenciais válidas:
+
+```bash
+python publish.py <slug> --platform all --live
+```
+
+Use `--help` em cada comando para os argumentos aceitos pela versão atual.
+
+## Estrutura de um episódio
 
 ```text
 episodes/<slug>/
@@ -65,393 +254,147 @@ episodes/<slug>/
 └── assets/
 ```
 
-A pasta `assets/` pode ficar vazia quando todos os assets principais forem remotos e o schema atual permitir.
+### `story.json`
 
-Gere o vídeo:
-
-```bash
-python generate.py <slug>
-```
-
-Prepare capa e metadados:
-
-```bash
-python prepare_post.py <slug>
-```
-
-Revise publicação sem enviar:
-
-```bash
-python publish.py <slug> --platform all --dry-run
-```
-
-Publicação real exige `--live` e credenciais válidas.
-
-## Estrutura principal
-
-```text
-.
-├── assets/
-│   └── audio/
-│       ├── music/catalog.json
-│       └── sfx/catalog.json
-├── config/
-│   ├── config.json
-│   └── style.json
-├── docs/
-│   ├── editorial-direction.md
-│   ├── audio-search.md
-│   └── visual-search.md
-├── engine/
-│   ├── assets.py
-│   ├── audio.py
-│   ├── audio_library.py
-│   ├── captions.py
-│   ├── editorial.py
-│   ├── media_cache.py
-│   ├── models.py
-│   ├── motion.py
-│   ├── music.py
-│   ├── pipeline.py
-│   ├── renderer.py
-│   ├── sfx.py
-│   ├── text_fx.py
-│   ├── timeline.py
-│   ├── tts.py
-│   └── visual_search.py
-├── episodes/
-├── publishing/
-├── templates/
-│   └── editorial-direction-prompt.md
-├── cache/
-├── work/
-├── output/
-├── generate.py
-├── prepare_post.py
-├── search_visual.py
-└── publish.py
-```
-
-`cache/`, `work/` e `output/` são regeneráveis e não devem ser usados como fonte permanente de assets.
-
-## `story.json`
-
-Contém roteiro e metadados narrativos do episódio. A narração é formada pela concatenação dos segmentos na ordem declarada.
-
-Exemplo mínimo:
+Roteiro declarativo. Contém `schema_version`, `title`, `slug`, `target_duration_seconds`, `topic` resolvido, contexto editorial opcional e segmentos ordenados com `id`, `text` e delivery opcional suportado.
 
 ```json
 {
   "schema_version": 1,
-  "title": "MY EYES — Travis Scott",
-  "slug": "my_eyes",
+  "title": "A decisão da Blockbuster",
+  "slug": "blockbuster_netflix",
   "target_duration_seconds": 75,
+  "topic": "Por que a Blockbuster recusou comprar a Netflix",
+  "content_profile": "empresas e tecnologia",
+  "angle": "a decisão e suas consequências",
+  "language": "pt-BR",
+  "entities": ["Blockbuster", "Netflix", "Reed Hastings"],
+  "events": ["proposta de parceria"],
+  "locations": ["Estados Unidos"],
+  "time_period": "2000",
+  "visual_keywords": ["Blockbuster store", "early Netflix website", "DVD rental"],
   "segments": [
     {
       "id": "hook",
-      "text": "Texto da abertura."
+      "text": "A Blockbuster teve a chance de negociar com sua futura rival.",
+      "delivery": "hook"
     }
   ]
 }
 ```
 
-O `slug` deve corresponder ao nome da pasta. IDs de segmento devem ser únicos.
+Campos editoriais opcionais também incluem `category` e `additional_instructions`. Listas de entidades/eventos/locais/keywords contêm strings não vazias. IDs de segmento são únicos e o slug corresponde à pasta.
 
-## `timeline.json`
+### `assets.json`
 
-Define a edição do episódio. No contrato atual, cada segmento recebe seu shot correspondente e pode ser complementado pelas camadas editoriais suportadas.
-
-Principais recursos atuais:
-
-- background music por profile;
-- SFX por `type`;
-- Smart Visual Pacing opcional para ajuste conservador do ritmo entre shots;
-- vídeo com `source_start_seconds` / `source_end_seconds`;
-- motions `push_in`, `pull_out`, `pan_left`, `pan_right`, `hold`;
-- transitions `cut` e `crossfade`;
-- visual FX `slow_zoom_in`, `slow_zoom_out`, `pan_left`, `pan_right`, `pan_up`, `pan_down`, `punch_zoom`;
-- kinetic text `pop_in`, `scale_bounce`, `slide_up`, `fade_pop`;
-- highlights ligados ao shot;
-- overlays animados quando o asset e o schema atual permitirem.
-
-Exemplo simplificado:
+Registra somente mídia final, não candidate pools:
 
 ```json
 {
   "schema_version": 1,
-  "smart_visual_pacing": {
-    "enabled": true
-  },
-  "background_music": {
-    "profile": "profile_existente",
-    "volume": 0.10
-  },
-  "sfx_cues": [
+  "assets": [
     {
-      "time_seconds": 0.25,
-      "type": "type_existente_no_catalogo",
-      "volume": 0.20
+      "id": "blockbuster_store",
+      "file": "blockbuster_store.jpg",
+      "url": "https://host.exemplo/blockbuster-store.jpg",
+      "credit": "Autor",
+      "license": "Licença",
+      "focus": {"x": 0.5, "y": 0.5}
     }
-  ],
-  "visual_fx_cues": [
-    {
-      "start_seconds": 0.10,
-      "end_seconds": 0.55,
-      "type": "punch_zoom",
-      "intensity": 0.55
-    }
-  ],
-  "text_fx_cues": [
-    {
-      "segment": "hook",
-      "offset_seconds": 0.12,
-      "duration_seconds": 1.30,
-      "text": "ISSO MUDOU\nTUDO",
-      "accent_text": "TUDO",
-      "animation": "scale_bounce",
-      "position": "center",
-      "intensity": 0.55
-    }
-  ],
+  ]
+}
+```
+
+### `timeline.json`
+
+Relaciona segmentos a shots e registra apenas capacidades suportadas:
+
+```json
+{
+  "schema_version": 1,
+  "smart_visual_pacing": {"enabled": true},
+  "background_music": {"profile": "profile_existente", "volume": 0.1},
+  "sfx_cues": [],
+  "visual_fx_cues": [],
+  "text_fx_cues": [],
+  "overlay_cues": [],
   "shots": [
     {
       "id": "shot_hook",
       "segment": "hook",
-      "asset": "main_video",
-      "source_start_seconds": 0,
-      "source_end_seconds": 12,
-      "motion": "hold",
+      "asset": "blockbuster_store",
+      "motion": "push_in",
       "transition_out": "cut"
     }
   ]
 }
 ```
 
-`smart_visual_pacing` é opt-in. Quando habilitado, o pipeline analisa a timeline
-inteira antes do render e pode ajustar conservadoramente as fronteiras dos shots,
-sem trocar/reordenar assets, mudar o áudio ou alterar a duração total. Campo
-ausente, `null` ou `{"enabled": false}` preserva exatamente o pacing legado.
+Vídeos podem usar `source_start_seconds`, `source_end_seconds`, `speed` e `freeze_frame` conforme os limites reais. Motions, transitions e efeitos são enums validados; não invente valores.
 
-Nunca invente enums ou campos porque parecem editorialmente úteis. Consulte a `main` antes de usar uma capacidade nova.
+### `sources.txt`
 
-## Vídeo, imagens e cache remoto
+Lista fontes factuais, páginas de origem, créditos/licenças e background externa quando aplicável.
 
-Assets principais são declarados em `assets.json` com ID, arquivo, URL quando remota, crédito, licença e foco quando aplicável.
+### `post.json`
 
-Exemplo:
+Contém `cover` e blocos por plataforma (`youtube`, `instagram`, `tiktok`) conforme o schema atual. Títulos, captions, descriptions, categoria e hashtags são topic-driven. Hashtags ficam nos arrays em minúsculas, sem `#` quando o publisher assim espera e sem repetição na caption.
 
-```json
-{
-  "id": "concert_clip",
-  "file": "concert_clip.webm",
-  "url": "https://host.exemplo/arquivo.webm",
-  "credit": "Autor",
-  "license": "Licença",
-  "focus": {"x": 0.5, "y": 0.5}
-}
-```
+## Render, preflight e publicação
 
-O projeto prioriza arquivos locais quando existem e usa cache para mídia remota quando necessário. URLs remotas precisam ser compatíveis com o downloader e com o tipo de mídia esperado.
+O pipeline resolve TTS, assets remotos, trims, background music e SFX; monta timeline; gera captions; renderiza com FFmpeg; aplica mix/loudness; registra diagnósticos e valida a saída.
 
-Para vídeos, o trecho escolhido precisa ser suficiente para a duração real do shot e para handles de crossfade quando aplicáveis. O renderer não deve usar loop para esconder um trecho insuficiente.
+Antes da queue, o media preflight carrega os JSONs com parsers reais, baixa e valida mídia pelos mesmos caminhos do render, verifica duração/trims e resolve background. HTTP 403/404/429/5xx, payload inválido, imagem ilegível, vídeo inválido, trim insuficiente ou profile sem faixa resolvível impedem a queue até correção.
 
-Na autoria, a ferramenta de Visual Search permite ao GPT seguir o fluxo
-`pesquisar → comparar → inspecionar → ranquear → escolher` com Wikimedia Commons
-(imagens e vídeos) e Openverse Images (imagens). Quando movimento real acrescentar
-valor, procure vídeo antes de aceitar imagem, compare múltiplos candidatos e evite
-arquivos de vídeo praticamente estáticos. Scores de movimento/qualidade são sinais
-técnicos para comparação, não julgamento semântico, e não entram nos JSONs do
-episódio. Consulte [`docs/visual-search.md`](docs/visual-search.md).
+Crie `.publish-queue/<slug>.txt` somente após episódio completo e PASS. Se asset, timeline ou background mudar, rode o preflight novamente.
 
-Essa busca só acontece durante a autoria. O renderer nunca consulta providers de
-busca; ele apenas usa o asset local ou a URL já escolhida em `assets.json`.
-Em um ambiente local/runner, comece com
-`python search_visual.py "consulta principal" "consulta alternativa" --kind any --external`.
+Uma queue ou upload iniciado não é publicação concluída. A automação acompanha jobs/logs/artefatos, aplica retry somente quando seguro e emite estados verificáveis por plataforma conforme [`templates/publishing-completion-rule.md`](templates/publishing-completion-rule.md) e [`docs/publishing-retry.md`](docs/publishing-retry.md).
 
-## Background music: external-first
-
-Background music e SFX seguem políticas diferentes.
-
-Para **background music**, quando houver acesso web na etapa de autoria, a estratégia é:
+## Estrutura principal
 
 ```text
-pesquisa externa -> avaliação editorial/técnica -> profile externo aprovado
-                                      ↓ se não houver opção adequada
-                                 fallback da repo
+assets/                 catálogos e mídia global
+config/                 configuração e estilo
+docs/                   contratos e operação
+engine/                 parsers, TTS, timeline, renderer e busca
+episodes/               episódios declarativos
+publishing/             metadata e publishers
+templates/              regras do agente editorial externo
+cache/, work/, output/  dados regeneráveis
 ```
-
-A busca pode usar Openverse e outras fontes/metadados permitidos conforme [`docs/audio-search.md`](docs/audio-search.md). Serviços como Apple, TikTok, YouTube e Spotify podem servir como referência editorial/metadado; previews comerciais não são fonte automática de arquivo para o renderer.
-
-Quando uma trilha externa é aprovada e a `main` suporta o fluxo, o catálogo de música pode receber um profile dedicado com uma entrada `{file, url}`. `timeline.json` continua apontando somente para o nome do profile.
-
-## SFX: somente biblioteca curada
-
-Para **SFX**, a estratégia é diferente e deliberadamente fechada durante a criação do episódio:
-
-```text
-assets/audio/sfx/catalog.json -> escolher type existente -> timeline -> cache/render
-```
-
-Regras:
-
-- `assets/audio/sfx/catalog.json` é a fonte de verdade;
-- o agente usa somente `type` que já exista no catálogo no início da execução;
-- não pesquisa novos SFX na web durante a criação do episódio;
-- não cria novos `type` por episódio;
-- não substitui um SFX curado por outro externo por preferência;
-- `timeline.json` referencia somente o `type`, nunca uma URL;
-- o catálogo pode conter arquivos locais ou entradas remotas `{file, url}`;
-- quando uma entrada remota é usada, o engine baixa para cache e valida o áudio.
-
-A biblioteca curada pode usar URLs diretas de mídia. O render não precisa abrir página HTML de catálogo para descobrir o arquivo quando a entrada já contém URL direta.
-
-SFX devem acompanhar eventos editoriais reais. Em cada shot, avalie se hook, corte, transição, punch zoom, kinetic text, highlight, overlay, reveal, estatística, mudança de assunto, reação, virada ou payoff merecem reforço sonoro.
-
-Não existe regra de `1 SFX por shot` nem quantidade mínima rígida. Também não se deve economizar por hábito: se um beat importante fica melhor com um SFX adequado, prefira usar. O warning acima de 25 é alerta de excesso, não meta.
-
-Types com prefixo `meme_br_` são intervenções completas: quando a regra atual do engine se aplicar, devem tocar integralmente, sem trim editorial do conteúdo falado.
-
-## Visual FX, kinetic text, highlights e overlays
-
-Essas camadas são ferramentas editoriais, não decoração automática.
-
-- **Visual FX:** marque hierarquia e impacto. `punch_zoom` é reservado para momentos fortes; zooms e pans lentos podem sustentar construção/contexto.
-- **Kinetic text:** não duplica legenda. Use para hook, contraste, palavra-chave, nome ou estatística curta.
-- **Highlight:** reforço curto ligado ao shot; escolha entre highlight e text FX quando ambos diriam exatamente a mesma coisa.
-- **Overlay:** acrescenta contexto visual concreto; não use imagem aleatória apenas para aumentar densidade.
-- **Motion:** não deixe `hold` por hábito, mas também não adicione movimento artificial a um vídeo que já está visualmente forte.
-- **Transition:** escolha `cut` ou `crossfade` conscientemente conforme energia, continuidade e emoção.
-
-Respeite os limites atuais do renderer, inclusive o limite de visual FX por shot quando aplicável.
-
-## Áudio final
-
-O pipeline resolve narração/TTS, background music e SFX, aplica o mix configurado e executa a normalização final de loudness no renderer. Voz deve permanecer dominante; música e SFX reforçam a edição sem prejudicar inteligibilidade.
-
-Caches de áudio ficam separados por finalidade e podem ser apagados; serão reconstruídos quando necessários.
-
-## `sources.txt`
-
-Registre as fontes factuais realmente usadas, páginas de origem dos visuais, créditos/licenças e a fonte de background music externa quando aplicável.
-
-SFX já curados no catálogo não exigem nova pesquisa externa por episódio.
-
-## `post.json` e publicação pública
-
-`post.json` contém capa e metadados por plataforma. Episódios produzidos pela automação são destinados ao **público geral**.
-
-Quando o schema/publisher atual permitir, use:
-
-```json
-{
-  "schema_version": 1,
-  "cover": {
-    "headline": "O BEAT MUDA TUDO",
-    "source": {"type": "asset", "asset_id": "main_image"}
-  },
-  "youtube": {
-    "title": "Título do Short",
-    "description": "Descrição curta e fiel ao vídeo.",
-    "hashtags": ["Musica", "Shorts"],
-    "privacy_status": "public",
-    "category_id": "10"
-  },
-  "instagram": {
-    "caption": "Legenda para Reels.",
-    "hashtags": ["Musica", "Reels"],
-    "share_to_feed": true,
-    "thumb_offset_ms": 1000
-  },
-  "tiktok": {
-    "caption": "Legenda para TikTok.",
-    "hashtags": ["Musica"],
-    "privacy_level": "PUBLIC_TO_EVERYONE",
-    "video_cover_timestamp_ms": 1000,
-    "disable_comment": false,
-    "disable_duet": false,
-    "disable_stitch": false,
-    "brand_content_toggle": false,
-    "brand_organic_toggle": false,
-    "is_aigc": false
-  }
-}
-```
-
-YouTube aceita `private`, `unlisted` e `public` no schema atual, mas a automação editorial deve configurar `public` para episódios destinados ao público geral.
-
-TikTok aceita os níveis definidos pelo publisher atual, incluindo `PUBLIC_TO_EVERYONE`; a automação deve solicitar publicação pública quando isso for suportado pela conta/app. Limitações impostas pela própria plataforma, auditoria ou autorização da conta continuam sendo tratadas pelo publisher e não devem ser mascaradas como sucesso.
-
-Salve hashtags sem `#`; o payload final acrescenta o caractere quando necessário. Quantidades recomendadas podem gerar warnings editoriais sem se tornarem hard errors quando o publisher não exige isso.
-
-## Queue e automação
-
-O episódio deve estar completo e validado antes de criar:
-
-```text
-.publish-queue/<slug>.txt
-```
-
-A queue é criada por último. A automação não deve executar `publish.py` diretamente nem recriar queue automaticamente quando houver risco de publicação duplicada.
-
-Durante criação normal de episódio, o agente não deve alterar `engine/`, `publishing/`, `config/`, `style.json`, `.github/`, episódios anteriores, queues existentes ou `assets/audio/sfx/catalog.json`.
 
 ## Credenciais
 
-Copie `.env.example` para `.env` e configure somente as integrações utilizadas. `.env` permanece fora do Git.
+Copie `.env.example` para `.env` se esse arquivo existir na versão atual e configure somente integrações utilizadas. `.env` não deve entrar no Git. Sem autorização válida, publicação live deve falhar claramente ou terminar como não verificada/bloqueada — nunca como sucesso simulado.
 
-Exemplos de grupos de credenciais:
-
-```text
-YOUTUBE_CLIENT_ID=
-YOUTUBE_CLIENT_SECRET=
-YOUTUBE_ACCESS_TOKEN=
-YOUTUBE_REFRESH_TOKEN=
-
-TIKTOK_CLIENT_KEY=
-TIKTOK_CLIENT_SECRET=
-TIKTOK_ACCESS_TOKEN=
-TIKTOK_REFRESH_TOKEN=
-
-META_APP_ID=
-META_APP_SECRET=
-INSTAGRAM_ACCESS_TOKEN=
-INSTAGRAM_ACCOUNT_ID=
-```
-
-O projeto não simula sucesso. Sem autorização válida, uma publicação live deve falhar de forma explícita ou ser reportada como não verificada/bloqueada conforme o fluxo que a chamou.
-
-## Validação
-
-O pipeline valida, entre outros pontos:
-
-- schema/versionamento dos JSONs;
-- slug e estrutura do episódio;
-- relação entre segmentos e shots;
-- assets e mídia remota;
-- motions/transitions;
-- trims de vídeo;
-- profiles de música e types de SFX;
-- trims de SFX;
-- visual FX, text FX, highlights e overlays;
-- duração/timings;
-- compatibilidade com FFmpeg/ffprobe;
-- conflitos editoriais que são hard errors no renderer.
-
-Warnings de densidade/repetição devem provocar revisão editorial, mas não devem ser transformados em hard errors sem suporte do código.
-
-## Testes
-
-Execute a suíte:
+## Validação e testes
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-## Documentação especializada
+O pipeline valida schema, slug, segmentos/shots, assets, mídia remota, enums, trims, timings, áudio e compatibilidade com FFmpeg/ffprobe. Warnings editoriais pedem revisão, mas não viram hard errors sem suporte no código.
 
-- [`docs/editorial-direction.md`](docs/editorial-direction.md): contrato de direção/Editor Mode.
-- [`templates/editorial-direction-prompt.md`](templates/editorial-direction-prompt.md): prompt usado como referência operacional.
-- [`docs/audio-search.md`](docs/audio-search.md): política de busca externa para background music e política fechada de SFX.
-- [`docs/visual-search.md`](docs/visual-search.md): busca, inspeção e seleção técnica de imagens/vídeos durante a autoria.
+## Limitações atuais
 
-Quando qualquer texto acima divergir do código atual, **a `main` continua sendo a fonte da verdade**.
+- A seleção automática do Profile Mode acontece no agente editorial externo; o renderer não escolhe pauta.
+- A CLI standalone exige `topic` já resolvido; Profile Mode puro depende de um `TopicSelector` injetado pela automação.
+- Disponibilidade, direitos e qualidade de mídia dependem das fontes e providers acessíveis.
+- Best Segment e Smart Pacing são melhorias conservadoras, não substitutos para boa autoria.
+- Publicação depende de credenciais, permissões, quotas, revisão de app e APIs das plataformas.
+- A engine aceita somente campos/enums implementados na `main`; documentação e prompts não criam capacidade runtime.
+- Música permanece suportada como tema e como camada técnica de background, sem ser requisito estrutural.
+
+## Documentação
+
+- [`templates/content-topic-rule.md`](templates/content-topic-rule.md): seleção Topic/Profile.
+- [`templates/editorial-direction-prompt.md`](templates/editorial-direction-prompt.md): prompt operacional completo.
+- [`templates/short-form-style-rule.md`](templates/short-form-style-rule.md): retenção, pacing e preflights.
+- [`docs/editorial-direction.md`](docs/editorial-direction.md): contrato de direção.
+- [`docs/narration-delivery.md`](docs/narration-delivery.md): roteiro e delivery.
+- [`docs/visual-search.md`](docs/visual-search.md): descoberta, ranking e inspeção.
+- [`docs/visual-uniqueness.md`](docs/visual-uniqueness.md): imagens únicas e até três trims por vídeo.
+- [`docs/audio-search.md`](docs/audio-search.md): background music e SFX.
+- [`docs/publishing-retry.md`](docs/publishing-retry.md): retries seguros.
+
+Quando qualquer texto divergir do código atual, a `main` continua sendo a fonte de verdade.

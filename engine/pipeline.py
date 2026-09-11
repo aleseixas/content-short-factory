@@ -73,7 +73,7 @@ async def build_video(project_root: Path, episode_name: str) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 64)
-    print(f"MUSIC SHORT FACTORY | {episode.story.title}")
+    print(f"CONTENT SHORT FACTORY | {episode.story.title}")
     print("=" * 64)
     has_video_assets = any(
         episode.assets[shot.asset_id].is_video

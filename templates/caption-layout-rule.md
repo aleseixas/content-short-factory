@@ -15,7 +15,7 @@ Quando houver risco de conflito visual, faça nesta ordem:
 
 ## Zonas preferenciais
 
-- metade superior: artista, rosto, objeto ou ação principal do shot;
+- metade superior: entidade, rosto, objeto ou ação principal do shot;
 - centro: `text_fx` editorial curto, quando realmente necessário;
 - meio-baixo: legenda falada;
 - rodapé e bordas: evite depender deles por causa da interface das plataformas.
@@ -42,7 +42,7 @@ Nos campos públicos de `post.json`, mantenha o texto da legenda/descrição sep
 - As hashtags devem existir SOMENTE no array `hashtags` da respectiva plataforma, porque o publisher já adiciona esse array ao texto final da publicação.
 - Nunca copie o mesmo bloco de hashtags para dentro da caption/description e também para `hashtags`; isso gera repetição no post publicado.
 - Cada hashtag deve aparecer no máximo uma vez por plataforma, considerando comparação sem diferença entre maiúsculas e minúsculas.
-- TODAS as hashtags devem ser salvas em letras minúsculas. Nunca use CamelCase, iniciais maiúsculas ou capitalização de nomes próprios. Exemplos corretos: `jotaquest`, `timmaia`, `musicabrasileira`, `rockinrio`, `curiosidade`.
+- TODAS as hashtags devem ser salvas em letras minúsculas. Nunca use CamelCase, iniciais maiúsculas ou capitalização de nomes próprios. Exemplos corretos: `blockbuster`, `netflix`, `negocios`, `tecnologia`, `curiosidade`.
 - Antes do commit/queue, faça uma checagem final do texto renderizado: deve existir apenas UM bloco de hashtags no final e nenhuma hashtag pode estar repetida.
 
 Exemplo ERRADO:

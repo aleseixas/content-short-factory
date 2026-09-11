@@ -352,7 +352,7 @@ def _resolve_myinstants_via_api(page_url: str, label: str) -> str:
             MYINSTANTS_API_URL,
             params={"id": instant_id},
             headers={
-                "User-Agent": "MusicShortFactory/8.2 (curated-sfx-catalog)",
+                "User-Agent": "ContentShortFactory/8.2 (curated-sfx-catalog)",
                 "Accept": "application/json",
             },
             timeout=MYINSTANTS_PAGE_TIMEOUT_SECONDS,

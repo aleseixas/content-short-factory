@@ -1,4 +1,4 @@
-"""Motor reutilizavel do Music Short Factory."""
+"""Motor reutilizavel do Content Short Factory."""
 
 
 async def build_video(*args, **kwargs):

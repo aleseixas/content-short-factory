@@ -2,7 +2,12 @@ from pathlib import Path
 import sys
 
 from engine.cli import main
-from engine.duplicates import find_duplicate_candidate, format_duplicate, infer_identity_from_story
+from engine.duplicates import (
+    find_duplicate_candidate,
+    format_duplicate,
+    infer_identity_from_story,
+    infer_topic_from_story,
+)
 
 
 def _guard_duplicate_episode(project_root: Path, argv: list[str]) -> int | None:
@@ -14,9 +19,11 @@ def _guard_duplicate_episode(project_root: Path, argv: list[str]) -> int | None:
     if not story_path.is_file():
         return None
 
+    topic = infer_topic_from_story(story_path)
     song, artist = infer_identity_from_story(story_path)
     match = find_duplicate_candidate(
         project_root,
+        topic=topic,
         song=song,
         artist=artist,
         slug=episode,
@@ -27,7 +34,7 @@ def _guard_duplicate_episode(project_root: Path, argv: list[str]) -> int | None:
 
     print(f"ERRO: {format_duplicate(match)}", file=sys.stderr)
     print(
-        "Esta candidata e duplicada. Descarte somente esta musica e avance para a proxima candidata do pool; nao trate como SEM_CANDIDATO global.",
+        "Esta candidata e duplicada. Descarte somente este topico e avance para a proxima candidata; nao trate como SEM_CANDIDATO global.",
         file=sys.stderr,
     )
     return 2

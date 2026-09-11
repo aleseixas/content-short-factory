@@ -16,7 +16,7 @@ Não existe regra proibindo exagero de estilo TikTok. O limite é factual: pode 
 
 ## Hook e progressão
 
-A primeira frase deve abrir com música + artista e uma premissa forte, estranha, chocante, contraditória ou surpreendente.
+A primeira frase deve identificar rapidamente o tópico ou a entidade principal e abrir uma premissa forte, estranha, chocante, contraditória ou surpreendente.
 
 Prefira transformar fatos em viradas narrativas. Em vez de listar informações, construa sequências como:
 
@@ -44,9 +44,9 @@ Para um episódio típico de 18–24 takes, monte um pool amplo de aproximadamen
 
 Priorize vídeo com movimento real. Como direção padrão, tente terminar com aproximadamente **60–80% dos takes em vídeo** e **20–40% em imagens**, mas ajuste conforme a qualidade real do material.
 
-Nunca reutilize a mesma imagem ou o mesmo vídeo-fonte em dois takes diferentes.
+Nunca reutilize a mesma imagem ou o mesmo trecho de vídeo. Uma fonte pode atender normalmente até 3 takes com intervalos distintos, seguros e não sobrepostos.
 
-Se houver 20 takes finais, um bom alvo editorial é algo próximo de **12–16 vídeos + 4–8 imagens**, sempre escolhidos de um pool muito maior.
+Se houver 20 takes finais, um bom alvo editorial é algo próximo de **12–16 vídeos + 4–8 imagens**, sempre escolhidos de um pool muito maior. Em slots visualmente ricos, amplie a busca para até 8 candidatos úteis de fontes distintas.
 
 ## Critério de qualidade
 

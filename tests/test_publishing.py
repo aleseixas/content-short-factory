@@ -21,6 +21,8 @@ from publishing.cover import generate_cover
 from publishing.credentials import CredentialStore
 from publishing.instagram import CloudinaryVideoHost, InstagramPublisher
 from publishing.metadata import (
+    DEFAULT_YOUTUBE_CATEGORY_ID,
+    build_post_defaults,
     create_post_template,
     load_post,
     normalize_post,
@@ -333,6 +335,42 @@ class ErrorResponse:
 
 
 class MetadataTests(unittest.TestCase):
+    def test_generic_post_defaults_do_not_assume_music(self):
+        defaults = build_post_defaults(
+            {
+                "title": "Por que a Blockbuster recusou comprar a Netflix",
+                "segments": [
+                    {
+                        "id": "hook",
+                        "text": "A Blockbuster teve a chance de comprar sua futura rival.",
+                    }
+                ],
+            },
+            "main_image",
+        )
+
+        self.assertEqual(
+            defaults["youtube"]["category_id"], DEFAULT_YOUTUBE_CATEGORY_ID
+        )
+        self.assertEqual(defaults["youtube"]["hashtags"], ["shorts"])
+        self.assertEqual(defaults["instagram"]["hashtags"], ["reels"])
+        self.assertNotIn("musica", str(defaults).casefold())
+
+    def test_empty_story_uses_neutral_metadata_fallbacks(self):
+        defaults = build_post_defaults(
+            {"topic": None, "title": None}, "main_image"
+        )
+
+        self.assertEqual(defaults["youtube"]["title"], "Novo video curto")
+        self.assertEqual(defaults["cover"]["headline"], "NOVO VIDEO CURTO")
+
+    def test_canonical_topic_can_drive_metadata_without_music_fields(self):
+        topic = "Como a BlackBerry perdeu o mercado de smartphones"
+        defaults = build_post_defaults({"topic": topic}, "main_image")
+
+        self.assertEqual(defaults["youtube"]["title"], topic)
+        self.assertIn(topic, defaults["youtube"]["description"])
+
     def test_normalize_load_and_validate_post(self):
         data = valid_post()
         data["youtube"]["hashtags"] = [" #Musica ", "musica", " Shorts "]

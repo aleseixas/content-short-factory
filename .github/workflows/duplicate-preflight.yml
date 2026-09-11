@@ -1,4 +1,4 @@
-name: Duplicate candidate preflight
+name: Content candidate duplicate preflight
 
 on:
   push:
@@ -54,16 +54,44 @@ jobs:
           request_file = Path(sys.argv[1])
           output_file = Path(sys.argv[2])
           data = json.loads(request_file.read_text(encoding="utf-8"))
-          song = str(data.get("song", "")).strip()
-          artist = str(data.get("artist", "")).strip()
-          slug = str(data.get("slug", "")).strip()
 
-          if not song or not artist or not slug:
-              raise SystemExit("request precisa conter song, artist e slug nao vazios")
+          def optional_text(field):
+              value = data.get(field)
+              if value is None:
+                  return ""
+              if not isinstance(value, str):
+                  raise SystemExit(f"{field} precisa ser texto ou null")
+              return value.strip()
+
+          topic = optional_text("topic")
+          content_profile = optional_text("content_profile")
+          # Backward compatibility for requests created by the original music
+          # workflow. New requests must use topic directly.
+          song = optional_text("song")
+          artist = optional_text("artist")
+          if not topic and song and artist:
+              topic = f"{artist} — {song}"
+          slug = optional_text("slug")
+
+          if not topic:
+              if content_profile:
+                  raise SystemExit(
+                      "Profile Mode precisa selecionar o topic final antes do duplicate preflight"
+                  )
+              raise SystemExit("request precisa conter topic nao vazio")
+          if not slug:
+              raise SystemExit("request precisa conter slug nao vazio derivado do topic final")
+          if any(
+              "\n" in value or "\r" in value
+              for value in (topic, content_profile, song, artist)
+          ):
+              raise SystemExit("campos textuais precisam ocupar uma unica linha")
           if not re.fullmatch(r"[a-z0-9]+([_-][a-z0-9]+)*", slug):
               raise SystemExit("slug invalido")
 
           with output_file.open("a", encoding="utf-8") as handle:
+              handle.write(f"topic={topic}\n")
+              handle.write(f"content_profile={content_profile}\n")
               handle.write(f"song={song}\n")
               handle.write(f"artist={artist}\n")
               handle.write(f"slug={slug}\n")
@@ -237,12 +265,13 @@ jobs:
         if: ${{ steps.execution_guard.outputs.result == 'OPEN' }}
         shell: bash
         env:
+          TOPIC: ${{ steps.request.outputs.topic }}
           SONG: ${{ steps.request.outputs.song }}
           ARTIST: ${{ steps.request.outputs.artist }}
           SLUG: ${{ steps.request.outputs.slug }}
         run: |
           set +e
-          output="$(python check_duplicate.py --song "$SONG" --artist "$ARTIST" --slug "$SLUG" 2>&1)"
+          output="$(python check_duplicate.py --topic "$TOPIC" --slug "$SLUG" --song "$SONG" --artist "$ARTIST" 2>&1)"
           status=$?
           set -e
 
@@ -274,8 +303,10 @@ jobs:
           CONTINUITY_SLUGS: ${{ steps.execution_guard.outputs.continuity_slugs }}
           CANDIDATE_ATTEMPTS: ${{ steps.execution_guard.outputs.candidate_attempts }}
           CANDIDATE_LIMIT: ${{ steps.execution_guard.outputs.candidate_limit }}
-          SONG: ${{ steps.request.outputs.song }}
-          ARTIST: ${{ steps.request.outputs.artist }}
+          TOPIC: ${{ steps.request.outputs.topic }}
+          CONTENT_PROFILE: ${{ steps.request.outputs.content_profile }}
+          LEGACY_SONG: ${{ steps.request.outputs.song }}
+          LEGACY_ARTIST: ${{ steps.request.outputs.artist }}
           SLUG: ${{ steps.request.outputs.slug }}
         run: |
           result="$GUARD_RESULT"
@@ -283,13 +314,16 @@ jobs:
             result="$DUPLICATE_RESULT"
           fi
           {
-            echo "## Duplicate candidate preflight"
+            echo "## Content candidate duplicate preflight"
             echo
             echo "- Result: ${result:-INFRA_FAILURE}"
             echo "- Latest publish queue boundary: ${LATEST_QUEUE_COMMIT:-NONE}"
             echo "- Candidate attempts: ${CANDIDATE_ATTEMPTS:-N/A}/${CANDIDATE_LIMIT:-15}"
-            echo "- Requested song: $SONG"
-            echo "- Requested artist: $ARTIST"
+            echo "- Final topic: $TOPIC"
+            echo "- Content profile: ${CONTENT_PROFILE:-N/A}"
+            if [[ -n "$LEGACY_SONG" || -n "$LEGACY_ARTIST" ]]; then
+              echo "- Legacy compatibility identity: ${LEGACY_ARTIST:-N/A} — ${LEGACY_SONG:-N/A}"
+            fi
             echo "- Requested slug: $SLUG"
             echo "- Resume slug: ${RESUME_SLUG:-N/A}"
             echo "- Continuity slugs: ${CONTINUITY_SLUGS:-N/A}"

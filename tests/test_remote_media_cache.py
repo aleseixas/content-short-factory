@@ -76,8 +76,8 @@ class RemoteMediaCacheTests(unittest.TestCase):
             self.assertTrue(response.closed)
             get.assert_called_once()
             user_agent = get.call_args.kwargs["headers"]["User-Agent"]
-            self.assertIn("MusicShortFactory/", user_agent)
-            self.assertIn("github.com/aleseixas/music-short-factory", user_agent)
+            self.assertIn("ContentShortFactory/", user_agent)
+            self.assertIn("github.com/aleseixas/content-short-factory", user_agent)
 
     def test_http_429_retry_after_is_respected_and_retry_succeeds(self):
         responses = (

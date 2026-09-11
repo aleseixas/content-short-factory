@@ -1,6 +1,6 @@
 # Narração com delivery por segmento
 
-O Music Short Factory suporta direção de voz por segmento em `story.json`.
+O Content Short Factory suporta direção de voz por segmento em `story.json`.
 
 A intenção editorial é permitir que o GPT/agente trate a narração como parte da edição: hook, contexto, emoção, tensão, reveal e payoff podem receber entregas diferentes quando isso melhora o vídeo.
 
@@ -52,88 +52,51 @@ Não alterne deliveries apenas para criar variedade. Uma sequência pode permane
 
 ## Seleção da história — escolha o assunto antes de tentar salvar o roteiro
 
-Uma música famosa não é automaticamente uma boa candidata a episódio. Antes de aprofundar roteiro, assets ou edição, procure **qual é a história forte daquela música** e compare a força desse ângulo com as outras candidatas disponíveis.
+No Topic Mode, preserve o núcleo do tema e encontre seu recorte mais forte. No Profile Mode, compare candidatas dentro do `content_profile` antes de aprofundar roteiro, assets ou edição. Reconhecimento da entidade não substitui narrativa.
 
-Não escolha uma música só porque ela é popular e depois tente transformar fatos fracos em narrativa. Quando houver várias candidatas viáveis, favoreça a que tiver uma história mais clara, humana, surpreendente, visualizável e com consequência real.
+### Arquétipos de prioridade alta
 
-### Archetypes de história com prioridade alta
-
-Procure especialmente por histórias que contenham um ou mais destes motores narrativos:
-
-- **quase não aconteceu:** música quase descartada, recusada, perdida, não lançada, retirada do álbum ou salva no último momento;
-- **decisão pequena que mudou tudo:** troca de uma palavra, refrão, arranjo, sample, instrumento, produtor, colaborador, velocidade, estrutura ou performance que alterou radicalmente o resultado;
-- **segredo ou detalhe escondido:** vocal, sample, pessoa, ruído, mensagem, referência, gravação, crédito, easter egg ou detalhe que a maioria do público não percebe;
-- **significado inesperado:** letra, título ou conceito que parece falar de uma coisa mas tem origem, alvo ou contexto diferente;
-- **mito vs. realidade:** uma interpretação popular ou história repetida sobre a música que muda quando as fontes primárias/secundárias confiáveis são examinadas;
-- **conflito humano:** artista vs. gravadora, produtor, colaborador, ex-parceiro, família, imprensa, público ou outro personagem relevante;
-- **personagem inesperado:** alguém pouco associado à música entra na história e muda seu rumo — músico de sessão, produtor, compositor, executivo, fã, diretor, parceiro, técnico, amigo etc.;
-- **transformação:** demo muito diferente → versão final, música pequena → fenômeno, faixa rejeitada → hit, artista desconhecido → virada de carreira;
-- **colaboração improvável:** encontro de universos, artistas ou produtores que parecia pouco provável e produziu um resultado marcante;
-- **consequência grande a partir de um evento específico:** uma escolha, apresentação, ligação, vazamento, entrevista, acidente, rejeição ou oportunidade que desencadeou algo muito maior;
-- **objeto/pista concreta:** fita, carta, mensagem, demo, instrumento, arquivo, contrato, gravação, áudio, foto ou outro elemento físico/digital que permita contar a história por evidências;
-- **origem pessoal forte:** experiência real, relacionamento, perda, medo, fama, pressão, rejeição, família ou acontecimento que esteja diretamente ligado à composição e seja sustentado por fonte confiável.
-
-Esses archetypes não são uma checklist nem garantia automática de bom episódio. A prioridade continua sendo a **força específica da história encontrada**.
+- **quase não aconteceu:** produto, evento, obra, decisão ou descoberta quase cancelada, perdida ou recusada;
+- **decisão e consequência:** escolha concreta que produz resultado mensurável ou inesperado;
+- **erro/falha:** detalhe técnico, estratégico ou humano com efeito relevante;
+- **mito vs. realidade:** crença popular que muda diante de fontes confiáveis;
+- **conflito humano ou institucional:** interesses opostos que movem a história;
+- **personagem inesperado:** alguém pouco associado ao tópico altera seu rumo;
+- **transformação:** pequeno para enorme, rejeitado para dominante, estável para colapso;
+- **conexão improvável:** universos distantes se encontram com consequência clara;
+- **escala concreta:** custo, alcance, tempo ou impacto traduzível para primeira escuta.
 
 ### Histórias de prioridade média
 
-Podem funcionar muito bem quando houver consequência, personagem ou detalhe memorável:
-
-- bastidor técnico de produção;
-- origem da composição;
-- mudança de arranjo ou gravação;
-- colaboração;
-- performance importante;
-- contexto cultural;
-- sample/interpolação;
-- estratégia de lançamento;
-- recepção inicial muito diferente do resultado posterior.
-
-Um bastidor técnico só deve ganhar prioridade se puder ser explicado de forma simples e se mudar a maneira como o público entende ou ouve a música.
+Origem de produto, processo criativo, bastidor técnico, recorde, coincidência e curiosidade histórica podem funcionar quando mudam de verdade a compreensão do assunto e têm payoff. Não os escolha apenas porque são fáceis de pesquisar.
 
 ### Sinais de história fraca
 
-Rebaixe candidatas cuja pesquisa produz principalmente:
+Rebaixe candidatas sustentadas principalmente por:
 
-- data de lançamento;
-- posição em charts;
-- número de streams;
-- certificações;
-- lista de prêmios;
-- descrição genérica do gênero/álbum;
-- sequência de fatos cronológicos sem conflito, surpresa, decisão ou consequência;
-- curiosidades que poderiam ser trocadas por qualquer outra música sem mudar muito o vídeo.
+- fama ou tendência sem acontecimento específico;
+- cronologia, ranking, datas ou prêmios sem tensão;
+- descrição genérica ou definição enciclopédica;
+- rumor não confirmado;
+- curiosidades intercambiáveis;
+- consequência pequena ou payoff ausente;
+- pouca documentação ou baixa capacidade visual.
 
-**“Foi lançada em X, chegou a Y e ganhou Z” não é história suficiente por si só.** Esses dados podem reforçar uma narrativa forte, mas não devem ser o coração do episódio.
-
-Se depois de pesquisa real a melhor história continuar fraca, descarte essa candidata e avance. Não force episódio só porque a música é famosa.
+Se a melhor história continuar fraca depois de pesquisa real, descarte a candidata no Profile Mode. Não force episódio para preencher calendário.
 
 ### Pesquisa para descobrir o melhor ângulo
 
-Não pesquise apenas `história da música` ou `significado da letra`. Expanda a investigação conforme a candidata:
+Não pesquise apenas `história de <tema>`. Procure entrevistas, documentos, fontes primárias, cobertura contemporânea, cronologias confiáveis, especialistas, decisões, conflitos, falhas, consequências e evidências visuais.
 
-- entrevistas do artista, compositor, produtor e colaboradores;
-- making of, track-by-track e comentários de estúdio;
-- créditos oficiais e bancos de composição quando relevantes;
-- demos, versões iniciais, remixes e performances antigas;
-- samples, interpolações e músicos de sessão;
-- matérias da época e entrevistas posteriores olhando para trás;
-- controvérsias, recusas, mudanças de gravadora/álbum, conflitos e decisões de lançamento;
-- videoclipes, diretores, objetos ou cenas citadas na história;
-- relatos de fãs/Reddit como **pistas para investigação**, nunca como confirmação factual isolada;
-- falas públicas do fandom que ajudem a descobrir perguntas recorrentes, mitos ou detalhes pouco conhecidos.
-
-Quando uma pista parecer forte, procure confirmação em fonte melhor antes de transformá-la em afirmação no roteiro.
+Fóruns, redes e relatos pessoais servem como pistas, não confirmação isolada. Datas, números, acusações, controvérsias e causalidade exigem verificação proporcional ao risco. Não transforme incerteza em afirmação absoluta.
 
 ### Critério de escolha entre candidatas
 
-Antes de decidir definitivamente pela música, faça uma comparação mental simples:
+Compare mentalmente:
 
-`FORÇA DO HOOK | HISTÓRIA HUMANA | SURPRESA | PROGRESSÃO | EVIDÊNCIA | CONSEQUÊNCIA | PAYOFF | POTENCIAL VISUAL`
+`hook + progressão + payoff + força humana + consequência + visualidade + fontes + clareza + novidade histórica`.
 
-Não persista esse score como campo novo. Ele serve apenas para evitar que fama da música substitua qualidade narrativa.
-
-Entre duas músicas com popularidade semelhante, prefira a que tiver melhor história. Entre uma música gigantesca com história fraca e uma música ainda reconhecível com história excepcional, a segunda pode ser a melhor candidata editorial.
+Não persista esse score como campo novo. Entre um tópico reconhecível com história fraca e outro adequado ao profile com história excepcional e documentada, o segundo pode vencer. Consulte o histórico para evitar a mesma história/payoff reescritos e para variar subtemas dinamicamente.
 
 ## Retenção aplicada ao roteiro curto
 
@@ -192,7 +155,7 @@ Depois do payoff, encerre rápido. Evite recapitulação longa, “e é isso”,
 
 Quando o histórico recente estiver acessível, confira aproximadamente os últimos 10 episódios e evite repetir em sequência o mesmo molde de abertura ou de progressão. Varie naturalmente entre conflito, origem, bastidor, mito vs. realidade, consequência, pergunta, objeto/pista, citação, comparação, cronologia, revelação etc.
 
-Não varie por obrigação se um formato continuar sendo claramente o melhor. O objetivo é evitar que o canal pareça um template que apenas troca artista e música.
+Não varie por obrigação se um formato continuar sendo claramente o melhor. O objetivo é evitar que o canal pareça um template que apenas troca tópico e nomes.
 
 ## Como o engine traduz a intenção
 
@@ -227,23 +190,18 @@ A feature foi projetada para preservar episódios antigos: segmentos sem `delive
 
 Providers que não suportarem tradução de delivery podem usar seus controles neutros conforme o comportamento atual do engine. A autoria não deve inventar capacidades específicas do provider.
 
-## Regra para o GPT agendado
+## Regra para o agente editorial externo
 
-Ao criar um episódio novo:
-
-1. antes de aprofundar uma candidata, descubra e compare a força real da história dela; fama da música não substitui narrativa;
-2. procure primeiro archetypes fortes como quase-não-aconteceu, decisão que mudou tudo, segredo/detalhe escondido, significado inesperado, mito vs. realidade, conflito humano, personagem inesperado, transformação ou consequência marcante;
-3. descarte candidatas cuja melhor história continue sendo apenas lançamento/charts/prêmios depois de pesquisa real;
-4. escreva um roteiro natural e factual somente depois que a candidata tiver um ângulo forte;
-5. gere mentalmente múltiplos hooks, escolha o melhor e alinhe hook, promessa e payoff;
-6. identifique a função narrativa de cada segmento e elimine preparação repetitiva ou sem entrega;
-7. distribua progressão, micro-payoffs e re-engagements de conteúdo ao longo do roteiro;
-8. faça uma auditoria de retenção segmento por segmento, perguntando por que o espectador continuaria;
-9. escolha `delivery` somente entre os valores reais da `main`;
-10. use mudanças de delivery quando elas reforçarem a curva narrativa;
-11. preserve contraste entre momentos fortes e momentos neutros;
-12. coordene voz, asset, motion, text FX, SFX e música quando fizerem parte do mesmo beat;
-13. encerre logo após um payoff forte, sem recapitulação ou despedida longa;
-14. deixe o pipeline determinar a duração e os timings reais.
-
-A voz deve ajudar retenção e emoção sem virar caricatura ou competir com clareza.
+1. aplicar a prioridade `topic > content_profile`;
+2. no Profile Mode, comparar pautas e histórico antes de aprofundar uma candidata;
+3. pesquisar o melhor recorte, sem usar reconhecimento como substituto de narrativa;
+4. descartar histórias fracas, genéricas ou insuficientemente verificáveis;
+5. escrever somente depois de confirmar hook, progressão, consequência e payoff;
+6. escolher delivery por segmento usando apenas o vocabulário real;
+7. gerar TTS e usar duração/timestamps reais;
+8. reescrever trechos que soem lidos, burocráticos ou enciclopédicos;
+9. preservar o grau correto de certeza;
+10. variar abertura, progressão e re-engagement entre episódios;
+11. coordenar voz, asset, motion, text FX, SFX e background music quando reforçarem o mesmo beat;
+12. manter o payoff antes do CTA contextual quando configurado;
+13. revalidar timeline sempre que texto ou delivery mudar.

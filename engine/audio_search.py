@@ -32,8 +32,8 @@ OPENVERSE_AUDIO_ENDPOINT = "https://api.openverse.org/v1/audio/"
 APPLE_MUSIC_SEARCH_ENDPOINT = "https://itunes.apple.com/search"
 SEARCH_HEADERS = {
     "User-Agent": (
-        "MusicShortFactory/8.1 "
-        "(+https://github.com/aleseixas/music-short-factory; editorial-audio-search)"
+        "ContentShortFactory/8.1 "
+        "(+https://github.com/aleseixas/content-short-factory; editorial-audio-search)"
     ),
     "Accept": "application/json",
 }

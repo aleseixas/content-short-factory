@@ -11,6 +11,7 @@ from typing import Any, Mapping
 
 SCHEMA_VERSION = 1
 PLATFORMS = ("youtube", "instagram", "tiktok")
+DEFAULT_YOUTUBE_CATEGORY_ID = "22"
 HASHTAG_RECOMMENDATIONS = {"youtube": 5, "instagram": 8, "tiktok": 5}
 PLATFORM_TEXT_LIMITS = {"youtube": 5000, "instagram": 2200, "tiktok": 2200}
 YOUTUBE_TITLE_LIMIT = 100
@@ -120,7 +121,7 @@ def validate_post(
             f"youtube.privacy_status invalido em {label}: {privacy!r}. "
             "Use private, unlisted ou public."
         )
-    category = str(youtube.get("category_id", "10"))
+    category = str(youtube.get("category_id", DEFAULT_YOUTUBE_CATEGORY_ID))
     if not category.isdigit():
         raise RuntimeError(f"youtube.category_id precisa ser numerico em {label}.")
 
@@ -212,7 +213,11 @@ def create_post_template(episode_dir: Path, overwrite: bool = False) -> Path:
 
 
 def build_post_defaults(story: Mapping[str, Any], asset_id: str) -> dict[str, Any]:
-    title = str(story.get("title", "")).strip() or "Novo video musical"
+    raw_topic = story.get("topic")
+    raw_title = story.get("title")
+    canonical_topic = raw_topic.strip() if isinstance(raw_topic, str) else ""
+    title = raw_title.strip() if isinstance(raw_title, str) else ""
+    title = title or canonical_topic or "Novo video curto"
     segments = story.get("segments")
     hook = ""
     if isinstance(segments, list) and segments and isinstance(segments[0], dict):
@@ -220,7 +225,7 @@ def build_post_defaults(story: Mapping[str, Any], asset_id: str) -> dict[str, An
     hook = hook or title
     headline = _short_headline(title)
     youtube_title = _truncate(title, 100)
-    topic = title.rstrip(".?! ")
+    topic = (canonical_topic or title).rstrip(".?! ")
     youtube_description = _truncate(
         f"{hook}\n\nA história por trás de {topic}, contada em formato curto.",
         5000,
@@ -239,13 +244,15 @@ def build_post_defaults(story: Mapping[str, Any], asset_id: str) -> dict[str, An
         "youtube": {
             "title": youtube_title,
             "description": youtube_description,
-            "hashtags": ["Shorts"],
+            "hashtags": ["shorts"],
             "privacy_status": "public",
-            "category_id": "10",
+            # People & Blogs is a neutral fallback. The editorial author should
+            # replace it when a more specific YouTube category fits the topic.
+            "category_id": DEFAULT_YOUTUBE_CATEGORY_ID,
         },
         "instagram": {
             "caption": instagram_caption,
-            "hashtags": ["Reels"],
+            "hashtags": ["reels"],
             "share_to_feed": True,
             "thumb_offset_ms": 1000,
         },
@@ -490,7 +497,7 @@ def _short_headline(title: str) -> str:
         if len(selected) >= 6 or len(candidate) > 42:
             break
         selected.append(word)
-    return (" ".join(selected) or "HISTORIA DA MUSICA").upper()
+    return (" ".join(selected) or "HISTORIA EM 1 MINUTO").upper()
 
 
 def _truncate(value: str, maximum: int) -> str:

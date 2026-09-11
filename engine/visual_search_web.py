@@ -37,8 +37,8 @@ RightsStatus = Literal["verified", "unknown", "restricted"]
 
 WEB_HEADERS = {
     "User-Agent": (
-        "MusicShortFactory/10.0 "
-        "(+https://github.com/aleseixas/music-short-factory; web-visual-discovery)"
+        "ContentShortFactory/10.0 "
+        "(+https://github.com/aleseixas/content-short-factory; web-visual-discovery)"
     ),
     "Accept": "application/json,text/html;q=0.9,*/*;q=0.5",
 }

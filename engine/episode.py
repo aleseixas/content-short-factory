@@ -6,6 +6,7 @@ from pathlib import Path
 import re
 
 from .assets import load_asset_catalog
+from .content import ContentRequest
 from .delivery import DELIVERY_NAMES
 from .models import Episode, ScriptSegment, Story
 from .timeline import load_timeline
@@ -68,6 +69,19 @@ def load_story(path: Path) -> Story:
         slug=slug,
         target_duration_seconds=target,
         segments=tuple(segments),
+        topic=_optional_story_text(data, "topic"),
+        content_profile=_optional_story_text(data, "content_profile"),
+        category=_optional_story_text(data, "category"),
+        angle=_optional_story_text(data, "angle"),
+        language=_optional_story_text(data, "language"),
+        additional_instructions=_optional_story_text(
+            data, "additional_instructions"
+        ),
+        entities=_optional_story_list(data, "entities"),
+        events=_optional_story_list(data, "events"),
+        locations=_optional_story_list(data, "locations"),
+        time_period=_optional_story_text(data, "time_period"),
+        visual_keywords=_optional_story_list(data, "visual_keywords"),
     )
 
 
@@ -118,9 +132,19 @@ def load_episode(project_root: Path, episodes_dir: str, name: str) -> Episode:
     )
 
 
-def create_episode(project_root: Path, episodes_dir: str, name: str) -> Path:
+def create_episode(
+    project_root: Path,
+    episodes_dir: str,
+    name: str,
+    *,
+    content: ContentRequest | None = None,
+) -> Path:
     project_root = project_root.resolve()
     episode_name = validate_slug(name)
+    if content is not None and content.topic is None:
+        raise RuntimeError(
+            "O ContentRequest precisa ter topic resolvido antes de criar o episodio."
+        )
     episodes_root = (project_root / episodes_dir).resolve()
     try:
         episodes_root.relative_to(project_root)
@@ -133,11 +157,12 @@ def create_episode(project_root: Path, episodes_dir: str, name: str) -> Path:
 
     assets_dir = destination / "assets"
     assets_dir.mkdir(parents=True)
+    target_duration = content.target_duration if content is not None else None
     story = {
         "schema_version": 1,
-        "title": "Novo video musical",
+        "title": content.topic if content is not None else "Novo video curto",
         "slug": episode_name,
-        "target_duration_seconds": 75,
+        "target_duration_seconds": target_duration or 75,
         "segments": [
             {
                 "id": "hook",
@@ -146,6 +171,8 @@ def create_episode(project_root: Path, episodes_dir: str, name: str) -> Path:
             }
         ],
     }
+    if content is not None:
+        story.update(_content_story_fields(content))
     timeline = {
         "schema_version": 1,
         "smart_visual_pacing": {"enabled": True},
@@ -190,6 +217,54 @@ def create_episode(project_root: Path, episodes_dir: str, name: str) -> Path:
         encoding="utf-8",
     )
     return destination
+
+
+def _content_story_fields(content: ContentRequest) -> dict[str, object]:
+    fields: dict[str, object] = {"topic": content.topic}
+    for name in (
+        "content_profile",
+        "category",
+        "angle",
+        "language",
+        "additional_instructions",
+        "time_period",
+    ):
+        value = getattr(content, name)
+        if value is not None:
+            fields[name] = value
+    for name in ("entities", "events", "locations", "visual_keywords"):
+        values = getattr(content, name)
+        if values:
+            fields[name] = list(values)
+    return fields
+
+
+def _optional_story_text(data: dict, field_name: str) -> str | None:
+    value = data.get(field_name)
+    if value is None:
+        return None
+    if not isinstance(value, str):
+        raise RuntimeError(f"story.json: {field_name!r} precisa ser uma string.")
+    normalized = value.strip()
+    return normalized or None
+
+
+def _optional_story_list(data: dict, field_name: str) -> tuple[str, ...]:
+    value = data.get(field_name)
+    if value is None:
+        return ()
+    if not isinstance(value, list):
+        raise RuntimeError(f"story.json: {field_name!r} precisa ser uma lista.")
+    result: list[str] = []
+    for item in value:
+        if not isinstance(item, str) or not item.strip():
+            raise RuntimeError(
+                f"story.json: {field_name!r} precisa conter strings nao vazias."
+            )
+        normalized = item.strip()
+        if normalized not in result:
+            result.append(normalized)
+    return tuple(result)
 
 
 def _write_json(path: Path, data: object) -> None:

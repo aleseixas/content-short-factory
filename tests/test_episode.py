@@ -3,6 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from engine.content import ContentRequest
 from engine.episode import create_episode, load_episode, load_story
 
 
@@ -73,6 +74,10 @@ class EpisodeTests(unittest.TestCase):
         self.assertEqual(episode.text_fx_cues, ())
         self.assertEqual(episode.overlay_cues, ())
         self.assertIsNone(episode.smart_visual_pacing)
+        self.assertIsNone(episode.story.topic)
+        self.assertIsNone(episode.story.content_profile)
+        self.assertEqual(episode.story.entities, ())
+        self.assertEqual(episode.story.effective_topic, episode.story.title)
 
     def test_load_story_reports_invalid_json(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -138,6 +143,63 @@ class EpisodeTests(unittest.TestCase):
                 create_episode(root, "episodes", "stan")
 
             self.assertEqual(sources.read_text(encoding="utf-8"), "do not overwrite\n")
+
+    def test_create_episode_persists_and_loads_generic_editorial_fields(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content = ContentRequest(
+                topic="Por que a Blockbuster recusou comprar a Netflix?",
+                content_profile="historia de negocios",
+                category="negocios",
+                angle="decisao que mudou um mercado",
+                target_duration=61.5,
+                language="pt-BR",
+                additional_instructions="Evite tom promocional.",
+                entities=("Blockbuster", "Netflix"),
+                events=("Oferta de aquisicao",),
+                locations=("Estados Unidos",),
+                time_period="anos 2000",
+                visual_keywords=("locadora de video", "catalogo de streaming"),
+            )
+
+            destination = create_episode(
+                root,
+                "episodes",
+                "blockbuster_netflix",
+                content=content,
+            )
+            story_json = json.loads(
+                (destination / "story.json").read_text(encoding="utf-8")
+            )
+            story = load_story(destination / "story.json")
+
+        self.assertEqual(story.title, content.topic)
+        self.assertEqual(story.topic, content.topic)
+        self.assertEqual(story.effective_topic, content.topic)
+        self.assertEqual(story.content_profile, "historia de negocios")
+        self.assertEqual(story.category, "negocios")
+        self.assertEqual(story.angle, "decisao que mudou um mercado")
+        self.assertEqual(story.target_duration_seconds, 61.5)
+        self.assertEqual(story.language, "pt-BR")
+        self.assertEqual(story.additional_instructions, "Evite tom promocional.")
+        self.assertEqual(story.entities, ("Blockbuster", "Netflix"))
+        self.assertEqual(story.events, ("Oferta de aquisicao",))
+        self.assertEqual(story.locations, ("Estados Unidos",))
+        self.assertEqual(story.time_period, "anos 2000")
+        self.assertEqual(
+            story.visual_keywords,
+            ("locadora de video", "catalogo de streaming"),
+        )
+        self.assertNotIn("song", story_json)
+        self.assertNotIn("artist", story_json)
+
+    def test_create_episode_rejects_unresolved_profile(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content = ContentRequest(content_profile="perfil livre")
+
+            with self.assertRaisesRegex(RuntimeError, "topic resolvido"):
+                create_episode(root, "episodes", "unresolved", content=content)
 
 
 if __name__ == "__main__":
