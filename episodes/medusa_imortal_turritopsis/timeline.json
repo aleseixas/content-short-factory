@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "background_music": {"profile":"dark_cinematic","volume":0.035},
+  "sfx_cues": [
+    {"time_seconds":0.08,"type":"bass_drop_cinematic","volume":0.06},
+    {"time_seconds":15.0,"type":"whoosh_fast","volume":0.04},
+    {"time_seconds":30.0,"type":"impact","volume":0.05},
+    {"time_seconds":46.0,"type":"ding","volume":0.035},
+    {"time_seconds":61.0,"type":"riser_build_up","volume":0.04}
+  ],
+  "visual_fx_cues": [
+    {"start_seconds":0.08,"end_seconds":0.65,"type":"punch_zoom","intensity":0.5},
+    {"start_seconds":29.5,"end_seconds":30.2,"type":"slow_zoom_in","intensity":0.28},
+    {"start_seconds":60.5,"end_seconds":61.2,"type":"punch_zoom","intensity":0.4}
+  ],
+  "text_fx_cues": [
+    {"segment":"hook","offset_seconds":0.12,"duration_seconds":1.25,"text":"ELA CONSEGUE\nVOLTAR A SER JOVEM","accent_text":"VOLTAR A SER JOVEM","animation":"scale_bounce","position":"center","intensity":0.62},
+    {"segment":"cyst","offset_seconds":0.12,"duration_seconds":1.15,"text":"24–36 HORAS\nPARA RECOMEÇAR","accent_text":"24–36 HORAS","animation":"pop_in","position":"center","intensity":0.58},
+    {"segment":"not_invincible","offset_seconds":0.12,"duration_seconds":1.15,"text":"IMORTAL?\nNÃO INVENCÍVEL","accent_text":"NÃO INVENCÍVEL","animation":"slide_up","position":"center","intensity":0.58},
+    {"segment":"payoff","offset_seconds":0.12,"duration_seconds":1.2,"text":"ELA VOLTA\nNO PRÓPRIO TEMPO","accent_text":"VOLTA","animation":"fade_pop","position":"center","intensity":0.58}
+  ],
+  "shots": [
+    {"id":"shot_hook","segment":"hook","asset":"video_hook","motion":"hold","transition_out":"cut","highlight":"A MEDUSA QUE REJUVENESCE"},
+    {"id":"shot_tiny","segment":"tiny","asset":"turritopsis_exact","motion":"push_in","transition_out":"crossfade","highlight":"TURRITOPSIS DOHRNII"},
+    {"id":"shot_normal","segment":"normal_cycle","asset":"video_aquarium","motion":"hold","transition_out":"cut","highlight":"UM CICLO DIFERENTE"},
+    {"id":"shot_reverse","segment":"reverse","asset":"video_monterey_4","motion":"hold","transition_out":"cut","highlight":"ELA INVERTE O PROCESSO"},
+    {"id":"shot_cyst","segment":"cyst","asset":"turritopsis_lifecycle","motion":"push_in","transition_out":"crossfade","highlight":"DE VOLTA AO PÓLIPO"},
+    {"id":"shot_restart","segment":"restart","asset":"video_monterey_8","motion":"hold","transition_out":"cut","highlight":"COMEÇA TUDO DE NOVO"},
+    {"id":"shot_cells","segment":"cells","asset":"turritopsis_exact","motion":"pull_out","transition_out":"cut","highlight":"REPROGRAMAÇÃO CELULAR"},
+    {"id":"shot_not_invincible","segment":"not_invincible","asset":"video_aquarium","motion":"hold","transition_out":"crossfade","highlight":"NÃO É INVENCÍVEL"},
+    {"id":"shot_repeat","segment":"repeat","asset":"turritopsis_lifecycle","motion":"pull_out","transition_out":"cut","highlight":"REJUVENESCIMENTO REPETIDO"},
+    {"id":"shot_payoff","segment":"payoff","asset":"video_hook","motion":"hold","transition_out":"cut","highlight":"VOLTAR A UMA VIDA ANTERIOR"}
+  ]
+}
