@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "cover": {"headline":"A MEDUSA QUE VOLTA A SER JOVEM","source":{"type":"asset","asset_id":"turritopsis_exact"}},
+  "youtube": {
+    "title":"A medusa que consegue voltar a ser jovem",
+    "description":"A Turritopsis dohrnii ficou conhecida como a medusa imortal porque consegue reverter o próprio ciclo de vida e voltar ao estágio de pólipo. Mas isso não significa que ela seja invencível. Entenda como esse rejuvenescimento funciona.",
+    "hashtags":["curiosidades","ciencia","animais","medusa","turritopsis","shorts"],
+    "privacy_status":"public",
+    "category_id":"27"
+  },
+  "instagram": {
+    "caption":"Existe uma medusa capaz de voltar a uma fase anterior da própria vida. A Turritopsis dohrnii pode reverter seu ciclo quando está sob estresse — mas o apelido de ‘imortal’ tem uma pegadinha.",
+    "hashtags":["curiosidades","ciencia","animais","medusa","turritopsis"],
+    "share_to_feed":true,
+    "thumb_offset_ms":700
+  },
+  "tiktok": {
+    "caption":"Essa medusa consegue voltar a ser jovem. Mas ‘imortal’ não significa invencível.",
+    "hashtags":["curiosidades","ciencia","animais","medusa","turritopsis"],
+    "privacy_level":"PUBLIC_TO_EVERYONE",
+    "video_cover_timestamp_ms":700,
+    "disable_comment":false,
+    "disable_duet":false,
+    "disable_stitch":false,
+    "brand_content_toggle":false,
+    "brand_organic_toggle":false,
+    "is_aigc":false
+  }
+}
