@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {"id":"video_hook","file":"jellyfish_monterey_11.webm","url":"https://upload.wikimedia.org/wikipedia/commons/e/ee/Jellyfish_at_Monterey_Bay_Aquarium_11_2017-11-21.webm","credit":"FASTILY / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
+    {"id":"video_aquarium","file":"jellyfish_aquarium.webm","url":"https://upload.wikimedia.org/wikipedia/commons/5/5d/Jellyfish_in_a_aquarium.webm","credit":"Amada44 / Wikimedia Commons","license":"CC BY-SA 3.0","focus":{"x":0.5,"y":0.5}},
+    {"id":"video_monterey_4","file":"jellyfish_monterey_4.webm","url":"https://upload.wikimedia.org/wikipedia/commons/3/3c/Jellyfish_at_Monterey_Bay_Aquarium_4_2017-11-21.webm","credit":"FASTILY / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
+    {"id":"video_monterey_8","file":"jellyfish_monterey_8.webm","url":"https://upload.wikimedia.org/wikipedia/commons/e/e3/Jellyfish_at_Monterey_Bay_Aquarium_8_2024-01-11.webm","credit":"FASTILY / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
+    {"id":"turritopsis_exact","file":"turritopsis_dohrnii.jpeg","url":"https://upload.wikimedia.org/wikipedia/commons/e/e2/Turritopsisdohrnii.jpeg","credit":"Dr. Karen J. Osborn / Smithsonian Institution / Wikimedia Commons","license":"CC0 1.0","focus":{"x":0.48,"y":0.48}},
+    {"id":"turritopsis_lifecycle","file":"turritopsis_lifecycle.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/b/b8/PSM_V33_D765_Turritopsis.jpg","credit":"Popular Science Monthly / Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.48}}
+  ]
+}
