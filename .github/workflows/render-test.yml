@@ -90,14 +90,47 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python generate.py "$EPISODE"
 
-      - name: Upload rendered MP4
-        uses: actions/upload-artifact@v7
-        with:
-          name: render-test-${{ steps.episode.outputs.slug }}
-          path: output/${{ steps.episode.outputs.slug }}.mp4
-          if-no-files-found: error
-          retention-days: 3
-          compression-level: 0
+      - name: Deliver rendered MP4 without GitHub artifact storage
+        id: delivery
+        env:
+          EPISODE: ${{ steps.episode.outputs.slug }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os
+          from cloudinary import uploader
+
+          episode = os.environ["EPISODE"]
+          required = ("CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET")
+          missing = [name for name in required if not os.environ.get(name, "").strip()]
+          if missing:
+              raise SystemExit("Missing Cloudinary credentials: " + ", ".join(missing))
+
+          path = f"output/{episode}.mp4"
+          result = uploader.upload_large(
+              path,
+              resource_type="video",
+              public_id=f"render-tests/{episode}",
+              overwrite=True,
+              invalidate=True,
+              cloud_name=os.environ["CLOUDINARY_CLOUD_NAME"],
+              api_key=os.environ["CLOUDINARY_API_KEY"],
+              api_secret=os.environ["CLOUDINARY_API_SECRET"],
+              timeout=300.0,
+          )
+          url = str(result.get("secure_url", "")).strip()
+          if not url.startswith("https://"):
+              raise SystemExit("Cloudinary did not return a secure URL")
+          print(f"RENDER_DOWNLOAD_URL={url}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+              handle.write(f"url={url}\n")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as handle:
+              handle.write(f"## Render test\n\nDownload: {url}\n")
+          PY
 
       - name: Confirm no publishing
-        run: echo "Render test complete. No publish command was executed."
+        run: echo "Render test complete. No social publish command was executed and no GitHub Actions artifact was stored."
