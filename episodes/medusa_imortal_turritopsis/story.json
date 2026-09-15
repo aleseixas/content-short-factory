@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "title": "A medusa que consegue voltar a ser jovem",
+  "slug": "medusa_imortal_turritopsis",
+  "target_duration_seconds": 72,
+  "topic": "Como a Turritopsis dohrnii consegue reverter o próprio ciclo de vida",
+  "content_profile": "curiosidades científicas visualmente impressionantes",
+  "angle": "o animal apelidado de medusa imortal e o que isso realmente significa",
+  "language": "pt-BR",
+  "entities": ["Turritopsis dohrnii"],
+  "visual_keywords": ["Turritopsis dohrnii", "immortal jellyfish", "jellyfish polyp life cycle"],
+  "segments": [
+    {"id":"hook","text":"Existe uma medusa que, quando está ferida ou sob estresse, consegue fazer algo que parece impossível: voltar a ser jovem.","delivery":"hook"},
+    {"id":"tiny","text":"Ela se chama Turritopsis dohrnii e mede só alguns milímetros, menor do que a unha do seu dedo mindinho.","delivery":"curious"},
+    {"id":"normal_cycle","text":"Normalmente, uma medusa cresce, se reproduz e envelhece. Mas essa espécie ganhou uma rota extra no próprio ciclo de vida.","delivery":"neutral"},
+    {"id":"reverse","text":"Quando sofre dano, fome ou condições ruins, ela pode absorver os tentáculos, perder a capacidade de nadar e virar uma pequena massa.","delivery":"dramatic"},
+    {"id":"cyst","text":"Essa massa se fixa a uma superfície e, em cerca de vinte e quatro a trinta e seis horas, começa a virar pólipo outra vez.","delivery":"reveal"},
+    {"id":"restart","text":"Do pólipo podem nascer novas medusas. É como se uma borboleta pudesse voltar a ser lagarta e começar tudo de novo.","delivery":"reveal"},
+    {"id":"cells","text":"O processo envolve reprogramação celular e transdiferenciação: células especializadas mudam de identidade durante essa transformação.","delivery":"curious"},
+    {"id":"not_invincible","text":"Mas o apelido de imortal engana um pouco. Ela ainda pode morrer por predadores, doenças ou danos que não consegue superar.","delivery":"dramatic"},
+    {"id":"repeat","text":"Em laboratório, cientistas já observaram esse rejuvenescimento acontecer repetidas vezes, por isso ela é considerada biologicamente extraordinária.","delivery":"curious"},
+    {"id":"payoff","text":"Ela não descobriu como nunca morrer. Descobriu algo talvez ainda mais estranho: como voltar para uma fase anterior da própria vida.","delivery":"payoff"}
+  ]
+}
