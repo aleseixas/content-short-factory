@@ -2,6 +2,19 @@ name: Test YouTube visual download
 
 on:
   workflow_dispatch:
+    inputs:
+      test_episode:
+        description: Existing episode slug used only for the optional resolver/handoff smoke test
+        type: string
+        default: luisa_sonza_menescal_rock_in_rio_2026
+      probe_only:
+        description: Run only the safe YouTube auth/download probes (no episode resolution or handoff)
+        type: boolean
+        default: false
+      youtube_url:
+        description: Public YouTube URL to probe
+        type: string
+        default: https://www.youtube.com/watch?v=DKZV_DbmWQo
   push:
     branches:
       - main
@@ -12,8 +25,8 @@ permissions:
   contents: read
 
 env:
-  TEST_EPISODE: luisa_sonza_menescal_rock_in_rio_2026
-  TEST_YOUTUBE_URL: https://www.youtube.com/watch?v=DKZV_DbmWQo
+  TEST_EPISODE: ${{ inputs.test_episode || 'luisa_sonza_menescal_rock_in_rio_2026' }}
+  TEST_YOUTUBE_URL: ${{ inputs.youtube_url || 'https://www.youtube.com/watch?v=DKZV_DbmWQo' }}
 
 jobs:
   youtube-visual-smoke-test:
@@ -89,12 +102,14 @@ jobs:
           YOUTUBE_DOWNLOAD_TEST_SECONDS: "8"
         run: python scripts/test_youtube_download.py
 
-      - name: Resolve Luisa visual candidates without publishing
+      - name: Resolve test episode visual candidates without publishing
+        if: ${{ !inputs.probe_only }}
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: python resolve_visual_candidates_web_auth.py "$TEST_EPISODE"
 
       - name: Verify resolver output
+        if: ${{ !inputs.probe_only }}
         shell: bash
         run: |
           set -euo pipefail
@@ -115,11 +130,13 @@ jobs:
           PY
 
       - name: Stage visual handoff
+        if: ${{ !inputs.probe_only }}
         env:
           EPISODE: ${{ env.TEST_EPISODE }}
         run: python scripts/stage_visual_handoff.py
 
       - name: Verify staged handoff locally
+        if: ${{ !inputs.probe_only }}
         shell: bash
         run: |
           set -euo pipefail
@@ -129,6 +146,7 @@ jobs:
           find .visual-handoff -type f -maxdepth 5 -print
 
       - name: Upload visual handoff smoke artifact
+        if: ${{ !inputs.probe_only }}
         uses: actions/upload-artifact@v7
         with:
           name: visual-handoff-smoke-${{ github.run_id }}
@@ -139,6 +157,7 @@ jobs:
           compression-level: 0
 
   handoff-smoke-test:
+    if: ${{ !inputs.probe_only }}
     needs: youtube-visual-smoke-test
     runs-on: ubuntu-latest
 

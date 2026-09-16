@@ -344,9 +344,9 @@ Contém `cover` e blocos por plataforma (`youtube`, `instagram`, `tiktok`) confo
 
 O pipeline resolve TTS, assets remotos, trims, background music e SFX; monta timeline; gera captions; renderiza com FFmpeg; aplica mix/loudness; registra diagnósticos e valida a saída.
 
-Antes da queue, o media preflight carrega os JSONs com parsers reais, baixa e valida mídia pelos mesmos caminhos do render, verifica duração/trims e resolve background. HTTP 403/404/429/5xx, payload inválido, imagem ilegível, vídeo inválido, trim insuficiente ou profile sem faixa resolvível impedem a queue até correção.
+Antes da queue, `Episode media preflight` carrega os JSONs com parsers reais, baixa e valida mídia, resolve os visuais finais, renderiza o vídeo, prepara a capa e executa o dry-run de todas as plataformas. HTTP 403/404/429/5xx, payload inválido, imagem ilegível, vídeo inválido, trim insuficiente ou profile sem faixa resolvível impedem a queue até correção.
 
-Crie `.publish-queue/<slug>.txt` somente após episódio completo e PASS. Se asset, timeline ou background mudar, rode o preflight novamente.
+Depois desses gates, o preflight cria o artefato `publish-ready-<slug>` e grava em `.publish-queue/<slug>.txt` o slug e o `run_id` que produziu o bundle. `Publish episode` verifica a procedência, baixa e publica exatamente esses bytes; ele não resolve visuais nem renderiza novamente. Se asset, timeline ou background mudar, execute um novo preflight para gerar outro bundle validado.
 
 Uma queue ou upload iniciado não é publicação concluída. A automação acompanha jobs/logs/artefatos, aplica retry somente quando seguro e emite estados verificáveis por plataforma conforme [`templates/publishing-completion-rule.md`](templates/publishing-completion-rule.md) e [`docs/publishing-retry.md`](docs/publishing-retry.md).
 
