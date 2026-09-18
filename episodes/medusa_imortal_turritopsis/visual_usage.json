@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "episode": "medusa_imortal_turritopsis",
+  "recorded_at": "2026-09-18T20:45:50Z",
+  "visual_usage": [
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_hook",
+      "asset_id": "video_hook",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "9ad8305c98f7aabb09f2c3891cf4983c4d43b013893caf7e5fce57dbb695a24b",
+        "url_hashes": [
+          "4f7644280c01ad075ed627494750db53640d5f4b2d9b572ecf262c64133b73a1"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "80e071996adc6eb7",
+          "80c277917bed4cca",
+          "80c166b6d9c97766",
+          "80c073b3ccdc7373",
+          "80c274b37bf94cca",
+          "80c039d86eb74bf5",
+          "80c275916bd85cf7",
+          "80c071996eb54feb"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 8.3
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_tiny",
+      "asset_id": "turritopsis_exact",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "1a16b4821da336b594076c4691ce0520ec06f0fd52e187df4a315c1d78385777",
+        "url_hashes": [
+          "915d26b1d7a8265448810a70df1c2571415c46bb65e60c98a20fdd9efe00aedb"
+        ],
+        "perceptual_hashes": [
+          "8c4cb3738ccc3d33",
+          "cc0cb3738ccc9c73",
+          "cc0cf3738ccc8c73",
+          "9b0f641b9b26649b",
+          "9b1ba6646464d99b",
+          "c71938c7c73838c7",
+          "c747b838383867c7"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_normal",
+      "asset_id": "video_aquarium",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "1ba970cf338480e263db20cc549aa68ab99cb4315231d8f0a4d4fdd1d7042424",
+        "url_hashes": [
+          "5925de484cc8ebaffc6582735396f3abe348a5f1df555bd5e7bb4765ffc344de"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "93c365383c6c6ce6",
+          "8b8f675267656426",
+          "95866a587b6a626b",
+          "96cf681c61b2b3b2",
+          "966d693c30b26b93",
+          "de4d6c3e32927138",
+          "cc67339867cf8c24",
+          "ccce33313366c999"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 9.3
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_reverse",
+      "asset_id": "video_monterey_4",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "4b4396f2220dc06c52585da8d5b353023bfe6cdcdbb719edc2a0c23bd6dec4d7",
+        "url_hashes": [
+          "fef6b6414a584277230fb8f70728bd42dce2437c4213d8666c46ce140efd18db"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "c364339e6d9e8463",
+          "c3603b9e6d9e1c61",
+          "cb6c37363d1b3888",
+          "cfdc7436363f3001",
+          "cf9e657836253823",
+          "cfdc6538362d3126",
+          "cbe46536271b3619",
+          "c3e073974f12cd0e"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 8.9
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_cyst",
+      "asset_id": "turritopsis_lifecycle",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b93d49a419ec7c275d569eb60476dc50a0e1cacb3733b75f3515f1e8ca5a54b8",
+        "url_hashes": [
+          "f94a7a486e697e8bcc2ecd2ca9ca5ee3162ce2883b988a1d4a54601d22fae2f2"
+        ],
+        "perceptual_hashes": [
+          "c4852b9e79613a7a",
+          "c7ad2b9e69603872",
+          "c7a92a8ee9e83872",
+          "88727c7943356c9b",
+          "8c8b669d3cdc8993",
+          "d03c290f7e1b78c6",
+          "d0d63cc183d8e78e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_restart",
+      "asset_id": "video_monterey_8",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "99a8e38243fab7084807c976acc1f2221823b77ec0b5e480fe92fda84c8449d9",
+        "url_hashes": [
+          "0a91e0f64518b19b2525c3e391663e04c4022efa41569b910788148e6d0c35fe"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "e9e89df418486d69",
+          "e9e891f518c86d69",
+          "e1e890a5bd954d69",
+          "e3f892a4b881cd6d",
+          "e2ead2b620adaca5",
+          "c2e0d4b537aaa9a9",
+          "c0c2f5b5356c49ab",
+          "c0c2d4b5b5b56555"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 9.3
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_cells",
+      "asset_id": "clytia_metamorphosis",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "62bd06c381f9a2d6083cf63145bc527a1ca4ca2fa92d36048f1cdaa10c80f7d6",
+        "url_hashes": [
+          "4f651baa3f63a72bde0f090d50ca3bd8df23d736a1f99f48e1090844f9b955c5"
+        ],
+        "perceptual_hashes": [
+          "d4fd83dd042a71c5",
+          "d5fe82d5862ac1c5",
+          "d5fe90c9ce348983",
+          "c3fc968821dedc61",
+          "83f021f6dedd2161",
+          "d6a9dcc02bd4c13b",
+          "d6a52bdcc4c12b2b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_not_invincible",
+      "asset_id": "jellyfish_ocean_cc0",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "0ea5b5ed9620f505af362d32551c31aac6f3e405b7db3ac020bc6c60cf91bb5f",
+        "url_hashes": [
+          "869ed7e882592c64c4fde5d2fa4f5497cec502f079eea5273783ad58d5c5b5c5"
+        ],
+        "perceptual_hashes": [
+          "998c6935c3ca35ab",
+          "958c7d25c24a376b",
+          "91cc3e2dd2463763",
+          "92997a86d52ed439",
+          "9689517a2ad19bb9",
+          "84c736d46934ed87",
+          "98c34d3616c9c797"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_repeat",
+      "asset_id": "jellyfish_reproductive_cycle",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ca261c13e5e6dd33e035e81ec7301c89f99c6f2dd54ed07ee2fffebe6ce85cef",
+        "url_hashes": [
+          "4c4d1d40996974d94366d549c495ff36d2bdade986a50238be4f08a36451eb1e"
+        ],
+        "perceptual_hashes": [
+          "feee8f8300800f9f",
+          "feee8f830cd10915",
+          "ffee8d830cf00859",
+          "fcf98601020fbfac",
+          "f0f8fbae3d88a088",
+          "e1a388bdde941ab1",
+          "d1b3e6988193b8a7"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "medusa_imortal_turritopsis",
+      "shot_id": "shot_payoff",
+      "asset_id": "blue_jellyfish_cc0",
+      "recorded_at": "2026-09-18T20:45:50Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "90964cf41d7192e9db3f985ec0beff8da650129a5a468ea7f5d945e76db35bf6",
+        "url_hashes": [
+          "a285486dfadb0d7834cb6ee13e503d94cbcce7944491421fb286f3405dc101a8"
+        ],
+        "perceptual_hashes": [
+          "90c41c7bef5685a3",
+          "80cc1d1b6f548fab",
+          "b0ed1c1b4fd48e0b",
+          "838b3ede8b8666a1",
+          "a1cb29377674b129",
+          "d6d60ca852ac7c7a",
+          "9bf6171dad285a03"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
