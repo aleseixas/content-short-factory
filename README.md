@@ -338,7 +338,7 @@ Lista fontes factuais, páginas de origem, créditos/licenças e background exte
 
 ### `post.json`
 
-Contém `cover` e blocos por plataforma (`youtube`, `instagram`, `tiktok`) conforme o schema atual. Títulos, captions, descriptions, categoria e hashtags são topic-driven. Hashtags ficam nos arrays em minúsculas, sem `#` quando o publisher assim espera e sem repetição na caption.
+Contém `cover` e blocos por plataforma (`youtube`, `instagram`, `facebook`, `tiktok`) conforme o schema atual. Títulos, captions, descriptions, categoria e hashtags são topic-driven. Hashtags ficam nos arrays em minúsculas, sem `#` quando o publisher assim espera e sem repetição na caption. Arquivos antigos sem `facebook` continuam compatíveis: o publisher deriva título/caption de YouTube e Instagram.
 
 ## Render, preflight e publicação
 

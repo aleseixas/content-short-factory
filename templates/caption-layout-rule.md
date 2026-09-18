@@ -38,7 +38,7 @@ Se uma cena já tiver legenda falada forte e o visual principal estiver claro, d
 
 Nos campos públicos de `post.json`, mantenha o texto da legenda/descrição separado das hashtags.
 
-- `youtube.description`, `instagram.caption` e `tiktok.caption` devem conter APENAS o texto editorial da publicação, sem hashtags embutidas no fim do texto.
+- `youtube.description`, `instagram.caption`, `facebook.caption` e `tiktok.caption` devem conter APENAS o texto editorial da publicação, sem hashtags embutidas no fim do texto.
 - As hashtags devem existir SOMENTE no array `hashtags` da respectiva plataforma, porque o publisher já adiciona esse array ao texto final da publicação.
 - Nunca copie o mesmo bloco de hashtags para dentro da caption/description e também para `hashtags`; isso gera repetição no post publicado.
 - Cada hashtag deve aparecer no máximo uma vez por plataforma, considerando comparação sem diferença entre maiúsculas e minúsculas.

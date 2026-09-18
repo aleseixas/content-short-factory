@@ -28,7 +28,7 @@ Acompanhe a execução exata de `.github/workflows/publish-episode.yml` correspo
 
 Fluxo normal:
 
-`tema -> duplicate preflight -> autoria -> media preflight PASS -> queue -> Publish episode -> YouTube -> Instagram -> TikTok -> verificar resultados -> STOP`
+`tema -> duplicate preflight -> autoria -> media preflight PASS -> queue -> Publish episode -> YouTube -> Instagram -> Facebook -> TikTok -> verificar resultados -> STOP`
 
 Se o workflow atual da `main` mudar, adapte os nomes das etapas ao código atual sem inventar capacidades.
 
@@ -39,7 +39,7 @@ Use estados separados:
 - `MEDIA PREFLIGHT`: resultado do gate de mídia;
 - `QUEUE`: criação da publish queue;
 - `PUBLISH ACTION`: resultado do workflow de publicação;
-- `YOUTUBE`, `INSTAGRAM` e `TIKTOK`: resultado real de cada plataforma.
+- `YOUTUBE`, `INSTAGRAM`, `FACEBOOK` e `TIKTOK`: resultado real de cada plataforma.
 
 É proibido emitir `ACTION: SUCESSO` se a única Action verificada foi o media preflight.
 
@@ -49,7 +49,7 @@ No relatório final, `ACTION` significa **PUBLISH ACTION**, nunca media prefligh
 
 Só use `STATUS: PUBLICADO` quando houver evidência real acessível de que o workflow de publicação chegou a estado terminal e todas as etapas de plataforma que a `main` realmente executa terminaram com sucesso.
 
-Para o estado atual da `main`, quando `publish-episode.yml` tiver etapas de YouTube, Instagram e TikTok, verifique cada uma separadamente.
+Para o estado atual da `main`, quando `publish-episode.yml` tiver etapas de YouTube, Instagram, Facebook e TikTok, verifique cada uma separadamente.
 
 Não transforme `NÃO_VERIFICADO` em sucesso por inferência.
 
@@ -69,6 +69,7 @@ Reporte separadamente, usando apenas evidência real da execução:
 
 - YouTube: `PUBLICADO_PUBLICO`, `PUBLICADO`, `FALHOU`, `EM_ANDAMENTO`, `NÃO_VERIFICADO` ou `BLOQUEADO`;
 - Instagram: `PUBLICADO`, `FALHOU`, `EM_ANDAMENTO`, `NÃO_VERIFICADO` ou `BLOQUEADO`;
+- Facebook: `PUBLICADO`, `FALHOU`, `EM_ANDAMENTO`, `NÃO_VERIFICADO` ou `BLOQUEADO`;
 - TikTok: reporte o estado real suportado pela `main`, por exemplo `PUBLICADO`, `DRAFT_ENVIADO`, `FALHOU`, `EM_ANDAMENTO`, `NÃO_VERIFICADO` ou outro estado comprovado pelo publisher atual.
 
 Nunca diga que uma plataforma publicou apenas porque o workflow geral foi disparado.
@@ -197,6 +198,7 @@ QUEUE: <CRIADA | NÃO_CRIADA | BLOQUEADA>
 PUBLISH ACTION: <SUCESSO | FALHA | EM_ANDAMENTO | NÃO_VERIFICADO | BLOQUEADO>
 YOUTUBE: <status real + ID/URL quando disponível>
 INSTAGRAM: <status real + ID/URL quando disponível>
+FACEBOOK: <status real + ID/URL quando disponível>
 TIKTOK: <status real + ID/URL quando disponível>
 RETRIES: <número de novas validações/publicações; não quantidade de itens corrigidos | N/A>
 EVIDÊNCIA: <run/job/log/artefato relevante | N/A>
