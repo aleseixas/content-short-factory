@@ -25,6 +25,10 @@
     {"id":"shot_normal","segment":"normal_cycle","asset":"video_aquarium","motion":"hold","transition_out":"cut","highlight":"UM CICLO DIFERENTE"},
     {"id":"shot_reverse","segment":"reverse","asset":"video_monterey_4","motion":"hold","transition_out":"cut","highlight":"ELA INVERTE O PROCESSO"},
     {"id":"shot_cyst","segment":"cyst","asset":"turritopsis_lifecycle","motion":"push_in","transition_out":"crossfade","highlight":"DE VOLTA AO PÓLIPO"},
-    {"id":"shot_restart","segment":"restart","asset":"video_monterey_8","motion":"hold","transition_out":"cut","highlight":"COMEÇA TUDO DE NOVO"}
+    {"id":"shot_restart","segment":"restart","asset":"video_monterey_8","motion":"hold","transition_out":"cut","highlight":"COMEÇA TUDO DE NOVO"},
+    {"id":"shot_cells","segment":"cells","asset":"turritopsis_lifecycle","motion":"push_in","transition_out":"crossfade","highlight":"CÉLULAS MUDAM DE IDENTIDADE"},
+    {"id":"shot_not_invincible","segment":"not_invincible","asset":"video_monterey_4","motion":"hold","transition_out":"cut","highlight":"IMORTAL NÃO É INVENCÍVEL"},
+    {"id":"shot_repeat","segment":"repeat","asset":"video_monterey_8","motion":"hold","transition_out":"cut","highlight":"REJUVENESCE DE NOVO"},
+    {"id":"shot_payoff","segment":"payoff","asset":"video_hook","motion":"push_in","transition_out":"cut","highlight":"VOLTA A UMA FASE ANTERIOR"}
   ]
 }
