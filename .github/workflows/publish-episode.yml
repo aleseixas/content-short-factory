@@ -233,7 +233,7 @@ jobs:
           CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
           CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
           CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
-          INSTAGRAM_API_HOST: graph.instagram.com
+          INSTAGRAM_API_HOST: graph.facebook.com
           META_GRAPH_API_VERSION: v26.0
           INSTAGRAM_VIDEO_HOST: cloudinary
         run: python publish.py "$EPISODE" --platform instagram --live
