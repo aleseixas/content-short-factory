@@ -1,15 +1,137 @@
 {
   "schema_version": 1,
   "assets": [
-    {"id":"video_hook","file":"jellyfish_monterey_11.webm","url":"https://upload.wikimedia.org/wikipedia/commons/e/ee/Jellyfish_at_Monterey_Bay_Aquarium_11_2017-11-21.webm","credit":"FASTILY / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
-    {"id":"video_aquarium","file":"jellyfish_aquarium.webm","url":"https://upload.wikimedia.org/wikipedia/commons/5/5d/Jellyfish_in_a_aquarium.webm","credit":"Amada44 / Wikimedia Commons","license":"CC BY-SA 3.0","focus":{"x":0.5,"y":0.5}},
-    {"id":"video_monterey_4","file":"jellyfish_monterey_4.webm","url":"https://upload.wikimedia.org/wikipedia/commons/3/3c/Jellyfish_at_Monterey_Bay_Aquarium_4_2017-11-21.webm","credit":"FASTILY / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
-    {"id":"video_monterey_8","file":"jellyfish_monterey_8.webm","url":"https://upload.wikimedia.org/wikipedia/commons/e/e3/Jellyfish_at_Monterey_Bay_Aquarium_8_2024-01-11.webm","credit":"FASTILY / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
-    {"id":"turritopsis_exact","file":"turritopsis_dohrnii.jpeg","url":"https://upload.wikimedia.org/wikipedia/commons/e/e2/Turritopsisdohrnii.jpeg","credit":"Dr. Karen J. Osborn / Smithsonian Institution / Wikimedia Commons","license":"CC0 1.0","focus":{"x":0.48,"y":0.48}},
-    {"id":"turritopsis_lifecycle","file":"turritopsis_lifecycle.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/b/b8/PSM_V33_D765_Turritopsis.jpg","credit":"Popular Science Monthly / Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.48}},
-    {"id":"clytia_metamorphosis","file":"clytia_metamorphosis.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/a/a1/Metamorphosis_of_Clytia_hemisphaerica.jpg","credit":"Tsuyoshi MOMOSE / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.55}},
-    {"id":"jellyfish_reproductive_cycle","file":"jellyfish_reproductive_cycle.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/d/d0/Reproductive_cycle_of_jellyfish.jpg","credit":"Zina Deretsky / National Science Foundation / Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.5}},
-    {"id":"video_monterey_2024_4","file":"jellyfish_monterey_4_2024.webm","url":"https://upload.wikimedia.org/wikipedia/commons/4/4f/Jellyfish_at_Monterey_Bay_Aquarium_4_2024-01-11.webm","credit":"Fastily / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}},
-    {"id":"video_monterey_2024_2","file":"jellyfish_monterey_2_2024.webm","url":"https://upload.wikimedia.org/wikipedia/commons/4/4d/Jellyfish_at_Monterey_Bay_Aquarium_2_2024-01-11.webm","credit":"Fastily / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.5}}
+    {
+      "id": "video_hook",
+      "file": "jellyfish_monterey_11.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Jellyfish_at_Monterey_Bay_Aquarium_11_2017-11-21.webm",
+      "credit": "FASTILY / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "video_aquarium",
+      "file": "jellyfish_aquarium.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Jellyfish_in_a_aquarium.webm",
+      "credit": "Amada44 / Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "video_monterey_4",
+      "file": "jellyfish_monterey_4.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Jellyfish_at_Monterey_Bay_Aquarium_4_2017-11-21.webm",
+      "credit": "FASTILY / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "video_monterey_8",
+      "file": "jellyfish_monterey_8.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Jellyfish_at_Monterey_Bay_Aquarium_8_2024-01-11.webm",
+      "credit": "FASTILY / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "turritopsis_exact",
+      "file": "turritopsis_dohrnii.jpeg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Turritopsisdohrnii.jpeg",
+      "credit": "Dr. Karen J. Osborn / Smithsonian Institution / Wikimedia Commons",
+      "license": "CC0 1.0",
+      "focus": {
+        "x": 0.48,
+        "y": 0.48
+      }
+    },
+    {
+      "id": "turritopsis_lifecycle",
+      "file": "turritopsis_lifecycle.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/PSM_V33_D765_Turritopsis.jpg",
+      "credit": "Popular Science Monthly / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {
+        "x": 0.5,
+        "y": 0.48
+      }
+    },
+    {
+      "id": "clytia_metamorphosis",
+      "file": "clytia_metamorphosis.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Metamorphosis_of_Clytia_hemisphaerica.jpg",
+      "credit": "Tsuyoshi MOMOSE / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.55
+      }
+    },
+    {
+      "id": "jellyfish_reproductive_cycle",
+      "file": "jellyfish_reproductive_cycle.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Reproductive_cycle_of_jellyfish.jpg",
+      "credit": "Zina Deretsky / National Science Foundation / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "video_monterey_2024_4",
+      "file": "jellyfish_monterey_4_2024.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Jellyfish_at_Monterey_Bay_Aquarium_4_2024-01-11.webm",
+      "credit": "Fastily / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "video_monterey_2024_2",
+      "file": "jellyfish_monterey_2_2024.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Jellyfish_at_Monterey_Bay_Aquarium_2_2024-01-11.webm",
+      "credit": "Fastily / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "jellyfish_ocean_cc0",
+      "file": "a_jellyfish.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/A_Jellyfish.jpg",
+      "credit": "safaritravelplus / Wikimedia Commons",
+      "license": "CC0 1.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "blue_jellyfish_cc0",
+      "file": "blue_jellyfish.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Blue_jellyfish.jpg",
+      "credit": "ProjectManhattan / Wikimedia Commons",
+      "license": "CC0 1.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
   ]
 }
