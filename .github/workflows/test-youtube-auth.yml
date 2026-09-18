@@ -177,3 +177,142 @@ jobs:
           test -f ".visual-handoff/episodes/$TEST_EPISODE/visual_resolution_report.json"
           echo "VISUAL_HANDOFF_TRANSFER_OK"
           find .visual-handoff -type f -maxdepth 5 -print
+
+
+  credential-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Validate content credentials without publishing
+        shell: bash
+        env:
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64, json, os, urllib.error, urllib.parse, urllib.request
+
+          def required(*names):
+              missing=[n for n in names if not os.environ.get(n,"").strip()]
+              if missing:
+                  raise SystemExit("Missing secrets: "+", ".join(missing))
+
+          required(
+              "CLOUDINARY_API_KEY","CLOUDINARY_API_SECRET","CLOUDINARY_CLOUD_NAME",
+              "FACEBOOK_PAGE_ACCESS_TOKEN","FACEBOOK_PAGE_ID","GEMINI_API_KEY",
+              "INSTAGRAM_ACCESS_TOKEN","INSTAGRAM_ACCOUNT_ID",
+              "TIKTOK_CLIENT_KEY","TIKTOK_CLIENT_SECRET","TIKTOK_REFRESH_TOKEN",
+              "YOUTUBE_CLIENT_ID","YOUTUBE_CLIENT_SECRET","YOUTUBE_REFRESH_TOKEN",
+          )
+          print("SECRETS_PRESENT_OK")
+
+          def get_json(url, headers=None):
+              req=urllib.request.Request(url, headers=headers or {})
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  return json.load(resp)
+
+          # Gemini: list models validates the API key without generating content.
+          q=urllib.parse.urlencode({"key":os.environ["GEMINI_API_KEY"],"pageSize":1})
+          data=get_json("https://generativelanguage.googleapis.com/v1beta/models?"+q)
+          if "models" not in data:
+              raise SystemExit("Gemini validation failed")
+          print("GEMINI_OK")
+
+          # Cloudinary Admin API: read-only request.
+          auth=base64.b64encode((os.environ["CLOUDINARY_API_KEY"]+":"+os.environ["CLOUDINARY_API_SECRET"]).encode()).decode()
+          data=get_json(
+              "https://api.cloudinary.com/v1_1/"+urllib.parse.quote(os.environ["CLOUDINARY_CLOUD_NAME"],safe="")+"/resources/image?max_results=1",
+              {"Authorization":"Basic "+auth},
+          )
+          if "resources" not in data:
+              raise SystemExit("Cloudinary validation failed")
+          print("CLOUDINARY_OK")
+
+          # Facebook Page token.
+          page_id=os.environ["FACEBOOK_PAGE_ID"]
+          data=get_json(
+              "https://graph.facebook.com/v26.0/"+urllib.parse.quote(page_id,safe="")+"?fields=id,name",
+              {"Authorization":"Bearer "+os.environ["FACEBOOK_PAGE_ACCESS_TOKEN"]},
+          )
+          if str(data.get("id")) != page_id:
+              raise SystemExit("Facebook page mismatch")
+          print("FACEBOOK_OK name="+str(data.get("name","<unknown>")))
+
+          # Instagram account/token through Facebook Graph API.
+          ig_id=os.environ["INSTAGRAM_ACCOUNT_ID"]
+          data=get_json(
+              "https://graph.facebook.com/v26.0/"+urllib.parse.quote(ig_id,safe="")+"?fields=id,username",
+              {"Authorization":"Bearer "+os.environ["INSTAGRAM_ACCESS_TOKEN"]},
+          )
+          if str(data.get("id")) != ig_id:
+              raise SystemExit("Instagram account mismatch")
+          print("INSTAGRAM_OK username="+str(data.get("username","<unknown>")))
+
+          # YouTube OAuth: refresh access token then query the authorized channel.
+          body=urllib.parse.urlencode({
+              "client_id":os.environ["YOUTUBE_CLIENT_ID"],
+              "client_secret":os.environ["YOUTUBE_CLIENT_SECRET"],
+              "refresh_token":os.environ["YOUTUBE_REFRESH_TOKEN"],
+              "grant_type":"refresh_token",
+          }).encode()
+          req=urllib.request.Request(
+              "https://oauth2.googleapis.com/token",
+              data=body,
+              headers={"Content-Type":"application/x-www-form-urlencoded"},
+          )
+          with urllib.request.urlopen(req, timeout=30) as resp:
+              yt_token=json.load(resp)
+          access=yt_token.get("access_token")
+          if not access:
+              raise SystemExit("YouTube OAuth did not return access_token")
+          data=get_json(
+              "https://www.googleapis.com/youtube/v3/channels?part=id,snippet&mine=true",
+              {"Authorization":"Bearer "+access},
+          )
+          items=data.get("items") or []
+          if not items:
+              raise SystemExit("YouTube token returned no channel")
+          print("YOUTUBE_OAUTH_OK channel="+str(items[0].get("snippet",{}).get("title","<unknown>")))
+
+          # TikTok client credentials can be checked safely using a dummy grant.
+          # Do not spend the real refresh token here because TikTok may rotate it.
+          dummy=urllib.parse.urlencode({
+              "client_key":os.environ["TIKTOK_CLIENT_KEY"],
+              "client_secret":os.environ["TIKTOK_CLIENT_SECRET"],
+              "refresh_token":"credential-smoke-test-not-a-real-token",
+              "grant_type":"refresh_token",
+          }).encode()
+          req=urllib.request.Request(
+              "https://open.tiktokapis.com/v2/oauth/token/",
+              data=dummy,
+              headers={"Content-Type":"application/x-www-form-urlencoded"},
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  payload=json.load(resp)
+          except urllib.error.HTTPError as exc:
+              payload=json.loads(exc.read().decode("utf-8","replace") or "{}")
+          error=str(payload.get("error","")).lower()
+          if error=="invalid_client":
+              raise SystemExit("TikTok client key/secret invalid")
+          if not os.environ["TIKTOK_REFRESH_TOKEN"].strip():
+              raise SystemExit("TikTok refresh token missing")
+          print("TIKTOK_CLIENT_OK")
+          print("TIKTOK_REFRESH_PRESENT_OK (not refreshed to avoid token rotation)")
+          PY
