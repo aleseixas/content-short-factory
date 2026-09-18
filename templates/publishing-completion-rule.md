@@ -78,6 +78,8 @@ Nunca diga que uma plataforma publicou apenas porque o workflow geral foi dispar
 
 **Uma GitHub Action com `failure` é um estado intermediário, não conclusão da tarefa, enquanto existir uma recuperação segura e autorizada.**
 
+**Este fluxo é de REPARO, não de observação.** Quando a causa concreta for corrigível nos arquivos do próprio episódio (`story.json`, `timeline.json`, `assets.json`, `post.json`, `sources.txt` ou assets do slug), o agente DEVE aplicar a correção na `main`, disparar uma nova validação do MESMO slug e acompanhar o resultado. Apenas identificar ou explicar a causa sem tentar a correção é comportamento incorreto.
+
 É proibido encerrar a execução após a primeira falha elegível apenas reportando o erro ao usuário.
 
 ### 6.0 Escada obrigatória de diagnóstico — não parar em erro genérico
@@ -125,11 +127,11 @@ Exemplo: se uma passada retornar três imagens 403, uma imagem 404 e um backgrou
 
 Para background, prefira selecionar diretamente uma faixa/profile válido e não usado recentemente. Não rotacione cegamente um profile por nova execução quando o histórico já permite eliminar opções repetidas de uma vez.
 
-Para evitar loop infinito no acompanhamento manual do agente, faça no máximo **3 ciclos externos totais de Media Preflight por episódio dentro da mesma execução do agente**: tentativa inicial + até 2 novas Actions após correções reais. Correções internas em lote realizadas pelo próprio workflow não contam como novas Actions do agente.
+Para evitar loop infinito, não faça revalidação cega: cada nova Action deve corresponder a uma correção real ou à única rechecagem diagnóstica permitida. Em uma execução normal de criação, faça no máximo **5 ciclos externos totais de Media Preflight**: tentativa inicial + até 4 novas Actions após correções reais. Em **MODO RECOVERY**, um run falhado herdado de uma execução anterior é apenas a linha de base diagnóstica e **não consome** uma nova tentativa do agente de recovery; depois de corrigir o episódio, o recovery pode disparar até **4 novas Actions de revalidação** do mesmo slug. Se cada nova passada revelar um erro dependente diferente, continue a sequência `diagnosticar -> corrigir -> commit -> novo episode-check -> acompanhar` enquanto houver correção segura e ciclos autorizados.
 
 **Exceção diagnóstica:** se o Media Preflight falhar antes da queue e tanto o log bruto quanto o artefato persistente não revelarem a causa concreta, é permitida **uma única rechecagem diagnóstica adicional do mesmo slug com nonce novo**, sem alteração de tema e sem criação de queue. Essa rechecagem existe somente para produzir diagnóstico melhor e não autoriza loop infinito.
 
-Pare antes do PASS somente se existir pelo menos um erro não recuperável que bloqueie a continuidade, se a correção não puder ser feita com segurança dentro do escopo autorizado do episódio, se depender de autenticação/secrets/permissões/infraestrutura externa, se a escada de diagnóstico tiver sido integralmente esgotada sem causa concreta ou se as tentativas seguras permitidas tiverem sido consumidas.
+Pare antes do PASS somente se existir pelo menos um erro realmente não recuperável que bloqueie a continuidade, se a correção exigir mudança global fora do escopo autorizado, se depender de autenticação/secrets/permissões/infraestrutura externa, se a escada de diagnóstico tiver sido integralmente esgotada sem causa concreta ou se os ciclos seguros permitidos tiverem sido consumidos. **Não classifique como bloqueio** um erro determinístico do próprio episódio que possa ser resolvido editando seus arquivos, escolhendo outro asset válido ou ajustando timeline/trims/metadata.
 
 Uma mensagem genérica de step/job, isoladamente, **não satisfaz nenhuma dessas condições de parada**.
 
