@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "title": "Saturno acabou de revelar um decágono gigante",
+  "slug": "saturno_decagono_polo_sul",
+  "target_duration_seconds": 75,
+  "topic": "O novo decágono de 10 lados descoberto no polo sul de Saturno pelo Hubble",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes sobre o planeta, a humanidade e o mundo",
+  "angle": "Saturno já tinha um hexágono no norte; agora o Hubble revelou uma onda atmosférica de dez lados no sul que parece estar se formando diante dos nossos olhos",
+  "language": "pt-BR",
+  "entities": ["Saturno", "Telescópio Espacial Hubble", "NASA", "ESA"],
+  "visual_keywords": ["Saturn south pole decagon Hubble", "Saturn north pole hexagon Cassini", "Saturn atmosphere jet stream"],
+  "segments": [
+    {"id":"hook","text":"Saturno já tinha um hexágono gigante no polo norte. Agora o Hubble encontrou outra forma geométrica no lado oposto: um decágono de dez lados.","delivery":"hook"},
+    {"id":"not_solid","text":"E não, isso não é uma estrutura sólida desenhada no planeta. É uma onda gigantesca acontecendo dentro da própria atmosfera de Saturno.","delivery":"curious"},
+    {"id":"first","text":"É a primeira vez que cientistas observam um padrão grande e regular desse tipo no hemisfério sul do planeta.","delivery":"reveal"},
+    {"id":"hidden","text":"O mais doido é que ele pode ser relativamente novo. A sonda Cassini observou Saturno por anos e não mostrou um padrão duradouro assim no sul.","delivery":"dramatic"},
+    {"id":"timeline","text":"Quando os pesquisadores voltaram aos dados do Hubble, acharam sinais discretos já em 2023. Depois, a forma foi ficando cada vez mais nítida.","delivery":"curious"},
+    {"id":"why_now","text":"A descoberta só ficou mais fácil porque as estações de Saturno estão trazendo o polo sul novamente para uma posição melhor de observar da Terra.","delivery":"neutral"},
+    {"id":"layers","text":"E tem outro detalhe absurdo: o decágono aparece em diferentes comprimentos de onda, então a estrutura atravessa várias camadas da atmosfera.","delivery":"reveal"},
+    {"id":"jet","text":"Ele fica preso em uma corrente de jato poderosa, perto de sessenta e três graus de latitude sul. Ou seja: é uma forma criada por dinâmica de gases, não por uma superfície.","delivery":"curious"},
+    {"id":"north","text":"No norte, o famoso hexágono de Saturno já permanece estável há mais de quarenta anos. O decágono do sul parece diferente e ainda está evoluindo.","delivery":"dramatic"},
+    {"id":"mystery","text":"Os cientistas ainda querem descobrir por que Saturno consegue produzir polígonos tão organizados em uma atmosfera que está em movimento o tempo inteiro.","delivery":"curious"},
+    {"id":"payoff","text":"Então pensa nisso: um planeta feito principalmente de gás agora tem um hexágono em um polo e uma onda de dez lados surgindo no outro.","delivery":"payoff"},
+    {"id":"cta","text":"Qual dos dois é mais absurdo pra você?","delivery":"payoff"}
+  ]
+}
