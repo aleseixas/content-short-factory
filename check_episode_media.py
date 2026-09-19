@@ -16,8 +16,6 @@ from engine.music import MUSIC_ROOT, background_music_candidates, resolve_backgr
 
 
 RECENT_BACKGROUND_TRACK_WINDOW = 20
-MAX_VIDEO_SOURCE_USES = 10
-DEFAULT_VIDEO_REUSE_WINDOW_SECONDS = 4.0
 
 
 def _single_line(value: object) -> str:
@@ -263,29 +261,10 @@ def _visual_aliases(asset: AssetSpec) -> tuple[tuple[str, str], ...]:
     return tuple(aliases)
 
 
-def _video_source_identity(asset: AssetSpec) -> tuple[str, str]:
-    aliases = _visual_aliases(asset)
-    for preferred_kind in ("file", "url"):
-        for identity in aliases:
-            if identity[0] == preferred_kind:
-                return identity
-    return ("asset_id", asset.id.casefold())
-
-
-def _shot_source_interval(shot) -> tuple[float, float]:
-    start = float(shot.source_start_seconds or 0.0)
-    if shot.source_end_seconds is not None:
-        end = float(shot.source_end_seconds)
-    else:
-        end = start + DEFAULT_VIDEO_REUSE_WINDOW_SECONDS
-    return start, end
-
-
 def _assert_intra_episode_visuals_unique(episode: Episode) -> None:
-    """Keep images unique; allow up to 10 non-overlapping takes per video source."""
+    """Block reuse of the same main visual across shots in one episode."""
 
-    seen_images: dict[tuple[str, str], tuple[str, str]] = {}
-    video_usages: dict[tuple[str, str], list[tuple[str, str, float, float]]] = {}
+    seen: dict[tuple[str, str], tuple[str, str]] = {}
 
     for shot in episode.shots:
         asset = episode.assets.get(shot.asset_id)
@@ -294,69 +273,32 @@ def _assert_intra_episode_visuals_unique(episode: Episode) -> None:
                 f"Shot {shot.id!r} referencia asset inexistente {shot.asset_id!r}."
             )
 
-        if not asset.is_video:
-            aliases = _visual_aliases(asset)
-            for identity in aliases:
-                previous = seen_images.get(identity)
-                if previous is None:
-                    continue
-                previous_shot, previous_asset = previous
-                identity_kind, identity_value = identity
-                raise RuntimeError(
-                    "INTRA_EPISODE_VISUAL_REUSE_BLOCKED: a mesma imagem foi usada "
-                    "mais de uma vez dentro do episodio. "
-                    f"Shot {shot.id!r} (asset={asset.id!r}) repete a imagem de "
-                    f"{previous_shot!r} (asset={previous_asset!r}); "
-                    f"identidade={identity_kind}:{identity_value}."
-                )
-            for identity in aliases:
-                seen_images[identity] = (shot.id, asset.id)
-            continue
+        aliases = _visual_aliases(asset)
+        for identity in aliases:
+            previous = seen.get(identity)
+            if previous is None:
+                continue
 
-        identity = _video_source_identity(asset)
-        usages = video_usages.setdefault(identity, [])
-        start, end = _shot_source_interval(shot)
-
-        if end <= start:
-            raise RuntimeError(
-                "INTRA_EPISODE_VISUAL_REUSE_BLOCKED: intervalo de video invalido para "
-                f"shot={shot.id!r} asset={asset.id!r}; start={start:.3f} end={end:.3f}."
-            )
-
-        if len(usages) >= MAX_VIDEO_SOURCE_USES:
+            previous_shot, previous_asset = previous
             identity_kind, identity_value = identity
             raise RuntimeError(
-                "INTRA_EPISODE_VISUAL_REUSE_BLOCKED: a mesma fonte de video excedeu "
-                f"o limite de {MAX_VIDEO_SOURCE_USES} shots; shot={shot.id!r} "
-                f"asset={asset.id!r} identidade={identity_kind}:{identity_value}."
+                "INTRA_EPISODE_VISUAL_REUSE_BLOCKED: o mesmo visual foi usado "
+                "mais de uma vez dentro do episodio. "
+                f"Shot {shot.id!r} (asset={asset.id!r}) repete o visual de "
+                f"{previous_shot!r} (asset={previous_asset!r}); "
+                f"identidade={identity_kind}:{identity_value}. "
+                "Cada shot principal deve usar uma imagem ou video diferente."
             )
 
-        overlap = next(
-            (
-                previous
-                for previous in usages
-                if start < previous[3] and previous[2] < end
-            ),
-            None,
-        )
-        if overlap is not None:
-            previous_shot, previous_asset, previous_start, previous_end = overlap
-            identity_kind, identity_value = identity
-            raise RuntimeError(
-                "INTRA_EPISODE_VISUAL_REUSE_BLOCKED: a mesma fonte de video usa "
-                "intervalos sobrepostos. "
-                f"Shot {shot.id!r} (asset={asset.id!r}, {start:.3f}-{end:.3f}s) "
-                f"sobrepoe {previous_shot!r} (asset={previous_asset!r}, "
-                f"{previous_start:.3f}-{previous_end:.3f}s); "
-                f"identidade={identity_kind}:{identity_value}."
-            )
-
-        usages.append((shot.id, asset.id, start, end))
+        for identity in aliases:
+            seen[identity] = (shot.id, asset.id)
 
     print(
         "[preflight] intra-episode visual uniqueness OK: "
-        f"{len(episode.shots)} shot(s); imagens unicas e videos com segmentos nao sobrepostos"
+        f"{len(episode.shots)} shot(s) sem reutilizacao"
     )
+
+
 def _candidate_aliases(entry: AudioCatalogEntry) -> set[str]:
     aliases = {f"file:{entry.relative_file.casefold()}"}
     if entry.url:
