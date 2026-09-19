@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "episode": "saturno_decagono_polo_sul",
+  "recorded_at": "2026-09-19T15:20:27Z",
+  "visual_usage": [
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_hook",
+      "asset_id": "saturn_hubble_color",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "a7384df52186fc0117403de809ef1c1b4a8c1b3954aed2650222b7f42acd23d6",
+        "url_hashes": [
+          "512f1aa68a93a6aecfafba2ae08135d4b3c536cd5ed4588cdefe3a2b6dfaa96f"
+        ],
+        "perceptual_hashes": [
+          "f15e3cc0e11bb49c",
+          "e15e1ed0e151b45e",
+          "a01f1ff0e260b51f",
+          "a75858c7b7aa5454",
+          "a7a71838e95554a7",
+          "f60909fd8c96496d",
+          "f6f60902a06969fe"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_not_solid",
+      "asset_id": "saturn_decagon_single",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6c880972bcb14268016ed06b786fb5e41df268360fc5de0bcc6c1cde3703044c",
+        "url_hashes": [
+          "8470cc61eaf50f37ca6a8cc1370e3152b8b6b1e161d5328f7ebd0fb8ed95a02a"
+        ],
+        "perceptual_hashes": [
+          "cee070e0c7e7c88d",
+          "cff070f0e7e2c8c0",
+          "8bf878f8a370d8c8",
+          "9463638cc4936d6f",
+          "9c9c6373936c6d90",
+          "c13e3ed1f1ce3032",
+          "c1c13e2eef3130cd"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_first",
+      "asset_id": "saturn_south",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "604a8a5c79a2fdcaca77a2dbf7a8b9a56001e06371f98a4e85c482eec112b592",
+        "url_hashes": [
+          "c88337cc05d7bc139e3e819155e2217822322e91461b426e79eb2b6543ea880a"
+        ],
+        "perceptual_hashes": [
+          "cee070e0c7e7c88d",
+          "cff070f0e7e2c8c0",
+          "8bf878f8a370d8c8",
+          "9463638cc4936d6f",
+          "9c9c6373936c6d90",
+          "c13e3ed1f1ce3032",
+          "c1c13e2eef3130cd"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_hidden",
+      "asset_id": "cassini_saturn",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "35fb12075b36dece94e67aa1b581d0739a06c7476856f3fc881912eb9a875b88",
+        "url_hashes": [
+          "3ae7dac9c62528d10d4696b6cce5fa42b3d757fc88f9c0b41f0794d24212a8f6"
+        ],
+        "perceptual_hashes": [
+          "f15e3cc0e11bb49c",
+          "a15e1ef0e151b45e",
+          "a01f1ff0e260b51f",
+          "a75858c7b7aa5454",
+          "a7a71838e95554a7",
+          "f60909fd8c96496d",
+          "f6f60902a06969fe"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_timeline",
+      "asset_id": "hubble_space",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "499dfc0eb5b374e06907faabd978680935ae687ca9cf285de5b7ab2cad052daf",
+        "url_hashes": [
+          "5d0aafbe6aea6c9682880a9df2aa41b31d1b45c24d42bf6e3f36c69f9c789a3b"
+        ],
+        "perceptual_hashes": [
+          "d261709e0f0f2737",
+          "d060709d4f8f2f17",
+          "d0687c9d5e8e2517",
+          "8763309c1e2e37d3",
+          "87c7632332b1d1cb",
+          "da7d1f80613419ee",
+          "daec7d1a1c098d66"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_why_now",
+      "asset_id": "saturn_globe",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ad50d8edef8230151fe04cce403ec1e42d64f1c76c5047ee8c4d96233dba4455",
+        "url_hashes": [
+          "9f778e4ea594c67bf4e984d78f78f5af00c6cc83993de1adb7e9ce30fa7054c0"
+        ],
+        "perceptual_hashes": [
+          "c4373bc8784dc336",
+          "c4373ada7c49c135",
+          "cd2732dc3ec8708d",
+          "806e75704eaf38b5",
+          "808a3f9db178d571",
+          "d5386b27e4d280db",
+          "c5d438da1b01ed1f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_layers",
+      "asset_id": "saturn_false_color",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "c6fd511d5f7235ffd4d151092a4cc08e7d82ad52a393163f7ffdcf22fac13606",
+        "url_hashes": [
+          "df772e36f8ce46464b90046b0053b95ae7323775b3aab328a5c03fe25fef88ac"
+        ],
+        "perceptual_hashes": [
+          "99666699b1cccb26",
+          "99666e99b7c9c206",
+          "99666c9936d9d08d",
+          "926d5bb4c28f7870",
+          "92a46d5b2d7872e4",
+          "cc33669dc6da250d",
+          "ccd9336e39350c39"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_jet",
+      "asset_id": "saturn_atmosphere",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ebed1ee26ded4daec699b4a88e9b5f7b94fec0da3826189d62b51061b11e72ac",
+        "url_hashes": [
+          "0e840b3e4e16c1d99840d3d584d7e0bb574970d4ce3fbaf67735423ccd83c9cb"
+        ],
+        "perceptual_hashes": [
+          "f4150ff5f210ad07",
+          "fc0503f5f454ab07",
+          "fd0002faf57dab01",
+          "ea1715eab0108fd7",
+          "e8e81515c4ef87f0",
+          "b64949ba8aa55a5b",
+          "b6b64945e15a5aa5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_north",
+      "asset_id": "saturn_hexagon",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b5279841a627825dad64f18066ecc026eaf7b6de3532cb50fedd4a358f9a4cce",
+        "url_hashes": [
+          "b7a52f6022181f339a10a216dd110ef9dac3e5389be1cd88fc14cd6c3f561c50"
+        ],
+        "perceptual_hashes": [
+          "fc1503f5f41ca907",
+          "fd0102fcf55dab01",
+          "fd0002faf57daa81",
+          "fa1715eab0148f87",
+          "fae81515c4ab87f0",
+          "b64949b68aad525b",
+          "a6b64949ed5252ad"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_mystery",
+      "asset_id": "saturn_polar_vortex",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "902493ce551e157af1ee90ee05839e49dc82a42955471ea7e8b6db6e25b7fa6e",
+        "url_hashes": [
+          "985bad6da6ba1936bca4ee264278d7bc146a58f4e5c172ddfc68b0b4e4af5601"
+        ],
+        "perceptual_hashes": [
+          "8fd870f82772d8c8",
+          "8f8a78092772daa7",
+          "8fc67c992374d223",
+          "9c6363ec64906b9b",
+          "9c9c6313926f6b64",
+          "c13e3eb130cd36c6",
+          "c1c13e4ecf323639"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_payoff",
+      "asset_id": "saturn_full",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "94610a6e483d8b6a1206d3a7929e12055537cd085f4247eaccd17fb9920562cf",
+        "url_hashes": [
+          "c65437eab400e825ff04ee753c62358f6cb4f441920f8305395ca1a3bd9d72ac"
+        ],
+        "perceptual_hashes": [
+          "99676698e6651b98",
+          "9965679ee6611a98",
+          "9865659ee467069e",
+          "906f6ea56e1cb2c2",
+          "92906f1a35e3e26d",
+          "cd3232b170498ff6",
+          "cdcd324e11b6f630"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "saturno_decagono_polo_sul",
+      "shot_id": "shot_cta",
+      "asset_id": "saturn_rings",
+      "recorded_at": "2026-09-19T15:20:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "7c35adfe1489e4560831088410b04709e332b0f923665992c8f05d180cdc1c47",
+        "url_hashes": [
+          "d6fbc0451ed251b297c320a2096cf462e94c3b34344bab3e46fd6e23883e7079"
+        ],
+        "perceptual_hashes": [
+          "8f96386863c7c63c",
+          "8f95387a61c36738",
+          "87953c3e30c3633e",
+          "9c337166ce4c7998",
+          "9c9c319969739987",
+          "c01f3f3cf06027c7",
+          "c0c01f833f1fc3dc"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
