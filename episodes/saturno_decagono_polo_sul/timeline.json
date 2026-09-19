@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "smart_visual_pacing": {"enabled": true},
+  "background_music": {"profile":"fallback_social_cinematic","volume":0.10},
+  "sfx_cues": [
+    {"time_seconds":0.08,"type":"energy_charge_repulsor","volume":0.14},
+    {"time_seconds":6.2,"type":"whoosh_wind","volume":0.10},
+    {"time_seconds":13.0,"type":"chime_sparkles","volume":0.11},
+    {"time_seconds":20.0,"type":"camera_shutter","volume":0.10},
+    {"time_seconds":28.0,"type":"metallic_riser","volume":0.12},
+    {"time_seconds":36.0,"type":"swoosh_alt","volume":0.10},
+    {"time_seconds":44.0,"type":"bass_drop","volume":0.13},
+    {"time_seconds":53.0,"type":"riser_build_up","volume":0.11},
+    {"time_seconds":62.0,"type":"dramatic_dun_dun","volume":0.12},
+    {"time_seconds":70.0,"type":"correct_ding","volume":0.09}
+  ],
+  "visual_fx_cues": [
+    {"start_seconds":0.05,"end_seconds":0.7,"type":"punch_zoom","intensity":0.55},
+    {"start_seconds":27.5,"end_seconds":28.4,"type":"slow_zoom_in","intensity":0.30},
+    {"start_seconds":61.5,"end_seconds":62.3,"type":"punch_zoom","intensity":0.42}
+  ],
+  "text_fx_cues": [
+    {"segment":"hook","offset_seconds":0.12,"duration_seconds":1.35,"text":"SATURNO TEM UM\nDECÁGONO GIGANTE","accent_text":"DECÁGONO","animation":"scale_bounce","position":"center","intensity":0.62},
+    {"segment":"layers","offset_seconds":0.10,"duration_seconds":1.15,"text":"ATRAVESSA\nVÁRIAS CAMADAS","accent_text":"VÁRIAS CAMADAS","animation":"pop_in","position":"center","intensity":0.55},
+    {"segment":"north","offset_seconds":0.10,"duration_seconds":1.20,"text":"6 LADOS NO NORTE\n10 NO SUL","accent_text":"10 NO SUL","animation":"slide_up","position":"center","intensity":0.58},
+    {"segment":"cta","offset_seconds":0.05,"duration_seconds":1.40,"text":"HEXÁGONO OU DECÁGONO?","accent_text":"DECÁGONO","animation":"fade_pop","position":"center","intensity":0.54}
+  ],
+  "shots": [
+    {"id":"shot_hook","segment":"hook","asset":"saturn_hubble_color","motion":"push_in","transition_out":"cut","highlight":"UM DECÁGONO EM SATURNO"},
+    {"id":"shot_not_solid","segment":"not_solid","asset":"saturn_decagon_single","motion":"push_in","transition_out":"crossfade","highlight":"É UMA ONDA ATMOSFÉRICA"},
+    {"id":"shot_first","segment":"first","asset":"saturn_south","motion":"push_in","transition_out":"cut","highlight":"PRIMEIRO PADRÃO REGULAR NO SUL"},
+    {"id":"shot_hidden","segment":"hidden","asset":"cassini_saturn","motion":"push_in","transition_out":"crossfade","highlight":"CASSINI NÃO VIU ISSO DURADOURO"},
+    {"id":"shot_timeline","segment":"timeline","asset":"hubble_space","motion":"push_in","transition_out":"cut","highlight":"SINAIS DESDE 2023"},
+    {"id":"shot_why_now","segment":"why_now","asset":"saturn_globe","motion":"push_in","transition_out":"crossfade","highlight":"O SUL VOLTOU À VISTA"},
+    {"id":"shot_layers","segment":"layers","asset":"saturn_false_color","motion":"push_in","transition_out":"cut","highlight":"VÁRIAS CAMADAS DA ATMOSFERA"},
+    {"id":"shot_jet","segment":"jet","asset":"saturn_atmosphere","motion":"push_in","transition_out":"crossfade","highlight":"PRESO NUMA CORRENTE DE JATO"},
+    {"id":"shot_north","segment":"north","asset":"saturn_hexagon","motion":"push_in","transition_out":"cut","highlight":"O HEXÁGONO DURA HÁ DÉCADAS"},
+    {"id":"shot_mystery","segment":"mystery","asset":"saturn_polar_vortex","motion":"push_in","transition_out":"crossfade","highlight":"POR QUE POLÍGONOS?"},
+    {"id":"shot_payoff","segment":"payoff","asset":"saturn_full","motion":"push_in","transition_out":"cut","highlight":"6 LADOS EM CIMA, 10 EMBAIXO"},
+    {"id":"shot_cta","segment":"cta","asset":"saturn_rings","motion":"push_in","transition_out":"cut","highlight":"QUAL É MAIS ABSURDO?"}
+  ]
+}
