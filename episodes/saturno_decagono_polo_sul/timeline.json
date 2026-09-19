@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "smart_visual_pacing": {"enabled": true},
-  "background_music": {"profile":"fallback_social_cinematic","volume":0.10},
+  "background_music": {"profile":"bright_fun","volume":0.10},
   "sfx_cues": [
     {"time_seconds":0.08,"type":"energy_charge_repulsor","volume":0.14},
     {"time_seconds":6.2,"type":"whoosh_wind","volume":0.10},
