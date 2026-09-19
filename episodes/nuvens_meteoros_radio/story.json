@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "title": "A nuvem invisível feita de meteoros que bagunça o rádio",
+  "slug": "nuvens_meteoros_radio",
+  "target_duration_seconds": 76,
+  "topic": "As nuvens invisíveis de metal feitas por meteoros que bagunçam sinais de rádio na Terra",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes sobre o planeta, a humanidade e o mundo",
+  "angle": "meteoros queimam na atmosfera, deixam metais na borda do espaço e esses átomos podem formar camadas que refletem sinais de rádio de modo imprevisível",
+  "language": "pt-BR",
+  "entities": ["camadas E esporádicas", "NASA", "ionosfera", "meteoros"],
+  "visual_keywords": ["meteor burning atmosphere", "NASA sounding rocket", "ionosphere layers", "radio waves atmosphere"],
+  "segments": [
+    {"id":"hook","text":"Existe uma nuvem invisível, feita com restos de meteoros, que aparece na borda do espaço e pode fazer sinais de rádio ricochetearem para lugares inesperados.","delivery":"hook"},
+    {"id":"meteor","text":"Tudo começa quando pequenos meteoroides entram na atmosfera. Eles aquecem, vaporizam e deixam para trás átomos metálicos, como ferro e magnésio.","delivery":"curious"},
+    {"id":"layer","text":"A dezenas de quilômetros de altitude, ventos e campos elétricos conseguem concentrar esse material em lâminas extremamente finas da ionosfera.","delivery":"neutral"},
+    {"id":"name","text":"Os cientistas chamam essas estruturas de camadas E esporádicas, porque elas surgem, mudam e desaparecem de forma difícil de prever.","delivery":"reveal"},
+    {"id":"radio","text":"Mesmo invisíveis aos nossos olhos, elas podem ficar eletricamente densas o bastante para refletir ondas de rádio que normalmente seguiriam outro caminho.","delivery":"dramatic"},
+    {"id":"effect","text":"Resultado: um sinal pode viajar muito mais longe do que deveria, ou ser desviado e deixar comunicações de longa distância temporariamente imprevisíveis.","delivery":"reveal"},
+    {"id":"rocket","text":"Para enxergar o que acontece lá dentro, a NASA lançou um foguete de pesquisa com cinco detectores que atravessaram a mesma camada quase ao mesmo tempo.","delivery":"curious"},
+    {"id":"surprise","text":"Os dados mostraram que aquilo que parecia uma folha uniforme era muito mais complexo: a densidade mudava bastante entre pontos separados por pequenas distâncias.","delivery":"reveal"},
+    {"id":"meaning","text":"Isso ajuda a explicar por que essas camadas conseguem alterar a propagação do rádio de maneiras tão irregulares e difíceis de antecipar.","delivery":"neutral"},
+    {"id":"payoff","text":"Então parte da interferência que acontece muito acima da sua cabeça pode começar com poeira espacial queimando: meteoros viram metal, o metal vira uma camada e a camada muda o caminho do rádio.","delivery":"payoff"}
+  ]
+}

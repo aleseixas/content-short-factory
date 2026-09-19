@@ -1,0 +1,6 @@
+NASA Science — NASA Rocket Takes First Multi-Point Look Inside Radio-Disrupting Clouds — 2026-09-02
+https://science.nasa.gov/science-research/heliophysics/nasa-rocket-takes-first-multi-point-look-inside-radio-disrupting-clouds/
+
+NASA describes sporadic E layers as thin high-altitude metallic layers formed from vaporized material from meteors. The article reports the first simultaneous multi-point sampling with five detectors and explains that the layers can redirect long-distance radio signals unpredictably.
+
+Supporting visual sources: NASA public-domain imagery and Wikimedia Commons assets listed in assets.json.
