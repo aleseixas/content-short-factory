@@ -1,0 +1,27 @@
+FACTUAL SOURCES
+
+NASA Science — NASA’s Hubble Tracks New Decagon Encircling Saturn’s South Pole — Sep 2, 2026
+https://science.nasa.gov/missions/hubble/nasas-hubble-tracks-new-decagon-encircling-saturns-south-pole/
+Used for the 10-sided atmospheric wave, first regular-sided southern pattern, evidence back to 2023, strengthening over time, Cassini comparison, seasonal viewing geometry, multiple atmospheric layers and jet-stream context.
+
+NASA Science — Decagon on Saturn’s South Pole (Single Filter) — Sep 2, 2026
+https://science.nasa.gov/asset/hubble/decagon-on-saturns-south-pole-single-filter/
+Used for the 63° south latitude location, multi-wavelength altitude context and Hubble observation details.
+
+ESA — Hubble tracks new decagon encircling Saturn’s south pole — Sep 2, 2026
+https://www.esa.int/Science_Exploration/Space_Science/Hubble_tracks_new_decagon_encircling_Saturn_s_south_pole
+Used as independent institutional confirmation and visual/media context.
+
+NASA APOD — Hubble: Decagon Around Saturn’s South Pole — Sep 8, 2026
+https://science.nasa.gov/image-article/apod-2026-september-8-hubble-decagon-around-saturns-south-pole/
+Used for comparison with the long-lived northern hexagon and the wave-interaction explanation stated with appropriate uncertainty.
+
+MEDIA SOURCES
+
+NASA/ESA/STScI Hubble decagon imagery — science.nasa.gov — NASA/ESA science media.
+NASA/JPL-Caltech/Space Science Institute Saturn/Cassini imagery — Wikimedia Commons — public domain.
+NASA Hubble imagery — Wikimedia Commons — public domain.
+
+BACKGROUND MUSIC
+
+External music search was considered for a cinematic/science documentary bed, but no new direct audio URL with sufficiently clear cross-platform reuse metadata was selected during this run. Using curated `fallback_social_cinematic` from the repository as the safe fallback per the current audio-search policy.
