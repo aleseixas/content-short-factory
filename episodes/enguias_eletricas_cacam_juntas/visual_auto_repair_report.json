@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "episode": "enguias_eletricas_cacam_juntas",
+  "error_code": "VISUAL_ASSET_INVALID",
+  "error_detail": "Asset de video invalido 'eel_video_1': ffprobe falhou (1): [mov,mp4,m4a,3gp,3g2,mj2 @ 0x56296bdfca40] moov atom not found /home/runner/work/content-short-factory/content-short-factory/cache/video/youtube-5eRws-wBlMA.mp4: Invalid data found when processing input",
+  "target_slot": "eel_video_1",
+  "failing_file": "",
+  "selection_mode": "same_kind_eligible",
+  "selected_kind": "video",
+  "selected_name": "jaWpDWbY5ik",
+  "selected_file": "youtube-jaWpDWbY5ik.mp4",
+  "selected_url": null,
+  "visual_score": 52.66,
+  "selection_score": 63.16,
+  "inspection_failures": []
+}
