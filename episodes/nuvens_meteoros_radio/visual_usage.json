@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "episode": "nuvens_meteoros_radio",
+  "recorded_at": "2026-09-20T02:15:42Z",
+  "visual_usage": [
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_hook",
+      "asset_id": "meteor_video",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "8b60b38aeb2ae70e40e92f0c724cde8b504de35ce7e433176d58f2d42ab3538c",
+        "url_hashes": [
+          "bd45923004f1d4593f01cc3d75b0811eecb5cfa3f794312504c3ca49ce2da9cb"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "c3c33c3cc3c33c3c",
+          "c3e33e1cc1c33c3c",
+          "c1e33e1cc3c33c3c",
+          "c1e33e1cc1c37a3c",
+          "c1e33e1cc5c36a3c",
+          "d63b6de504c63e88",
+          "d82476f00df0cf1e",
+          "cb3ce238e4fde006"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 10.1
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_meteor",
+      "asset_id": "meteor_shower",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "829a1bc9ce9ea74659c5838d6db54c5080418a19ff575a42a3133adc16cb84ea",
+        "url_hashes": [
+          "40c73dcf5741a465ae5e91ad1cd1de8f66e31d0a29c8498cdce477c4b23189e3"
+        ],
+        "perceptual_hashes": [
+          "c1ae1bc49b2e41bb",
+          "c3a43bdc9b2cc916",
+          "c6ad76d9922dca11",
+          "c43f43952fd82749",
+          "c4a93649d2bd22dd",
+          "d52a5dcb39641a65",
+          "d5b21873cc8b36e1"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_layer",
+      "asset_id": "atmosphere",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "8ca66d107c32a69ef38f276ecbf1c4efcac7e97716378c5b16f136ab2092b393",
+        "url_hashes": [
+          "0439271c0cb9f0d6a2c9a06994aa6bfd78198d46ab9ec16929b7a23a0d1e9d57"
+        ],
+        "perceptual_hashes": [
+          "a5254bda4ada5acc",
+          "ad2d53d648d346d4",
+          "ab2bd31468936cdc",
+          "a82a9559f659d436",
+          "e82a4eb709cb364e",
+          "b534da4bda42cb1a",
+          "a53534da27e71c34"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_name",
+      "asset_id": "ionosphere",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f63a0f4784f6bc6043e2cf6870e14e51002dc23ff21385459f695142a6c90917",
+        "url_hashes": [
+          "98a940fec80a67ecc7933c184b993fb6c4ae7213a461c1525eb146512a5e52a8"
+        ],
+        "perceptual_hashes": [
+          "aa73e09a3966da61",
+          "9433e09a3996da67",
+          "9c72e4983995da63",
+          "bf648976ec144b91",
+          "bf24cb8d5362ab90",
+          "8a79d23d724926c7",
+          "aa38e6c38d3496cd"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_radio",
+      "asset_id": "radio_waves",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3966efe24f35a87ea83662bc7419209a52f9401aa46320c7d337a1d3cadac12c",
+        "url_hashes": [
+          "2e8011fa499e1021a32b1a1a841c82a507ce23a3157e866f35c10dd4e3cd3bb0"
+        ],
+        "perceptual_hashes": [
+          "b49bc3389bce8c98",
+          "bc9bc2389bcd8c98",
+          "af93c039934d8b9c",
+          "e88787949a3aa36e",
+          "e8788763b3e54b84",
+          "b7d8de80c20f1f38",
+          "b724da378f1876c0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_effect",
+      "asset_id": "radio_tower",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "8b2dcf0204b00187cf17d8292c6a873d057484bf47629450ab05269bf1884fce",
+        "url_hashes": [
+          "16d8cbd4273b77764f55abbfd25118c0d5cc3cd130f2ee4e1691d0c142b664e3"
+        ],
+        "perceptual_hashes": [
+          "e7807f7ccf014962",
+          "e7c0777dc7804d30",
+          "a4d37e7d8281752a",
+          "c0c47bdf05408dfe",
+          "ee808430faad9e7a",
+          "b2d946ea814ea9dc",
+          "f2afd8066abb8452"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_rocket",
+      "asset_id": "sounding_rocket",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6e11068048e0ee28448fe51f619f9b3bddb9cc019fe5185f5f36851fe99e084f",
+        "url_hashes": [
+          "d82ad6e5c95f23376ec8fbd55c8bf3f66d520c72afa2701d458602e275a98892"
+        ],
+        "perceptual_hashes": [
+          "cf9f0f2f032f80d0",
+          "c7831f27030f3a57",
+          "c4811f250f2b3f57",
+          "df1f3f0f1ca0c0e0",
+          "cf87907b807f8079",
+          "eb8c2e75299ad095",
+          "ebd0801ed660f537"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_surprise",
+      "asset_id": "earth_limb",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "51049ed4e34514880bfbe39d34e2dd2c56e31f55919e7f4f0b34ef1698cb9f50",
+        "url_hashes": [
+          "19e985d3c8a76ef6e1a7814a9d3707a53e965c23d4e92d4db4558f8c0a94bfd3"
+        ],
+        "perceptual_hashes": [
+          "c4651bd83e8f3c98",
+          "c46313d43fc31d9a",
+          "c56311fd03639bc3",
+          "803f17787cf16361",
+          "80e01f83739f6b9c",
+          "d7284a2d21873f37",
+          "c7b508d63fca3289"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_meaning",
+      "asset_id": "night_radio",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "834615713f129ee8ae61a8fbc4c5b4010ec66fe3f2d421d8977bc389da0148fd",
+        "url_hashes": [
+          "74dd31837303237fc2f6328ba17c2f3ddc299bb170de00b9f71479192c0553bb"
+        ],
+        "perceptual_hashes": [
+          "89e9ab1636b69692",
+          "89e9eb4634b59694",
+          "cbcbca483d25a5b4",
+          "d2d28d29adad2555",
+          "9ad2d4d5d531705c",
+          "ecacfb1292931b49",
+          "84edade9e90f6520"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "nuvens_meteoros_radio",
+      "shot_id": "shot_payoff",
+      "asset_id": "meteor_streak",
+      "recorded_at": "2026-09-20T02:15:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "157bc934feef0cb5207a27a4ebda3114340d6bf8733ecefb43999f014d97f246",
+        "url_hashes": [
+          "c01e97758805afa2cb5ba3862ab3e1a7764cf5830aa4a57452e817a3ba88c294"
+        ],
+        "perceptual_hashes": [
+          "959557d25a6a8aca",
+          "a59555d556505ada",
+          "aaaa78c595a599d2",
+          "a4b5d59521d55553",
+          "80a071c79dfd2baa",
+          "95955a4a2aea4b5d",
+          "a58535f551555754"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
