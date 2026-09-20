@@ -1,15 +1,85 @@
 {
   "schema_version": 1,
   "assets": [
-    {"id":"meteor_video","file":"meteor.webm","url":"https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5f/Meteor_falling.webm/Meteor_falling.webm.720p.webm","credit":"Wikimedia Commons contributors","license":"CC / Wikimedia Commons","focus":{"x":0.5,"y":0.5}},
-    {"id":"meteor_shower","file":"meteor_shower.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/5/5f/Leonids-1833.jpg","credit":"Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.45}},
-    {"id":"atmosphere","file":"atmosphere.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/8/87/ISS-44_Stratosphere.jpg","credit":"NASA / Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.5}},
-    {"id":"ionosphere","file":"ionosphere.png","url":"https://upload.wikimedia.org/wikipedia/commons/7/7d/Atmosphere_layers-en.svg","credit":"Wikimedia Commons","license":"CC BY-SA","focus":{"x":0.5,"y":0.5}},
-    {"id":"radio_tower","file":"radio_tower.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/8/86/Radio_tower.jpg","credit":"Wikimedia Commons","license":"CC","focus":{"x":0.5,"y":0.5}},
-    {"id":"radio_waves","file":"radio_waves.svg","url":"https://upload.wikimedia.org/wikipedia/commons/3/30/Skywave.svg","credit":"Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.5}},
-    {"id":"sounding_rocket","file":"sounding_rocket.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/0/00/NASA_sounding_rocket.jpg","credit":"NASA / Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.5}},
-    {"id":"earth_limb","file":"earth_limb.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg","credit":"NASA / Wikimedia Commons","license":"Public domain","focus":{"x":0.5,"y":0.5}},
-    {"id":"meteor_streak","file":"meteor_streak.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/1/18/Perseid_Meteor.jpg","credit":"Wikimedia Commons","license":"CC","focus":{"x":0.5,"y":0.5}},
-    {"id":"night_radio","file":"night_radio.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/6/6d/Radio_telescope.jpg","credit":"Wikimedia Commons","license":"CC","focus":{"x":0.5,"y":0.5}}
+    {
+      "id": "meteor_video",
+      "file": "meteor.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/NASA_-_NPP_Sees_Aftermath_of_the_Chelyabinsk_Meteor_Q9KwK0izt5c.webm",
+      "credit": "NASA Goddard / Wikimedia Commons",
+      "license": "Public domain (NASA)",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "meteor_shower",
+      "file": "meteor_shower.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Leonids-1833.jpg",
+      "credit": "Adolf Vollmy / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {"x": 0.5, "y": 0.45}
+    },
+    {
+      "id": "atmosphere",
+      "file": "atmosphere.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/1_atmosphere_layers.png",
+      "credit": "NASA / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "ionosphere",
+      "file": "ionosphere.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Ionospheric_layers_from_night_to_day.png",
+      "credit": "Carlos Molina / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "radio_tower",
+      "file": "radio_tower.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Radio-Tower.jpg",
+      "credit": "Irvias / Wikimedia Commons",
+      "license": "CC0 1.0",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "radio_waves",
+      "file": "radio_waves.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Skywave.jpg",
+      "credit": "Kf4yfd, Noldoaran, Augiasstallputzer / Wikimedia Commons",
+      "license": "CC BY-SA 3.0 / GFDL",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "sounding_rocket",
+      "file": "sounding_rocket.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/WFF_sounding_rockets.jpg",
+      "credit": "NASA Wallops Flight Facility / Wikimedia Commons",
+      "license": "Public domain (NASA)",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "earth_limb",
+      "file": "earth_limb.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
+      "credit": "NASA / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "meteor_streak",
+      "file": "meteor_streak.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Perseid_Meteor.jpg",
+      "credit": "Brocken Inaglory / Wikimedia Commons",
+      "license": "CC BY-SA / GFDL",
+      "focus": {"x": 0.5, "y": 0.5}
+    },
+    {
+      "id": "night_radio",
+      "file": "night_radio.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Radio_telescope.jpg",
+      "credit": "Norayr / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {"x": 0.5, "y": 0.5}
+    }
   ]
 }
