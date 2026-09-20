@@ -2,7 +2,7 @@
   "schema_version": 1,
   "assets": [
     {"id":"eel_video_1","file":"electric-eel-opening.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Electric-eel.jpg","credit":"Steven G. Johnson / Wikimedia Commons","license":"CC BY-SA","focus":{"x":0.5,"y":0.5}},
-    {"id":"eel_photo_1","file":"electric-eel.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Electric-eel.jpg","credit":"Steven G. Johnson / Wikimedia Commons","license":"CC BY-SA","focus":{"x":0.5,"y":0.5}},
+    {"id":"eel_photo_1","file":"electrophorus-electricus-3.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Electrophorus%20electricus%203.jpg","credit":"Stan Shebs / Wikimedia Commons","license":"CC BY-SA 3.0 / GFDL","focus":{"x":0.5,"y":0.5}},
     {"id":"fish_school","file":"electric-eel-2.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Electric%20eel%202.jpg","credit":"Wikimedia Commons","license":"CC","focus":{"x":0.5,"y":0.5}},
     {"id":"eel_photo_2","file":"eelectricus.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Eelectricus.jpg","credit":"Wikimedia Commons","license":"CC","focus":{"x":0.5,"y":0.5}},
     {"id":"amazon_map","file":"electric-eel-cas.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Electric%20eel%20CAS.jpg","credit":"Wikimedia Commons","license":"CC","focus":{"x":0.5,"y":0.5}},
