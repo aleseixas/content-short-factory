@@ -1,0 +1,7 @@
+Factual sources
+- Ecology and Evolution (2021), “Social predation in electric eels”: https://onlinelibrary.wiley.com/doi/10.1002/ece3.7121
+- Smithsonian Institution, “Scientists Discover Electric Eels Hunting in a Group”: https://www.si.edu/newsdesk/releases/scientists-discover-electric-eels-hunting-group
+
+The study reports repeated observations of Volta's electric eels herding and encircling small fish, with smaller groups launching joint high-voltage predatory strikes in the Brazilian Amazon.
+
+Visual references are listed in assets.json.
