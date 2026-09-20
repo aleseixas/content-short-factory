@@ -1,0 +1,21 @@
+{
+  "schema_version":1,
+  "title":"As enguias-elétricas da Amazônia que caçam em grupo",
+  "slug":"enguias_eletricas_cacam_juntas",
+  "target_duration_seconds":68,
+  "topic":"Enguias-elétricas da Amazônia caçam em grupo e cercam peixes antes de dar choques",
+  "content_profile":"curiosidades surpreendentes, verdadeiras e simples para público brasileiro",
+  "angle":"um animal conhecido por caçar sozinho pode formar grupos, cercar cardumes e atacar em conjunto",
+  "language":"pt-BR",
+  "entities":["enguia-elétrica de Volta","rio Iriri","Amazônia","tetras","Smithsonian"],
+  "visual_keywords":["electric eel Amazon","electric eels group hunting","Iriri River Amazon","fish school underwater"],
+  "segments":[
+    {"id":"hook","text":"Na Amazônia, cientistas descobriram enguias-elétricas fazendo algo que parecia improvável: elas podem caçar em grupo, cercar peixes e atacar juntas com descargas elétricas.","delivery":"hook"},
+    {"id":"surpresa","text":"A surpresa foi grande porque as enguias-elétricas eram conhecidas principalmente como predadores solitários. Mas pesquisadores observaram esse comportamento mais de uma vez no norte do Brasil.","delivery":"curious"},
+    {"id":"cerco","text":"Primeiro, dezenas delas se juntam e empurram pequenos peixes para uma área menor, formando uma bola compacta de presas perto da superfície.","delivery":"dramatic"},
+    {"id":"ataque","text":"Depois, grupos menores, com cerca de dez enguias, avançam e soltam descargas quase ao mesmo tempo. Os peixes atordoados saltam da água e viram alimento.","delivery":"reveal"},
+    {"id":"especie","text":"O comportamento foi registrado em enguias-elétricas de Volta, espécie amazônica capaz de produzir descargas muito fortes mesmo quando caça sozinha.","delivery":"curious"},
+    {"id":"raridade","text":"Caça cooperativa é comum em animais como lobos e golfinhos, mas é rara entre peixes. Por isso a descoberta mudou a ideia de que essas enguias tinham apenas uma estratégia solitária.","delivery":"reveal"},
+    {"id":"payoff","text":"Então aquele animal que já parecia impressionante sozinho fica ainda mais estranho em grupo: ele ajuda a encurralar o cardume, espera o momento certo e participa de um ataque elétrico coletivo.","delivery":"payoff"}
+  ]
+}
