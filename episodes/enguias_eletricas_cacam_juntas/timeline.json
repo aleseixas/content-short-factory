@@ -1,16 +1,14 @@
 {
-  "schema_version":1,
-  "smart_visual_pacing":{"enabled":true},
-  "background_music":{"profile":"dark_cinematic","volume":0.045},
+  "schema_version":1,"smart_visual_pacing":{"enabled":true},"background_music":{"profile":"dark_cinematic","volume":0.045},
   "sfx_cues":[{"time_seconds":0.1,"type":"impact","volume":0.08},{"time_seconds":30,"type":"bass_drop_cinematic","volume":0.08}],
   "text_fx_cues":[{"segment":"hook","offset_seconds":0.1,"duration_seconds":1.2,"text":"ELAS CAÇAM EM GRUPO","accent_text":"EM GRUPO","animation":"scale_bounce","position":"center","intensity":0.7}],
   "shots":[
     {"id":"shot_01","segment":"hook","asset":"eel_video_1","motion":"push_in","transition_out":"cut","source_start_seconds":8,"highlight":"CHOQUE EM GRUPO"},
-    {"id":"shot_02","segment":"surpresa","asset":"eel_photo_1","motion":"push_in","transition_out":"crossfade","source_start_seconds":10,"highlight":"NÃO CAÇAM SÓ SOZINHAS"},
-    {"id":"shot_03","segment":"cerco","asset":"fish_school","motion":"push_in","transition_out":"cut","source_start_seconds":40,"highlight":"ELAS CERCAM OS PEIXES"},
-    {"id":"shot_04","segment":"ataque","asset":"eel_photo_2","motion":"push_in","transition_out":"crossfade","source_start_seconds":65,"highlight":"ATAQUE ELÉTRICO COLETIVO"},
-    {"id":"shot_05","segment":"especie","asset":"amazon_map","motion":"push_in","transition_out":"cut","source_start_seconds":95,"highlight":"AMAZÔNIA BRASILEIRA"},
-    {"id":"shot_06","segment":"raridade","asset":"eel_photo_3","motion":"pull_out","transition_out":"crossfade","source_start_seconds":120,"highlight":"RARO ENTRE PEIXES"},
-    {"id":"shot_07","segment":"payoff","asset":"amazon_river","motion":"push_in","transition_out":"cut","source_start_seconds":180,"highlight":"PREDADORES EM EQUIPE"}
+    {"id":"shot_02","segment":"surpresa","asset":"eel_photo_1","motion":"push_in","transition_out":"crossfade","highlight":"NÃO CAÇAM SÓ SOZINHAS"},
+    {"id":"shot_03","segment":"cerco","asset":"fish_school","motion":"push_in","transition_out":"cut","highlight":"ELAS CERCAM OS PEIXES"},
+    {"id":"shot_04","segment":"ataque","asset":"eel_photo_2","motion":"push_in","transition_out":"crossfade","highlight":"ATAQUE ELÉTRICO COLETIVO"},
+    {"id":"shot_05","segment":"especie","asset":"amazon_map","motion":"push_in","transition_out":"cut","highlight":"AMAZÔNIA BRASILEIRA"},
+    {"id":"shot_06","segment":"raridade","asset":"eel_photo_3","motion":"pull_out","transition_out":"crossfade","highlight":"RARO ENTRE PEIXES"},
+    {"id":"shot_07","segment":"payoff","asset":"amazon_river","motion":"push_in","transition_out":"cut","highlight":"PREDADORES EM EQUIPE"}
   ]
 }
