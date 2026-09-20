@@ -1,0 +1,12 @@
+{
+  "schema_version":1,
+  "assets":[
+    {"id":"eel_video_1","file":"youtube-electric-eel-group.mp4","url":"https://www.youtube.com/results?search_query=Smithsonian+electric+eels+hunt+together","credit":"Smithsonian research context / YouTube search","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"eel_photo_1","file":"electric_eel.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/9/91/Electric_eel_Electrophorus_electricus.jpg","credit":"Wikimedia Commons","license":"CC / Wikimedia Commons","focus":{"x":0.5,"y":0.5}},
+    {"id":"amazon_map","file":"amazon_river.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/0/02/Amazonrivermap.svg","credit":"Wikimedia Commons","license":"CC / Wikimedia Commons","focus":{"x":0.5,"y":0.5}},
+    {"id":"eel_photo_2","file":"electric_eel_2.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/9/91/Electric_eel_Electrophorus_electricus.jpg","credit":"Wikimedia Commons","license":"CC / Wikimedia Commons","focus":{"x":0.45,"y":0.5}},
+    {"id":"fish_school","file":"fish_school.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/0/03/Fish_school.jpg","credit":"Wikimedia Commons","license":"CC / Wikimedia Commons","focus":{"x":0.5,"y":0.5}},
+    {"id":"eel_photo_3","file":"electric_eel_3.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/9/91/Electric_eel_Electrophorus_electricus.jpg","credit":"Wikimedia Commons","license":"CC / Wikimedia Commons","focus":{"x":0.55,"y":0.5}},
+    {"id":"amazon_river","file":"amazon_river_2.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/9/9d/Amazon_river.jpg","credit":"Wikimedia Commons","license":"CC / Wikimedia Commons","focus":{"x":0.5,"y":0.5}}
+  ]
+}
