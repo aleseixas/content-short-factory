@@ -65,6 +65,26 @@ Favoreça histórias específicas. Em economia, por exemplo, `Como uma corrida a
 
 O perfil pode produzir conteúdo evergreen, histórico, atual ou ligado a tendências. Atualidade só recebe bônus quando for relevante para o perfil, verificável e ainda útil na data de publicação.
 
+
+## Acessibilidade imediata para público brasileiro
+
+Quando o `content_profile` for voltado ao público geral brasileiro, trate **facilidade de entendimento na primeira escuta** como critério editorial central, não como detalhe de redação.
+
+Prefira temas que um brasileiro médio consiga compreender e achar interessante **sem conhecimento técnico, científico, histórico ou cultural prévio**. A curiosidade pode ser inteligente e surpreendente, mas a ideia central precisa caber em uma frase simples e concreta.
+
+Na seleção do pool:
+
+- dê forte preferência a assuntos universais, concretos, visualizáveis e fáceis de explicar;
+- favoreça animais, corpo humano, lugares, objetos, hábitos, fenômenos visíveis, acontecimentos históricos claros, invenções, situações do cotidiano, feitos humanos e fatos do planeta quando houver surpresa forte;
+- penalize temas que dependam de muitos conceitos prévios, siglas, fórmulas, terminologia acadêmica, mecanismos abstratos ou longas explicações para o espectador entender por que aquilo é interessante;
+- se o hook só funcionar depois de explicar 20–30 segundos de contexto, normalmente escolha outra candidata;
+- se duas candidatas tiverem força parecida, escolha a que possa ser entendida mais rapidamente por uma pessoa comum;
+- tema complexo só deve vencer quando puder ser traduzido para linguagem cotidiana sem perder a verdade nem exigir aula prévia.
+
+Use o teste mental: **“uma pessoa comum no Brasil, ouvindo isso distraída no celular, entende em até poucos segundos o que está acontecendo e por que é surpreendente?”** Se a resposta for não, rebaixe ou descarte a candidata.
+
+Não confunda simplicidade com banalidade. O objetivo é **curiosidade forte + explicação simples**, não fato óbvio ou infantilizado.
+
 ## História, diversidade e duplicidade
 
 Antes de promover um candidato:
