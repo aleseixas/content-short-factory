@@ -1,19 +1,32 @@
 {
-  "schema_version":1,
-  "background_music":{"profile":"dark_cinematic","volume":0.035},
-  "sfx_cues":[{"time_seconds":0.08,"type":"bass_drop_cinematic","volume":0.06},{"time_seconds":15,"type":"whoosh_fast","volume":0.04},{"time_seconds":31,"type":"impact","volume":0.05},{"time_seconds":48,"type":"ding","volume":0.035},{"time_seconds":64,"type":"riser_build_up","volume":0.04}],
-  "visual_fx_cues":[{"start_seconds":0.08,"end_seconds":0.7,"type":"punch_zoom","intensity":0.5},{"start_seconds":47.5,"end_seconds":48.2,"type":"slow_zoom_in","intensity":0.3}],
-  "text_fx_cues":[{"segment":"hook","offset_seconds":0.1,"duration_seconds":1.3,"text":"UMA NUVEM FEITA\nDE METEOROS","accent_text":"DE METEOROS","animation":"scale_bounce","position":"center","intensity":0.62},{"segment":"radio","offset_seconds":0.1,"duration_seconds":1.2,"text":"ELA MUDA O CAMINHO\nDO RÁDIO","accent_text":"DO RÁDIO","animation":"pop_in","position":"center","intensity":0.58},{"segment":"payoff","offset_seconds":0.1,"duration_seconds":1.2,"text":"METEORO → METAL\n→ INTERFERÊNCIA","accent_text":"INTERFERÊNCIA","animation":"fade_pop","position":"center","intensity":0.58}],
-  "shots":[
-    {"id":"shot_hook","segment":"hook","asset":"meteor_video","motion":"hold","transition_out":"cut","highlight":"METEOROS VIRAM UMA NUVEM INVISÍVEL"},
-    {"id":"shot_meteor","segment":"meteor","asset":"meteor_shower","motion":"push_in","transition_out":"crossfade","highlight":"FERRO E MAGNÉSIO"},
-    {"id":"shot_layer","segment":"layer","asset":"atmosphere","motion":"push_in","transition_out":"cut","highlight":"NA BORDA DO ESPAÇO"},
-    {"id":"shot_name","segment":"name","asset":"ionosphere","motion":"push_in","transition_out":"crossfade","highlight":"CAMADA E ESPORÁDICA"},
-    {"id":"shot_radio","segment":"radio","asset":"radio_waves","motion":"push_in","transition_out":"cut","highlight":"ONDAS PODEM RICOCHETEAR"},
-    {"id":"shot_effect","segment":"effect","asset":"radio_tower","motion":"push_in","transition_out":"crossfade","highlight":"SINAIS VÃO MAIS LONGE"},
-    {"id":"shot_rocket","segment":"rocket","asset":"sounding_rocket","motion":"push_in","transition_out":"cut","highlight":"5 DETECTORES AO MESMO TEMPO"},
-    {"id":"shot_surprise","segment":"surprise","asset":"earth_limb","motion":"push_in","transition_out":"crossfade","highlight":"MUITO MAIS COMPLEXA"},
-    {"id":"shot_meaning","segment":"meaning","asset":"night_radio","motion":"push_in","transition_out":"crossfade","highlight":"PROPAGAÇÃO IMPREVISÍVEL"},
-    {"id":"shot_payoff","segment":"payoff","asset":"meteor_streak","motion":"push_in","transition_out":"cut","highlight":"POEIRA ESPACIAL MUDA O RÁDIO"}
+  "schema_version": 1,
+  "background_music": {"profile": "uplifting_documentary", "volume": 0.035},
+  "sfx_cues": [
+    {"time_seconds": 0.08, "type": "bass_drop_cinematic", "volume": 0.06},
+    {"time_seconds": 15, "type": "whoosh_fast", "volume": 0.04},
+    {"time_seconds": 31, "type": "impact", "volume": 0.05},
+    {"time_seconds": 48, "type": "ding", "volume": 0.035},
+    {"time_seconds": 64, "type": "riser_build_up", "volume": 0.04}
+  ],
+  "visual_fx_cues": [
+    {"start_seconds": 0.08, "end_seconds": 0.7, "type": "punch_zoom", "intensity": 0.5},
+    {"start_seconds": 47.5, "end_seconds": 48.2, "type": "slow_zoom_in", "intensity": 0.3}
+  ],
+  "text_fx_cues": [
+    {"segment": "hook", "offset_seconds": 0.1, "duration_seconds": 1.3, "text": "UMA NUVEM FEITA\nDE METEOROS", "accent_text": "DE METEOROS", "animation": "scale_bounce", "position": "center", "intensity": 0.62},
+    {"segment": "radio", "offset_seconds": 0.1, "duration_seconds": 1.2, "text": "ELA MUDA O CAMINHO\nDO RÁDIO", "accent_text": "DO RÁDIO", "animation": "pop_in", "position": "center", "intensity": 0.58},
+    {"segment": "payoff", "offset_seconds": 0.1, "duration_seconds": 1.2, "text": "METEORO → METAL\n→ INTERFERÊNCIA", "accent_text": "INTERFERÊNCIA", "animation": "fade_pop", "position": "center", "intensity": 0.58}
+  ],
+  "shots": [
+    {"id": "shot_hook", "segment": "hook", "asset": "meteor_video", "motion": "hold", "transition_out": "cut", "highlight": "METEOROS VIRAM UMA NUVEM INVISÍVEL"},
+    {"id": "shot_meteor", "segment": "meteor", "asset": "meteor_shower", "motion": "push_in", "transition_out": "crossfade", "highlight": "FERRO E MAGNÉSIO"},
+    {"id": "shot_layer", "segment": "layer", "asset": "atmosphere", "motion": "push_in", "transition_out": "cut", "highlight": "NA BORDA DO ESPAÇO"},
+    {"id": "shot_name", "segment": "name", "asset": "ionosphere", "motion": "push_in", "transition_out": "crossfade", "highlight": "CAMADA E ESPORÁDICA"},
+    {"id": "shot_radio", "segment": "radio", "asset": "radio_waves", "motion": "push_in", "transition_out": "cut", "highlight": "ONDAS PODEM RICOCHETEAR"},
+    {"id": "shot_effect", "segment": "effect", "asset": "radio_tower", "motion": "push_in", "transition_out": "crossfade", "highlight": "SINAIS VÃO MAIS LONGE"},
+    {"id": "shot_rocket", "segment": "rocket", "asset": "sounding_rocket", "motion": "push_in", "transition_out": "cut", "highlight": "5 DETECTORES AO MESMO TEMPO"},
+    {"id": "shot_surprise", "segment": "surprise", "asset": "earth_limb", "motion": "push_in", "transition_out": "crossfade", "highlight": "MUITO MAIS COMPLEXA"},
+    {"id": "shot_meaning", "segment": "meaning", "asset": "night_radio", "motion": "push_in", "transition_out": "crossfade", "highlight": "PROPAGAÇÃO IMPREVISÍVEL"},
+    {"id": "shot_payoff", "segment": "payoff", "asset": "meteor_streak", "motion": "push_in", "transition_out": "cut", "highlight": "POEIRA ESPACIAL MUDA O RÁDIO"}
   ]
 }
