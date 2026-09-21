@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "background_music": {"profile":"playful_curiosity","volume":0.03},
+  "background_music": {"profile":"hiphop_groove","volume":0.03},
   "sfx_cues": [
     {"time_seconds":0.08,"type":"impact","volume":0.045},
     {"time_seconds":20,"type":"whoosh_fast","volume":0.035},
@@ -23,7 +23,7 @@
     {"id":"shot_numbers","segment":"numbers","asset":"jack_russell_tilt","motion":"push_in","transition_out":"crossfade","highlight":"43% CONTRA 2%"},
     {"id":"shot_meaning","segment":"meaning","asset":"dog_head_anatomy","motion":"push_in","transition_out":"cut","highlight":"INFORMAÇÃO COM SIGNIFICADO"},
     {"id":"shot_side","segment":"side","asset":"french_bulldog_tilt","motion":"push_in","transition_out":"crossfade","highlight":"CADA CÃO PREFERIA UM LADO"},
-    {"id":"shot_limits","segment":"limits","asset":"new_sound_tilt","motion":"hold","transition_out":"cut","highlight":"VISÃO E AUDIÇÃO TAMBÉM PODEM CONTAR"},
-    {"id":"shot_payoff","segment":"payoff","asset":"german_shepherd_tilt","motion":"push_in","transition_out":"cut","highlight":"ATENÇÃO AO QUE VOCÊ DISSE"}
+    {"id":"shot_limits","segment":"limits","asset":"dogs_with_toy","motion":"hold","transition_out":"cut","highlight":"VISÃO E AUDIÇÃO TAMBÉM PODEM CONTAR"},
+    {"id":"shot_payoff","segment":"payoff","asset":"schnauzer_ball","motion":"push_in","transition_out":"cut","highlight":"ATENÇÃO AO QUE VOCÊ DISSE"}
   ]
 }
