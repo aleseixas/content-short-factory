@@ -85,6 +85,27 @@ Use o teste mental: **“uma pessoa comum no Brasil, ouvindo isso distraída no 
 
 Não confunda simplicidade com banalidade. O objetivo é **curiosidade forte + explicação simples**, não fato óbvio ou infantilizado.
 
+
+### Proximidade cotidiana e potencial de clique
+
+Para o **Além do Óbvio** e outros perfis de curiosidades para público geral brasileiro, trate **proximidade com a vida real do espectador** como um sinal editorial forte de potencial de view. Não escolha pauta apenas porque é rara, distante ou intelectualmente sofisticada.
+
+Quando duas ou mais candidatas forem igualmente verdadeiras, surpreendentes e visualmente fortes, prefira a que faça o público pensar imediatamente **“isso está na minha casa”, “eu vejo isso todo dia”, “eu tenho um desses”, “meu cachorro/gato faz isso”, “isso acontece no Brasil” ou “como eu nunca percebi isso?”**.
+
+Dê bônus editorial, sem virar whitelist fixa, para curiosidades fortes envolvendo:
+- cachorros, gatos e outros animais muito presentes na vida das pessoas;
+- comportamentos estranhos ou surpreendentes de pets;
+- objetos e fenômenos dentro de casa;
+- cozinha, alimentos, geladeira, banheiro, quarto, eletrônicos, roupas e itens cotidianos;
+- corpo humano, sono, sentidos, hábitos e comportamentos comuns;
+- rua, carro, trânsito, elevador, mercado, escola, trabalho e situações reconhecíveis;
+- fatos surpreendentes sobre o Brasil, cidades brasileiras, natureza brasileira, costumes, objetos, alimentos ou situações familiares ao público daqui;
+- coisas comuns que escondem uma explicação inesperada.
+
+Isso NÃO significa que todo episódio deve ser sobre pets, casa ou Brasil. Temas globais continuam válidos quando forem claramente mais fortes. A regra é: **reconhecimento imediato + surpresa real + explicação simples + bons visuais** tende a vencer curiosidade distante que exija muito contexto para o público se importar.
+
+Antes de promover o vencedor, faça também o teste mental: **“uma pessoa comum no Brasil teria motivo para parar o scroll porque reconhece isso na própria vida ou no próprio país?”** Se sim, isso é um diferencial relevante na seleção.
+
 ## História, diversidade e duplicidade
 
 Antes de promover um candidato:
