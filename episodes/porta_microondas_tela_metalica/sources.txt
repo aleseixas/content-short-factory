@@ -1,0 +1,9 @@
+FDA — Microwave Ovens
+https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens
+Micro-ondas são refletidas por metal; o magnetron gera as micro-ondas; a cavidade metálica as reflete; aparelhos possuem interlocks que interrompem a geração quando a porta abre.
+
+FDA — Microwave Oven Radiation Safety
+https://www.fda.gov/media/81147/download
+A tela da porta permite visualizar o interior, mas reflete micro-ondas como uma superfície sólida; isso depende de os furos serem uma pequena fração do comprimento de onda.
+
+Wikimedia Commons — materiais visuais com licenças registradas em assets.json.

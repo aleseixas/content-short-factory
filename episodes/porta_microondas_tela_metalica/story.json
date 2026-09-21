@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "title": "Por que você enxerga a comida, mas o micro-ondas não escapa?",
+  "slug": "porta_microondas_tela_metalica",
+  "target_duration_seconds": 72,
+  "topic": "Por que a porta do micro-ondas tem uma tela cheia de furinhos e mesmo assim segura as micro-ondas?",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes sobre o planeta, a humanidade e o mundo",
+  "angle": "a grade metálica da porta parece furada demais para ser uma barreira, mas os furos são minúsculos comparados ao comprimento de onda das micro-ondas; por isso a luz visível atravessa e as micro-ondas são refletidas",
+  "language": "pt-BR",
+  "entities": ["forno de micro-ondas", "tela metálica da porta", "micro-ondas", "luz visível", "FDA"],
+  "visual_keywords": ["microwave oven door mesh", "microwave oven operating", "electromagnetic wave wavelength", "magnetron microwave oven"],
+  "segments": [
+    {"id":"hook","text":"Olha para a porta do seu micro-ondas: ela é cheia de furinhos. Mesmo assim, você enxerga a comida lá dentro sem deixar a energia do forno simplesmente escapar.","delivery":"hook"},
+    {"id":"mesh","text":"O segredo não é o vidro. É aquela tela metálica escura colada na porta. Para as micro-ondas, ela se comporta quase como uma parede de metal.","delivery":"curious"},
+    {"id":"size","text":"A explicação está no tamanho. Um forno doméstico trabalha normalmente perto de 2,45 gigahertz, o que corresponde a ondas com cerca de doze centímetros de comprimento.","delivery":"neutral"},
+    {"id":"holes","text":"Os furos da tela têm só alguns milímetros. Como são uma fração muito pequena desse comprimento de onda, a energia de micro-ondas é fortemente refletida e fica confinada no forno.","delivery":"reveal"},
+    {"id":"light","text":"Já a luz que seus olhos enxergam tem comprimentos de onda absurdamente menores, na escala de centenas de nanômetros. Para ela, aqueles mesmos furos são enormes — então a luz atravessa e você consegue olhar para dentro.","delivery":"reveal"},
+    {"id":"metal","text":"Isso combina com outra propriedade importante: micro-ondas são refletidas por metal. Por isso a cavidade do aparelho e a tela da porta usam metal para ajudar a manter a energia onde ela deve ficar.","delivery":"neutral"},
+    {"id":"safety","text":"E a segurança não depende só da tela. A porta também tem selos e o aparelho possui sistemas de intertravamento que interrompem a geração de micro-ondas quando ela é aberta.","delivery":"curious"},
+    {"id":"payoff","text":"Então aqueles pontinhos que você vê todo dia são um filtro por tamanho de onda: pequenos demais para a micro-onda passar, mas gigantes para a luz visível. É assim que você vê o almoço sem transformar a cozinha numa extensão do forno.","delivery":"payoff"}
+  ]
+}
