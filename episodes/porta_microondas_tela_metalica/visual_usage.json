@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "episode": "porta_microondas_tela_metalica",
+  "recorded_at": "2026-09-21T15:21:29Z",
+  "visual_usage": [
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_hook",
+      "asset_id": "microwave_video",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "61d3d9e3398836a8fab9be04402f30a5755b197d2831b31ea19a01ea63cc5d49",
+        "url_hashes": [
+          "9fda2157ba20fa6e2609ac70892640be69c67ca54864e06c20f1617cb37b41c2"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "a9554f7503458bcd",
+          "a8555d2a07c79b99",
+          "a8554f790b458bcb",
+          "a8756f6d2b4482cb",
+          "a8794f7d2344a64b",
+          "a8794f783544666b",
+          "a87565792964656b",
+          "a87565692b45a74b"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 11.6
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_mesh",
+      "asset_id": "door_mesh",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "cf9bcf760a1fdfac08a4f88a3af36fcb21ef2bcbd51efc8bb7f51fdce4faa964",
+        "url_hashes": [
+          "e52151c2f61ff446809121e899dfc007d6d18c97199bb890d1d2844a0bad8275"
+        ],
+        "perceptual_hashes": [
+          "f11ec01e0fefa1c1",
+          "f91ed51507a3aa83",
+          "fb0ffd1c05020bab",
+          "f01c031fcf80c73f",
+          "e03ce0f0101f3f3f",
+          "fd005602e9a57e5e",
+          "fd01f8ff025a5a0a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_size",
+      "asset_id": "em_wave",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "4c3dc5eadab6c17b94a4b73d32ed564246d12a0c9185e572db07a0307c7633fa",
+        "url_hashes": [
+          "e528c37cbd12e66dc4f83cc04901bc8cc11e7cef46742ad8843ec1298c9adbba"
+        ],
+        "perceptual_hashes": [
+          "8be6c478fe811678",
+          "80eeec75ff801638",
+          "e2e6ed6f69c60608",
+          "8fe8c078833db2f4",
+          "873f89037cf280fc",
+          "a8b5d62ad5528cd9",
+          "a829d5d62aacddd0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_holes",
+      "asset_id": "microwave_field",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "03410e156ca44aed4f043e7c426a6986c53f9ef4ee3228f0575a77ceb25e7fcc",
+        "url_hashes": [
+          "546829f1fbef2add87356984e82187a24a91cb1503021155111a20078ceecb23"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "bc69c396c3963c68",
+          "bc92c36dcb963492",
+          "bc92c36dcb963492",
+          "bc92c36dc99634d2",
+          "bc92c369cdb63432",
+          "b43cc3cbcd26343a",
+          "bc65c39bcd2c3072",
+          "bc79c3c6c52e3232"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 11.966667
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_light",
+      "asset_id": "em_spectrum",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3fa33294d98d7144decd105ab8da1553dad4bb6a3a73d68d239b0b621eb4d8ec",
+        "url_hashes": [
+          "66e3916239e7ef5e30a4c6468aa9833a20d676a5d6a42158a14c3b55cf2a3142"
+        ],
+        "perceptual_hashes": [
+          "add20c2dd22dd2f2",
+          "add20d2fd20dd22d",
+          "a9f409b3d40bf629",
+          "dbe51ae45aa45b48",
+          "dae1e11ba4535ae4",
+          "a4da25db25da266a",
+          "a4dada24da2e25da"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_metal",
+      "asset_id": "magnetron",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "cd8f524b480cb32c9463217920880bc43ceba59a16a12de46774e5e57a6d46a3",
+        "url_hashes": [
+          "a151986f212214a25b5d29799bea86e99729968fc56c47b682c5d4d0e0b3dc6f"
+        ],
+        "perceptual_hashes": [
+          "b23fe3c89523c8d4",
+          "b23fe3c82563c0d5",
+          "b62ef2d92b42cc51",
+          "f466c69a46c9e2d1",
+          "e43c66d59a2e7489",
+          "9939ec86f8c61687",
+          "bb033debc61438a5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_safety",
+      "asset_id": "microwave_open",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "48c10350e23db38db235807d8cefc5653d681dec7a28225a755173a70e307430",
+        "url_hashes": [
+          "61455591c946322cea061612bbedab5ae79a69a276991c5a9fc1a7f37269180b"
+        ],
+        "perceptual_hashes": [
+          "f52c5219146fb2d9",
+          "e72c51325d6c97c8",
+          "eb0e51314d229eaf",
+          "ea1926196ba4caf3",
+          "e4d97466a45b6117",
+          "f54a1a452399e65e",
+          "f4a55a2ed14e314e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "porta_microondas_tela_metalica",
+      "shot_id": "shot_payoff",
+      "asset_id": "microwave_kitchen",
+      "recorded_at": "2026-09-21T15:21:29Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "5e620aabb86c3cdbf6806a3acfd80a3aaeffef52dc927220287be3d69ecf0557",
+        "url_hashes": [
+          "ea754663a2c07516801bca872a134e6b6da8edf407efa6e599d0bd1ba7683661"
+        ],
+        "perceptual_hashes": [
+          "bc92e32d8593992b",
+          "bd96626da7919099",
+          "af96706ce7949198",
+          "b8a56288b6975e69",
+          "fa958572496c696c",
+          "a7db3ea49a8c6423",
+          "a58b5b2e653433b2"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
