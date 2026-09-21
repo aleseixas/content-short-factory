@@ -6,6 +6,8 @@
     {"id":"new_sound_tilt","file":"new_sound_tilt.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_body_language_new_sound_tilting_head.jpg","credit":"Gopal Aggarwal / Wikimedia Commons","license":"CC BY 2.0","focus":{"x":0.5,"y":0.5}},
     {"id":"jack_russell_tilt","file":"jack_russell_tilt.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Jack_Russell_tilting_her_head.jpg","credit":"Writ Keeper / Wikimedia Commons","license":"CC BY-SA 3.0","focus":{"x":0.5,"y":0.4}},
     {"id":"french_bulldog_tilt","file":"french_bulldog_tilt.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/French_bulldog_-_head_tilt.jpg","credit":"Stephen Hanafin / Wikimedia Commons","license":"CC BY-SA 2.0","focus":{"x":0.5,"y":0.4}},
-    {"id":"dog_head_anatomy","file":"dog_head_anatomy.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_head_(sagittal_section).jpg","credit":"Museu de Anatomia Veterinária da FMVZ USP / Wagner Souza e Silva","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.45}}
+    {"id":"dog_head_anatomy","file":"dog_head_anatomy.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_head_(sagittal_section).jpg","credit":"Museu de Anatomia Veterinária da FMVZ USP / Wagner Souza e Silva","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.45}},
+    {"id":"dogs_with_toy","file":"dogs_with_toy.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Dogs_playing.JPG","credit":"Brandt Luke Zorn / Wikimedia Commons","license":"CC BY-SA 2.0","focus":{"x":0.5,"y":0.5}},
+    {"id":"schnauzer_ball","file":"schnauzer_ball.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Schnauzer_with_a_ball.jpg","credit":"JBennett (WMF) / Wikimedia Commons","license":"CC BY-SA 4.0","focus":{"x":0.5,"y":0.45}}
   ]
 }
