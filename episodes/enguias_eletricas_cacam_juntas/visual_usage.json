@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "episode": "enguias_eletricas_cacam_juntas",
+  "recorded_at": "2026-09-21T10:14:47Z",
+  "visual_usage": [
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_01",
+      "asset_id": "eel_video_1",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ad163946f3191b26545909ef465db14452ae7c373afc9b979da56157a2aaadd9",
+        "url_hashes": [
+          "4724a177c236b3d75692944cc68c48e8c0f9acf9ccf3dc7eb8715dcd5ae3c404"
+        ],
+        "perceptual_hashes": [
+          "91798b35fce17806",
+          "837c8331fde15c07",
+          "a07e8236e5f81d65",
+          "a658867af2398cb3",
+          "86719c2739cef612",
+          "9d4c9956fc03e28d",
+          "903fc89943e0fd9c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_02",
+      "asset_id": "eel_photo_1",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "1b59e1b99d762235b20334a32ee1f587100dff8d717a0cca20ba4c095f4c538d",
+        "url_hashes": [
+          "247e2844d0a498fd2223a2e406e2e95e22816674786d80120e8b63971ea1c483"
+        ],
+        "perceptual_hashes": [
+          "8f60f85fc525b283",
+          "8f60fa5fc525b203",
+          "8270fe5dc52de407",
+          "8f407c0fabb59493",
+          "8f41e074d4ce3b8b",
+          "a17d4a56b68988d7",
+          "a13db90949e416f7"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_03",
+      "asset_id": "fish_school",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "47e8c46f58035055bbd5a8e17092e5ad4ab87cda5e6b68fe30ac9ed1d90de490",
+        "url_hashes": [
+          "711534997791213877b3a3fe995aa27945e17c541b8af040e73d2d7839665695"
+        ],
+        "perceptual_hashes": [
+          "95ee683b3616039d",
+          "91ee686b7536011f",
+          "91ccd86b7572221f",
+          "86d9566e2d1598e3",
+          "8499d19452fae6e3",
+          "91e26c341385c6ff",
+          "9483c2cd6466697f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_04",
+      "asset_id": "eel_photo_2",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "29631447b3dbd19815ad8bb7e4e8f7b0e0c83f5c396479b2f700a6c8424cc4e9",
+        "url_hashes": [
+          "fc1511a77fdc72c5d5ae5b9de680d06002f15d833e5a3af3cd28ed4de7de53f1"
+        ],
+        "perceptual_hashes": [
+          "8faecc7cd2822179",
+          "82afcc3ed684247b",
+          "8083cf2fd684677a",
+          "8f8c58e58766f682",
+          "8faf865a7c95820b",
+          "a9a0211bfa3cccde",
+          "d9bae8242ccdd2d2"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_05",
+      "asset_id": "amazon_map",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6ef5b512856c52213c3f360039065494be7ab20bb78a2ed3513ec09efdbd194c",
+        "url_hashes": [
+          "984cb54dde6c4551778ee0d00f87d4e87c8ec42b4835e62fd808c7851740083f"
+        ],
+        "perceptual_hashes": [
+          "ff06fa85300fe138",
+          "ff04dee13807f01c",
+          "eb14d7e01f05fa0c",
+          "df39ce201ee218ce",
+          "f40bb5cee1380eb4",
+          "f91be21d02bd46e8",
+          "f9061ae0ff03e299"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_06",
+      "asset_id": "eel_photo_3",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f65857e9207c09af62a35efb0d6a6724cf58eba86e2e0f755d8752897e3fd902",
+        "url_hashes": [
+          "60dd72ba3d7ea2c99bdc4036f103e5523cfc031b813a594bb8360ca70b6f1cf0"
+        ],
+        "perceptual_hashes": [
+          "d0f02f1fb1d0c82f",
+          "dcf42a0ab1d4de2a",
+          "ddf4020aa0ddf56a",
+          "c06d1f27c0587f93",
+          "c0e06d1f3f2f9382",
+          "d63a0bb4d66b29c4",
+          "c6f63a0b2939c4d6"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "enguias_eletricas_cacam_juntas",
+      "shot_id": "shot_07",
+      "asset_id": "amazon_river",
+      "recorded_at": "2026-09-21T10:14:47Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2c15da843ace3a78c80a10666de195939f6aaf0fcbe4f6363d6454a9f9962c89",
+        "url_hashes": [
+          "6bbf3295d14b97ee83ef07dc6bb5f56e5301b2769f876120580e10797444150a"
+        ],
+        "perceptual_hashes": [
+          "90af2b60664fcc7a",
+          "95ab3af062456f4a",
+          "958a3af560856f4e",
+          "803f61465fd813b7",
+          "809f3fb072678366",
+          "92293f7a43c44ade",
+          "d2842d8f2c3ade3c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
