@@ -18,7 +18,7 @@ Assim que um tópico se tornar candidato real, antes de aprofundar pesquisa, bus
 4. se for duplicata, descarte somente essa candidata e avance no pool;
 5. se o resultado for inconclusivo, não presuma unicidade.
 
-No Topic Mode, não troque silenciosamente o tema fornecido: reporte a duplicidade. No Profile Mode, continue candidata por candidata até encontrar a mais bem ranqueada que seja inédita. Interfaces legadas de `song`/`artist` são apenas compatibilidade.
+No Topic Mode, não troque silenciosamente o tema fornecido: reporte a duplicidade. No Profile Mode, **duplicate preflight nunca encerra a geração por si só**: comece com pelo menos 10 candidatas reais, teste-as em ordem editorial e descarte individualmente qualquer candidata duplicada/similar. Se o lote acabar, gere outro lote semanticamente novo e continue até obter `UNIQUE_CANDIDATE`. A rejeição de uma candidata não consome a vaga do episódio agendado. Depois de `UNIQUE_CANDIDATE`, trave tema/slug e prossiga sem interrupção pela autoria, validação, media preflight, queue, publish e verificação terminal. Depois da autoria, nunca troque de tema para escapar de falha técnica; repare o mesmo slug. Leia e cumpra o loop completo em `templates/content-topic-rule.md`. Interfaces legadas de `song`/`artist` são apenas compatibilidade.
 
 ## Atualidade e evergreen
 
