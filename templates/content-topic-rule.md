@@ -59,7 +59,40 @@ Monte um pool real de aproximadamente 10–15 candidatos. O pool deve refletir a
 - distância temática em relação ao histórico recente;
 - aderência a `additional_instructions`.
 
-Esse pool é uma etapa de comparação, não licença para promover uma pauta duplicada ou fraca. Descarte individualmente as candidatas que falharem e avance pelas alternativas permitidas pelo fluxo; só encerre sem pauta quando as tentativas válidas estiverem realmente esgotadas.
+Esse pool é uma etapa de comparação, não licença para promover uma pauta duplicada ou fraca.
+
+### Loop obrigatório de candidatos no Profile Mode
+
+Cada execução agendada em Profile Mode tem como objetivo produzir **exatamente um episódio novo**. Rejeição de uma candidata é falha da candidata, não falha da execução.
+
+1. Monte inicialmente um pool de **10 candidatas reais e distintas** seguindo integralmente o profile, o histórico, a proximidade cotidiana, a clareza para público brasileiro, a factualidade e o potencial visual.
+2. Ordene as candidatas editorialmente e teste a melhor no duplicate preflight técnico **antes da autoria**.
+3. Se retornar duplicata, similaridade proibida, candidata já tentada ou qualquer reprovação editorial de unicidade, descarte somente essa candidata e teste imediatamente a próxima.
+4. **Nunca encerre a execução porque uma, duas ou várias candidatas falharam duplicate preflight.**
+5. Continue candidata -> duplicate preflight -> próxima candidata até obter `UNIQUE_CANDIDATE`.
+6. Se as 10 candidatas iniciais forem consumidas sem `UNIQUE_CANDIDATE`, gere **um novo lote de candidatas**, evitando semanticamente as já rejeitadas, e continue. Não reutilize paráfrases do mesmo fato.
+7. Só é permitido encerrar sem episódio quando houver bloqueio objetivo externo/de infraestrutura que impeça novas verificações, ou quando todas as tentativas autorizadas pelo contrato operacional vigente estiverem realmente esgotadas. "Os primeiros temas eram duplicados" nunca é motivo terminal.
+8. Assim que houver `UNIQUE_CANDIDATE`, **trave tema e slug** e continue na MESMA execução: autoria -> validação/schema -> media preflight -> queue -> publish -> verificação terminal das plataformas. `UNIQUE_CANDIDATE`, commit criado, autoria pronta, media PASS ou queue criada são estados intermediários, nunca conclusão.
+9. Depois que a autoria começar, falha de asset, mídia, render, schema ou publicação **não autoriza trocar de tema**. Repare o mesmo episódio/slug segundo os contratos de recovery e publicação.
+10. Uma candidata rejeitada no duplicate **não consome a vaga do episódio daquela execução agendada**.
+
+Contrato mental obrigatório:
+
+```text
+10 candidatas distintas
+  -> testar melhor candidata
+  -> DUPLICATE? descartar só ela e testar a próxima
+  -> esgotou 10? gerar novo lote
+  -> UNIQUE_CANDIDATE
+  -> AUTORIA
+  -> MEDIA PREFLIGHT
+  -> QUEUE
+  -> PUBLISH
+  -> VERIFICAR PLATAFORMAS
+  -> exatamente 1 episódio novo
+```
+
+Descarte individualmente candidatas fracas ou duplicadas e avance pelas alternativas; o objetivo do Profile Mode não é apenas escolher uma pauta, mas **encontrar uma pauta inédita e levá-la até um episódio completo**.
 
 Favoreça histórias específicas. Em economia, por exemplo, `Como uma corrida aos bancos derruba uma instituição em dias` tende a ter mais força narrativa que `O que é inflação?`. Isso é princípio de seleção, não uma lista fixa nem proibição de temas educativos.
 
