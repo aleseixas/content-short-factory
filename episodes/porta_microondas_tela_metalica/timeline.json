@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "background_music": {"profile":"fallback_social_modern","volume":0.035},
+  "background_music": {"profile":"ambient_calm","volume":0.035},
   "sfx_cues": [
     {"time_seconds":0.08,"type":"impact","volume":0.05},
     {"time_seconds":18,"type":"whoosh_fast","volume":0.04},
