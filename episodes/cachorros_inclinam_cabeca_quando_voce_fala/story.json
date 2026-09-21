@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "title": "Por que seu cachorro inclina a cabeça quando você fala?",
+  "slug": "cachorros_inclinam_cabeca_quando_voce_fala",
+  "target_duration_seconds": 72,
+  "topic": "Por que os cachorros inclinam a cabeça quando você fala com eles?",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes sobre o planeta, a humanidade e o mundo",
+  "angle": "a inclinação não tem uma explicação única comprovada, mas um experimento mostrou uma pista forte: cães que conheciam nomes de brinquedos inclinavam a cabeça muito mais ao ouvir palavras relevantes, sugerindo processamento atento de informação significativa",
+  "language": "pt-BR",
+  "entities": ["cães", "inclinação da cabeça", "comunicação humano-cão", "Gifted Word Learners", "Eötvös Loránd University", "Animal Cognition"],
+  "visual_keywords": ["dog head tilt owner talking", "dog listening human", "dog toy name cognition", "dog ears hearing", "dog muzzle face"],
+  "segments": [
+    {"id":"hook","text":"Você fala uma palavra para o seu cachorro e, do nada, ele vira a cabeça de lado como se estivesse tentando entender cada sílaba. E isso pode ser mais do que uma pose fofa.","delivery":"hook"},
+    {"id":"mystery","text":"A ciência ainda não tem uma explicação única para esse gesto. Ouvir melhor, enxergar o rosto por outro ângulo e atenção social são hipóteses. Mas um experimento encontrou uma pista bem mais interessante.","delivery":"curious"},
+    {"id":"study","text":"Pesquisadores acompanharam quarenta cães enquanto seus tutores pediam brinquedos pelo nome. Sete deles eram excepcionais em aprender e lembrar os nomes dos objetos.","delivery":"neutral"},
+    {"id":"numbers","text":"Quando ouviam o nome de um brinquedo conhecido, esses cães inclinavam a cabeça em cerca de quarenta e três por cento das tentativas. Nos cães típicos, isso aconteceu em apenas cerca de dois por cento.","delivery":"reveal"},
+    {"id":"meaning","text":"Os pesquisadores sugeriram que o movimento pode estar ligado ao processamento de um estímulo relevante e significativo — como se o cachorro estivesse relacionando aquela palavra com uma representação mental do brinquedo.","delivery":"reveal"},
+    {"id":"side","text":"Tem outro detalhe curioso: cada cachorro que inclinava a cabeça costumava preferir o mesmo lado durante meses, independentemente de onde a pessoa estava. Isso indica que não era simplesmente acompanhar a posição do tutor.","delivery":"curious"},
+    {"id":"limits","text":"Isso não significa que todo cachorro que inclina a cabeça está decifrando palavras. O estudo foi específico, e visão, audição e até o reforço que nós damos quando achamos o gesto fofo também podem participar.","delivery":"neutral"},
+    {"id":"payoff","text":"Então, da próxima vez que você disser passeio, petisco ou o nome do brinquedo e vier aquela inclinadinha, talvez você esteja vendo um pequeno sinal externo de um cérebro canino prestando muita atenção no que acabou de ouvir.","delivery":"payoff"}
+  ]
+}
