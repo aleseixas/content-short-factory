@@ -20,6 +20,8 @@ A criação de `.publish-queue/<slug>.txt` significa apenas que o episódio foi 
 
 `MEDIA PREFLIGHT: SUCESSO` e `QUEUE: CRIADA` não significam `PUBLICAÇÃO: SUCESSO`.
 
+**`EM_ANDAMENTO` também não é conclusão.** Duplicate preflight, Media Preflight ou Publish Action em `queued`, `pending`, `waiting`, `requested` ou `in_progress` devem continuar sendo acompanhados enquanto o mesmo run/job for consultável. Simples demora nunca é `BLOQUEADO`.
+
 ## 2. Fluxo obrigatório até publicação
 
 Depois de o episódio passar pelo media preflight e a queue ser criada, não escolha outro tema e não crie outro episódio.
@@ -53,7 +55,7 @@ Para o estado atual da `main`, quando `publish-episode.yml` tiver etapas de YouT
 
 Não transforme `NÃO_VERIFICADO` em sucesso por inferência.
 
-Se a Publish Action ainda estiver rodando e não houver estado terminal acessível, use `STATUS: PUBLICAÇÃO_EM_ANDAMENTO` e `PUBLISH ACTION: EM_ANDAMENTO`. Nunca use `STATUS: CRIADO` como sinônimo de publicação concluída.
+Se a Publish Action ainda estiver rodando, `PUBLICAÇÃO_EM_ANDAMENTO` é apenas estado interno transitório. **Enquanto o GitHub conectado continuar permitindo consultar o mesmo run/job, continue acompanhando e NÃO devolva resposta final.** Use `STATUS: PUBLICAÇÃO_NÃO_VERIFICADA` somente quando uma limitação técnica real de acesso impedir continuar verificando nesta invocação. Nunca use `STATUS: CRIADO` como sinônimo de publicação concluída.
 
 Uma primeira falha de Media Preflight ou Publish Action **não é automaticamente um estado terminal**. Antes de reportar falha final, aplique obrigatoriamente o protocolo de recuperação da seção 6 quando a falha for elegível.
 
@@ -87,8 +89,8 @@ Nunca diga que uma plataforma publicou apenas porque o workflow geral foi dispar
 Antes de considerar uma falha terminal, faça tudo que for aplicável abaixo na **execução exata** que falhou:
 
 1. identifique `run_id`, `job_id`, commit/branch e a etapa exata;
-2. abra o **log bruto/completo do job** e procure a mensagem imediatamente anterior ao exit code, traceback, `ERROR`, `Exception`, validator detail, target, asset, URL, arquivo ou constraint;
-3. se o log bruto estiver indisponível, truncado ou genérico, consulte obrigatoriamente o artefato `media-preflight-diagnostics-<run_id>` quando existir;
+2. procure primeiro metadados estruturados, outputs, summaries, annotations e campos `MEDIA_PREFLIGHT_*` emitidos pelo workflow;
+3. consulte o artefato `media-preflight-diagnostics-<run_id>` quando existir; se algum log textual estiver acessível, use-o como evidência complementar, **não como pré-requisito**;
 4. leia `final-result.txt`; se ainda estiver genérico, leia os `attempt-*.log` do mesmo run;
 5. quando existirem `MEDIA_PREFLIGHT_ERROR_COUNT`, `MEDIA_PREFLIGHT_ERRORS_JSON` ou linhas `MEDIA_PREFLIGHT_ERROR_ITEM`, trate **a lista completa** como o diagnóstico autoritativo daquela passada — não reduza o diagnóstico ao primeiro erro legado;
 6. cruze todas as causas encontradas com os arquivos do **mesmo slug** e com a versão da `main` usada naquele run;
@@ -98,7 +100,7 @@ Mensagens como `Process completed with exit code 1`, `Validate and auto-repair e
 
 Enquanto houver uma fonte diagnóstica ainda não consultada ou uma correção segura restante, **continue trabalhando no mesmo slug e não devolva o controle ao usuário**.
 
-Se todas as fontes disponíveis forem realmente esgotadas sem causa concreta, use `DIAGNÓSTICO_INACESSÍVEL` como motivo explícito e informe quais fontes foram tentadas. Não mascare isso como erro técnico do episódio.
+Se artefato/log não puder ser lido, **reproduza o diagnóstico pelo código**: leia a versão exata do workflow, scripts/validators chamados e arquivos do mesmo slug e aplique as validações determinísticas. Ausência do antigo log bruto, sozinha, nunca autoriza `DIAGNÓSTICO_INACESSÍVEL`. Se todas as fontes e a reprodução determinística forem realmente esgotadas sem causa concreta, use `DIAGNÓSTICO_INACESSÍVEL` e informe o que foi tentado.
 
 ### 6.1 Falha no Media Preflight antes da queue — diagnóstico e correção em lote
 
