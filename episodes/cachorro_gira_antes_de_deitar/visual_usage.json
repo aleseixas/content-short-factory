@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "episode": "cachorro_gira_antes_de_deitar",
+  "recorded_at": "2026-09-22T17:17:30Z",
+  "visual_usage": [
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_hook",
+      "asset_id": "dog_spinning_video",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "b2470e7d26368e7afbdaab5ddde0c7f1b7d8bce1b1f20e054fd8b9f947838f07",
+        "url_hashes": [
+          "403ea09dd0b65e4840e6ba029b00312b90661de92490347cb047cb56c1d1b748"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "9bcc8926e6b98c99",
+          "9966396633cccc39",
+          "99643933c69999b9",
+          "9b6c31993323cd66",
+          "98656599b326b2b3",
+          "982666996c8ebb66",
+          "9893662d6c64acee",
+          "989b332eb2ec922d"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 8.1
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_instinto",
+      "asset_id": "wolf_grass",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "409e299541956fb0afdbd4388521ebdbdc9ad2b70578f41d9f7ce6c53d93bdba",
+        "url_hashes": [
+          "e2fa5dc64d6a49a0180444662eb64c9a0b2f272e2e5753d6c7a9bb87680928c6"
+        ],
+        "perceptual_hashes": [
+          "93b04cd4db99266b",
+          "b1ba4cb4db9b6403",
+          "b1ba6cf5da9d6002",
+          "a6d12b96946d5ea8",
+          "a6a459696b96b0f1",
+          "98af56cdcc30e992",
+          "d0b8633273cd9653"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_natureza",
+      "asset_id": "dog_spinning_alt",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "223eccfbce3912a69af49818aa5afa012be1717eafe1329c67b27ad8d2698677",
+        "url_hashes": [
+          "b5a0b659dfd9a86b17ed638228fea5803eb1e93b99545928ba95baf037c002a6"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "c6d4d0d191373637",
+          "c8c9c9c9c7c78b1a",
+          "c4d495973535e589",
+          "dec6d291163ee0e1",
+          "e7c2da98b90953e4",
+          "f1c9cd8cc824a775",
+          "f6f4c6a7849414da",
+          "f3f3d1919d1c0ca4"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 5.933333
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_hipoteses",
+      "asset_id": "wolf_lair",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "69376d5fb9e75a8b6908a4621bbf0485390dab2f5cf2aebf2a370d74f5b8e3fd",
+        "url_hashes": [
+          "20b35b911157eff84a5252831f36149963e5a2a75d8b9d9d598152a92f3723b8"
+        ],
+        "perceptual_hashes": [
+          "b17604cb537a1d74",
+          "b037cdc3423b0d3e",
+          "b035edc8f00ae59d",
+          "a7609a477f3a3344",
+          "a36f28e897e13744",
+          "9f52c45a2d061f6d",
+          "9f3b16a4c47b1d60"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_lacuna",
+      "asset_id": "dog_grass",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "cd8180fe7831a39da23ee97ffd16d2d42abb343a20edde077a4b76187d07e7e1",
+        "url_hashes": [
+          "7ffb27a230aff29795cdb8604fde61b1fe78c1f0b1308215ccbade0b7ae1313c"
+        ],
+        "perceptual_hashes": [
+          "d4a6a46d3bc2e299",
+          "d5a6a56d39426699",
+          "d5a4a56d2d66278c",
+          "d1a8ca3ac5f493e4",
+          "d1b585c87a9b4b64",
+          "c6a2e40cc9fdccd8",
+          "c78b91f52c8e6338"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_teste",
+      "asset_id": "dog_laying_video",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "ab9f3d3e5e8b696e0b4430f4370bb5082e4c5c64a9cffece0445f5fc1a8f423e",
+        "url_hashes": [
+          "ae9a9b16bc1d8f935d6027c397a85b5a9bc39c2424d74cd5c8f468a2538202c4"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "cbeba5351ce426d0",
+          "d2ea2b09c7d506ec",
+          "fc7c0b8b81c9c8c7",
+          "dadb1a5915911795",
+          "dc1c27266afa9195",
+          "d5056efa91b54c4a",
+          "872ac914baeb4d56",
+          "806bd52afc155a6b"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 5.566667
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_liso",
+      "asset_id": "dog_sleeping_bed",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "e515d4f19e29c5f160076fe6b969ab033c303b1a8e2fff1919c5bce2e5b3003b",
+        "url_hashes": [
+          "3e45b44dc079b7e8ba455414a0191a6658e5e8d2fe7ba3114cbd54954a21f816"
+        ],
+        "perceptual_hashes": [
+          "94a66651990b7bb5",
+          "94a66555990a7bb5",
+          "95a465759d4a3b25",
+          "a8a96a925574abd5",
+          "b4894d6ae28b9d55",
+          "93b276ce0938d6c9",
+          "99833332d6d6cb49"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_irregular",
+      "asset_id": "shag_carpet",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "36901c1fce411278716103e70b26dd9932b4bae3e7ac5b965e9167a863647c6b",
+        "url_hashes": [
+          "12b00208ebd83624b0372e0ef517e5354e014e34d10eed214ff52e902cb08657"
+        ],
+        "perceptual_hashes": [
+          "94cca95eb0c9d4ba",
+          "96cc2b4fb589c4b2",
+          "96ed4047b3c9a4b3",
+          "88cb54ac92e9b65b",
+          "a0dbe35f68345259",
+          "d1ee48b0ccd3a947",
+          "91c7be4b33294c47"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_dezenove",
+      "asset_id": "yorkie_bed_video",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "5e2683588fef2649162cb0ac68654b725cb597df48af67dd5fa88535e7acf3d6",
+        "url_hashes": [
+          "c0a083b53142e2c9a71e7467be58574a014759b541686710c4ac008201d6e718"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "81e59d25f349a61b",
+          "81b5b5b4cb261be2",
+          "81f5b5359348a71b",
+          "81d5b635f149e60d",
+          "81f59534d149a67b",
+          "85f49535cd609b78",
+          "81f59534d948876f",
+          "81f59735914ca769"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 5.633333
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_cinquenta_cinco",
+      "asset_id": "dog_bed_toy",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3886cba543ca8c59026e1b3c8064bb36903a2089a6872c742378de5106c0021c",
+        "url_hashes": [
+          "126ac77958fb5808b5bf3fc5941c6bcb5b50215f7bf83c91f2bf95879c172d0c"
+        ],
+        "perceptual_hashes": [
+          "9a2f683d80368dfa",
+          "922a786dd0358f3e",
+          "92627ecdf4258317",
+          "9c6d7a803d9cf0c3",
+          "941cf57ac2e10be3",
+          "8a3926d21185cbff",
+          "ca01292dec7b467d"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_quase_tres",
+      "asset_id": "puppy_playing_video",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "0764c70a45b41259544c5f81a6a12518bf1b7bc2426293acbaf7fdc3822b2862",
+        "url_hashes": [
+          "465063fdbc26d5495b930e1b00cced99c912ce0797440ff4c6c3fe945558e8bf"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "eab5122a74a42bdd",
+          "eab5932674a0ab5c",
+          "c020e66f6fe3261b",
+          "c3016468eaca37df",
+          "cf0f2568c8ce239e",
+          "c30f8d6868ce27b3",
+          "c30f2568e8ce279e",
+          "cf0fad6848c82b5e"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 6.4
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_arranhar",
+      "asset_id": "dog_on_bed",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "86487a5f60db30dbe332276537ca66cfe9fb0c250fc89f60a9fc8590e4537948",
+        "url_hashes": [
+          "78248623a723da2b626bcbf285c5c4799c0ab2f88ae30e29242366a4b2b1ab55"
+        ],
+        "perceptual_hashes": [
+          "882b6bd80df63687",
+          "8a086bdd0df637c4",
+          "8a096a7f497725d4",
+          "803f741aecad9176",
+          "80837fe513d7704e",
+          "aa2e79467292cdac",
+          "a9863df904ed2d2c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_limite",
+      "asset_id": "rem_sleep_video",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "6c998730298d6321ad915cbad76129f19b226c761c1237cae6018efafedb3be1",
+        "url_hashes": [
+          "f9bb47049cca4e1e837082611adc9c7ba0d86b43a807286add3937569f516842"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "b744c0d39b6c3b38",
+          "b764c0d39be82b38",
+          "b76cc0c3939aca8b",
+          "a679c18696dccd86",
+          "ae79c186964ccd8e",
+          "a679c18696cccdc6",
+          "a679c18696cccd8e",
+          "ae79c186964ccd8e"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 5.6
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_ancestral",
+      "asset_id": "curled_blanket",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "291dc2c1cb58f9d2dd92bc93c7107de5a5c1f3bfb198f6ac055bfbfadbd3fa91",
+        "url_hashes": [
+          "1e535c22215cdc51780e5b9a7fb73e9308058e78ef3c285025f023be3efd2d52"
+        ],
+        "perceptual_hashes": [
+          "c07ecd6095c3b16e",
+          "e41f48798ec3b856",
+          "f41e427dc6b0b893",
+          "e05d40f897735c4b",
+          "c33c9f427a4c8e4b",
+          "f6496431d91f6067",
+          "f60ac96e0660fc67"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_conforto",
+      "asset_id": "dog_lying_house",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "21a7edac4f41d51fbdbc1c094292d90ace1d1b3a338447353145d45e44549e6b",
+        "url_hashes": [
+          "82cb55d04e9c32188c1d3310b41659b4f88bff4cd2c603fff9ea6bdf22d25890"
+        ],
+        "perceptual_hashes": [
+          "b415e168ec3b6f90",
+          "b795a16adc496b90",
+          "b795b06e9d4b61c0",
+          "a4a747587667a178",
+          "a436a767c9b0587a",
+          "91946f636e799321",
+          "9194947df397603c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_travesseiro",
+      "asset_id": "puppy_sleeps",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "de3b5d3d290792723737ee6cda17a7d4257b79f521b0d7b59b9ddf5b9466934d",
+        "url_hashes": [
+          "9a1526c534a282e68a781e2503720b2d8a912a7b180dc8ebce962561e81a10f3"
+        ],
+        "perceptual_hashes": [
+          "f866c77898ba63c0",
+          "f866c1789c3f60d8",
+          "bee2c0489f3c6879",
+          "f1cfd330bd40901f",
+          "f06ccf474090bf1d",
+          "bfe16e0f9078c851",
+          "9f31f07c648ed093"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_payoff",
+      "asset_id": "dog_gopro_video",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "66559a1c5d786a414202e417c39c86fbc7d6b2240d3dc06e20f2dd87b97fb87a",
+        "url_hashes": [
+          "31f6126795758c2ef1ccf2b34879db191796d47f577c41d562729fcb859b062c"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "e5e41b9bce33304c",
+          "b96f39c7c1392491",
+          "da6e3fc7c00b28d2",
+          "df6e3fc5d0152842",
+          "b4c017cb1938e33f",
+          "90c74798383f39c7",
+          "90c34fcc6e3939c3",
+          "91c747cc6e3839c3"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 5.8
+      }
+    },
+    {
+      "episode": "cachorro_gira_antes_de_deitar",
+      "shot_id": "shot_cta",
+      "asset_id": "dog_sleeping_new",
+      "recorded_at": "2026-09-22T17:17:30Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "139c3b28b00f51ce5ab2be04163219ae59edb37bed91d06b3867846244f8513b",
+        "url_hashes": [
+          "a2ab07dcf92a2beb73247f40f4b264b92505148faa90cc10f952c724cc796a6c"
+        ],
+        "perceptual_hashes": [
+          "f444c36d66b1c699",
+          "f544c3686b31e7d0",
+          "bd44c34c6b2a673c",
+          "f945c36ae588b385",
+          "f8198593cf3225dc",
+          "d640ec25bdc29ed1",
+          "9352d9cee20e9be0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
