@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "dog_spinning_video",
+      "file": "dog_spinning.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Outside234_5.webm",
+      "credit": "guuseeg32 / Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "dog_laying_video",
+      "file": "dog_laying.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Batumi2025dog-laying-relax.webm",
+      "credit": "Vitaly Zdanevich / Wikimedia Commons",
+      "license": "CC BY 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.55
+      }
+    },
+    {
+      "id": "yorkie_bed_video",
+      "file": "yorkie_bed.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Yorkie_Dance.webm",
+      "credit": "Blight55 / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "rem_sleep_video",
+      "file": "rem_sleep.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/REM_-_Rapid_eye_movement_sleep_of_a_dog.webm",
+      "credit": "Amada44 / Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "wolf_grass",
+      "file": "wolf_grass.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Canis_lupus_laying_in_grass.jpg",
+      "credit": "U.S. Fish and Wildlife Service / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {
+        "x": 0.52,
+        "y": 0.48
+      }
+    },
+    {
+      "id": "wolf_lair",
+      "file": "wolf_lair.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Wolf_rests_in_front_of_the_wolfs_lair.jpg",
+      "credit": "U.S. Fish and Wildlife Service / Wikimedia Commons",
+      "license": "Public domain",
+      "focus": {
+        "x": 0.5,
+        "y": 0.55
+      }
+    },
+    {
+      "id": "dog_grass",
+      "file": "dog_grass.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Dog_lying_on_grass.JPG",
+      "credit": "Editor abcdef / Wikimedia Commons",
+      "license": "CC0",
+      "focus": {
+        "x": 0.55,
+        "y": 0.62
+      }
+    },
+    {
+      "id": "dog_sleeping_bed",
+      "file": "dog_sleeping_bed.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Dog_sleeping_in_bed.jpg",
+      "credit": "Gerardolagunes / Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "focus": {
+        "x": 0.45,
+        "y": 0.55
+      }
+    },
+    {
+      "id": "shag_carpet",
+      "file": "shag.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Shag.jpg",
+      "credit": "bradleyolin / Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "dog_bed_toy",
+      "file": "dog_bed_toy.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Dog_sleeping_on_dog_bed.jpg",
+      "credit": "Nicole Qowens / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.53,
+        "y": 0.62
+      }
+    },
+    {
+      "id": "dog_on_bed",
+      "file": "dog_on_bed.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Dog_on_Bed.jpg",
+      "credit": "Bobbleforit / Wikimedia Commons",
+      "license": "CC BY 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.58
+      }
+    },
+    {
+      "id": "curled_blanket",
+      "file": "curled_blanket.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Dog_sleeping_curled_up_on_his_blanket_during_the_day_at_his_master%27s_workplace_in_a_shop.jpg",
+      "credit": "W.carter / Wikimedia Commons",
+      "license": "CC BY 4.0",
+      "focus": {
+        "x": 0.48,
+        "y": 0.52
+      }
+    },
+    {
+      "id": "puppy_sleeps",
+      "file": "puppy_sleeps.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/A_puppy_sleeps.jpg",
+      "credit": "Jami430 / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.45,
+        "y": 0.5
+      }
+    }
+  ]
+}

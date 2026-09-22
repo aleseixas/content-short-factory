@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "cover": {
+    "headline": "POR QUE ELES GIRAM?",
+    "source": {
+      "type": "asset",
+      "asset_id": "dog_bed_toy"
+    }
+  },
+  "youtube": {
+    "title": "Por que cachorros giram antes?",
+    "description": "Aquele giro antes de deitar parece mania, mas um teste simples encontrou uma diferença enorme quando os cães receberam uma superfície irregular.",
+    "hashtags": [
+      "curiosidades",
+      "cachorros",
+      "pets",
+      "comportamentoanimal",
+      "curiosidade",
+      "shorts"
+    ],
+    "privacy_status": "public",
+    "category_id": "27"
+  },
+  "instagram": {
+    "caption": "Seu cachorro dá algumas voltas antes de deitar? Existe uma explicação ancestral famosa, mas um teste com cães apontou para algo bem mais cotidiano.",
+    "hashtags": [
+      "curiosidades",
+      "cachorros",
+      "pets",
+      "comportamentoanimal",
+      "curiosidade"
+    ],
+    "share_to_feed": true,
+    "thumb_offset_ms": 700
+  },
+  "tiktok": {
+    "caption": "Por que seu cachorro gira antes de deitar? O teste que existe aponta para uma explicação muito mais simples do que parece.",
+    "hashtags": [
+      "curiosidades",
+      "cachorros",
+      "pets",
+      "comportamentoanimal",
+      "curiosidade"
+    ],
+    "privacy_level": "PUBLIC_TO_EVERYONE",
+    "video_cover_timestamp_ms": 700,
+    "disable_comment": false,
+    "disable_duet": false,
+    "disable_stitch": false,
+    "brand_content_toggle": false,
+    "brand_organic_toggle": false,
+    "is_aigc": false
+  }
+}

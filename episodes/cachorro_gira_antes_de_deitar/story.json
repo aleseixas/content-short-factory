@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "title": "Por que cachorros giram antes de deitar?",
+  "slug": "cachorro_gira_antes_de_deitar",
+  "target_duration_seconds": 74,
+  "topic": "Por que cachorros giram em círculos antes de deitar?",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes sobre o planeta, a humanidade e o mundo, feitas para público brasileiro",
+  "angle": "o ritual costuma ser explicado como herança ancestral, mas um teste com 62 cães encontrou muito mais giros numa superfície irregular do que numa superfície lisa, apoiando a ideia de que o cão também está tentando ajeitar o lugar para ficar confortável",
+  "language": "pt-BR",
+  "entities": [
+    "cachorros",
+    "comportamento de descanso",
+    "Stanley Coren",
+    "superfície lisa",
+    "tapete felpudo"
+  ],
+  "visual_keywords": [
+    "dog circling before lying down",
+    "dog settling in bed",
+    "sleeping dog",
+    "wolf resting",
+    "shag carpet"
+  ],
+  "segments": [
+    {
+      "id": "hook",
+      "text": "Seu cachorro gira antes de deitar? Esse ritual estranho pode ser a versão canina de arrumar a cama.",
+      "delivery": "hook"
+    },
+    {
+      "id": "instinto",
+      "text": "A explicação popular diz que é um instinto herdado dos ancestrais selvagens.",
+      "delivery": "curious"
+    },
+    {
+      "id": "natureza",
+      "text": "Na natureza, girar poderia achatar capim, afastar gravetos e preparar um lugar mais seguro para descansar.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "hipoteses",
+      "text": "Também existem hipóteses sobre vigiar predadores, vento e temperatura.",
+      "delivery": "curious"
+    },
+    {
+      "id": "lacuna",
+      "text": "Só que tem um detalhe: quase nenhuma dessas ideias foi testada diretamente.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "teste",
+      "text": "O psicólogo Stanley Coren resolveu fazer um teste bem simples com sessenta e dois cães.",
+      "delivery": "curious"
+    },
+    {
+      "id": "liso",
+      "text": "Metade recebeu uma superfície lisa e plana para deitar.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "irregular",
+      "text": "A outra metade recebeu um tapete felpudo, macio, mas bem irregular.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "dezenove",
+      "text": "No piso liso, só dezenove por cento dos cães giraram pelo menos uma vez.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "cinquenta_cinco",
+      "text": "No tapete irregular, esse número saltou para cinquenta e cinco por cento.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "quase_tres",
+      "text": "Ou seja: eles ficaram quase três vezes mais propensos a girar quando o chão parecia precisar de ajustes.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "arranhar",
+      "text": "E alguns ainda arranharam o tapete antes de deitar.",
+      "delivery": "curious"
+    },
+    {
+      "id": "limite",
+      "text": "Isso não prova que conforto seja a única razão, nem apaga o papel do instinto.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "ancestral",
+      "text": "Veterinários ainda tratam a origem ancestral como uma hipótese plausível.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "conforto",
+      "text": "Mas o teste dá apoio concreto a uma ideia muito menos dramática: o cachorro está ajeitando o lugar.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "travesseiro",
+      "text": "É quase o equivalente canino de afofar o travesseiro.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "payoff",
+      "text": "Então aquele giro que parece sem sentido pode ser um comportamento antigo ainda útil dentro da sua casa.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "cta",
+      "text": "Seu cachorro faz isso? Repara hoje e me conta quantas voltas ele dá.",
+      "delivery": "curious"
+    }
+  ]
+}
