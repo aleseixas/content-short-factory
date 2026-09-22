@@ -112,9 +112,9 @@
     {
       "id": "shot_natureza",
       "segment": "natureza",
-      "asset": "dog_spinning_video",
-      "source_start_seconds": 6,
-      "source_end_seconds": 11,
+      "asset": "dog_spinning_alt",
+      "source_start_seconds": 0,
+      "source_end_seconds": 5.5,
       "motion": "hold",
       "transition_out": "cut"
     },
@@ -180,9 +180,9 @@
     {
       "id": "shot_quase_tres",
       "segment": "quase_tres",
-      "asset": "yorkie_bed_video",
-      "source_start_seconds": 6,
-      "source_end_seconds": 11,
+      "asset": "puppy_playing_video",
+      "source_start_seconds": 4,
+      "source_end_seconds": 10,
       "motion": "hold",
       "transition_out": "cut",
       "highlight": "QUASE 3× MAIS"
@@ -214,10 +214,8 @@
     {
       "id": "shot_conforto",
       "segment": "conforto",
-      "asset": "dog_laying_video",
-      "source_start_seconds": 6,
-      "source_end_seconds": 11,
-      "motion": "hold",
+      "asset": "dog_lying_house",
+      "motion": "push_in",
       "transition_out": "cut",
       "highlight": "AJEITANDO O LUGAR"
     },
@@ -232,19 +230,17 @@
     {
       "id": "shot_payoff",
       "segment": "payoff",
-      "asset": "rem_sleep_video",
+      "asset": "dog_gopro_video",
       "source_start_seconds": 7,
-      "source_end_seconds": 12,
+      "source_end_seconds": 13,
       "motion": "hold",
       "transition_out": "cut"
     },
     {
       "id": "shot_cta",
       "segment": "cta",
-      "asset": "dog_spinning_video",
-      "source_start_seconds": 13,
-      "source_end_seconds": 18,
-      "motion": "hold",
+      "asset": "dog_sleeping_new",
+      "motion": "push_in",
       "transition_out": "cut",
       "highlight": "QUANTAS VOLTAS ELE DÁ?"
     }

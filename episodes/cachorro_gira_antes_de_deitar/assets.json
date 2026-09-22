@@ -143,6 +143,61 @@
         "x": 0.45,
         "y": 0.5
       }
+    },
+    {
+      "id": "dog_spinning_alt",
+      "file": "dog_spinning_alt.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Dog_-_Spinning_1.webm",
+      "credit": "guuseeg32 / Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "puppy_playing_video",
+      "file": "puppy_playing.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Puppy_playing.webm",
+      "credit": "Subhashish Panigrahi / Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "dog_gopro_video",
+      "file": "dog_gopro.webm",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Dog_seen_from_a_GoPro.webm",
+      "credit": "Pablo Fuentes / Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "dog_lying_house",
+      "file": "dog_lying_house.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Dog_lying_at_his_bed_in_a_house_%2851784464611%29.jpg",
+      "credit": "Jernej Furman / Wikimedia Commons",
+      "license": "CC BY 2.0",
+      "focus": {
+        "x": 0.58,
+        "y": 0.66
+      }
+    },
+    {
+      "id": "dog_sleeping_new",
+      "file": "dog_is_sleeping.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Dog_is_sleeping.jpg",
+      "credit": "와정말대단하다 / Wikimedia Commons",
+      "license": "CC BY-SA 4.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.55
+      }
     }
   ]
 }
