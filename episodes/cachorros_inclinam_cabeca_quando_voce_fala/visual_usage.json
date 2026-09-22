@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+  "recorded_at": "2026-09-21T23:40:32Z",
+  "visual_usage": [
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_hook",
+      "asset_id": "german_shepherd_tilt",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ecaad14cdd63409457d09828709c73041942e2acb902edbc6a152322744db7a0",
+        "url_hashes": [
+          "a2cde1c44a7d119e3303860f533a50f9909e783a0944d9a83e9523f5f58d8949"
+        ],
+        "perceptual_hashes": [
+          "cf2490cbeab5392a",
+          "cf2cb0cbceb55830",
+          "c72cb0c9c7a754b8",
+          "de2192da2833575e",
+          "9f68213353ccdcca",
+          "e037deea150e2d64",
+          "e0231f1e6af2e552"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_mystery",
+      "asset_id": "new_sound_tilt",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6eab8a4a8dd1183c2a5328418b4cf1db4110fb95ea7146688fde810640aeb496",
+        "url_hashes": [
+          "224526de4aa29e3c952d37870decd424ef665fe362a0467ddd310e6d289d61c6"
+        ],
+        "perceptual_hashes": [
+          "cdc6938f98112767",
+          "cdc4b38f9819c687",
+          "c9e4a3cf9a98c782",
+          "dac59e9037cd2523",
+          "dacb644ecdb43382",
+          "c4f988cd1cf0393e",
+          "c4e73970e39c0f8c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_study",
+      "asset_id": "black_dog_tilt",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "7ceedd2acfe04e02477c7e0bde6fd9da55eebfc1b6199601d70183575ccc9245",
+        "url_hashes": [
+          "fedd22a59878025c487835211945f5db1fe9b66f114d441a636891c3d2d976ac"
+        ],
+        "perceptual_hashes": [
+          "e8c297a5c6d3528e",
+          "e8d0afa5a5515587",
+          "eed02bafa870258d",
+          "e087ae8f878c9c95",
+          "f8c3153ca8985767",
+          "afda94d4dac0c1c9",
+          "afea4a2485a56b3c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_numbers",
+      "asset_id": "jack_russell_tilt",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "27b036732c88231b1e5f6561aaff9f4b1f09cc2dc746ef173ce9230514287d12",
+        "url_hashes": [
+          "9700bb1ece008cc5eb980fcd28d215e7bcc4a8757efd98ffe4343f1d7e61a788"
+        ],
+        "perceptual_hashes": [
+          "c35834f3cc2675d2",
+          "c35834f3cd6465f0",
+          "c21830f3cd6e6b78",
+          "857365d84967a1bc",
+          "8d936b65b699289c",
+          "c82f39c4273cdb91",
+          "d0cf37399ccb1381"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_meaning",
+      "asset_id": "dog_head_anatomy",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "30f113c9667d85b26acbfb3bf1596fe9820f51d4399fc59742c2ed209bcde75b",
+        "url_hashes": [
+          "fd974d5519b0dd2df74ae1b26c81db6b59a053095cc096eb95ef2a53ac7e0827"
+        ],
+        "perceptual_hashes": [
+          "86a435831fe88d3f",
+          "87ad25823fca2f1a",
+          "d7ad2c903aca2f94",
+          "84aa871fd11ea756",
+          "84a86b833e65877e",
+          "c0b69e89e5a4da3c",
+          "d0a036fa941bdd35"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_side",
+      "asset_id": "french_bulldog_tilt",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "aaae508306cbebd01c9ccf06cb0108d057a9d80a6012578e4c24d5943bde9dcb",
+        "url_hashes": [
+          "db5517a1cd0ded031505263b2e08fc0a7408668df057b264992fa26056249188"
+        ],
+        "perceptual_hashes": [
+          "80b9fb81c69f6293",
+          "b8bb3ba0c79c6093",
+          "b8bb3be0c58c68b1",
+          "83b4a58918e5bed9",
+          "83b874b7c49e3859",
+          "bfa89de202b99863",
+          "d7a3089df9982363"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_limits",
+      "asset_id": "dogs_with_toy",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6e0ac2bd2ae0ee0abee08296c8f2edb46786989ba820a92a64ae3fe42a79bbd2",
+        "url_hashes": [
+          "aa84564070e74b305d7d017140b358ea6ef8296e77e90c26a5b50431db6ff0b3"
+        ],
+        "perceptual_hashes": [
+          "953313351a9ca7b3",
+          "8133133f1a9da3b3",
+          "8930b33f5e0d3339",
+          "9637363493a6b0d9",
+          "8327b72e6470595d",
+          "9d1a14098fbc8fe3",
+          "c53bbeb4384b4361"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "cachorros_inclinam_cabeca_quando_voce_fala",
+      "shot_id": "shot_payoff",
+      "asset_id": "schnauzer_ball",
+      "recorded_at": "2026-09-21T23:40:32Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f421e1d4a89fa21546b5899e42616d9de99e3e5606dee472ab551a4bd67b0a95",
+        "url_hashes": [
+          "70f336fbc8cea53000973ab80852f68b532a938c6a3c6143089afa92bc645ad6"
+        ],
+        "perceptual_hashes": [
+          "bf9fc2d1cc6302c2",
+          "be8fe0d9cc6160d2",
+          "9a0df099ce616d93",
+          "beafc4d046e48563",
+          "bd3a6fa691d02362",
+          "8db2dcc57038c93e",
+          "8986329dcfcd162e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
