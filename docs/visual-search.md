@@ -172,20 +172,19 @@ URLs diretas continua preservando o tipo do asset-base.
 Não compare tipos apenas pelo número bruto do score: primeiro aplique a pertinência semântica explícita, depois os gates
 técnicos do vídeo; por fim respeite a prioridade editorial de movimento real entre opções semanticamente equivalentes.
 
-## Regra crítica: unicidade por imagem e trecho de vídeo
+## Regra crítica: unicidade visual compatível com o Media Preflight
 
-Cada shot deve terminar com conteúdo visual próprio no episódio.
+Cada shot principal deve terminar com uma fonte física diferente no estado atual da `main`.
 
 - a mesma imagem NÃO pode ser usada em dois shots;
-- a mesma fonte de vídeo pode atender normalmente até **3 shots**;
-- cada uso precisa de intervalo temporal distinto, seguro e não sobreposto;
-- mudar crop, focus, speed, motion, transition, visual FX ou overlay sobre o mesmo intervalo NÃO cria outro take;
-- URLs diferentes que resolvem para o mesmo arquivo, upload, `provider_id` ou página-fonte compartilham a mesma contagem e reservas;
-- depois que uma imagem ou intervalo vence um slot, ele fica reservado;
-- Best Segment não pode mover um trim para cima da reserva de outro shot;
-- diversidade de fontes continua preferível quando houver alternativas semanticamente equivalentes.
+- a mesma fonte de vídeo NÃO deve ser usada em dois shots, mesmo com trims diferentes;
+- o mesmo YouTube `provider_id`, URL normalizada ou arquivo resolvido deve ser reservado para um único shot principal;
+- mudar crop, focus, speed, motion, transition, freeze, visual FX ou overlay NÃO cria outra identidade;
+- aliases diferentes que resolvem para a mesma mídia continuam sendo duplicata;
+- antes do primeiro `.episode-check`, audite o pool do episódio inteiro e remova colisões previsíveis;
+- se um vídeo aparece em mais de um slot, mantenha-o apenas no slot em que tiver maior valor editorial e pesquise outra fonte para os demais.
 
-Considere o consumo real do shot, speed, freeze e crossfade ao verificar sobreposição. Ao atingir três usos ou esgotar intervalos seguros, selecione outra fonte ou uma imagem relevante.
+O resolver pode possuir lógica de reservas temporais, mas a autoria **não deve depender dela para reuso intraepisódio** enquanto `check_episode_media.py` bloquear repetição por asset/file/URL.
 
 ## Pool visual recomendado
 
