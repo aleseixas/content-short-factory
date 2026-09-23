@@ -392,21 +392,11 @@ e motivo. O arquivo é diagnóstico temporário; nunca copie seus campos para
 fechar o episódio: Best Segment melhora apenas um trecho claramente inferior de um
 vídeo já adequado, não corrige irrelevância semântica nem asset ruim.
 
-### REGRA CRÍTICA — UNICIDADE VISUAL COMPATÍVEL COM O PREFLIGHT
+### REGRA CRÍTICA — UNICIDADE POR IMAGEM E TRECHO
 
-No estado atual da `main`, **cada shot principal precisa resolver para uma fonte visual física exclusiva**. Isso vale para imagem e vídeo.
+A mesma imagem não pode aparecer em dois shots. Uma mesma fonte de vídeo pode atender normalmente até **3 shots**, desde que cada uso tenha intervalo temporal distinto, seguro e não sobreposto. Crop, focus, speed, motion ou FX não transformam o mesmo trecho em take novo.
 
-NÃO reutilize o mesmo vídeo em dois shots, mesmo com trims diferentes e não sobrepostos. O Media Preflight atual bloqueia repetição por identidade de asset/arquivo/URL; portanto, trims diferentes do mesmo `provider_id` não tornam a fonte única.
-
-Antes do primeiro `.episode-check`, faça uma auditoria GLOBAL de `visual_candidates.json`, `assets.json` e `timeline.json`:
-
-- nenhum `asset_id` final repetido;
-- nenhum `file` final repetido;
-- nenhuma URL normalizada final repetida;
-- nenhum YouTube `provider_id` planejado para vencer em mais de um slot;
-- nenhum alias/nome diferente mascarando a mesma fonte física.
-
-Se um vídeo aparece em vários slots, reserve-o para apenas UM shot e substitua os demais por fontes diferentes antes do Media Preflight. Leia `templates/visual-uniqueness-rule.md`; ela SOBREPÕE qualquer regra antiga de até 3 usos por vídeo.
+URLs, aliases, provider IDs, SHA-256 e hashes perceptuais devem compartilhar identidade. O Best Segment respeita reservas de outros shots da mesma fonte. Ao atingir três usos ou esgotar segmentos seguros, escolha outra fonte. Leia `templates/visual-uniqueness-rule.md`.
 
 ## Fluxo obrigatório
 
@@ -428,7 +418,7 @@ Siga esta ordem:
 14. revisar isoladamente hook, reveals, mudanças de assunto, estatísticas, virada e payoff;
 15. fazer uma AUDITORIA SEMÂNTICA obrigatória: percorrer cada shot junto da frase narrada e substituir qualquer visual que não tenha relação específica, clara e imediata com o que está sendo dito;
 16. validar deliveries, assets, conflitos, trims de vídeo e SFX contra suas durações reais, duração final e host de background externa;
-17. fazer deduplicação GLOBAL antes do primeiro episode-check: substituir qualquer imagem repetida e qualquer vídeo-fonte/provider_id/URL/file que apareça em mais de um shot; trims diferentes NÃO liberam reuso da mesma fonte física no validator atual;
+17. fazer deduplicação GLOBAL: substituir qualquer imagem repetida ou trecho de vídeo repetido/sobreposto, confirmar no máximo 3 shots por vídeo-fonte e validar que todos os trims dessa fonte sejam distintos e seguros;
 18. refazer a checagem de duplicidade por topic/entidades/slug como proteção pré-commit;
 19. revisar `post.json` para garantir que `youtube.title` tenha no máximo 6 palavras, que `cover.headline` tenha no máximo 4 palavras **e seja concreto, clicável, curioso e fiel ao fato que o vídeo entrega**, que todas as hashtags estejam em minúsculas, que `curiosidade` esteja presente quando fizer sentido, que créditos/fontes técnicos ficaram apenas em `sources.txt` e que qualquer asset que exija atribuição pública tenha sido substituído ou atendido por mecanismo público realmente suportado;
 20. fazer polimento global removendo apenas escolhas redundantes, conflitantes, repetitivas, caricatas ou prejudiciais à compreensão/mix;
