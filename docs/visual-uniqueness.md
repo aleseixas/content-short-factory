@@ -1,61 +1,57 @@
-# Unicidade visual por conteúdo e segmento
+# Unicidade visual — contrato compatível com o validator atual
 
-Esta regra é obrigatória para toda autoria de episódio do Content Short Factory e SOBREPÕE qualquer orientação anterior que proíba reutilizar uma fonte de vídeo inteira mesmo quando há trechos diferentes.
+Esta documentação descreve a regra efetivamente aceita pelo Media Preflight da `main`.
 
-## IMAGENS — ZERO REUSO
+## Fonte da verdade
 
-Cada imagem principal continua sendo exclusiva de um shot dentro do episódio.
+No estado atual, `check_episode_media.py` chama `_assert_intra_episode_visuals_unique` e bloqueia dois shots que compartilhem qualquer identidade principal por:
 
-- A mesma imagem nunca pode aparecer em dois shots.
-- Crop, focus, zoom, motion, transition, visual FX, overlay ou qualquer outro tratamento não transforma a mesma imagem em um asset novo.
-- URLs/aliases diferentes que resolvam para a mesma imagem continuam sendo duplicata.
+- `asset_id`;
+- `file`;
+- URL normalizada.
 
-## VÍDEOS — UNICIDADE POR SEGMENTO
+O validator não considera trims diferentes suficientes para liberar o mesmo arquivo de vídeo em dois shots.
 
-Uma mesma fonte de vídeo pode abastecer mais de um shot quando o conteúdo temporal usado é realmente diferente.
+## Regra operacional
 
-- O mesmo vídeo-fonte pode aparecer normalmente em até **3 shots** por episódio.
-- Cada shot deve usar um intervalo temporal diferente e não sobreposto.
-- Outro trim só conta como outro take quando realmente aponta para outro trecho do vídeo.
-- Alterar crop, focus, speed, motion, transition, visual FX ou overlay sobre o mesmo intervalo não cria um take novo.
-- URLs, aliases, downloads ou nomes de arquivo diferentes que resolvam para o mesmo provider/página-fonte devem compartilhar o mesmo controle de reutilização.
-- Prefira distribuir usos da mesma fonte ao longo do episódio em vez de agrupá-los consecutivamente.
-- Se uma fonte já chegou a 3 usos, procure outro vídeo relevante ou use uma imagem relevante.
+### Imagens
 
-O resolver web mantém as reservas de segmentos durante a resolução. Quando um candidato reutilizado não informa `source_start_seconds`, ele pode receber automaticamente um baseline posterior não sobreposto. A autoria, porém, deve preferir escolher explicitamente o trecho que melhor representa a fala.
+Zero reuso. Cada imagem principal é exclusiva de um shot.
 
-## RELAÇÃO COM BEST SEGMENT
+### Vídeos
 
-`source_start_seconds`/`source_end_seconds` escolhidos na autoria continuam sendo o baseline editorial de cada shot.
+Zero reuso da fonte física no episódio.
 
-O Best Segment pode comparar janelas próximas e substituir o baseline apenas quando sua política conservadora permitir. Quando vários shots apontam para a mesma fonte física, o Best Segment considera as reservas dos outros shots e não aceita uma janela otimizada que sobreponha outro trecho já reservado da mesma fonte.
+Mesmo que dois shots usem intervalos temporais diferentes e não sobrepostos, eles NÃO devem resolver para o mesmo arquivo/URL de vídeo enquanto o validator atual permanecer assim.
 
-Isso significa que reutilizar uma fonte não desativa nem enfraquece o Best Segment: cada shot continua sendo otimizado individualmente, mas dentro do espaço temporal disponível.
+Logo:
 
-## DIVERSIDADE CONTINUA IMPORTANTE
+- mesmo YouTube `provider_id` → reserve para um único shot principal;
+- mesmo arquivo baixado → não repetir;
+- mesma URL normalizada → não repetir;
+- aliases diferentes → não contornam a regra;
+- crop, speed, motion, freeze, FX e Best Segment → não criam uma nova identidade de visual.
 
-Permitir vários segmentos de um vídeo não significa usar um único clipe no episódio inteiro.
+## Relação com o resolver
 
-Prefira diversidade de fontes quando houver alternativas igualmente relevantes. Reutilize uma fonte sobretudo quando ela contém vários momentos distintos e úteis — por exemplo, entrevista longa, demonstração, arquivo histórico, reportagem, performance ou registro de evento com cenas diferentes.
+O resolver pode tecnicamente conhecer reservas temporais e trims distintos, mas a autoria não deve depender disso para reutilização intraepisódio enquanto o gate final continuar source-level.
 
-A prioridade editorial permanece:
+Ao montar `visual_candidates.json`, faça deduplicação global do episódio. Se um `provider_id` aparecer em vários slots, escolha o slot em que ele é mais valioso e substitua os demais por fontes diferentes antes do primeiro Media Preflight.
 
-1. vídeo/segmento realmente relevante para o take;
-2. imagem realmente relevante;
-3. vídeo genérico apenas se ainda houver função contextual clara;
-4. imagem genérica como último recurso.
+## Gate antes do primeiro episode-check
 
-Uma imagem específica e correta deve vencer de um vídeo genérico sem relação com a narração.
+Audite o conjunto final esperado:
 
-## GATE ANTES DA QUEUE
+1. todos os shots têm `asset_id` diferentes;
+2. nenhum asset usado compartilha o mesmo `file`;
+3. nenhum asset usado compartilha a mesma URL normalizada;
+4. nenhum `provider_id` de vídeo foi planejado para mais de um shot;
+5. não existem trims diferentes da mesma fonte sendo tratados como visuais independentes.
 
-Antes da queue, confirme explicitamente que:
+Se uma colisão for previsível, corrija antes de criar `.episode-check/<slug>-<nonce>.json`.
 
-1. nenhuma imagem final aparece em mais de um shot;
-2. nenhum intervalo de vídeo final é repetido ou sobreposto dentro da mesma fonte;
-3. nenhuma fonte de vídeo excede normalmente 3 shots no episódio;
-4. aliases da mesma fonte compartilham a mesma contagem de uso;
-5. o reaproveitamento não foi criado apenas por crop/FX/speed sobre o mesmo trecho;
-6. a reutilização de fonte foi escolhida por relevância editorial, não para inflar artificialmente a porcentagem de vídeo.
+## Por que esta regra existe
 
-A política vigente é: **zero reuso da mesma imagem e zero reuso do mesmo trecho de vídeo; a mesma fonte de vídeo pode fornecer takes diferentes, desde que sejam segmentos não sobrepostos e respeitem o limite de uso por fonte**.
+O objetivo é evitar desperdiçar um ciclo externo de Media Preflight com `INTRA_EPISODE_VISUAL_REUSE` quando a colisão já pode ser detectada durante a autoria.
+
+Quando o validator mudar para reconhecer unicidade por segmento temporal, esta documentação deve mudar junto. A `main` executável sempre prevalece sobre documentação antiga.
