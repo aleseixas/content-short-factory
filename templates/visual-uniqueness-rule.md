@@ -1,8 +1,34 @@
-# Override obrigatório — unicidade visual por conteúdo e segmento
+# Override obrigatório — unicidade visual compatível com o Media Preflight
 
 Leia esta regra antes de fechar `assets.json`, `visual_candidates.json` e `timeline.json`.
 
-Esta é a regra vigente e **SOBREPÕE qualquer texto anterior que diga que o mesmo vídeo-fonte nunca pode aparecer em dois shots**.
+Esta regra é autoritativa para a autoria e **SOBREPÕE qualquer orientação anterior que permita reutilizar o mesmo vídeo-fonte em mais de um shot por usar trims diferentes**.
+
+## Regra atual da main — ZERO REUSO DE VISUAL PRINCIPAL
+
+No estado atual da `main`, o Media Preflight executa `_assert_intra_episode_visuals_unique` em `check_episode_media.py` e considera repetição qualquer visual principal que compartilhe uma identidade por:
+
+- `asset_id`;
+- nome físico de `file`;
+- URL normalizada.
+
+Portanto, para a autoria agendada, a regra operacional é simples:
+
+**cada shot principal deve terminar com um asset visual diferente.**
+
+Isso vale para imagem E vídeo.
+
+### Vídeos — trims diferentes NÃO tornam o arquivo único
+
+Enquanto o validator atual continuar comparando identidade de asset/arquivo/URL:
+
+- NÃO use o mesmo vídeo-fonte em dois shots principais, mesmo que os `source_start_seconds` sejam diferentes;
+- NÃO trate dois trims não sobrepostos do mesmo YouTube `provider_id` como visuais distintos;
+- NÃO crie aliases ou nomes de asset diferentes que acabem resolvendo para o mesmo arquivo baixado;
+- crop, focus, speed, motion, transition, freeze, visual FX, overlay e Best Segment NÃO transformam a mesma fonte física em outro visual para esse gate;
+- se um vídeo excelente já foi reservado para um shot, os outros shots precisam usar outra fonte de vídeo ou uma imagem diferente.
+
+**Até o validator da `main` mudar, zero reuso da fonte física vence qualquer regra antiga de até 3 usos por vídeo.**
 
 ## Imagens — zero reuso
 
@@ -10,68 +36,54 @@ A mesma imagem principal NUNCA pode ser usada em dois shots do episódio.
 
 Crop, focus, zoom, motion, transition, visual FX, overlay ou qualquer outro tratamento NÃO transforma a mesma imagem em um visual novo.
 
-## Vídeos — mesma fonte pode alimentar takes diferentes
+URLs, aliases ou nomes diferentes que resolvam para o mesmo arquivo continuam sendo duplicata.
 
-O mesmo vídeo-fonte PODE ser usado em mais de um shot quando cada uso corresponde a um **trecho temporal realmente diferente e não sobreposto**.
+## visual_candidates.json — deduplicação GLOBAL antes do primeiro episode-check
 
-Regras obrigatórias:
+O erro deve ser prevenido na autoria, não descoberto pela primeira Action.
 
-- use normalmente no máximo **3 shots por vídeo-fonte** no mesmo episódio;
-- para cada uso, escolha `source_start_seconds` e, quando fizer sentido, `source_end_seconds` com intenção semântica própria;
-- NÃO reutilize o mesmo intervalo nem intervalos que se sobreponham;
-- mudar crop, focus, speed, motion, transition, visual FX, overlay ou outro tratamento sobre o MESMO TRECHO não cria um novo take;
-- distribua os reaproveitamentos ao longo do episódio e evite shots consecutivos da mesma fonte quando houver alternativa contextual equivalente;
-- quando um candidato repetido não trouxer trim explícito, o resolver pode atribuir um baseline temporal distinto automaticamente; ainda assim, um trim editorial explícito e semanticamente escolhido é preferível;
-- o Best Segment continua podendo otimizar cada baseline dentro da sua vizinhança conservadora e não deve criar sobreposição com outro shot da mesma fonte;
-- ao atingir o limite de usos ou quando não houver outro intervalo seguro, escolha outro vídeo relevante ou uma imagem relevante.
+Antes de criar o primeiro `.episode-check/<slug>-<nonce>.json`:
 
-URLs, aliases ou nomes de arquivo diferentes que resolvam para o mesmo vídeo/provider continuam sendo a **mesma fonte** para controle de limite e sobreposição.
+1. monte o pool de candidatos por slot;
+2. normalize todos os candidatos de vídeo pela fonte real, usando prioritariamente `provider_id`, URL canônica e arquivo resolvido previsível;
+3. revise o episódio inteiro, não slot por slot isoladamente;
+4. um mesmo `provider_id`/URL de vídeo não deve permanecer como candidato selecionável principal em vários slots;
+5. se o mesmo vídeo aparecer em vários slots, escolha editorialmente UM único slot para ele e substitua os demais por fontes diferentes antes do Media Preflight;
+6. faça a mesma revisão para imagens por URL/arquivo;
+7. confirme que a resolução esperada não pode produzir dois assets com o mesmo `file` ou URL.
 
-## Prioridade editorial
-
-Diversidade de fontes continua desejável, mas não desperdice um vídeo longo e altamente relevante só para obedecer uma regra artificial de um único uso por fonte.
-
-A ordem editorial é:
-
-1. vídeo/trecho realmente relevante para o que está sendo narrado;
-2. imagem realmente relevante;
-3. vídeo genérico apenas quando ainda tiver função contextual clara;
-4. imagem genérica como último recurso.
-
-Nunca escolha um vídeo sem relação com a fala apenas para aumentar a porcentagem de movimento.
+Não confie no fato de os trims serem diferentes. O gate atual não usa trim para liberar reuso intraepisódio.
 
 ## Pool de candidatos — diversidade antes do resolver
 
-Esta seção **SOBREPÕE o alvo antigo de 4–5 candidatos por slot** quando o tema tiver material visual suficiente. O resolver só consegue escolher entre o que recebeu; portanto, a qualidade e a diversidade do `visual_candidates.json` são responsabilidade editorial obrigatória.
+O resolver só consegue escolher entre o que recebeu. Para slots visualmente ricos, mire normalmente em até **8 candidatos reais por slot**, preferindo **fontes diferentes no episódio inteiro**, não apenas dentro do slot.
 
-Para slots visualmente ricos, mire normalmente em **8 candidatos reais por slot**, com a composição preferencial de **até 5 vídeos de IDs/fontes distintos + até 3 imagens**. Quando a disponibilidade real não permitir isso, aceite um pool menor, mas tente manter **pelo menos 5 candidatos úteis** antes de desistir da busca. Não complete quantidade com material genérico ou irrelevante.
+Regras obrigatórias:
 
-Regras obrigatórias para montar o pool:
+- cada slot deve pesquisar a partir de `topic`, frase, entidades, evento, local, período e `visual_intent`;
+- quando a primeira busca trouxer vídeos repetidos, genéricos ou pouco ligados à fala, faça novas consultas semanticamente diferentes;
+- um mesmo YouTube `provider_id` conta como uma única fonte global e deve ser reservado para no máximo UM shot principal;
+- não deixe poucos IDs populares dominarem muitos slots;
+- prefira candidatos `exact` e `direct`; use `contextual` conscientemente e `generic` apenas como último recurso;
+- não trate cinco trims do mesmo vídeo como cinco candidatos diferentes;
+- antes de fechar `visual_candidates.json`, faça uma auditoria global dos IDs/URLs/files e elimine colisões previsíveis.
 
-- cada slot deve pesquisar a partir de `topic`, frase, entidades, evento, local, período e `visual_intent`, não apenas pelo nome da entidade;
-- quando a primeira busca trouxer vídeos repetidos, genéricos ou pouco ligados à fala, faça novas consultas semanticamente diferentes antes de fechar o slot;
-- um mesmo YouTube `provider_id` conta como **uma única fonte** para diversidade do pool, mesmo que apareça com títulos, URLs ou trims diferentes;
-- não deixe 2–3 IDs populares dominarem candidatos de muitos slots sem relação direta entre si;
-- se a mesma fonte começar a aparecer em vários slots, continue pesquisando alternativas antes de aceitá-la novamente;
-- prefira candidatos `exact` e `direct`; use `contextual` conscientemente e `generic` apenas como último recurso real;
-- para pessoas, empresas, produtos, tecnologias, colaborações, eventos ou locais citados, faça buscas específicas com esses nomes/contextos em vez de substituir por B-roll genérico;
-- preserve diversidade entre fontes, eventos e momentos: demonstração, entrevista, bastidor, reportagem, performance, arquivo histórico, premiação e contexto documental podem coexistir quando fizerem sentido para a história;
-- não trate cinco trims do mesmo vídeo como cinco bons candidatos de vídeo para o slot;
-- antes de fechar `visual_candidates.json`, revise os IDs de vídeo do episódio inteiro. Se poucos IDs estiverem aparecendo repetidamente em muitos slots, reabra as buscas dos slots mais fracos.
+## Gate editorial ANTES do Media Preflight
 
-O objetivo não é maximizar contagem. É entregar ao resolver **opções semanticamente fortes e realmente diferentes** para que download, semantic gates, Best Segment, motion/static checks e ranking técnico tenham matéria-prima suficiente.
+Antes do PRIMEIRO `.episode-check`, confirme explicitamente:
 
-## Gate antes da queue
+- cada shot principal aponta para um asset_id exclusivo;
+- nenhum `file` é compartilhado entre dois assets usados por shots;
+- nenhuma URL normalizada é compartilhada entre dois assets usados por shots;
+- nenhum vídeo `provider_id` está planejado para vencer em mais de um slot;
+- nenhum alias mascara a mesma fonte física;
+- nenhum trim diferente do mesmo vídeo está sendo usado como justificativa de unicidade;
+- o primeiro Media Preflight não deverá descobrir `INTRA_EPISODE_VISUAL_REUSE` por algo que já era verificável na autoria.
 
-Antes de finalizar o episódio, confirme:
+Se houver qualquer colisão, corrija o pool/timeline/assets ANTES de disparar a Action.
 
-- nenhuma imagem principal foi reutilizada;
-- todo vídeo-fonte usado mais de uma vez ficou em no máximo 3 shots;
-- os intervalos reutilizados da mesma fonte são distintos e não se sobrepõem;
-- o mesmo trecho não foi mascarado como novo take por crop/FX/speed;
-- o Best Segment pode operar sem empurrar um take para cima do intervalo de outro shot da mesma fonte;
-- a escolha de reutilizar uma fonte preserva ou melhora relevância semântica;
-- slots visualmente ricos receberam variedade real de candidatos, em vez de pequenas variações dos mesmos poucos IDs;
-- nenhum vídeo genérico foi usado para encobrir falta de busca específica quando uma imagem relevante ou asset existente seria editorialmente melhor.
+## Regra de ouro
 
-Esta regra substitui a política anterior de `zero reuso do vídeo-fonte`. A política correta agora é: **zero reuso da mesma imagem e zero reuso do mesmo trecho de vídeo; uma mesma fonte de vídeo pode abastecer takes distintos com segmentos não sobrepostos, dentro do limite definido acima**.
+**Na main atual: 1 shot principal = 1 fonte visual física exclusiva.**
+
+Se futuramente `check_episode_media.py` passar a validar unicidade por intervalo temporal de vídeo, esta regra deverá ser atualizada novamente com base no código real. Até lá, o validator atual prevalece.
