@@ -21,16 +21,54 @@ Antes de pesquisar temas ou criar arquivos, registre:
 - `QUEUES_AT_START`: arquivos já existentes em `.publish-queue/`;
 - `EXECUTION_SLUG=UNSET`.
 
-Queue existente no snapshot pode ser herdada. Queue criada depois pertence à execução atual e nunca autoriza um segundo episódio.
+Queue existente no snapshot pertence a uma execução anterior por padrão e serve apenas como histórico operacional.
+
+### 2.1 Histórico fechado NÃO pode virar resultado da nova execução
+
+No início de CADA nova chamada, classifique como `CLOSED_HISTORY` qualquer slug que, antes de `EXECUTION_START_HEAD`:
+
+- já possuía `.publish-queue/<slug>.txt` e Publish Action terminal;
+- já estava `PUBLICADO` / publicado nas plataformas previstas;
+- já tinha estado terminal de geração/publicação e não há trabalho incompleto seguro pendente;
+- ou aparece apenas porque é o episódio mais recente do repositório.
+
+Um `CLOSED_HISTORY`:
+
+- NÃO pode virar `EXECUTION_SLUG`;
+- NÃO pode ser reportado como o episódio produzido pela chamada atual;
+- NÃO satisfaz o objetivo da nova execução;
+- NÃO pode fazer a chamada responder `STATUS: PUBLICADO` sem que um novo episódio desta chamada tenha sido criado ou uma retomada realmente incompleta tenha sido comprovada.
+
+**Se todos os episódios anteriores estão terminais/fechados, a nova chamada DEVE manter `EXECUTION_SLUG=UNSET` e iniciar uma NOVA seleção editorial.**
+
+É proibido usar “o último episódio já foi publicado com sucesso” como resposta de uma nova execução criadora.
+
+Queue criada depois de `EXECUTION_START_HEAD` pertence à execução atual e nunca autoriza um segundo episódio.
 
 ## 3. Travamento imutável do slug
 
 Enquanto `EXECUTION_SLUG=UNSET`, avalie candidatas e execute duplicate preflights.
 
 Fixe `EXECUTION_SLUG=<slug>` no primeiro destes eventos:
-1. retomada legítima de episódio incompleto;
+1. **retomada legítima e comprovadamente incompleta** de episódio anterior;
 2. candidata recebe `UNIQUE_CANDIDATE` e autoria começa;
 3. qualquer arquivo é escrito em `episodes/<slug>/`.
+
+### 3.1 Definição estrita de retomada legítima
+
+“Retomada” só é válida quando existe evidência concreta de geração anterior INCOMPLETA que ainda precisa continuar, por exemplo:
+- autoria iniciada sem queue e sem publicação terminal;
+- Media Preflight falhou/ficou incompleto antes da queue;
+- queue/publicação da geração anterior ainda é não terminal e pertence inequivocamente a uma execução que não chegou a concluir.
+
+NÃO é retomada legítima:
+- último episódio simplesmente ser o mais recente;
+- último episódio já ter Publish Action terminal com sucesso;
+- slug já publicado aparecer em `.publish-queue/`;
+- encontrar run antigo `success`;
+- encontrar episódio saudável sem erro pendente.
+
+Se o episódio anterior já terminou com sucesso, **ignore-o para identidade da nova chamada e crie um novo episódio**.
 
 Depois disso o slug é **IMUTÁVEL até a resposta final**. É proibido voltar ao pool, autorizar outra candidata, criar duplicate-check para outro tema, iniciar outro episódio, fazer media preflight de outro slug ou criar queue para outro slug.
 
@@ -54,6 +92,16 @@ Em particular:
 `PUBLICAÇÃO_EM_ANDAMENTO` pode existir internamente, mas não deve ser resposta final enquanto o run continuar consultável.
 
 ## 5. Estados realmente terminais
+
+Antes de responder, aplique também o **CURRENT-RUN EVIDENCE GATE**:
+
+Para uma execução criadora nova sem retomada incompleta, deve existir evidência posterior a `EXECUTION_START_HEAD` de:
+1. duplicate preflight desta chamada;
+2. `UNIQUE_CANDIDATE`;
+3. autoria de um slug novo;
+4. continuidade desse mesmo slug até o estado terminal.
+
+Run/queue/publicação anterior ao início da chamada pode ser citado apenas como histórico e NUNCA como prova de sucesso desta execução.
 
 A resposta final só é permitida quando ocorrer:
 - `PUBLICADO`: Publish Action terminal e plataformas executadas pela `main` verificadas;
@@ -99,3 +147,9 @@ Depois da queue, acompanhe somente publicação/recovery do mesmo slug até esta
 **SÓ RESPONDER ANTES DO TERMINAL SE HOUVER BLOQUEIO TÉCNICO REAL QUE IMPEÇA CONTINUAR.**
 
 **QUEUE/PASS/PUBLICAÇÃO NÃO REINICIAM A EXECUÇÃO.**
+
+**EPISÓDIO JÁ PUBLICADO ANTES DE EXECUTION_START_HEAD = CLOSED_HISTORY, NUNCA RESULTADO DA NOVA CHAMADA.**
+
+**NOVA CHAMADA + NENHUM INCOMPLETO REAL = EXECUTION_SLUG=UNSET -> NOVO DUPLICATE LOOP -> NOVO EPISÓDIO.**
+
+**STATUS: PUBLICADO EXIGE EVIDÊNCIA DO SLUG DESTA EXECUÇÃO, NÃO DE UM RUN ANTIGO.**
