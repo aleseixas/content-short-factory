@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "episode": "trena_gancho_solto_serve_para_medir",
+  "recorded_at": "2026-09-23T01:13:16Z",
+  "visual_usage": [
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "9e644d9f14cbfa5cc9513366b7f19c0c20a36fcece0852bea9f14f2c7f4276dd",
+        "url_hashes": [
+          "7b2d1c21764f45716fb274966abcbd6f947a95aba0675c14c9fd3eb14d0e0beb"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "a33891b965936c73",
+          "8639b179b3d2a712",
+          "903d79a35f383193",
+          "802f3c397033d3cf",
+          "853e7821d78adb8c",
+          "800bdf3f366e382c",
+          "850e7831d7cb0dec",
+          "800bdf3d747a383c"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 5.133333
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_thickness",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "5b13586330e3d71de212b31122c039d6e3a0c5b1c72fd4503bcde2a67e7d2fa4",
+        "url_hashes": [
+          "82bb96b6c2a915240d540691b62580fc75c784fe19388a8425735e9b389fa881"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "e6cca8f3b19018b7",
+          "e6cc88f3b19118b7",
+          "e6cc8af3b11118e7",
+          "c6ccceb3b11308e7",
+          "e6cc8ae3991138e7",
+          "c6ccaae3991138e7",
+          "e2cc8ef3b11118e7",
+          "e2ccce9311133ae7"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 3.6
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_two_ways",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "49895f91e228409040dfe24ec452855b1bb91357de3621ecfd4a6f01c302febd",
+        "url_hashes": [
+          "a075e870579b5d0b8ca7c63ce2292a0dda50753935f533b464bdc206c4ca46ae"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "ac8d738d32cd334c",
+          "ad9c739833cc6750",
+          "e49d739c33c64750",
+          "e499779976c44750",
+          "e499779976c46350",
+          "e49c739976c47350",
+          "9cacc71ae9a5945a",
+          "9ea5d21be9a49958"
+        ],
+        "source_start_seconds": 10.0,
+        "source_duration_seconds": 4.9
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_outside_setup",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "44eb5ff83c00bb129e1b737762f040a478a074d9c4885c39c740cca75b7e907f",
+        "url_hashes": [
+          "959b727df5e3094163216ca05a0ac034785ab4f9e9597cc52a91cfd2042559cd"
+        ],
+        "perceptual_hashes": [
+          "ca5a95b4e29fb007",
+          "da5b94b6c09fb00e",
+          "da5b84aec09fa04f",
+          "d4d5a9cbb0a25aa6",
+          "d5549638e01ff0a7",
+          "ca4ab7b38ab0669c",
+          "ca4aca97b5640eb9"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_inside_setup",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d79be1f8e36ef32c9a783470d6af9e1fd84ac61b6c2b989d8bcdac1083308ef3",
+        "url_hashes": [
+          "e2a614c45d12926ace3298d4c2221eab5014cf1fcd60473477e681baf3f68a66"
+        ],
+        "perceptual_hashes": [
+          "d03f2dc2352ec13d",
+          "d03f0bd22d46d22f",
+          "d42b1bd62dd4d229",
+          "c17e856b2e857a85",
+          "c17f3e85a17a8985",
+          "db2cc93620dd24db",
+          "d32f24c99526c2db"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_fixed_problem",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "055739ac0c7994be6de0fbdac74ff38b4c3ee73af20214d3a4d4414203f5396f",
+        "url_hashes": [
+          "6ee4f94c36f859a311c1da987899bf25fc45ba868125249d57eddf9270f6bc3c"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "a3f27c15a0037afc",
+          "a3f27c15a10372fc",
+          "a3f27c15a1036afc",
+          "a3f27c15a0037afc",
+          "a3f27c15a0037afc",
+          "a3f25c17a00373fc",
+          "a3f25e17210372fc",
+          "a3b25e17a10372fc"
+        ],
+        "source_start_seconds": 460.0,
+        "source_duration_seconds": 4.6
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_error",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "a60ab11dd7ff8c19634c2348cf354d512434aa50f0922e8c8780e8c49c8da7a7",
+        "url_hashes": [
+          "50cd4a16d6c54bfba8fd22e86f93917299e56860a3fb00cd3876e3b4242bcca1"
+        ],
+        "perceptual_hashes": [
+          "b3e3c71c68cd1c32",
+          "b2e3c71e48cd1cb4",
+          "b0f387176ac83cb4",
+          "e7c49c71db318456",
+          "e767cc9c24c4dc52",
+          "bbf0c00fe51ed0e4",
+          "bf3df0801af1e06c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_rivets",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "0c2d5334bc585cf50ec524f5a84236ac3b72c30b97720dc54840649f56bbe59a",
+        "url_hashes": [
+          "fab5dc3afacff975e5c3b8dfcb8663eb09d7a241b90ae0450ceadf8ce0a4da10"
+        ],
+        "perceptual_hashes": [
+          "b938c6c69249367b",
+          "b93dc6c4904ea759",
+          "b93dc2e4d2cf0338",
+          "b2b0cdc75a267389",
+          "f23290cdafd5c88c",
+          "9e8ee1f904381fc3",
+          "8c1e0de3b34de6c1"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_pull_out",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "ece1f6ccbd4f999d1f868e856cb3487ea6dc92550f7747827d8389da064f9b80",
+        "url_hashes": [
+          "cd0495d95afc06befcba643727176afb96907b89900c90e67319ad860d391991"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "e9c260d49e0dcf2b",
+          "ebca60949e1d872b",
+          "e9da60d69a9d8689",
+          "edda61979a0d062b",
+          "efca69969825072b",
+          "edc269969924cf23",
+          "efca61969c2c072b",
+          "efda6196980d462b"
+        ],
+        "source_start_seconds": 127.0,
+        "source_duration_seconds": 3.9
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_outside_comp",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "efa01e1582017d0d5fbb86db0eb18ddd8f94fab72404014479d63e308dd33425",
+        "url_hashes": [
+          "a65efa65cbb217fb2deb4bc8e8b1b93f4f0a73f19371b828817e9df5efb8e5c9"
+        ],
+        "perceptual_hashes": [
+          "870a76c5936fc896",
+          "870a77c7926fc194",
+          "821f75d4b26bc19c",
+          "852ade857ac23d66",
+          "85117ada953d78c6",
+          "950876913eca977c",
+          "95893a76c7913d68"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_push_in",
+      "asset_id": "visual_11",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "5185666c8c62ac536f8aaf464285778f5e9eaa476b5ebb2cc6dd9fdd725e2bf7",
+        "url_hashes": [
+          "6cb50b9165cbbc5395d06784dc2fde5c481623a723f329d44efea5cad1e45fba"
+        ],
+        "perceptual_hashes": [
+          "c2d3392cd4aec693",
+          "c2d1396e55acc693",
+          "c0913b6a5d6ec4b3",
+          "8f7668cb4a85b649",
+          "87b7707ce5326849",
+          "da1c25d6a2d19c67",
+          "cada1c295d1e2765"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_inside_comp",
+      "asset_id": "visual_12",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "862c73c967ad7cb03154fb96b14cef6dc58a0131a5655c7c2fb4ecef86fda1f6",
+        "url_hashes": [
+          "c93d91c28f9c3b3453fc75f9ddc807a88390f10602187d6565bfd234107b7193"
+        ],
+        "perceptual_hashes": [
+          "80c936e74d7f009f",
+          "82d936e54c7b489d",
+          "82db37e41c634eb1",
+          "81902ddb77c9be09",
+          "85d2b5ae09be22d9",
+          "a1cc326728e792f3",
+          "a1cc1bb2d3963a63"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_truzero_name",
+      "asset_id": "visual_13",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "923b679e7b607a39965acffb44f08758e49510a66cc0bba23bdeb5507657c0d4",
+        "url_hashes": [
+          "fabb61a28c5e6ad680b67aa47622329902a8f04c6adbce5ea016e658cd4c1f98"
+        ],
+        "perceptual_hashes": [
+          "9fc0e03f19e03e8e",
+          "9fe0e21f98f01e86",
+          "9ce0e30fb8710ece",
+          "bfc0c03fc13c8766",
+          "bf3bc0cc3c836272",
+          "87f5700ffe01c07c",
+          "8687f96000bc7e3f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_truzero_meaning",
+      "asset_id": "visual_14",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2385332b473bfedf4a9d00e92d583e7a6d786906ea5ce034ec7ded0e027f9480",
+        "url_hashes": [
+          "5db7c1c6b506e099b2020d588f13a1eeefefffdb7e2cfb9ec5523f731471cd38"
+        ],
+        "perceptual_hashes": [
+          "cb6a16b4b5a5694a",
+          "ca4a16b5a5ad694b",
+          "da5a54b5a5a9aa2a",
+          "d555aaaa5a5455a3",
+          "95545555a5ada9a3",
+          "c96b9294a56d4b5a",
+          "c9696b4b5a929696"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_other_makers",
+      "asset_id": "visual_15",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "1561f94fa6249f709b5cc72d29919aa0e54da764369cbb2e9e2e02e8fa3aa1ee",
+        "url_hashes": [
+          "68b68e91133daf20556eb2a3ae3e87a3dac66b89fe67ef63772a99b21c485f48"
+        ],
+        "perceptual_hashes": [
+          "e88e6b4b8c24bd93",
+          "e88e7acb0e043d9b",
+          "fc847ad3464d099b",
+          "db18569c6bb6a489",
+          "e39971579485496b",
+          "aa0b69c0369cd9f3",
+          "ae823f6cc9d96262"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_physical_zero",
+      "asset_id": "visual_16",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "4b19846bc16bd0ed5cda8b6865582d57b5975647c431fbfa4c12fcbfff58ae7b",
+        "url_hashes": [
+          "34935eae801f017530a600591cb36f66ea290a7fbc613101241bc533278fc093"
+        ],
+        "perceptual_hashes": [
+          "bd3dc2d226c3193c",
+          "bd3dc2d266c19907",
+          "bd29c2d6e6c19b82",
+          "face852dc6324959",
+          "fa7ace913949c8b0",
+          "b6e4c913f40e2367",
+          "b636e4cb0363e38c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_no_math",
+      "asset_id": "visual_17",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "93ec2848a1b8af4231f5d4ce2b96036acdb5de636c6acebb2db422af9825e37e",
+        "url_hashes": [
+          "b0c9643a03ac8c44bb0d07a996c2719182abbc57568be9b2d7acf644318dba78"
+        ],
+        "perceptual_hashes": [
+          "b094c367cd6c2cb6",
+          "b894c36bcf691c26",
+          "bc94d2c2cb4b8d6c",
+          "ea958798586b6527",
+          "ea63856797a54694",
+          "bfd0d8c545363938",
+          "bf37d83ac8d16890"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_invisible_fix",
+      "asset_id": "visual_18",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "358dcc1f308b19b813c7052d1d3969c866b6f66b2a846cf15af8d58b8f3bc1c1",
+        "url_hashes": [
+          "0572a664da2cfca7efcdbbd3dcae1fd6c63494d778b2a10d8700646b04870b92"
+        ],
+        "perceptual_hashes": [
+          "d1b42fb16a4c1717",
+          "d0bf80bbea4f801d",
+          "d4b980baead7c01d",
+          "918f23ec548d3f68",
+          "d1a81f016f7b6ec0",
+          "d5c39f6a40903e7a",
+          "d59000953f6f3aea"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_dont_tighten",
+      "asset_id": "visual_19",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6ffddf7d56fd46b9ec9aecb54323e9f5503bb9e979034f772d0abd05e1ac9818",
+        "url_hashes": [
+          "3ace1f2b787519ec443b0913b89913bcd1a2bb8dbc513b99b17ccdd3a184dcf2"
+        ],
+        "perceptual_hashes": [
+          "915e47691a76359a",
+          "901e476b5e65139e",
+          "9817616a5e65931f",
+          "811c4e556ab639cf",
+          "81bd0e6a15f54ac7",
+          "d542744b329d0ff4",
+          "d58b52744dcb64f0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_normal_play",
+      "asset_id": "visual_20",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f5f986841c14c8b24f71176ad7166797985d31874ca2920aff609c94c2e8effc",
+        "url_hashes": [
+          "09a5ffa863b35964c18880214b0378576e10e6707cdde8afb64ecb9883935558"
+        ],
+        "perceptual_hashes": [
+          "b399cc269bec1499",
+          "b399cc369b6c90c9",
+          "b399cc369b6d9068",
+          "a6934b35cab55a25",
+          "a4b69a6935946ab5",
+          "bcce6219e69b641a",
+          "b89cc62319cd369b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_real_damage",
+      "asset_id": "visual_21",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "9e07bd25df7edd38e3375441baf34f184e533a3af19678b0600a9b4ec4c80db9",
+        "url_hashes": [
+          "e9014c3568abbca7f7647c6ecd0b12d9444044451b2b6775184cbb472bcbbef9"
+        ],
+        "perceptual_hashes": [
+          "fee1841e639c68e1",
+          "bfe18c5c611e78a1",
+          "9ce39f54611f78a0",
+          "ffc09967b8428f18",
+          "ff668099478f1d42",
+          "aaf5837a816fd04a",
+          "aa7c95877ef0026a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_payoff",
+      "asset_id": "visual_22",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "86019d3a3da20eea7dc4cf11a1c658216b92281ea01048474c09fa3f864addc5",
+        "url_hashes": [
+          "9a4e7d893e7c4e70b0854d3cb5637a4a9d0ae3065b557d8308a843061beb4a3a"
+        ],
+        "perceptual_hashes": [
+          "bfc6d039c23849e6",
+          "bfc6d019d2394b62",
+          "aac6dd19d6199865",
+          "fec1b2353857e814",
+          "fe4cc032c7e13897",
+          "a9f39e19036d7381",
+          "a961f31ee1f300cd"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "trena_gancho_solto_serve_para_medir",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_23",
+      "recorded_at": "2026-09-23T01:13:16Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2fec5871d9bf64237201f54edb6a5db5101d003a3674b4abf2ab2bd041364ca5",
+        "url_hashes": [
+          "68d07b1a504c53260bcb5fb37d9370b81adf7290b44f7338ce3e0910100b7ab0"
+        ],
+        "perceptual_hashes": [
+          "d4ad29da291656e5",
+          "d4ad69daaa0454f5",
+          "d5aac0d2aa55627d",
+          "c54ad5340be1f29d",
+          "cdf90ac1f4b21e0d",
+          "d2a55aad565394ca",
+          "d2b4345aadad8aa9"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
