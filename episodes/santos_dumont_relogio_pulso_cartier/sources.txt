@@ -1,0 +1,9 @@
+FONTES FACTUAIS
+- Cartier — Santos-Dumont watch: https://www.cartier.com/pt-pt/watches/collections/santos-de-cartier/relogio-santos-dumont-CRWSSA0032 — fonte oficial; registra que em 1904 Louis Cartier atendeu ao desejo de Alberto Santos-Dumont de ler as horas durante o voo e descreve a peça como um dos primeiros relógios de pulso.
+- Smithsonian National Air and Space Museum — Santos-Dumont making the first public flight in Europe: https://airandspace.si.edu/multimedia-gallery/4492hjpg — contexto documental da atividade aeronáutica de Santos-Dumont e do voo público do 14-bis em 1906.
+
+NOTA EDITORIAL
+O roteiro evita a alegação incorreta de que Santos-Dumont ou Cartier inventaram o primeiro relógio de pulso da história. A formulação usada é que a colaboração produziu um dos primeiros modelos célebres e ajudou a popularizar o formato.
+
+BACKGROUND MUSIC
+- fallback_social_cinematic — fallback curado da repo escolhido para uma narrativa histórica com descoberta e virada; sem novo binário commitado.
