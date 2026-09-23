@@ -135,9 +135,30 @@ Dê bônus editorial, sem virar whitelist fixa, para curiosidades fortes envolve
 - fatos surpreendentes sobre o Brasil, cidades brasileiras, natureza brasileira, costumes, objetos, alimentos ou situações familiares ao público daqui;
 - coisas comuns que escondem uma explicação inesperada.
 
-Isso NÃO significa que todo episódio deve ser sobre pets, casa ou Brasil. Temas globais continuam válidos quando forem claramente mais fortes. A regra é: **reconhecimento imediato + surpresa real + explicação simples + bons visuais** tende a vencer curiosidade distante que exija muito contexto para o público se importar.
+### Prioridade editorial brasileira — Além do Óbvio
 
-Antes de promover o vencedor, faça também o teste mental: **“uma pessoa comum no Brasil teria motivo para parar o scroll porque reconhece isso na própria vida ou no próprio país?”** Se sim, isso é um diferencial relevante na seleção.
+Para o **Além do Óbvio**, o público brasileiro não é apenas o idioma-alvo: é o centro da seleção editorial. Ao montar e ordenar o pool, dê preferência real a pautas que tenham conexão direta com o Brasil ou com a vida cotidiana de quem vive no Brasil.
+
+Priorize, quando houver histórias fortes e verificáveis:
+- curiosidades do Brasil, de cidades e regiões brasileiras;
+- histórias pouco conhecidas da história do Brasil, com conflito, virada, consequência ou detalhe surpreendente;
+- acontecimentos, personagens, invenções, obras, costumes, comidas, lugares, empresas, esportes e fenômenos brasileiros;
+- fatos históricos brasileiros que tenham imagens, documentos, locais ou personagens visualmente fortes;
+- assuntos brasileiros atuais que possam ser explicados como história/curiosidade, e não apenas como notícia;
+- cachorros, gatos e outros animais com alta proximidade emocional e reconhecimento imediato;
+- comportamentos curiosos de pets, animais urbanos e fauna brasileira;
+- casa, comida, carro, trânsito, corpo humano, escola, trabalho, tecnologia cotidiana e objetos que brasileiros veem ou usam com frequência.
+
+**Política e eleições também são permitidas**, inclusive em períodos eleitorais, desde que o episódio seja estritamente informativo, factual e neutro. Pode explorar, por exemplo, histórias de eleições brasileiras, fatos curiosos sobre presidentes e instituições, origem de regras eleitorais, urna eletrônica, Congresso, Constituição, campanhas históricas, acontecimentos políticos passados e funcionamento de instituições. Não faça propaganda, não peça voto, não recomende candidato/partido, não tente persuadir politicamente o público e não transforme opinião partidária em fato. Em temas atuais ou controversos, use fontes fortes, atribua alegações contestadas e deixe claro o que é fato documentado versus interpretação.
+
+Temas globais continuam permitidos, mas **não devem vencer por padrão**. Para superar uma boa pauta brasileira/cotidiana, o tema global precisa ter hook, surpresa, relevância e potencial visual claramente superiores para o público daqui.
+
+Na prática, ao ordenar candidatas do Além do Óbvio, use esta preferência editorial:
+**Brasil/história brasileira/assunto brasileiro forte → pets e animais próximos → cotidiano reconhecível → tema global excepcional**.
+
+Isso não é uma quota rígida nem exige que todo episódio seja brasileiro. É uma prioridade de interesse: **reconhecimento brasileiro + surpresa real + explicação simples + bons visuais + vontade de compartilhar**.
+
+Antes de promover o vencedor, faça também o teste mental: **“uma pessoa comum no Brasil teria motivo para parar o scroll porque reconhece isso na própria vida, no próprio país ou numa história brasileira que vale descobrir?”** Se sim, isso é um diferencial relevante na seleção.
 
 ## História, diversidade e duplicidade
 
