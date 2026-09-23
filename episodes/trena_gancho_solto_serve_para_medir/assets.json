@@ -3,20 +3,18 @@
   "assets": [
     {
       "id": "visual_01",
-      "file": "visual_01.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_end.jpg",
-      "credit": "Wikimedia Commons",
+      "file": "youtube-u3Nhus8P1cE.mp4",
+      "credit": "youtube",
       "license": "",
       "focus": {
         "x": 0.5,
-        "y": 0.45
+        "y": 0.5
       }
     },
     {
       "id": "visual_02",
-      "file": "visual_02.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.png",
-      "credit": "Wikimedia Commons",
+      "file": "youtube-u0ig4NUydsE.mp4",
+      "credit": "youtube",
       "license": "",
       "focus": {
         "x": 0.5,
@@ -25,9 +23,8 @@
     },
     {
       "id": "visual_03",
-      "file": "visual_03.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.jpg",
-      "credit": "Wikimedia Commons",
+      "file": "youtube-ecJSwDpm30U.mp4",
+      "credit": "youtube",
       "license": "",
       "focus": {
         "x": 0.5,
@@ -58,9 +55,8 @@
     },
     {
       "id": "visual_06",
-      "file": "visual_06.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.JPG",
-      "credit": "Wikimedia Commons",
+      "file": "youtube-OGsf-SZtW-s.mp4",
+      "credit": "youtube",
       "license": "",
       "focus": {
         "x": 0.5,
@@ -91,9 +87,8 @@
     },
     {
       "id": "visual_09",
-      "file": "visual_09.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_25%27_Klein_Tools.jpg",
-      "credit": "Wikimedia Commons",
+      "file": "youtube-sKtHHESnZk8.mp4",
+      "credit": "youtube",
       "license": "",
       "focus": {
         "x": 0.5,

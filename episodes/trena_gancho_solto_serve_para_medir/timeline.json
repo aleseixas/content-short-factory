@@ -4,7 +4,7 @@
     "enabled": true
   },
   "background_music": {
-    "profile": "fallback_social_fun",
+    "profile": "hiphop_groove",
     "volume": 0.03
   },
   "sfx_cues": [
@@ -104,7 +104,8 @@
       "asset": "visual_01",
       "motion": "push_in",
       "transition_out": "crossfade",
-      "highlight": "ESSA FOLGA É DE PROPÓSITO"
+      "highlight": "ESSA FOLGA É DE PROPÓSITO",
+      "source_start_seconds": 0.0
     },
     {
       "id": "shot_thickness",
@@ -112,7 +113,8 @@
       "asset": "visual_02",
       "motion": "pull_out",
       "transition_out": "cut",
-      "highlight": "O GANCHO TEM ESPESSURA"
+      "highlight": "O GANCHO TEM ESPESSURA",
+      "source_start_seconds": 0.0
     },
     {
       "id": "shot_two_ways",
@@ -120,7 +122,8 @@
       "asset": "visual_03",
       "motion": "pan_left",
       "transition_out": "cut",
-      "highlight": "DUAS FORMAS DE MEDIR"
+      "highlight": "DUAS FORMAS DE MEDIR",
+      "source_start_seconds": 10.0
     },
     {
       "id": "shot_outside_setup",
@@ -144,7 +147,8 @@
       "asset": "visual_06",
       "motion": "pull_out",
       "transition_out": "crossfade",
-      "highlight": "SE FOSSE TRAVADO..."
+      "highlight": "SE FOSSE TRAVADO...",
+      "source_start_seconds": 460.0
     },
     {
       "id": "shot_error",
@@ -168,7 +172,8 @@
       "asset": "visual_09",
       "motion": "push_in",
       "transition_out": "cut",
-      "highlight": "PUXOU? ELE VAI PARA FORA"
+      "highlight": "PUXOU? ELE VAI PARA FORA",
+      "source_start_seconds": 127.0
     },
     {
       "id": "shot_outside_comp",
