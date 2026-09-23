@@ -125,23 +125,6 @@
       "inspect_top": 4,
       "candidates": [
         {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Loose hook explanation – outside measurement",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
-          "source_page_url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
-          "file": "outside_setup_ecJSwDpm30U.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "ecJSwDpm30U",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 55
-        },
-        {
           "editorial_rank": 2,
           "semantic_fit": "contextual",
           "name": "Wikimedia tape measure visual 4",
@@ -163,23 +146,6 @@
       "required_seconds": 3.2,
       "inspect_top": 4,
       "candidates": [
-        {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Loose hook explanation – inside measurement",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
-          "source_page_url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
-          "file": "inside_setup_ecJSwDpm30U.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "ecJSwDpm30U",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 105
-        },
         {
           "editorial_rank": 2,
           "semantic_fit": "contextual",
@@ -242,23 +208,6 @@
       "inspect_top": 4,
       "candidates": [
         {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Insider Carpentry tape hook demonstration 2",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
-          "source_page_url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
-          "file": "error_OGsf-SZtW-s.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "OGsf-SZtW-s",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 485
-        },
-        {
           "editorial_rank": 2,
           "semantic_fit": "contextual",
           "name": "Wikimedia tape measure visual 7",
@@ -280,23 +229,6 @@
       "required_seconds": 3.2,
       "inspect_top": 4,
       "candidates": [
-        {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Insider Carpentry tape hook demonstration 3",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
-          "source_page_url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
-          "file": "rivets_OGsf-SZtW-s.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "OGsf-SZtW-s",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 510
-        },
         {
           "editorial_rank": 2,
           "semantic_fit": "contextual",
@@ -359,23 +291,6 @@
       "inspect_top": 4,
       "candidates": [
         {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Tape measure hook demonstration 2",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
-          "source_page_url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
-          "file": "outside_comp_sKtHHESnZk8.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "sKtHHESnZk8",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 145
-        },
-        {
           "editorial_rank": 2,
           "semantic_fit": "contextual",
           "name": "Wikimedia tape measure visual 10",
@@ -397,23 +312,6 @@
       "required_seconds": 3.2,
       "inspect_top": 4,
       "candidates": [
-        {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Tape measure hook demonstration 3",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
-          "source_page_url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
-          "file": "push_in_sKtHHESnZk8.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "sKtHHESnZk8",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 165
-        },
         {
           "editorial_rank": 2,
           "semantic_fit": "contextual",
