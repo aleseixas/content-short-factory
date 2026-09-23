@@ -1,0 +1,8 @@
+FONTES FACTUAIS
+- The Henry Ford — Ford Rubber Plantations in Brazil: https://www.thehenryford.org/collections/explore/popular-research-topics/ford-rubber-plantations-in-brazil
+- Fundação Joaquim Nabuco — Fordlândia: https://pesquisaescolar.fundaj.gov.br/en/artigo/fordlandia/
+- Associated Press — Brazilian court orders restoration of Fordlandia, Henry Ford's Amazon ghost town (2026): https://apnews.com/article/370a0e6999447a20a525a66d8d081450
+- Wikimedia Commons — Category:Fordlândia e arquivos históricos/atuais usados como base visual: https://commons.wikimedia.org/wiki/Category:Fordl%C3%A2ndia
+
+MÚSICA
+Foram feitas buscas externas por trilhas documentais/históricas no Pixabay. As candidatas encontradas eram em grande parte marcadas como Content ID Registered ou não ofereciam, pela interface de pesquisa disponível, uma URL direta segura para inserir como novo profile. Foi usado o fallback curado `fallback_social_cinematic`, conforme docs/audio-search.md.
