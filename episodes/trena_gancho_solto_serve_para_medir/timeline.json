@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "smart_visual_pacing": {
+    "enabled": true
+  },
+  "background_music": {
+    "profile": "fallback_social_fun",
+    "volume": 0.03
+  },
+  "sfx_cues": [
+    {
+      "time_seconds": 0.08,
+      "type": "impact",
+      "volume": 0.045
+    },
+    {
+      "time_seconds": 16,
+      "type": "whoosh_fast",
+      "volume": 0.035
+    },
+    {
+      "time_seconds": 31,
+      "type": "ding",
+      "volume": 0.032
+    },
+    {
+      "time_seconds": 48,
+      "type": "riser_build_up",
+      "volume": 0.032
+    },
+    {
+      "time_seconds": 67,
+      "type": "pop",
+      "volume": 0.032
+    }
+  ],
+  "visual_fx_cues": [
+    {
+      "start_seconds": 0.08,
+      "end_seconds": 0.7,
+      "type": "punch_zoom",
+      "intensity": 0.46
+    },
+    {
+      "start_seconds": 30.5,
+      "end_seconds": 31.2,
+      "type": "slow_zoom_in",
+      "intensity": 0.24
+    },
+    {
+      "start_seconds": 65.5,
+      "end_seconds": 66.2,
+      "type": "punch_zoom",
+      "intensity": 0.28
+    }
+  ],
+  "text_fx_cues": [
+    {
+      "segment": "hook",
+      "offset_seconds": 0.1,
+      "duration_seconds": 1.25,
+      "text": "ISSO NÃO ESTÁ\nSOLTO À TOA",
+      "accent_text": "SOLTO À TOA",
+      "animation": "scale_bounce",
+      "position": "center",
+      "intensity": 0.6
+    },
+    {
+      "segment": "truzero_name",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.1,
+      "text": "TRU-ZERO",
+      "accent_text": "TRU-ZERO",
+      "animation": "pop_in",
+      "position": "center",
+      "intensity": 0.56
+    },
+    {
+      "segment": "dont_tighten",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.15,
+      "text": "NÃO APERTE\nOS REBITES",
+      "accent_text": "NÃO APERTE",
+      "animation": "fade_pop",
+      "position": "center",
+      "intensity": 0.56
+    },
+    {
+      "segment": "payoff",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.2,
+      "text": "O “DEFEITO”\nCORRIGE A MEDIDA",
+      "accent_text": "CORRIGE A MEDIDA",
+      "animation": "pop_in",
+      "position": "center",
+      "intensity": 0.58
+    }
+  ],
+  "overlay_cues": [],
+  "shots": [
+    {
+      "id": "shot_hook",
+      "segment": "hook",
+      "asset": "visual_01",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "ESSA FOLGA É DE PROPÓSITO"
+    },
+    {
+      "id": "shot_thickness",
+      "segment": "thickness",
+      "asset": "visual_02",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "O GANCHO TEM ESPESSURA"
+    },
+    {
+      "id": "shot_two_ways",
+      "segment": "two_ways",
+      "asset": "visual_03",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "DUAS FORMAS DE MEDIR"
+    },
+    {
+      "id": "shot_outside_setup",
+      "segment": "outside_setup",
+      "asset": "visual_04",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "MEDIÇÃO EXTERNA"
+    },
+    {
+      "id": "shot_inside_setup",
+      "segment": "inside_setup",
+      "asset": "visual_05",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "MEDIÇÃO INTERNA"
+    },
+    {
+      "id": "shot_fixed_problem",
+      "segment": "fixed_problem",
+      "asset": "visual_06",
+      "motion": "pull_out",
+      "transition_out": "crossfade",
+      "highlight": "SE FOSSE TRAVADO..."
+    },
+    {
+      "id": "shot_error",
+      "segment": "error",
+      "asset": "visual_07",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "UMA MEDIDA FICARIA ERRADA"
+    },
+    {
+      "id": "shot_rivets",
+      "segment": "rivets",
+      "asset": "visual_08",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "OS REBITES DEIXAM O JOGO"
+    },
+    {
+      "id": "shot_pull_out",
+      "segment": "pull_out",
+      "asset": "visual_09",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "PUXOU? ELE VAI PARA FORA"
+    },
+    {
+      "id": "shot_outside_comp",
+      "segment": "outside_comp",
+      "asset": "visual_10",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "COMPENSA A ESPESSURA"
+    },
+    {
+      "id": "shot_push_in",
+      "segment": "push_in",
+      "asset": "visual_11",
+      "motion": "pan_left",
+      "transition_out": "crossfade",
+      "highlight": "EMPURROU? ELE VAI PARA DENTRO"
+    },
+    {
+      "id": "shot_inside_comp",
+      "segment": "inside_comp",
+      "asset": "visual_12",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "COMPENSA NO OUTRO SENTIDO"
+    },
+    {
+      "id": "shot_truzero_name",
+      "segment": "truzero_name",
+      "asset": "visual_13",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "TRU-ZERO"
+    },
+    {
+      "id": "shot_truzero_meaning",
+      "segment": "truzero_meaning",
+      "asset": "visual_14",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "ZERO PUXANDO OU EMPURRANDO"
+    },
+    {
+      "id": "shot_other_makers",
+      "segment": "other_makers",
+      "asset": "visual_15",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "MEDIR POR DENTRO E POR FORA"
+    },
+    {
+      "id": "shot_physical_zero",
+      "segment": "physical_zero",
+      "asset": "visual_16",
+      "motion": "pan_right",
+      "transition_out": "crossfade",
+      "highlight": "O ZERO SE MOVE FISICAMENTE"
+    },
+    {
+      "id": "shot_no_math",
+      "segment": "no_math",
+      "asset": "visual_17",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "SEM FAZER CONTA"
+    },
+    {
+      "id": "shot_invisible_fix",
+      "segment": "invisible_fix",
+      "asset": "visual_18",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "A CORREÇÃO É AUTOMÁTICA"
+    },
+    {
+      "id": "shot_dont_tighten",
+      "segment": "dont_tighten",
+      "asset": "visual_19",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "NÃO APERTE OS REBITES"
+    },
+    {
+      "id": "shot_normal_play",
+      "segment": "normal_play",
+      "asset": "visual_20",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "ESSA FOLGA É NORMAL"
+    },
+    {
+      "id": "shot_real_damage",
+      "segment": "real_damage",
+      "asset": "visual_21",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "TORTO OU PRESO É OUTRA HISTÓRIA"
+    },
+    {
+      "id": "shot_payoff",
+      "segment": "payoff",
+      "asset": "visual_22",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "O 'DEFEITO' É A ENGENHARIA"
+    },
+    {
+      "id": "shot_cta",
+      "segment": "cta",
+      "asset": "visual_23",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "VOCÊ JÁ TENTOU CONSERTAR?"
+    }
+  ]
+}

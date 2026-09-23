@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "visual_01",
+      "file": "visual_01.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_end.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.45
+      }
+    },
+    {
+      "id": "visual_02",
+      "file": "visual_02.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.png",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_03",
+      "file": "visual_03.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_04",
+      "file": "visual_04.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measuring-tape.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_05",
+      "file": "visual_05.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_06",
+      "file": "visual_06.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.JPG",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_07",
+      "file": "visual_07.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(48008077448).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_08",
+      "file": "visual_08.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(4915969081).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_09",
+      "file": "visual_09.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_25%27_Klein_Tools.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_10",
+      "file": "visual_10.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_with_16_and_19.2_inch_marks.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_11",
+      "file": "visual_11.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_for_Wikipedia_articles.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_12",
+      "file": "visual_12.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Marking_white_room_wall_with_pencil_and_measuring_tape_(16333093811).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_13",
+      "file": "visual_13.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_(12640203793).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_14",
+      "file": "visual_14.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_No_1.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_15",
+      "file": "visual_15.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measurement_Tape.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_16",
+      "file": "visual_16.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measuring_tape.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_17",
+      "file": "visual_17.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chesterman_Tape_Measure.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_18",
+      "file": "visual_18.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(4245551509).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_19",
+      "file": "visual_19.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_Tailor_Tape_Measure_387277_Edited_2020_(49917401241).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_20",
+      "file": "visual_20.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wall-mounted_measuring_tape.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_21",
+      "file": "visual_21.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_Unravelling_(51117533578).jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_22",
+      "file": "visual_22.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_colored.jpeg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_23",
+      "file": "visual_23.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tailor%27s_measuring_tapes.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ]
+}

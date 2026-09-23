@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "cover": {
+    "headline": "ESSA FOLGA É DE PROPÓSITO",
+    "source": {
+      "type": "asset",
+      "asset_id": "visual_01"
+    }
+  },
+  "youtube": {
+    "title": "Por que a ponta da trena fica solta?",
+    "description": "Aquela folga no gancho da trena parece defeito, mas existe para corrigir a própria espessura do metal quando você mede puxando ou encostando a ponta numa superfície.",
+    "hashtags": [
+      "curiosidades",
+      "trena",
+      "ferramentas",
+      "engenharia",
+      "cotidiano",
+      "shorts"
+    ],
+    "privacy_status": "public",
+    "category_id": "27"
+  },
+  "instagram": {
+    "caption": "A ponta da trena parece meio solta — e é exatamente assim que ela consegue medir certo dos dois jeitos.",
+    "hashtags": [
+      "curiosidades",
+      "trena",
+      "ferramentas",
+      "engenharia",
+      "cotidiano"
+    ],
+    "share_to_feed": true,
+    "thumb_offset_ms": 700
+  },
+  "tiktok": {
+    "caption": "A ponta da trena fica solta de propósito. O motivo é uma correção mecânica que acontece sem você perceber.",
+    "hashtags": [
+      "curiosidades",
+      "trena",
+      "ferramentas",
+      "engenharia",
+      "cotidiano"
+    ],
+    "privacy_level": "PUBLIC_TO_EVERYONE",
+    "video_cover_timestamp_ms": 700,
+    "disable_comment": false,
+    "disable_duet": false,
+    "disable_stitch": false,
+    "brand_content_toggle": false,
+    "brand_organic_toggle": false,
+    "is_aigc": false
+  }
+}

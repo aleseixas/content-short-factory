@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "slots": [
+    {
+      "id": "visual_01",
+      "visual_intent": "Close real do gancho de uma trena mexendo, mostrando imediatamente a folga intencional",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "exact",
+          "name": "That Loose Measuring Tape Hook Isn’t a Mistake",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=u3Nhus8P1cE",
+          "source_page_url": "https://www.youtube.com/watch?v=u3Nhus8P1cE",
+          "file": "hook_u3Nhus8P1cE.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "u3Nhus8P1cE",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 0
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia tape measure visual 1",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_end.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_end.jpg",
+          "file": "visual_01.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-1",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_02",
+      "visual_intent": "Close do gancho metálico e sua espessura",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "REEKON tape measure loose hook short",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=u0ig4NUydsE",
+          "source_page_url": "https://www.youtube.com/watch?v=u0ig4NUydsE",
+          "file": "thickness_u0ig4NUydsE.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "u0ig4NUydsE",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 0
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 2",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.png",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.png",
+          "file": "visual_02.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-2",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_03",
+      "visual_intent": "Uso real de uma trena em duas situações de medição",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Why Do Measuring Tapes Have a Loose Hook?",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
+          "source_page_url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
+          "file": "two_ways_ecJSwDpm30U.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "ecJSwDpm30U",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 10
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 3",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/TapeMeasure.jpg",
+          "file": "visual_03.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-3",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_04",
+      "visual_intent": "Gancho da trena preso na borda de uma peça para medição externa",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Loose hook explanation – outside measurement",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
+          "source_page_url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
+          "file": "outside_setup_ecJSwDpm30U.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "ecJSwDpm30U",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 55
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 4",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measuring-tape.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measuring-tape.jpg",
+          "file": "visual_04.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-4",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_05",
+      "visual_intent": "Gancho da trena pressionado contra uma parede ou superfície para medição interna",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Loose hook explanation – inside measurement",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
+          "source_page_url": "https://www.youtube.com/watch?v=ecJSwDpm30U",
+          "file": "inside_setup_ecJSwDpm30U.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "ecJSwDpm30U",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 105
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 5",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.jpg",
+          "file": "visual_05.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-5",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_06",
+      "visual_intent": "Close do gancho e da fita mostrando por que uma peça fixa deslocaria o zero",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Insider Carpentry tape hook demonstration 1",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
+          "source_page_url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
+          "file": "fixed_problem_OGsf-SZtW-s.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "OGsf-SZtW-s",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 460
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 6",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.JPG",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure.JPG",
+          "file": "visual_06.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-6",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_07",
+      "visual_intent": "Comparação prática de referência de zero na ponta da trena",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Insider Carpentry tape hook demonstration 2",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
+          "source_page_url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
+          "file": "error_OGsf-SZtW-s.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "OGsf-SZtW-s",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 485
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 7",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(48008077448).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(48008077448).jpg",
+          "file": "visual_07.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-7",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_08",
+      "visual_intent": "Close dos rebites e do movimento limitado do gancho",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Insider Carpentry tape hook demonstration 3",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
+          "source_page_url": "https://www.youtube.com/watch?v=OGsf-SZtW-s",
+          "file": "rivets_OGsf-SZtW-s.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "OGsf-SZtW-s",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 510
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 8",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(4915969081).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(4915969081).jpg",
+          "file": "visual_08.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-8",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_09",
+      "visual_intent": "Gancho sendo puxado para fora ao prender numa borda",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Tape measure hook demonstration 1",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
+          "source_page_url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
+          "file": "pull_out_sKtHHESnZk8.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "sKtHHESnZk8",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 127
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 9",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_25%27_Klein_Tools.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_25%27_Klein_Tools.jpg",
+          "file": "visual_09.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-9",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_10",
+      "visual_intent": "Detalhe da posição externa do gancho compensando sua espessura",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Tape measure hook demonstration 2",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
+          "source_page_url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
+          "file": "outside_comp_sKtHHESnZk8.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "sKtHHESnZk8",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 145
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 10",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_with_16_and_19.2_inch_marks.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_with_16_and_19.2_inch_marks.jpg",
+          "file": "visual_10.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-10",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_11",
+      "visual_intent": "Gancho sendo empurrado para dentro contra uma superfície",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Tape measure hook demonstration 3",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
+          "source_page_url": "https://www.youtube.com/watch?v=sKtHHESnZk8",
+          "file": "push_in_sKtHHESnZk8.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "sKtHHESnZk8",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 165
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 11",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_for_Wikipedia_articles.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_for_Wikipedia_articles.jpg",
+          "file": "visual_11.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-11",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_12",
+      "visual_intent": "Detalhe da posição interna do gancho compensando no sentido oposto",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 12",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Marking_white_room_wall_with_pencil_and_measuring_tape_(16333093811).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Marking_white_room_wall_with_pencil_and_measuring_tape_(16333093811).jpg",
+          "file": "visual_12.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-12",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_13",
+      "visual_intent": "Trena Stanley/PowerLock ou detalhe do gancho Tru-Zero",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 13",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_(12640203793).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_(12640203793).jpg",
+          "file": "visual_13.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-13",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_14",
+      "visual_intent": "Demonstração do gancho alternando posição ao puxar e empurrar",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 14",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_No_1.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_No_1.jpg",
+          "file": "visual_14.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-14",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_15",
+      "visual_intent": "Trena sendo usada para medição interna e externa",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 15",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measurement_Tape.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measurement_Tape.jpg",
+          "file": "visual_15.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-15",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_16",
+      "visual_intent": "Close mecânico do gancho mudando fisicamente o ponto de referência",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 16",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measuring_tape.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Measuring_tape.jpg",
+          "file": "visual_16.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-16",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_17",
+      "visual_intent": "Medição sendo lida diretamente sem cálculo adicional",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 17",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chesterman_Tape_Measure.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chesterman_Tape_Measure.jpg",
+          "file": "visual_17.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-17",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_18",
+      "visual_intent": "Movimento curto do gancho mostrando a correção automática",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 18",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(4245551509).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_(4245551509).jpg",
+          "file": "visual_18.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-18",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_19",
+      "visual_intent": "Close dos rebites intactos e da folga projetada",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 19",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_Tailor_Tape_Measure_387277_Edited_2020_(49917401241).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_Tailor_Tape_Measure_387277_Edited_2020_(49917401241).jpg",
+          "file": "visual_19.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-19",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_20",
+      "visual_intent": "Gancho movendo apenas alguns milímetros nos rebites",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 20",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wall-mounted_measuring_tape.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Wall-mounted_measuring_tape.jpg",
+          "file": "visual_20.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-20",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_21",
+      "visual_intent": "Gancho de trena em bom estado para contraste com dano real",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 21",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_Unravelling_(51117533578).jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_Measure_Unravelling_(51117533578).jpg",
+          "file": "visual_21.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-21",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_22",
+      "visual_intent": "Close forte do mecanismo que parecia defeito",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 22",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_colored.jpeg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tape_measure_colored.jpeg",
+          "file": "visual_22.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-22",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    },
+    {
+      "id": "visual_23",
+      "visual_intent": "Trena na mão em contexto cotidiano para pergunta final",
+      "required_seconds": 3.2,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "contextual",
+          "name": "Wikimedia tape measure visual 23",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tailor%27s_measuring_tapes.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tailor%27s_measuring_tapes.jpg",
+          "file": "visual_23.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-23",
+          "credit": "Wikimedia Commons",
+          "license": ""
+        }
+      ]
+    }
+  ]
+}

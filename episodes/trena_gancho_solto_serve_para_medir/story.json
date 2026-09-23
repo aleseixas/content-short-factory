@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "title": "Por que a ponta da trena fica solta de propósito?",
+  "slug": "trena_gancho_solto_serve_para_medir",
+  "target_duration_seconds": 76,
+  "topic": "Por que o gancho da ponta da trena fica solto de propósito?",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes sobre o planeta, a humanidade e o mundo",
+  "angle": "a folga que parece defeito é uma compensação mecânica da espessura do gancho, permitindo medições externas e internas corretas sem cálculo manual",
+  "language": "pt-BR",
+  "additional_instructions": "prioridade para reconhecimento cotidiano no Brasil; explicação simples; mostrar o mecanismo de empurrar/puxar sem transformar tolerância projetada em número universal",
+  "entities": [
+    "trena",
+    "gancho móvel",
+    "rebites",
+    "Tru-Zero",
+    "STANLEY"
+  ],
+  "visual_keywords": [
+    "tape measure loose hook",
+    "tape measure rivets close up",
+    "tape measure inside measurement",
+    "tape measure outside measurement",
+    "true zero hook"
+  ],
+  "segments": [
+    {
+      "id": "hook",
+      "text": "Essa ponta da trena balançando parece defeito. Só que foi feita assim.",
+      "delivery": "hook"
+    },
+    {
+      "id": "thickness",
+      "text": "O gancho metálico tem espessura. E isso cria um problema escondido.",
+      "delivery": "curious"
+    },
+    {
+      "id": "two_ways",
+      "text": "A trena precisa medir puxando por uma borda ou encostando numa parede.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "outside_setup",
+      "text": "Quando você prende o gancho numa quina, faz uma medição externa.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "inside_setup",
+      "text": "Quando empurra a ponta contra uma superfície, a referência muda.",
+      "delivery": "curious"
+    },
+    {
+      "id": "fixed_problem",
+      "text": "Se o gancho fosse travado, a própria espessura entraria na conta.",
+      "delivery": "dramatic"
+    },
+    {
+      "id": "error",
+      "text": "E uma das duas formas de medir ficaria ligeiramente errada.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "rivets",
+      "text": "Por isso os rebites deixam aquela pequena folga de propósito.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "pull_out",
+      "text": "Quando você puxa a fita, o gancho desliza para fora.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "outside_comp",
+      "text": "Esse deslocamento compensa a espessura da própria peça metálica.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "push_in",
+      "text": "Quando você empurra a trena contra uma parede, ele vai para dentro.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "inside_comp",
+      "text": "E a compensação acontece no sentido oposto, automaticamente.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "truzero_name",
+      "text": "A Stanley chama esse princípio de Tru-Zero.",
+      "delivery": "curious"
+    },
+    {
+      "id": "truzero_meaning",
+      "text": "É um zero que funciona tanto puxando quanto empurrando.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "other_makers",
+      "text": "O princípio aparece em trenas feitas para medir corretamente por dentro e por fora.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "physical_zero",
+      "text": "Na prática, a referência se ajusta fisicamente antes da leitura.",
+      "delivery": "curious"
+    },
+    {
+      "id": "no_math",
+      "text": "Você não precisa somar nem descontar a espessura do gancho.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "invisible_fix",
+      "text": "E aquela folga pequena faz a correção sem você perceber.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "dont_tighten",
+      "text": "Por isso apertar os rebites pode justamente estragar a precisão.",
+      "delivery": "dramatic"
+    },
+    {
+      "id": "normal_play",
+      "text": "Se o gancho só corre naquele pequeno espaço, está funcionando certo.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "real_damage",
+      "text": "Se estiver torto, preso ou folgado demais, aí existe desgaste.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "payoff",
+      "text": "A parte que parece quebrada é a engenharia que corrige sua medida.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "cta",
+      "text": "Você já tentou apertar uma trena achando que estava com defeito?",
+      "delivery": "curious"
+    }
+  ]
+}
