@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "episode": "fordlandia_cidade_ford_amazonia",
+  "recorded_at": "2026-09-23T15:32:27Z",
+  "visual_usage": [
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2b488cb87acfb5ae0d54d278c7057738ff4b8776025feac84f44d29173620eac",
+        "url_hashes": [
+          "9c7afd8024edda6ededdc05090d5151084b6a061305afd8b940e7dee9642888d"
+        ],
+        "perceptual_hashes": [
+          "cbe511d4279ae41d",
+          "caed1df42bd2241c",
+          "caeb9ce50bf02c1c",
+          "dccaa12eb56994a5",
+          "d4ca36b94a9ea60e",
+          "c1a4963499b3d9f8",
+          "c9e40dd336ccd8f0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_rubber",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "275c4c17201d7692a7c21f68d4e28e5f74121b1c1fea6414644917314dbf3a63",
+        "url_hashes": [
+          "9fe29315b516b006e473dbf3dde8d6b4b900b3af8dc8138d2b19490b927c55cc"
+        ],
+        "perceptual_hashes": [
+          "a5585aa5d25a2dad",
+          "a1585aadd6566aa5",
+          "e1505eabd4944bab",
+          "c6513caa954eb49b",
+          "cec3556a6aa9b151",
+          "f44ba5b64a2d954a",
+          "f45e4aa5a592d26a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_land",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3e8c0aa6bb9ae0e26930465a718759062e0880369f16ca5c2f1e75961bb0e6ed",
+        "url_hashes": [
+          "13f65591e0c4d9d2ef28cbb47cbf182c823c410fbb4d70a8a12685bd246b9b2c"
+        ],
+        "perceptual_hashes": [
+          "ad14a4f0bab127a7",
+          "ed14a474be352137",
+          "e90524fe9d397831",
+          "ca2ba9f12265ec9c",
+          "ca3b0b69cdb98899",
+          "a692979bbc35b0a1",
+          "e416a277e182e1cf"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_arrival",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "4aaf600ea52602f35f7297748f715a3e1a4a62c32b4e5b2e4153588012ba6e56",
+        "url_hashes": [
+          "71cfe1ee9708c162585932bb8507cf29ada55273eada19613099196ede73b27a"
+        ],
+        "perceptual_hashes": [
+          "81c8bf966896f06d",
+          "80e8b7974a95686f",
+          "80c8b7b64ab54cbb",
+          "85daa55ba1c13e17",
+          "85c35ea45f1ea44b",
+          "d1ee906f926a944b",
+          "d1ee6c916d05986b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_city",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "59931e8245c76ec5955ac3cdfcfe97ecebe897629921243721863c8136c0ec7b",
+        "url_hashes": [
+          "5b766cbb0e1964736466ea4171506ea17213aa8c6dc072be7231669d524f856c"
+        ],
+        "perceptual_hashes": [
+          "f31982e95e43c0be",
+          "f21d81e82743d0f7",
+          "fa1ce2782760b476",
+          "f515c078c5e0fc5a",
+          "ec3b85c2b07e530b",
+          "b915f86578eb8846",
+          "b90f91ee87044eb6"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_american_life",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "e642406808c414d2bb77e26f15900390edb6b38ef01fdac859e35e71a8ecaa0a",
+        "url_hashes": [
+          "33b22d5b47e3143663536b8e9efb8d42361c94671d019a1c5930e9af8a76a32b"
+        ],
+        "perceptual_hashes": [
+          "e63b94e9d99c5842",
+          "e639b6eb989c1292",
+          "e631a7ebb89c1294",
+          "ed3f89d29114c9d2",
+          "ed762d4c46e8d270",
+          "ba1295cdc749c2ec",
+          "b32a133168baa7ad"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_rules",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3710be23bd76494fc2f3ee93ed99a4553ea4189ed7000fb96d2b36da81e8244d",
+        "url_hashes": [
+          "6a6926ece702d44325c04233102d3b71f62e16562a64f608a9be48f90c78d1dd"
+        ],
+        "perceptual_hashes": [
+          "f61f8eb8e9c4b00a",
+          "e7978eb8f9c43108",
+          "e7838738d8e53543",
+          "ec9ea9f2c823d4a4",
+          "ed969c2d3354d423",
+          "d0c0ab6fe016e9d9",
+          "f054c0938f69c93f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_riot",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3e7b7a4920c9d4bf0d23dc4f1fea40edaec327e0ad91f7d2a73a105063b3abbb",
+        "url_hashes": [
+          "b015967b8fa8b3a0dd5479c03185dfd3681c033a56e55e6c0f8094c3703ceab7"
+        ],
+        "perceptual_hashes": [
+          "9a966d4966256c67",
+          "9a966d4a66356563",
+          "969569da62b16473",
+          "95ab526d6a4a6699",
+          "95956a92d9659399",
+          "cbb22c3934663cc7",
+          "cad236cec1398ec3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_escape",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b4fdd36b1720b308b6168dd2880c47b757bf10767cd490b89abe94ab37f37689",
+        "url_hashes": [
+          "ec8fc341ad72ff541df47ae819afe5f38b5d7a4a9ef7b4d4dd498d421d961b8d"
+        ],
+        "perceptual_hashes": [
+          "fa70ccf218dc6354",
+          "fa38cc7a9c596314",
+          "fa18c4719cd9731c",
+          "f5f1eb30904489ee",
+          "d42181ee65b9ab66",
+          "eb4f721f447093b0",
+          "e81bc7703197a33c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_trees",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ff7a2f6c61b0cc681678d5f9ec8c27b83738e837ec61a503f83000641a8634d0",
+        "url_hashes": [
+          "5b8c92d79b8c49a6f70e6318dfbb0e71d602182508f41a9640720ee943170409"
+        ],
+        "perceptual_hashes": [
+          "eb859ed84c64b632",
+          "e081969a4e65b737",
+          "f0a197984eec4da6",
+          "e78eb8d868a664d2",
+          "e7872ea794549453",
+          "bc94cbe7309219ce",
+          "bab43098c969cd6e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_disease",
+      "asset_id": "visual_11",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "5081053890f3c2905eedee16232f8ca0bd76ebe5d74f555dc2fe3b2b1febbb1c",
+        "url_hashes": [
+          "3c8700f882ab0b27bcf7359a1f65a4948184f67aa2fa4e36b0142cf5d51ae655"
+        ],
+        "perceptual_hashes": [
+          "d9d9c0a439eb8635",
+          "d9d9f2e439c29270",
+          "d9d9d6a439d21471",
+          "d2d2c939dda84a9c",
+          "f69256c92872cd1d",
+          "ccccf397699074c1",
+          "cc8c48f3963ee18b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_expertise",
+      "asset_id": "visual_12",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "41589873fcacd822b0d82ddd9f4d7729fc0eb1ef40e0c1035167dcd7c3301e7b",
+        "url_hashes": [
+          "364513506d3e8aafbf3de5da4c48a96ac34f0ca6fcf9e2a08bd0624e376ec73a"
+        ],
+        "perceptual_hashes": [
+          "f0f1522d097a9717",
+          "f0f956214b7ae01e",
+          "f8f057284b7ae056",
+          "e3e70457d4a31ca6",
+          "e3e3ac698b1c9463",
+          "ff7b512d489680b4",
+          "ffbeda32940080be"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_belterra",
+      "asset_id": "visual_13",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "63c0d8a0de61964009eff49336d31f2496234a082b540dee5cc6aaadfffc6d0f",
+        "url_hashes": [
+          "65b204005c0908cd752215c963f1bbf604a606e4f7c065d1b583d1459160dc14"
+        ],
+        "perceptual_hashes": [
+          "e0cc4e2473d78a9d",
+          "e0ce8e2c70f3929d",
+          "f8ca8e2c7466179c",
+          "c3dd0963e494f346",
+          "e3d29c98196b634e",
+          "e7e3233f58c08e70",
+          "feecc08527363a70"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_rubber_output",
+      "asset_id": "visual_14",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3b2fa05f937651c47e090eab98fdbf9763b4b12eaa16494f5c7fab8b585d9a1b",
+        "url_hashes": [
+          "1df485ca21342c54325b75024f826e01605415fa002e43290e4f872690fed746"
+        ],
+        "perceptual_hashes": [
+          "ffb02147d030fc69",
+          "dfb920c7d114bc19",
+          "dbbf20c759863c18",
+          "fca04dd321f912cd",
+          "feb0324ddc068ccd",
+          "c09c61c69fa74cf1",
+          "c89c3f61e06cd0f3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_war",
+      "asset_id": "visual_15",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "66d496e5a0e55515e98bc2054184ec71499162143dfe2746dd90c7c1c7306ccf",
+        "url_hashes": [
+          "ef3b135c131ff842a4b815a40737f975a36783e2f25f8ca4624fbe2369c52a8a"
+        ],
+        "perceptual_hashes": [
+          "aba3851e7ab86705",
+          "bbf0840f5fba6181",
+          "fbf080071ffa60b1",
+          "f7818878f14f90f8",
+          "f6e3838f0eb0b078",
+          "aabdd14aaf749482",
+          "aabebdb540828b63"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_sale",
+      "asset_id": "visual_16",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "eae374a8fd4a47f16f47a3750e2ee60305963cbfc52a7e78c17c1f280abbb86a",
+        "url_hashes": [
+          "08c781b812b3c86b1e046faf0fde32184018c39a4ecc30e30e1da702768999ac"
+        ],
+        "perceptual_hashes": [
+          "c54cc9cae3b3305d",
+          "c545cdcae3b3302b",
+          "cd45cdcdc3933123",
+          "cb9a92c4a4755dd1",
+          "c90b8a1ac9da8bdb",
+          "c6c6ced9991d41ca",
+          "f542c446c2e5cad7"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_cost",
+      "asset_id": "visual_17",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d1e2ced6374b3340ba461b597e61675eb936b4382e334ce753ac6a59310346c3",
+        "url_hashes": [
+          "d1a68e93990cc37a9598a12fd96a6ad88624bf4370a0f4f39d6850575c450f8d"
+        ],
+        "perceptual_hashes": [
+          "fe5809e31721e68e",
+          "bf5869e712217686",
+          "af1c68e5183953b6",
+          "fc1362bf06ed190a",
+          "fc9d13c0fd191256",
+          "904f2cd23df28376",
+          "b1d34fac52872c5c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_never_visited",
+      "asset_id": "visual_18",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "675a0e425155a0d69197e0e79005f87d8c27a1ce6eba470e1c79d7e66d5aae69",
+        "url_hashes": [
+          "27519a1fad54b70add2f3b98ddd85bb097c590512d926a69ea9cfd3692ea1d47"
+        ],
+        "perceptual_hashes": [
+          "8d8476394f87d985",
+          "8d84747a4387db35",
+          "8d85347a66535a76",
+          "8a8b655c8e92ab9e",
+          "8a8aaba371e9649e",
+          "84d67be1c0c6b7c4",
+          "848652973fb778c4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_ruins",
+      "asset_id": "visual_19",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "591b803279df757160dfa2c0d1a92f3d1c8b124fb1a185ebdf7d807a07b3c107",
+        "url_hashes": [
+          "3231f80364b5b0d144acbb6d53a750b6d18a6d36d02a149cfc45fd36698e22d6"
+        ],
+        "perceptual_hashes": [
+          "93314ccf793076c9",
+          "b330cccf193476a9",
+          "b331cccb99366638",
+          "a45bd872696c527c",
+          "a466d98c5e927b98",
+          "9846c33e3b396e68",
+          "9939c7c16cc64fc1"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_lesson",
+      "asset_id": "visual_20",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f6892d24b45884cacca7630f52a9ede5d30b047930343eae7387249b844a436d",
+        "url_hashes": [
+          "8a73583065720b8d8cdb43de734c9c7dc7cef99fb3f972b18793861ac34f98eb"
+        ],
+        "perceptual_hashes": [
+          "af29c9768e6184e6",
+          "eb2ac95e0e718666",
+          "eb0bc1175c31873e",
+          "fc10df1de38849c6",
+          "fe3082669d473786",
+          "a9e5c24376a163ec",
+          "a82de47e816b1ecc"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "fordlandia_cidade_ford_amazonia",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_21",
+      "recorded_at": "2026-09-23T15:32:27Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "a07e764131124200ee5becb4176c3344bf383f3fb6fcbd6f0cb1015850660f1b",
+        "url_hashes": [
+          "3e74e0ebb00c4d1ea987104a2aa01da2e80f897959dd7b389b3e54331fef5e9d"
+        ],
+        "perceptual_hashes": [
+          "ea2d9492315a4f76",
+          "fb2d9492b11a4772",
+          "dd29b5b3b91ac054",
+          "da2ba566171d6878",
+          "d04eab9de8e2709a",
+          "eab59b3d4a433225",
+          "ea2496c3b5b62dc4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
