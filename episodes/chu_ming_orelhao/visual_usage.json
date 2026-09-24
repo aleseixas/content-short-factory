@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "episode": "chu_ming_orelhao",
+  "recorded_at": "2026-09-24T18:12:54Z",
+  "visual_usage": [
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "0dd23010bdf8246f1726875e924c49f2a6c1c08c7c2ca3dfa1edd64ee4e6646e",
+        "url_hashes": [
+          "4fdc2b70a49484660c11935841730a3fa18f642eacf2401cff9c35a201238d1d"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "966b6934cccdc332",
+          "d36e34319ac6c639",
+          "9d69625a9576a9c8",
+          "c2966c3cf1d38366",
+          "87986f2d85d29a2d",
+          "966a696d923924db",
+          "b4076d02de660ef9",
+          "9966669964ccce99"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 6.733333
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_chu",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "5c1366efb52b0c4b30020c7c5f63376ac5fed33ddcdec2b6c16ac6a9fbf71406",
+        "url_hashes": [
+          "3c2efd2d0fdeef586e187c5804ae7c7c076c4a6c4716981179dace91bf0ecdf5"
+        ],
+        "perceptual_hashes": [
+          "da4aa8e52eaa55a6",
+          "d25aaa652b6a4b2e",
+          "d65aaae731502766",
+          "d5556a6e070eaa93",
+          "d55531c19c6bd316",
+          "d92ba530abd096d5",
+          "d94baba5c0a2dd8c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_problem",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "9879b97ba28f8ab3c187c701ad24a760c5350a6934e44212280635f6f5ed8b53",
+        "url_hashes": [
+          "1f0a7c28bf7362554f037e42d563457089d04f498601a3ce2893aa56cadc4056"
+        ],
+        "perceptual_hashes": [
+          "b5384ac7c3b8989e",
+          "b53846c7c22e789e",
+          "ad3c45c1e1687c9e",
+          "ab738cc4f0b09cce",
+          "bf71132e878e8662",
+          "b62ef8f10585c1f8",
+          "96074e92c8f0fa3e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_oval",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "video",
+        "sha256": "a517c71eb2d2ed01cc4f7dfaaa4fe99163969f3eb6737160924645c94204509d",
+        "url_hashes": [
+          "202eb7070442b54974dc64665ea66c901b77a719612c21393b820aa08b38e511"
+        ],
+        "perceptual_hashes": [],
+        "video_frame_hashes": [
+          "fcdcbd200ef0831e",
+          "fcdcbd220eb0831e",
+          "fcdc9d220eb1831e",
+          "fcdc9d220ef0831e",
+          "fcdcbd220eb0831e",
+          "fcdcfda00eb0031e",
+          "fcdcfd200eb1031e",
+          "fcdcfd200eb1031e"
+        ],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": 4.133333
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_egg",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "80cc57acee78492115fa40b01b0bba982676d342a03b04f55552fcd15cdff0f2",
+        "url_hashes": [
+          "7833d42397c33ab9999cfb38a323ba4fe35cd7d7fa75b0ad8045ce70b857745e"
+        ],
+        "perceptual_hashes": [
+          "88cb835337f1393c",
+          "8ccb834ba7f1313c",
+          "8ccbc74383f33166",
+          "9084942de77339f3",
+          "99d2b9d1189cd2ae",
+          "c7c0c951bd1f038f",
+          "87eea64f03c1ec94"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_noise",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "0386bb1abdba19676b3c2e072209f52eed72db40c966e14b7a42ed81d9924fc8",
+        "url_hashes": [
+          "262510937630a14b7168bb6fb7e6f9510b6bc241f5aab28ccea1240ce24d0d9a"
+        ],
+        "perceptual_hashes": [
+          "8e8e106f71336ee8",
+          "8e8f106f393168f9",
+          "8e8e9e4f9b10589b",
+          "9f116462234bee6e",
+          "9b9d01cd5a942ef1",
+          "83cb383c3f6eb032",
+          "87c39be2649c306f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_small",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f73f5c83415d821eca22daf67b2075b2137fefa529a2f14617c9e511bac58cde",
+        "url_hashes": [
+          "e52936f55d86a4a005b9f9d832ea683dc29a41ea7e93f4e64ad2a034d3a9c96e"
+        ],
+        "perceptual_hashes": [
+          "9ace1d2522d9e699",
+          "98c61d2731dcae99",
+          "9dc71b2631c6a999",
+          "a99c1e2b92de3349",
+          "b3cd949e2d324dd0",
+          "83c1043bcfae9e63",
+          "9ee3ccc4310e736a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_street",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6193947921acf2fce49b9159dfee87be5a5ebc81732d7bcc752dea0cec141829",
+        "url_hashes": [
+          "5b6b201719e17b36600c041af7447f61cbfc6a1439bc049bca45c391213ceae5"
+        ],
+        "perceptual_hashes": [
+          "f3b3351c4c48da93",
+          "f3b3a0044c6ddad3",
+          "f0f1a0242c6cded7",
+          "e7a719195894b60f",
+          "e6e6a6a5ad2b0b09",
+          "f8b9874744c89cb5",
+          "f8f8b89893352527"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_chu1",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "bd1bda9a3d00a26de0addfe7a36af142242284d2986b8d42648e056bd5e97d87",
+        "url_hashes": [
+          "40c53049d2138b5079ca3b13bcedd58531854337d579e94c611f0671717e2efd"
+        ],
+        "perceptual_hashes": [
+          "b7ebc036c03c9743",
+          "bec3c137c83c9163",
+          "b6c0c3b1cb3ce361",
+          "bdc6a4d018ef40bd",
+          "bd5f802fc65031bc",
+          "b9e8906407f86f93",
+          "916bcc3af86d1790"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_chu2",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "eefd93cd74154de21711eccfd7e1e5988a5304f64d6baa935d004757b1624597",
+        "url_hashes": [
+          "f6bff0ad95fc720c89e2598b17fa9e1c5bec7db381d146271399c51fb8bcdf5f"
+        ],
+        "perceptual_hashes": [
+          "bd2911373a49d4ea",
+          "bda811373a69d4ca",
+          "be89913733299553",
+          "b802267d53c94f6b",
+          "b9c98286ab666b39",
+          "a5ac1c2b65c3aa37",
+          "87a3cef492283557"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_launch",
+      "asset_id": "visual_11",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "618fe51fa32a0e202202ce1d3cf3eba5df780fc9571a51b2644da9c7915ba6d6",
+        "url_hashes": [
+          "db3f7ecc7c1f2df83754ddec810502ec7f7e245ce168754b94669b529973c011"
+        ],
+        "perceptual_hashes": [
+          "d1133a3e6e0d05f5",
+          "d1133a3e6e0c0ded",
+          "d31333366e0e0dec",
+          "9434797d1b02f3b4",
+          "948686a064fdfd3c",
+          "dd1c3b232614f599",
+          "c4dcdc9c79f98908"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_rio",
+      "asset_id": "visual_12",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "fc94cf4be2c70b0db33bd626d50ffc9e922f517fece84e91d33df447470887eb",
+        "url_hashes": [
+          "1c3c323fefe53ac8155434b918df9743f83665074eaa697bb6e4a45f676cef15"
+        ],
+        "perceptual_hashes": [
+          "bb49c6ae1bd42c0b",
+          "bb49c6ae59d52e02",
+          "b848c62ed1bd0e76",
+          "f315ec32837c85d2",
+          "f61384ec7c87a29a",
+          "be41f10ed621fa46",
+          "be0ed1b129c8d6c5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_sp",
+      "asset_id": "visual_13",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "6b05fbeb71f31529bd1ae07d437834ec532b508acb6614e4280458f4fd04a029",
+        "url_hashes": [
+          "68c6b2e8e44f2151d63155cc79ca74b7285054ec56b3280aedcf6aaf5c493075"
+        ],
+        "perceptual_hashes": [
+          "fafc85c8d2d90c07",
+          "fdbe89c4d2d80e03",
+          "f9b689c0f2d886c3",
+          "f2adc2c4921f0773",
+          "f6f9bc5a0d84e0e0",
+          "dab5e4da8c25901f",
+          "9abb9564f0d8ce06"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_nicknames",
+      "asset_id": "visual_14",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "27b13555c42ce53497a746f5bef4b2bc6f8adad58bb0bd36a9e4835df8ea91fb",
+        "url_hashes": [
+          "1fac33f54d341c33e86f0251ea9ba0439d33cd46ed6ca9c68d9934aac6b1a0c0"
+        ],
+        "perceptual_hashes": [
+          "b59f42e42e432c3d",
+          "b59f42e44f432c2b",
+          "bd9f50ec4e700e62",
+          "a01d4578577a36f2",
+          "a0ba1783f894e79c",
+          "95497b255b370c1e",
+          "948448f6a7c87ed3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_name",
+      "asset_id": "visual_15",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "4f6d68a6f77354405589e351bbbc9164de433e619926832f4983bea28594e65c",
+        "url_hashes": [
+          "251e83ad48561efda2744784b461f319a5160a70db83b23e2d72171f0a278021"
+        ],
+        "perceptual_hashes": [
+          "b9d9462ff40c1c66",
+          "b9da4635e41c5c65",
+          "bada4111e498edf4",
+          "b7d50be999183d14",
+          "b6b5d51e6c6d3408",
+          "8dcf2673d7063189",
+          "9d8dc10c7a799d2a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_landscape",
+      "asset_id": "visual_16",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "28902310b59a57e8408bb361ca5432081b074c7cd24c131fb6f3e89951137bf7",
+        "url_hashes": [
+          "a7e71ea52b6e78f5ec61d9955e7d9486098ac542becfb4e78dfe4232869efa83"
+        ],
+        "perceptual_hashes": [
+          "f9e4c61a38653b64",
+          "b8e5c7928c313b6c",
+          "baedc592cc131a6c",
+          "f0cf85314a744bb6",
+          "f06aca84b4cba6b6",
+          "bde2d90f660d6318",
+          "bd24e2d999e2d898"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_icon",
+      "asset_id": "visual_17",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "7e45b5ecb19dfe50b4dbfedbf544b967a5bc193b16d3e1bed8b29a8c1b7858b9",
+        "url_hashes": [
+          "155f9e89d917e4424d1165c64c1da49247c8479ba9f413c9cef3a0c515297c13"
+        ],
+        "perceptual_hashes": [
+          "d9c524fb4f673030",
+          "d9e5249a4767343c",
+          "dbe9249a4743343e",
+          "966b799c4a317896",
+          "96926bb1b1ccd683",
+          "cc363b41749f2ccc",
+          "ccc436bf8f60ccc4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_payoff",
+      "asset_id": "visual_18",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2fd68e47996769687b3877d95b50db303a9faf73160113df437e09777cbbfbb0",
+        "url_hashes": [
+          "d3f480a94cbd4a3146cb45279c558c07dc859fec2a7ae63e33730b45a6cb3fb0"
+        ],
+        "perceptual_hashes": [
+          "d292c9e9a4a79b19",
+          "d292c9c8e4e3b399",
+          "d212d9cce4e2f391",
+          "d584c2c9e5371b59",
+          "d53596929a9ad9c8",
+          "d999e5a7b1888e23",
+          "d91948cc8ec6e3e3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "chu_ming_orelhao",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_19",
+      "recorded_at": "2026-09-24T18:12:54Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "42e014a5041f5f65ead16e61f0d900bd9e8b08661c834df4770a245eb3a6e6d8",
+        "url_hashes": [
+          "d276fa48a984ce7967de45f991e177b8029e78911241ae98321a860a68f1e868"
+        ],
+        "perceptual_hashes": [
+          "e7e519929a989b19",
+          "e7e509969e9c9298",
+          "e76969968c8e46cc",
+          "eeca919591b4b334",
+          "ecea4ae6a61bb904",
+          "b0e48bcbcf988e98",
+          "b0b464bc98179b79"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
