@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "visual_01",
+      "file": "visual_01.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20belo%20horizonte.JPG",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_02",
+      "file": "visual_02.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ficha%20consular%20da%20designer%20sino-brasileira%20Chu%20Ming%20Silveira.jpg",
+      "credit": "Arquivo Nacional / Wikimedia Commons",
+      "license": "public domain",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_03",
+      "file": "visual_03.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20projeto.png",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_04",
+      "file": "visual_04.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20S%C3%A3o%20Paulo.png",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_05",
+      "file": "visual_05.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/3orelhoesoi.JPG",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_06",
+      "file": "visual_06.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20ctbc.JPG",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_07",
+      "file": "visual_07.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20no%20Rio%20de%20Janeiro.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_08",
+      "file": "visual_08.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhaosavassi.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_09",
+      "file": "visual_09.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20da%20Oi%20na%20UFMS%2C%20Campo%20Grande%2C%20dezembro%20de%202022.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_10",
+      "file": "visual_10.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20da%20Oi.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_11",
+      "file": "visual_11.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20Botucatu%20-%2019.01.26.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_12",
+      "file": "visual_12.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20Bras%C3%ADlia%2001.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_13",
+      "file": "visual_13.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20Bras%C3%ADlia%2002.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_14",
+      "file": "visual_14.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20na%20Avenida%20Paulista%20em%202025.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_15",
+      "file": "visual_15.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20no%20centro%20de%20Cuiab%C3%A1.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_16",
+      "file": "visual_16.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Telephone%20booth%201%20Curitiba%20Brasil.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_17",
+      "file": "visual_17.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20t%C3%AAnis%20em%20Birigui.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_18",
+      "file": "visual_18.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Telefone%20p%C3%BAblico%20(orelh%C3%A3o)%20Oi.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    {
+      "id": "visual_19",
+      "file": "visual_19.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Girl%20on%20bike%20at%20payphone.jpg",
+      "credit": "Wikimedia Commons",
+      "license": "",
+      "focus": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  ]
+}
