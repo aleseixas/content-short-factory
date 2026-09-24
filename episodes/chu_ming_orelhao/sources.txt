@@ -1,0 +1,33 @@
+Orelhão — site oficial e acervo de Chu Ming Silveira
+https://www.orelhao.arq.br/
+Fonte primária/familiar do projeto. Confirma o memorial descritivo, a inspiração na forma do ovo, a criação em 1971, os nomes técnicos Chu I e Chu II, materiais, finalidade acústica e as inaugurações de janeiro de 1972 no Rio de Janeiro e em São Paulo.
+
+Orelhão — galeria e documentação histórica
+https://www.orelhao.arq.br/imagens
+Usada como referência histórica para projeto original, protótipos, documentação e aparência dos primeiros protetores telefônicos. Conteúdo do acervo não foi usado como asset-base de publicação quando a licença comercial não era clara.
+
+CAU/BR — Chu Ming Silveira e o projeto do orelhão
+https://www.caubr.gov.br/chu-ming-silveira-a-arquiteta-por-tras-do-projeto-do-orelhao/
+Fonte institucional de arquitetura usada para confirmar formação, contexto profissional e desafio de design.
+
+Wikimedia Commons — Chu Ming Silveira
+https://commons.wikimedia.org/wiki/Category:Chu_Ming_Silveira
+Usada para a ficha consular de Chu Ming, em domínio público pelo Acervo Arquivo Nacional.
+
+Wikimedia Commons — projeto original do Orelhão
+https://commons.wikimedia.org/wiki/File:Orelhao_projeto.png
+Projeto original de 1971, autoria de Chu Ming Silveira, licenciado CC BY-SA 3.0.
+
+Wikimedia Commons — categoria Orelhões
+https://commons.wikimedia.org/wiki/Category:Orelh%C3%B5es
+Fonte dos assets-base reais de orelhões usados no episódio. Licenças individuais devem ser preservadas conforme as páginas originais; quando não confirmadas durante a autoria, a metadata fica como unknown em vez de inventada.
+
+YouTube — São Paulo nas Alturas: história de Chu Ming Silveira e do Orelhão
+https://www.youtube.com/watch?v=oBCVBDd5-Uc
+Candidato de vídeo real diretamente relacionado ao tema, usado pelo resolver web-first; direitos marcados como unknown.
+
+YouTube — Brasil Entusiasta: história do Orelhão
+https://www.youtube.com/watch?v=ZOJKou9ohDE
+Candidato de vídeo contextual diretamente relacionado ao orelhão, usado pelo resolver web-first; direitos marcados como unknown.
+
+BACKGROUND MUSIC: profile uplifting_documentary da repo selecionado para tom histórico/explicativo.
