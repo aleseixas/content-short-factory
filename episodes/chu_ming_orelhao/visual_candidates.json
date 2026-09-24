@@ -48,23 +48,6 @@
       "inspect_top": 4,
       "candidates": [
         {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "São Paulo nas Alturas — Chu Ming Silveira",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
-          "source_page_url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
-          "file": "visual_02_oBCVBDd5-Uc.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "oBCVBDd5-Uc",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 45
-        },
-        {
           "editorial_rank": 2,
           "semantic_fit": "exact",
           "name": "Wikimedia Commons — Ficha consular da designer sino-brasileira Chu Ming Silveira.jpg",
@@ -87,23 +70,6 @@
       "required_seconds": 4,
       "inspect_top": 4,
       "candidates": [
-        {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "São Paulo nas Alturas — projeto do Orelhão",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
-          "source_page_url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
-          "file": "visual_03_oBCVBDd5-Uc.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "oBCVBDd5-Uc",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 100
-        },
         {
           "editorial_rank": 2,
           "semantic_fit": "exact",
@@ -190,23 +156,6 @@
       "required_seconds": 4,
       "inspect_top": 4,
       "candidates": [
-        {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Brasil Entusiasta — Orelhão em contexto urbano",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
-          "source_page_url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
-          "file": "visual_06_ZOJKou9ohDE.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "ZOJKou9ohDE",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 35
-        },
         {
           "editorial_rank": 2,
           "semantic_fit": "direct",
@@ -299,23 +248,6 @@
       "required_seconds": 4,
       "inspect_top": 4,
       "candidates": [
-        {
-          "editorial_rank": 1,
-          "semantic_fit": "direct",
-          "name": "Brasil Entusiasta — design e história do Orelhão",
-          "kind": "video",
-          "url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
-          "source_page_url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
-          "file": "visual_10_ZOJKou9ohDE.mp4",
-          "source": "youtube",
-          "search_provider": "youtube_web",
-          "provider_id": "ZOJKou9ohDE",
-          "creator": "",
-          "credit": "",
-          "license": "",
-          "rights_status": "unknown",
-          "source_start_seconds": 80
-        },
         {
           "editorial_rank": 2,
           "semantic_fit": "direct",
