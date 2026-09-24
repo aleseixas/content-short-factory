@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "slots": [
+    {
+      "id": "visual_01",
+      "visual_intent": "Orelhão brasileiro real e reconhecível aparecendo imediatamente no hook",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "exact",
+          "name": "São Paulo nas Alturas — história de Chu Ming e do Orelhão",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
+          "source_page_url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
+          "file": "visual_01_oBCVBDd5-Uc.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "oBCVBDd5-Uc",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 0
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhao belo horizonte.JPG",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20belo%20horizonte.JPG",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelhao_belo_horizonte.JPG",
+          "file": "visual_01.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-1-Orelhao belo horizonte.JPG",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_02",
+      "visual_intent": "Chu Ming Silveira ou documento histórico diretamente ligado à arquiteta",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "São Paulo nas Alturas — Chu Ming Silveira",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
+          "source_page_url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
+          "file": "visual_02_oBCVBDd5-Uc.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "oBCVBDd5-Uc",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 45
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "exact",
+          "name": "Wikimedia Commons — Ficha consular da designer sino-brasileira Chu Ming Silveira.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ficha%20consular%20da%20designer%20sino-brasileira%20Chu%20Ming%20Silveira.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Ficha_consular_da_designer_sino-brasileira_Chu_Ming_Silveira.jpg",
+          "file": "visual_02.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-2-Ficha consular da designer sino-brasileira Chu Ming Silveira.jpg",
+          "credit": "Arquivo Nacional / Wikimedia Commons",
+          "license": "public domain",
+          "rights_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "visual_03",
+      "visual_intent": "Projeto original de 1971 mostrando o desenho e a forma do orelhão",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "São Paulo nas Alturas — projeto do Orelhão",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
+          "source_page_url": "https://www.youtube.com/watch?v=oBCVBDd5-Uc",
+          "file": "visual_03_oBCVBDd5-Uc.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "oBCVBDd5-Uc",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 100
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "exact",
+          "name": "Wikimedia Commons — Orelhao projeto.png",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20projeto.png",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelhao_projeto.png",
+          "file": "visual_03.png",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-3-Orelhao projeto.png",
+          "credit": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "rights_status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "visual_04",
+      "visual_intent": "Forma oval do orelhão vista de modo claro para explicar a solução acústica",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Brasil Entusiasta — história do Orelhão",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
+          "source_page_url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
+          "file": "visual_04_ZOJKou9ohDE.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "ZOJKou9ohDE",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 0
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão em São Paulo.png",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20S%C3%A3o%20Paulo.png",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_em_S%C3%A3o_Paulo.png",
+          "file": "visual_04.png",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-4-Orelhão em São Paulo.png",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_05",
+      "visual_intent": "Curva em forma de concha/ovo do orelhão em contexto urbano",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — 3orelhoesoi.JPG",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/3orelhoesoi.JPG",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:3orelhoesoi.JPG",
+          "file": "visual_05.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-5-3orelhoesoi.JPG",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_06",
+      "visual_intent": "Pessoa ou orelhão em rua movimentada, mostrando proteção contra ruído",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Brasil Entusiasta — Orelhão em contexto urbano",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
+          "source_page_url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
+          "file": "visual_06_ZOJKou9ohDE.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "ZOJKou9ohDE",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 35
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhao ctbc.JPG",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20ctbc.JPG",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelhao_ctbc.JPG",
+          "file": "visual_06.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-6-Orelhao ctbc.JPG",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_07",
+      "visual_intent": "Telefone público protegido por concha menor ou contexto de protetores telefônicos",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhao no Rio de Janeiro.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhao%20no%20Rio%20de%20Janeiro.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelhao_no_Rio_de_Janeiro.jpg",
+          "file": "visual_07.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-7-Orelhao no Rio de Janeiro.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_08",
+      "visual_intent": "Orelhão externo de fibra de vidro em espaço aberto",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhaosavassi.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelhaosavassi.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelhaosavassi.jpg",
+          "file": "visual_08.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-8-Orelhaosavassi.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_09",
+      "visual_intent": "Exemplo de protetor telefônico brasileiro para introduzir o nome Chu I",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão da Oi na UFMS, Campo Grande, dezembro de 2022.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20da%20Oi%20na%20UFMS%2C%20Campo%20Grande%2C%20dezembro%20de%202022.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_da_Oi_na_UFMS%2C_Campo_Grande%2C_dezembro_de_2022.jpg",
+          "file": "visual_09.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-9-Orelhão da Oi na UFMS, Campo Grande, dezembro de 2022.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_10",
+      "visual_intent": "Orelhão de rua para revelar o nome técnico Chu II",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 1,
+          "semantic_fit": "direct",
+          "name": "Brasil Entusiasta — design e história do Orelhão",
+          "kind": "video",
+          "url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
+          "source_page_url": "https://www.youtube.com/watch?v=ZOJKou9ohDE",
+          "file": "visual_10_ZOJKou9ohDE.mp4",
+          "source": "youtube",
+          "search_provider": "youtube_web",
+          "provider_id": "ZOJKou9ohDE",
+          "creator": "",
+          "credit": "",
+          "license": "",
+          "rights_status": "unknown",
+          "source_start_seconds": 80
+        },
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão da Oi.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20da%20Oi.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_da_Oi.jpg",
+          "file": "visual_10.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-10-Orelhão da Oi.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_11",
+      "visual_intent": "Orelhão brasileiro em contexto histórico/urbano para marcar 1972",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão em Botucatu - 19.01.26.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20Botucatu%20-%2019.01.26.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_em_Botucatu_-_19.01.26.jpg",
+          "file": "visual_11.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-11-Orelhão em Botucatu - 19.01.26.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_12",
+      "visual_intent": "Orelhão no Rio de Janeiro ou contexto urbano carioca",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão em Brasília 01.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20Bras%C3%ADlia%2001.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_em_Bras%C3%ADlia_01.jpg",
+          "file": "visual_12.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-12-Orelhão em Brasília 01.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_13",
+      "visual_intent": "Orelhão em São Paulo para marcar a chegada em 25 de janeiro",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão em Brasília 02.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20em%20Bras%C3%ADlia%2002.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_em_Bras%C3%ADlia_02.jpg",
+          "file": "visual_13.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-13-Orelhão em Brasília 02.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_14",
+      "visual_intent": "Formatos/aparências de orelhões que justifiquem apelidos populares",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão na Avenida Paulista em 2025.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20na%20Avenida%20Paulista%20em%202025.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_na_Avenida_Paulista_em_2025.jpg",
+          "file": "visual_14.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-14-Orelhão na Avenida Paulista em 2025.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_15",
+      "visual_intent": "Orelhão clássico claramente reconhecível para revelar o nome que ficou",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão no centro de Cuiabá.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20no%20centro%20de%20Cuiab%C3%A1.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_no_centro_de_Cuiab%C3%A1.jpg",
+          "file": "visual_15.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-15-Orelhão no centro de Cuiabá.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_16",
+      "visual_intent": "Orelhão integrado à rua brasileira como mobiliário urbano",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Telephone booth 1 Curitiba Brasil.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Telephone%20booth%201%20Curitiba%20Brasil.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Telephone_booth_1_Curitiba_Brasil.jpg",
+          "file": "visual_16.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-16-Telephone booth 1 Curitiba Brasil.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_17",
+      "visual_intent": "Composição forte de orelhão como peça de design brasileiro",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Orelhão tênis em Birigui.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Orelh%C3%A3o%20t%C3%AAnis%20em%20Birigui.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Orelh%C3%A3o_t%C3%AAnis_em_Birigui.jpg",
+          "file": "visual_17.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-17-Orelhão tênis em Birigui.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_18",
+      "visual_intent": "Detalhe da curva do orelhão retomando a inspiração no ovo",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Telefone público (orelhão) Oi.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Telefone%20p%C3%BAblico%20(orelh%C3%A3o)%20Oi.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Telefone_p%C3%BAblico_(orelh%C3%A3o)_Oi.jpg",
+          "file": "visual_18.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-18-Telefone público (orelhão) Oi.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "visual_19",
+      "visual_intent": "Pessoa usando telefone público/orelhão para CTA nostálgico",
+      "required_seconds": 4,
+      "inspect_top": 4,
+      "candidates": [
+        {
+          "editorial_rank": 2,
+          "semantic_fit": "direct",
+          "name": "Wikimedia Commons — Girl on bike at payphone.jpg",
+          "kind": "image",
+          "url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Girl%20on%20bike%20at%20payphone.jpg",
+          "source_page_url": "https://commons.wikimedia.org/wiki/File:Girl_on_bike_at_payphone.jpg",
+          "file": "visual_19.jpg",
+          "source": "wikimedia_commons",
+          "search_provider": "web_direct",
+          "provider_id": "commons-19-Girl on bike at payphone.jpg",
+          "credit": "Wikimedia Commons",
+          "license": "",
+          "rights_status": "unknown"
+        }
+      ]
+    }
+  ]
+}
