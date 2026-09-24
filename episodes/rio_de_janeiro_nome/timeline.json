@@ -1,0 +1,40 @@
+{
+  "schema_version":1,
+  "smart_visual_pacing":{"enabled":true},
+  "background_music":{"profile":"fallback_social_cinematic","volume":0.10},
+  "sfx_cues":[
+    {"time_seconds":0.08,"type":"impact","volume":0.14},
+    {"time_seconds":18,"type":"whoosh_fast","volume":0.10},
+    {"time_seconds":31,"type":"riser_build_up","volume":0.11},
+    {"time_seconds":47,"type":"ding","volume":0.09},
+    {"time_seconds":62,"type":"pop","volume":0.09}
+  ],
+  "visual_fx_cues":[{"start_seconds":0.08,"end_seconds":0.72,"type":"punch_zoom","intensity":0.45}],
+  "text_fx_cues":[
+    {"segment":"hook","offset_seconds":0.08,"duration_seconds":1.2,"text":"CADÊ O RIO\nJANEIRO?","accent_text":"RIO JANEIRO?","animation":"scale_bounce","position":"center","intensity":0.6},
+    {"segment":"date","offset_seconds":0.05,"duration_seconds":1.0,"text":"1º DE JANEIRO\nDE 1502","accent_text":"1502","animation":"fade_pop","position":"center","intensity":0.55},
+    {"segment":"twist","offset_seconds":0.05,"duration_seconds":1.1,"text":"A HISTÓRIA\nNÃO FECHA","accent_text":"NÃO FECHA","animation":"pop_in","position":"center","intensity":0.58},
+    {"segment":"city","offset_seconds":0.05,"duration_seconds":1.0,"text":"1565","accent_text":"1565","animation":"fade_pop","position":"center","intensity":0.55}
+  ],
+  "overlay_cues":[],
+  "shots":[
+    {"id":"shot_hook","segment":"hook","asset":"visual_01","motion":"push_in","transition_out":"crossfade","highlight":"NÃO EXISTE UM RIO JANEIRO"},
+    {"id":"shot_bay","segment":"bay","asset":"visual_02","motion":"pull_out","transition_out":"cut","highlight":"BAÍA DE GUANABARA"},
+    {"id":"shot_date","segment":"date","asset":"visual_03","motion":"pan_left","transition_out":"cut","highlight":"1º DE JANEIRO DE 1502"},
+    {"id":"shot_expedition","segment":"expedition","asset":"visual_04","motion":"pan_right","transition_out":"cut","highlight":"EXPEDIÇÃO PORTUGUESA"},
+    {"id":"shot_calendar","segment":"calendar","asset":"visual_05","motion":"push_in","transition_out":"cut","highlight":"O CALENDÁRIO BATIZAVA O LITORAL"},
+    {"id":"shot_myth","segment":"myth","asset":"visual_06","motion":"pull_out","transition_out":"crossfade","highlight":"A FAMOSA CONFUSÃO"},
+    {"id":"shot_twist","segment":"twist","asset":"visual_07","motion":"pan_left","transition_out":"cut","highlight":"MAS NÃO É TÃO SIMPLES"},
+    {"id":"shot_documents","segment":"documents","asset":"visual_08","motion":"pan_right","transition_out":"cut","highlight":"FALTAM DOCUMENTOS"},
+    {"id":"shot_experienced","segment":"experienced","asset":"visual_09","motion":"push_in","transition_out":"cut","highlight":"NAVEGADORES EXPERIENTES"},
+    {"id":"shot_term","segment":"term","asset":"visual_10","motion":"pull_out","transition_out":"crossfade","highlight":"RIO PODIA TER OUTRO USO"},
+    {"id":"shot_vespucci","segment":"vespucci","asset":"visual_11","motion":"pan_left","transition_out":"cut","highlight":"ATÉ O BATISMO É DISCUTIDO"},
+    {"id":"shot_namefirst","segment":"namefirst","asset":"visual_12","motion":"pan_right","transition_out":"cut","highlight":"O NOME VEIO PRIMEIRO"},
+    {"id":"shot_city","segment":"city","asset":"visual_13","motion":"push_in","transition_out":"cut","highlight":"A CIDADE: 1565"},
+    {"id":"shot_saosebastiao","segment":"saosebastiao","asset":"visual_14","motion":"pull_out","transition_out":"cut","highlight":"SÃO SEBASTIÃO DO RIO DE JANEIRO"},
+    {"id":"shot_maps","segment":"maps","asset":"visual_15","motion":"pan_left","transition_out":"crossfade","highlight":"O RIO FICOU NOS MAPAS"},
+    {"id":"shot_payoff","segment":"payoff","asset":"visual_16","motion":"pan_right","transition_out":"cut","highlight":"JANEIRO É CERTO. O RIO É A DÚVIDA."},
+    {"id":"shot_final","segment":"final","asset":"visual_17","motion":"push_in","transition_out":"cut","highlight":"5 SÉCULOS NO NOME"},
+    {"id":"shot_cta","segment":"cta","asset":"visual_18","motion":"pull_out","transition_out":"cut","highlight":"VOCÊ TAMBÉM ACHAVA?"}
+  ]
+}
