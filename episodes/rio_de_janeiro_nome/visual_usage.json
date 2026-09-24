@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "episode": "rio_de_janeiro_nome",
+  "recorded_at": "2026-09-24T22:31:07Z",
+  "visual_usage": [
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "9fd3af0dab16616768c86135fcf9bdab8d5594a014a01295cd97888582f7b1a0",
+        "url_hashes": [
+          "b262a88d4fa5f65a37a6592ec43a3b821ed945fad836286364e44e3afca77a67"
+        ],
+        "perceptual_hashes": [
+          "ad962b2d52a9556a",
+          "aa952a2d56ab54ab",
+          "aa952a3557aa55aa",
+          "aaa86a9550d17f17",
+          "aa856a2a1f3e2e17",
+          "a5922dca6d572a5a",
+          "a5d23a2d52aa97ca"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_bay",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "fab7b3b7e4a166e99a192047cfdf47d1bd02ff0664f0d6c984a15b75902a6a20",
+        "url_hashes": [
+          "1ebc45a69b470f8f76a414eb2d30465271223bff81b17263846ad55eb798e61e"
+        ],
+        "perceptual_hashes": [
+          "f3989a8965b17153",
+          "f7949a8a2cb871d2",
+          "f3959e8b2e2c2a34",
+          "e6b994486366a5ce",
+          "e6a13b96c4998b5a",
+          "b88a8d35367cdae0",
+          "b0d21acaf9c3d26c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_date",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "a6d9a17a5618579985e4d9bd4bf883cb8a612f2785d9750111032c89a008990c",
+        "url_hashes": [
+          "81ab0fdb7e56e7d500eb0a8ba785cfc9a960608324f2c528f73eac9a35928050"
+        ],
+        "perceptual_hashes": [
+          "ea97c4b88385d16e",
+          "fad3ecb81085d166",
+          "cad36f3e0e805974",
+          "ff8cf09382e2cc8a",
+          "ff8d8c78b4198d12",
+          "aad0a68bd4dcf1c4",
+          "abd8d027d923d1cc"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_expedition",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ba611e5a083665d93406332b2ba70200b2e29aff0156bc878e33a153c2ca28a0",
+        "url_hashes": [
+          "682d11d4979d7655c8ee25de8ba0de7d071a9160843c3a931d95350460052e56"
+        ],
+        "perceptual_hashes": [
+          "b0360dd9383e3ecc",
+          "b027c9d9193e1e4b",
+          "b427cbd1993e0751",
+          "a10e96b3391dc3e9",
+          "e16d0ece86c261af",
+          "9f40cc0e2343feb5",
+          "b73360e0dccc3595"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_calendar",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "dad3e806fe06494faf274bbf2e1d5dba9dc1e2659067c3923a83308559aa47c8",
+        "url_hashes": [
+          "19f87a7e70f236968421d9d860f97ca55fe21bb55a6b5175db5dcc4e5d9abe59"
+        ],
+        "perceptual_hashes": [
+          "a99a84c56d29bb66",
+          "a19a86d76489bd66",
+          "eb1a86d76899bc82",
+          "c2118a4353bd4f77",
+          "ea74398cec4d866a",
+          "a88bd0762c9b792e",
+          "ae292391f273ec26"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_myth",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d6092294fc8292e334c1137d5142fe2d0453da2554b82f442d28bd463ea0d8e4",
+        "url_hashes": [
+          "8208e55eb0928bdd8f030ad8664bbd655db5020e302cd6cc5de08271bae2f518"
+        ],
+        "perceptual_hashes": [
+          "ad68d2c6b01b27b5",
+          "af68d276bc1b2321",
+          "a968d2679c5a6372",
+          "ea97d5a0174eb198",
+          "ea6a974ce8b1989a",
+          "a4cecb968d349786",
+          "a426c969f29fc3c4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_twist",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "aff7cc70596206a8c3fa05b4bdf17c190420b48946f7c9118557696a6236a2ad",
+        "url_hashes": [
+          "7201de37a6806cfe9ef4588ecaf09fa089a3cb41cd501bdb3eb2c0a3e8da6ee9"
+        ],
+        "perceptual_hashes": [
+          "b8ac064ab67ec6ac",
+          "baa060ca367776ac",
+          "baa061d83653366f",
+          "f121097d6cd99a9a",
+          "f1ba8ada91389a2d",
+          "afb7432130e3c4ce",
+          "ab85f6cec305c41b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_documents",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d0c1a7c53097b3c368d05457f6e8139e25d60b465f57e3ebcaea380a85729556",
+        "url_hashes": [
+          "8f1e903e6b0ada6e8329f755c0b13427357cc21c969980d35e5a6e717c710f9b"
+        ],
+        "perceptual_hashes": [
+          "b57b1a74aa95c42a",
+          "b15f1f772a9804ca",
+          "ba1b157f2296029f",
+          "e73c78459189d8cb",
+          "a7529e386876f807",
+          "b40a1329c5e3aaf7",
+          "946c8a562a2cdf76"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_experienced",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "98bc2b4c455f4ffb4fd8e221fb4082c986dac58cdaa783e10a636fe51b6d6f74",
+        "url_hashes": [
+          "9facaa18ef2a03b325fe5ff7f90eff4d0e222ad8b3f6f70a80288af0fc6c3839"
+        ],
+        "perceptual_hashes": [
+          "f0310f921b6e4ecd",
+          "f0398535197696ce",
+          "f03aad31383796c6",
+          "e0170e374c9d5b6a",
+          "e0f34dc816d36ab2",
+          "ff2d401f63c1642e",
+          "ff3d61e00cac329c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_term",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3b4c7c2a894aaca7196e45dd88bdaa7f35e6e13624ed4c8bfd3c81915b8801d5",
+        "url_hashes": [
+          "611e5d3866bf631c664fbd74c2f9d20d27db3f81357df434330bda6b413df1fb"
+        ],
+        "perceptual_hashes": [
+          "99b9404467feb724",
+          "999866446ef6b664",
+          "999a65516796a74a",
+          "b3a0406dfdad40ed",
+          "bbb74200404ad7ff",
+          "8eb97133ab936c12",
+          "8e8f2d56746649b2"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_vespucci",
+      "asset_id": "visual_11",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "53c43d61019af8f2a34d34597d23338be9c761cb34da652809e7ae0c07b51feb",
+        "url_hashes": [
+          "f0579c1374ad0272b091d33cc4703dff8fd45c0320473fd140ef4385fe96f025"
+        ],
+        "perceptual_hashes": [
+          "aa9a6575752a9aa2",
+          "aa9a65356d539a8a",
+          "8e90e5bf295a9c52",
+          "81d76a6a5591caea",
+          "a895e18eb86a756a",
+          "8bca75346a8bf294",
+          "ab8aead1d5345534"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_namefirst",
+      "asset_id": "visual_12",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "a8a70ee5abe049709d39ecc51d5b77923a71af326ce03171fb5f70c5d7ae0e5d",
+        "url_hashes": [
+          "7eb10ffe579201f0ee3d0ad4342babf62e55fa4ace5be6866a6d140993cb976d"
+        ],
+        "perceptual_hashes": [
+          "c7cf0a60f0708f97",
+          "c7870f68f878c287",
+          "8081017eff7eecd0",
+          "8f9f40e0608f3f3c",
+          "8f9f1f0f8f2030e8",
+          "d0c023fe5ff31c21",
+          "d6d50a31ea1e4da3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_city",
+      "asset_id": "visual_13",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "e1dab833fb0bf803771cafabc1bc57985ef831d46454b2a2da6098e09a91a8d0",
+        "url_hashes": [
+          "b49ebdf0c976aa91f6c52b85c3ab7a1602716eec09b7c4168514d3463b17118f"
+        ],
+        "perceptual_hashes": [
+          "afa998d613167236",
+          "e9a9dcfa03933234",
+          "e989dcea83833a1e",
+          "ce9af126257129ce",
+          "ce0a91d1f98ec6ca",
+          "a4afcf18911b13ea",
+          "e02a87e76fa0e0ea"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_saosebastiao",
+      "asset_id": "visual_14",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "35f5414f92ecc749e972397b3a1127a3cc80fd48e65bc957910a314d95da70fb",
+        "url_hashes": [
+          "ed2a0649539095a9e5310b020272dccfaec959433d3c5a99c5ed6aba85f43a6a"
+        ],
+        "perceptual_hashes": [
+          "fc87a1f079382f24",
+          "fe80a0f77b7b0920",
+          "ff80a0f2df5b1830",
+          "f88fe0f2360f08f8",
+          "f08f0f89cdc8e8d8",
+          "d3b1fc5c0e3c32a2",
+          "8283b1b2f1f3d2c5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_maps",
+      "asset_id": "visual_15",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "c4fc29669ac6d28eeac17b9f58c30091f9d5748b59a444152fb8c6adbb358a16",
+        "url_hashes": [
+          "3cb8e122dcf17282512643a23edaa39cdff87841dd2b7cb7844a3ad673f5b6d3"
+        ],
+        "perceptual_hashes": [
+          "c3d5e05f052c9ad5",
+          "c3d47f5b002e95c9",
+          "ca957f5b202e90cd",
+          "97837c0f289fcb05",
+          "869be0fcd7432f04",
+          "c1d66956a1caf42b",
+          "a8d7b449de652b09"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_payoff",
+      "asset_id": "visual_16",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "98154d466238e0e64b310f76defa6878e7b8a47559a89e66e6b642992730c77c",
+        "url_hashes": [
+          "fc3b7f8aff2d8a820e68118d7dbf265d843d195afc075a4bb22726330f384a42"
+        ],
+        "perceptual_hashes": [
+          "d4c96318fbc431dc",
+          "d6c9631cf2c033dc",
+          "def14639c6601f98",
+          "90cf23b8c738db46",
+          "94d3ce1b34d9472c",
+          "d5fa3582f80ac378",
+          "d1cef80718c37c39"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_final",
+      "asset_id": "visual_17",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f08a86448bbb778e6dd54105426f86d450c0a8268fdb0019342772b4572b88bb",
+        "url_hashes": [
+          "8ebaed2460e5761d8ff6a40c0b1ed3c07d9a8c031ad0c2a0c348f948b3210cf8"
+        ],
+        "perceptual_hashes": [
+          "d4c107944ae73bda",
+          "d4c9279c44e719d6",
+          "dec9279c44a219ee",
+          "91c631db4e32c92f",
+          "80c26eb033ccef37",
+          "d5f815ca718ad51a",
+          "d1ee38950e71f50a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "rio_de_janeiro_nome",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_18",
+      "recorded_at": "2026-09-24T22:31:07Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ee0bef03405d1cc1891019d00ad3e1f4695309206e922932b94ace889eb0587f",
+        "url_hashes": [
+          "543464e71e595304d73a2a4147796fb25a505f0edc2492574719a090d7de0da1"
+        ],
+        "perceptual_hashes": [
+          "c8f30de61d8ad683",
+          "caf188f718c6de81",
+          "cbb188f50bccde81",
+          "c4b3897e19ee026b",
+          "d0e613e57e04687d",
+          "e894f708c3f0bc35",
+          "e8f885f21cac6723"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
