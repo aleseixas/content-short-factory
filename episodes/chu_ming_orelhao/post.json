@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "cover": {
+    "headline": "O ORELHÃO NASCEU DE UM OVO",
+    "source": {
+      "type": "asset",
+      "asset_id": "visual_01"
+    }
+  },
+  "youtube": {
+    "title": "Por que o orelhão tem esse formato?",
+    "description": "O formato do orelhão brasileiro não nasceu por acaso. Em 1971, a arquiteta Chu Ming Silveira partiu da forma do ovo para resolver um problema de acústica, custo e resistência — e criou um ícone do design nacional.",
+    "hashtags": [
+      "brasil",
+      "orelhao",
+      "chuming",
+      "designbrasileiro",
+      "historiadobrasil",
+      "curiosidades",
+      "shorts"
+    ],
+    "privacy_status": "public",
+    "category_id": "27"
+  },
+  "instagram": {
+    "caption": "O orelhão virou parte da paisagem brasileira, mas sua curva nasceu de um problema bem prático: proteger o telefone do barulho e do clima. A solução de Chu Ming Silveira começou com a forma de um ovo.",
+    "hashtags": [
+      "brasil",
+      "orelhao",
+      "chuming",
+      "designbrasileiro",
+      "historiadobrasil",
+      "curiosidades"
+    ],
+    "share_to_feed": true,
+    "thumb_offset_ms": 700
+  },
+  "tiktok": {
+    "caption": "O formato do orelhão brasileiro nasceu de uma ideia inesperada: um ovo.",
+    "hashtags": [
+      "brasil",
+      "orelhao",
+      "chuming",
+      "designbrasileiro",
+      "historiadobrasil",
+      "curiosidades"
+    ],
+    "privacy_level": "PUBLIC_TO_EVERYONE",
+    "video_cover_timestamp_ms": 700,
+    "disable_comment": false,
+    "disable_duet": false,
+    "disable_stitch": false,
+    "brand_content_toggle": false,
+    "brand_organic_toggle": false,
+    "is_aigc": false
+  }
+}
