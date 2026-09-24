@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "title": "O orelhão brasileiro nasceu de um ovo",
+  "slug": "chu_ming_orelhao",
+  "target_duration_seconds": 76,
+  "topic": "Como a arquiteta Chu Ming Silveira criou o orelhão brasileiro inspirado na forma de um ovo",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes feitas para público brasileiro, com prioridade para Brasil, história do Brasil, acontecimentos e fatos brasileiros, cultura e cotidiano brasileiro, pets/animais próximos e assuntos que despertem reconhecimento imediato",
+  "angle": "A forma icônica do orelhão surgiu de um problema real de acústica, custo e resistência; Chu Ming partiu do formato do ovo e transformou a solução em um ícone do design brasileiro",
+  "language": "pt-BR",
+  "additional_instructions": "história brasileira; linguagem simples; destacar engenharia, acústica e design; não atribuir ao formato propriedades além das documentadas; CTA de compartilhamento",
+  "entities": [
+    "Chu Ming Silveira",
+    "Companhia Telefônica Brasileira",
+    "CTB",
+    "Chu I",
+    "Chu II",
+    "Orelhinha",
+    "Orelhão",
+    "Rio de Janeiro",
+    "São Paulo"
+  ],
+  "visual_keywords": [
+    "Chu Ming Silveira orelhão",
+    "orelhão projeto 1971",
+    "orelhão brasileiro antigo",
+    "telefone público orelhão",
+    "Chu I Chu II"
+  ],
+  "segments": [
+    {
+      "id": "hook",
+      "text": "Esse formato que todo brasileiro reconhece nasceu de uma ideia inesperada: um ovo.",
+      "delivery": "hook"
+    },
+    {
+      "id": "chu",
+      "text": "Em 1971, a arquiteta Chu Ming Silveira chefiava projetos na Companhia Telefônica Brasileira.",
+      "delivery": "curious"
+    },
+    {
+      "id": "problem",
+      "text": "A missão: proteger telefones públicos do barulho e do clima sem uma cabine cara e pesada.",
+      "delivery": "dramatic"
+    },
+    {
+      "id": "oval",
+      "text": "Chu Ming chegou à forma oval pensando em acústica e construção.",
+      "delivery": "curious"
+    },
+    {
+      "id": "egg",
+      "text": "Ela dizia que o ovo era a melhor forma acústica.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "noise",
+      "text": "O formato ajudava a reduzir o ruído da rua perto do aparelho.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "small",
+      "text": "Primeiro veio o Orelhinha, menor e pensado para ambientes fechados.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "street",
+      "text": "Depois nasceu a versão de rua, feita em fibra de vidro para enfrentar o tempo.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "chu1",
+      "text": "Na CTB, o Orelhinha se chamava Chu I.",
+      "delivery": "curious"
+    },
+    {
+      "id": "chu2",
+      "text": "E o modelo de rua era Chu II, homenagem à arquiteta.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "launch",
+      "text": "Os primeiros orelhões foram inaugurados em janeiro de 1972.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "rio",
+      "text": "No Rio, dia 20.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "sp",
+      "text": "Em São Paulo, cinco dias depois, no aniversário da cidade.",
+      "delivery": "neutral"
+    },
+    {
+      "id": "nicknames",
+      "text": "O público tentou apelidos como tulipa e capacete de astronauta.",
+      "delivery": "curious"
+    },
+    {
+      "id": "name",
+      "text": "Mas um nome venceu: orelhão.",
+      "delivery": "reveal"
+    },
+    {
+      "id": "landscape",
+      "text": "O projeto virou muito mais que proteção para telefone: virou parte da paisagem brasileira.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "icon",
+      "text": "Uma solução de acústica e resistência acabou virando ícone do design nacional.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "payoff",
+      "text": "Da próxima vez que encontrar um, lembra: aquela curva começou com um ovo.",
+      "delivery": "payoff"
+    },
+    {
+      "id": "cta",
+      "text": "Manda para alguém que ainda lembra de usar orelhão.",
+      "delivery": "payoff"
+    }
+  ]
+}
