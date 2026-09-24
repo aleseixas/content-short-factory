@@ -267,3 +267,55 @@ Só avance quando:
 - existirem entidades e intenções visuais concretas;
 - o tema couber no tempo e no schema atuais;
 - música permanecer uma possibilidade editorial, nunca uma dependência estrutural.
+
+## CAMADA DE OPORTUNIDADE ATUAL PARA SHORTS — DEMANDA + CONCORRÊNCIA
+
+Antes de autorizar uma candidata do Além do Óbvio, faça uma pesquisa atual de oportunidade para descobrir quais assuntos têm atenção crescente e ainda não estão saturados. Esta camada serve para PRIORIZAR o pool; não substitui factualidade, duplicate preflight, relevância brasileira, surpresa real, qualidade visual nem os demais hard gates da main.
+
+### Objetivo
+Encontrar temas que combinem:
+- interesse/demanda crescendo AGORA;
+- concorrência/saturação ainda administrável;
+- vídeos recentes mostrando tração/outlier;
+- forte proximidade ou curiosidade para público brasileiro;
+- história/explicação que sustente retenção em Short.
+
+### Fontes e sinais
+Use, quando acessíveis nesta execução:
+1. vidIQ público: Rising Keywords, páginas de tendências, crescimento recente, outliers, views/hour e outros sinais públicos;
+2. dados do vidIQ autenticado SOMENTE se estiverem realmente acessíveis — nunca invente Search Volume, Competition ou Overall Score;
+3. YouTube/Shorts: quantidade e idade de vídeos recentes sobre o MESMO assunto/ângulo, tamanho dos canais concorrentes, velocidade de views e presença de canais pequenos/médios obtendo desempenho acima do normal;
+4. Google Trends e pesquisas recentes no Brasil quando ajudarem;
+5. notícias, Reddit e outras fontes de descoberta podem indicar pauta, mas o fato final deve ser confirmado por fontes adequadas ao tema.
+
+Se Search Volume ou Competition exatos do vidIQ não estiverem disponíveis, NÃO bloqueie a seleção e NÃO fabrique números. Estime demanda e saturação qualitativamente a partir de evidências públicas.
+
+### Como medir concorrência para Shorts
+Priorize SATURAÇÃO RECENTE, não apenas keyword competition:
+- quantidade de vídeos/Shorts recentes sobre o mesmo tema e sobretudo o mesmo ângulo;
+- número e tamanho dos canais que já cobriram;
+- repetição da mesma narrativa;
+- idade dos vídeos que ainda estão ganhando velocidade;
+- presença de canais pequenos/médios conseguindo outliers;
+- existência de um ângulo factual forte ainda pouco explorado.
+
+Tema extremamente popular mas já repetido por muitos criadores deve perder prioridade. Tema em aceleração com poucos vídeos equivalentes e boa resposta recente deve ganhar prioridade.
+
+### Priorização interna sugerida
+Use como guia flexível:
+- 35% tendência/crescimento recente;
+- 25% baixa saturação/concorrência recente;
+- 20% desempenho de vídeos recentes/outliers;
+- 15% força da história/curiosidade para retenção;
+- 5% volume de busca/search intent.
+
+Quando houver dados confiáveis, use-os. Quando não houver, classifique sinais como ALTO/MÉDIO/BAIXO com evidência observável.
+
+### Regra de decisão
+Entre candidatas que já passam pelos filtros editoriais do Além do Óbvio, prefira a melhor combinação de:
+`MOMENTUM ALTO + SATURAÇÃO BAIXA/MÉDIA + OUTLIERS RECENTES + RELEVÂNCIA PARA BRASILEIROS + HISTÓRIA FORTE`.
+
+A prioridade editorial já definida para Brasil/história brasileira/pets/cotidiano continua valendo. A camada de oportunidade ajuda a decidir ENTRE boas pautas; ela não deve empurrar um assunto global irrelevante para brasileiros só porque está trending.
+
+Temas políticos/eleitorais, quando considerados, continuam sujeitos integralmente às exigências de neutralidade, factualidade e fontes fortes já definidas neste arquivo e no prompt do agendamento.
+
