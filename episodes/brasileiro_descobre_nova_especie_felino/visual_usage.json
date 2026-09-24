@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "episode": "brasileiro_descobre_nova_especie_felino",
+  "recorded_at": "2026-09-24T15:47:51Z",
+  "visual_usage": [
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "92a00729b2d7783beefc6bfe85a8c38e9346a301fdf9198dae95d3dfd5c569fe",
+        "url_hashes": [
+          "a29a8f398de0adff7d4a5f62e29c113755384642fa1c02e608508dca12fbe586"
+        ],
+        "perceptual_hashes": [
+          "ce8e8ef1311df023",
+          "ce8e8ff1109ef403",
+          "ce8e87f10c8ecc0f",
+          "d998e72339e226e2",
+          "d8989cee6606fec0",
+          "c3c13c3e077f183c",
+          "e3c3c1f4781808ff"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_name",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "79a12952d27b27db756d676023ca1b7f532d60a35cf106491367bb94951c1e01",
+        "url_hashes": [
+          "584001c659c2a93c0058af95a7dfb5aa0076328698782cce2a6ba8e4f4cdd181"
+        ],
+        "perceptual_hashes": [
+          "ec8e33703933c669",
+          "cc86337839b36273",
+          "cf84735c38b77031",
+          "d887713364cf9299",
+          "d88f3ec81b73980d",
+          "e3981d3f38f08cc3",
+          "e6e258e0c70ec1f3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_found",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "00531258341cdc75a81a481677f085f5409d8883af54da4e0678f4534596c445",
+        "url_hashes": [
+          "461d7ac1bf3f6e89271efb0166cf047ef49f49533c794ce3d1e1ecfa66b866b5"
+        ],
+        "perceptual_hashes": [
+          "ce8e8ef1311df023",
+          "ce8e8ff1189ef003",
+          "ce8e87f10c8ecc0f",
+          "d998e72339e226e2",
+          "d8989cee6606fec0",
+          "c3c13e3e077e183c",
+          "e3c1c1f478180cff"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_sanctuary",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "4e52a8bf2976f0e7280fb979d540e5fa5c5d906a53a7938b34ecb3b6bc12af4c",
+        "url_hashes": [
+          "b98cf76e58f65b0132eb773fbccd1909d6fe6f8704bb804220615e38ae8c92f9"
+        ],
+        "perceptual_hashes": [
+          "c2b95b27486783f2",
+          "c2995103ce67c37b",
+          "c2d911836f41f373",
+          "85320f4d6f877919",
+          "85f3122f90791bcd",
+          "d10e706373f90727",
+          "d18f4e38cc2347f1"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_years",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "057f0077a413190860740d3173b554092f882b9880305334a8a3c9685f3d7283",
+        "url_hashes": [
+          "30bf9e792f72773fabd96cc36103f7ccb36ed374cdf6fd3c798ccaf8a8420c9f"
+        ],
+        "perceptual_hashes": [
+          "d3a94e569139ce26",
+          "d1a94e469139cf27",
+          "d1e94f46b858c837",
+          "f7ca0c2373cc2cd2",
+          "b7e3da4c8c2892d3",
+          "deae419e2ee011ce",
+          "dcbea461c1308eee"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_brazil",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "cf021d52a89a9ea1ced831cd254b93e85d80ef6b95ab5ac7bc6329a766c4d051",
+        "url_hashes": [
+          "1b578171c8cb2e1f76d887ade9a5ae6215913b9757c6c39523d60ccb249ab45e"
+        ],
+        "perceptual_hashes": [
+          "c0ccc4b7943baf13",
+          "c8ccc4e6dc3da217",
+          "c8cce4e6dc2f8685",
+          "c0c9cdbc3a2f8372",
+          "c053c3cfc9d0f272",
+          "e6e7b1910ca8de2c",
+          "ea4ee6a1f14ae429"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_dna",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b0a04fe4df70475119d000412abc29af58c6e509660ae4178d8403d662fddcdc",
+        "url_hashes": [
+          "a30d779437eead4b6fe83362c4650da42f815c320cd94f54f7d1a71126e48bed"
+        ],
+        "perceptual_hashes": [
+          "c8a5f65235cd6532",
+          "c8adff5211c96136",
+          "d4aaf77695ca6030",
+          "81f8ec27da4f30d8",
+          "8113fadc6db894ca",
+          "cbb5d11ee5251ac1",
+          "ca25b44b3a9ac5e5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_result",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "369544d411ea7fbcaf07b481118bdd6bc23e50cfdfe83c6c4257dc72a226fb97",
+        "url_hashes": [
+          "330d187b872bd4783413429bfec4d304e3023acd344ea3e94c981b7831f5f451"
+        ],
+        "perceptual_hashes": [
+          "c3f26cf03039cbc6",
+          "c3e76df23039c321",
+          "c2e36ff634383231",
+          "c5ea78e3d3849a98",
+          "d5c558dc8c6b9a61",
+          "d876253f8ec8c6c1",
+          "c9f824c0d137c73b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_age",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "c6c8a4f5d9a2559c4a60d1dd765e783ea539d5d84b03df691dd9b5438a3893fb",
+        "url_hashes": [
+          "1f6dd0030e76d6e8b085bfb951009d94560afd751b680e51b6c633644bb123d0"
+        ],
+        "perceptual_hashes": [
+          "e6a659d98c599d48",
+          "e6a65b990c719f48",
+          "e6a65b9b4c931bc0",
+          "edec929b72924398",
+          "eded64569841ee14",
+          "b3b1ccc75ec46681",
+          "b3b3394c856fb109"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_species",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "06d25df261b8d66fddb239f45548aad9fd48416a8e5117a9035170904d661cb2",
+        "url_hashes": [
+          "63d5ea79b54495d2faac41ce7889046685a9f1eeb2c9b7e23f4efb06f6bca884"
+        ],
+        "perceptual_hashes": [
+          "b065cf9a3236e50d",
+          "b869cb9a10b4e59d",
+          "be68ca9a1eb48599",
+          "e0ce95b12fca324d",
+          "e06acede903435cd",
+          "bf64c89b32f40c71",
+          "b734e4e0cd0919f3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_size",
+      "asset_id": "visual_11",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "c4749eb31f53392461d702a82e6e7de8f8a58353a2c6844183809c09f56de44a",
+        "url_hashes": [
+          "d0a0386ce5855e5c45603675a1e7415198f5cd1a5ab798065b86daac606f573d"
+        ],
+        "perceptual_hashes": [
+          "b3c30d309b3dc26d",
+          "b3c30db49b9cc06d",
+          "b3c30db49b95126b",
+          "e69e3bb59a434889",
+          "e6c45a69857aa137",
+          "b8c007d9c66f62d3",
+          "b8f84437fb24d215"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_century",
+      "asset_id": "visual_12",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "dfd79095ea915c4f9b6ee38957ee16a34df9d37bd9fc806a49c049fd2850b5b2",
+        "url_hashes": [
+          "95a54e9d7bd83289bd02c805a87828e3cf6c04948b93404a257bd33f1e55a66b"
+        ],
+        "perceptual_hashes": [
+          "ae26af6bc0c4947c",
+          "a4242f6bcac4b53d",
+          "a425274bcae2bc6e",
+          "afae7ec1c1b0d0c4",
+          "bf29a83eba4ec406",
+          "a2b0a8edd596c6d8",
+          "aa17962aac6ae13e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_five",
+      "asset_id": "visual_13",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "25cdab174b0a434696b1256b96187ad4460dcecb3d47cad457b616ec621a843e",
+        "url_hashes": [
+          "5470fb2936e8fbf7bc96f8b209ff5ad235f8392f89f2bf36031ba2fedc36e762"
+        ],
+        "perceptual_hashes": [
+          "eacca53b9c163394",
+          "eacca33b8d06b0a7",
+          "facca05b8f10b8a7",
+          "ffc8a6908da78c32",
+          "fd588867f2d80e52",
+          "aae7b884d29ef00e",
+          "aa42f7388ca57a0f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_unknown",
+      "asset_id": "visual_14",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d93f56a0faf29448a225c9603e5c8494f548e083c40ef5e776b2d67beb9b4fd7",
+        "url_hashes": [
+          "372b7fb783ddbc77a9f31ad316c539483f9a99409266566e6c8e1b81ea5d0897"
+        ],
+        "perceptual_hashes": [
+          "eab0965981e7c43e",
+          "f8bcb69183c3c436",
+          "fdbea69891c18ca4",
+          "fba08d96cc492d56",
+          "fbe0ec4993348656",
+          "aab5d2ccf1633168",
+          "aaafb1438e18ec6c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_threat",
+      "asset_id": "visual_15",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3c2015bb7b6084b754eff08dbb5899a9c2d0933295d8bf614d63c5a96b06175a",
+        "url_hashes": [
+          "26f50bdf2d96b5b783bd4c5944040da4bcaba3b8644ba30cfa28ef5e555c3808"
+        ],
+        "perceptual_hashes": [
+          "ceb000dfb64c1b67",
+          "ccb0009df70e9b67",
+          "c4b2489def9cb328",
+          "9de01bfc383e601e",
+          "dfe46093a6c910cf",
+          "c2bd47d02b983f4a",
+          "c2b83dc79c770ad0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_twist",
+      "asset_id": "visual_16",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b4fdd36b1720b308b6168dd2880c47b757bf10767cd490b89abe94ab37f37689",
+        "url_hashes": [
+          "ec8fc341ad72ff541df47ae819afe5f38b5d7a4a9ef7b4d4dd498d421d961b8d"
+        ],
+        "perceptual_hashes": [
+          "fa70ccf218dc6354",
+          "fa38cc7a9c596314",
+          "fa18c4719cd9731c",
+          "f5f1eb30904489ee",
+          "d42181ee65b9ab66",
+          "eb4f721f447093b0",
+          "e81bc7703197a33c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasileiro_descobre_nova_especie_felino",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_17",
+      "recorded_at": "2026-09-24T15:47:51Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3b2fa05f937651c47e090eab98fdbf9763b4b12eaa16494f5c7fab8b585d9a1b",
+        "url_hashes": [
+          "1df485ca21342c54325b75024f826e01605415fa002e43290e4f872690fed746"
+        ],
+        "perceptual_hashes": [
+          "ffb02147d030fc69",
+          "dfb920c7d114bc19",
+          "dbbf20c759863c18",
+          "fca04dd321f912cd",
+          "feb0324ddc068ccd",
+          "c09c61c69fa74cf1",
+          "c89c3f61e06cd0f3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
