@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "smart_visual_pacing": {
+    "enabled": true
+  },
+  "background_music": {
+    "profile": "uplifting_documentary",
+    "volume": 0.035
+  },
+  "sfx_cues": [
+    {
+      "time_seconds": 0.08,
+      "type": "impact",
+      "volume": 0.045
+    },
+    {
+      "time_seconds": 15,
+      "type": "whoosh_fast",
+      "volume": 0.035
+    },
+    {
+      "time_seconds": 31,
+      "type": "ding",
+      "volume": 0.032
+    },
+    {
+      "time_seconds": 49,
+      "type": "riser_build_up",
+      "volume": 0.032
+    },
+    {
+      "time_seconds": 68,
+      "type": "pop",
+      "volume": 0.032
+    }
+  ],
+  "visual_fx_cues": [
+    {
+      "start_seconds": 0.08,
+      "end_seconds": 0.72,
+      "type": "punch_zoom",
+      "intensity": 0.44
+    }
+  ],
+  "text_fx_cues": [
+    {
+      "segment": "hook",
+      "offset_seconds": 0.08,
+      "duration_seconds": 1.25,
+      "text": "NASCEU DE\nUM OVO",
+      "accent_text": "UM OVO",
+      "animation": "scale_bounce",
+      "position": "center",
+      "intensity": 0.6
+    },
+    {
+      "segment": "egg",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.1,
+      "text": "A MELHOR FORMA\nACÚSTICA",
+      "accent_text": "ACÚSTICA",
+      "animation": "pop_in",
+      "position": "center",
+      "intensity": 0.55
+    },
+    {
+      "segment": "launch",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.05,
+      "text": "1972",
+      "accent_text": "1972",
+      "animation": "fade_pop",
+      "position": "center",
+      "intensity": 0.55
+    },
+    {
+      "segment": "icon",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.15,
+      "text": "ÍCONE DO DESIGN\nBRASILEIRO",
+      "accent_text": "BRASILEIRO",
+      "animation": "pop_in",
+      "position": "center",
+      "intensity": 0.58
+    }
+  ],
+  "overlay_cues": [],
+  "shots": [
+    {
+      "id": "shot_hook",
+      "segment": "hook",
+      "asset": "visual_01",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "NASCEU DE UM OVO"
+    },
+    {
+      "id": "shot_chu",
+      "segment": "chu",
+      "asset": "visual_02",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "CHU MING SILVEIRA"
+    },
+    {
+      "id": "shot_problem",
+      "segment": "problem",
+      "asset": "visual_03",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "BARULHO + CLIMA + CUSTO"
+    },
+    {
+      "id": "shot_oval",
+      "segment": "oval",
+      "asset": "visual_04",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "A FORMA OVAL"
+    },
+    {
+      "id": "shot_egg",
+      "segment": "egg",
+      "asset": "visual_05",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "A MELHOR FORMA ACÚSTICA"
+    },
+    {
+      "id": "shot_noise",
+      "segment": "noise",
+      "asset": "visual_06",
+      "motion": "pull_out",
+      "transition_out": "crossfade",
+      "highlight": "MENOS RUÍDO PERTO DO TELEFONE"
+    },
+    {
+      "id": "shot_small",
+      "segment": "small",
+      "asset": "visual_07",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "PRIMEIRO: ORELHINHA"
+    },
+    {
+      "id": "shot_street",
+      "segment": "street",
+      "asset": "visual_08",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "DEPOIS: ORELHÃO"
+    },
+    {
+      "id": "shot_chu1",
+      "segment": "chu1",
+      "asset": "visual_09",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "CHU I"
+    },
+    {
+      "id": "shot_chu2",
+      "segment": "chu2",
+      "asset": "visual_10",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "CHU II"
+    },
+    {
+      "id": "shot_launch",
+      "segment": "launch",
+      "asset": "visual_11",
+      "motion": "pan_left",
+      "transition_out": "crossfade",
+      "highlight": "JANEIRO DE 1972"
+    },
+    {
+      "id": "shot_rio",
+      "segment": "rio",
+      "asset": "visual_12",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "RIO — DIA 20"
+    },
+    {
+      "id": "shot_sp",
+      "segment": "sp",
+      "asset": "visual_13",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "SÃO PAULO — DIA 25"
+    },
+    {
+      "id": "shot_nicknames",
+      "segment": "nicknames",
+      "asset": "visual_14",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "TULIPA? CAPACETE?"
+    },
+    {
+      "id": "shot_name",
+      "segment": "name",
+      "asset": "visual_15",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "ORELHÃO"
+    },
+    {
+      "id": "shot_landscape",
+      "segment": "landscape",
+      "asset": "visual_16",
+      "motion": "pan_right",
+      "transition_out": "crossfade",
+      "highlight": "PARTE DA PAISAGEM BRASILEIRA"
+    },
+    {
+      "id": "shot_icon",
+      "segment": "icon",
+      "asset": "visual_17",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "ÍCONE DO DESIGN NACIONAL"
+    },
+    {
+      "id": "shot_payoff",
+      "segment": "payoff",
+      "asset": "visual_18",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "A CURVA COMEÇOU COM UM OVO"
+    },
+    {
+      "id": "shot_cta",
+      "segment": "cta",
+      "asset": "visual_19",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "QUEM AINDA LEMBRA?"
+    }
+  ]
+}
