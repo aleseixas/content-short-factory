@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "title": "O Rio de Janeiro não é um rio",
+  "slug": "rio_de_janeiro_nome",
+  "target_duration_seconds": 72,
+  "topic": "Por que o Rio de Janeiro se chama 'Rio de Janeiro' — e a história de que portugueses confundiram a Baía de Guanabara com um rio",
+  "content_profile": "curiosidades surpreendentes, verdadeiras e visualmente fortes feitas para público brasileiro, com prioridade para Brasil, história do Brasil, acontecimentos e fatos brasileiros, cultura e cotidiano brasileiro, pets/animais próximos e assuntos que despertem reconhecimento imediato",
+  "angle": "O nome nasceu quando uma expedição portuguesa chegou à entrada da atual Baía de Guanabara em 1º de janeiro de 1502; a famosa explicação de que navegadores confundiram a baía com a foz de um rio é tradicional, mas a documentação não permite tratá-la como certeza.",
+  "language": "pt-BR",
+  "additional_instructions": "história do Brasil; separar fato documentado de versão tradicional; não afirmar como certeza que navegadores experientes confundiram baía e rio; CTA de compartilhamento",
+  "entities": ["Rio de Janeiro", "Baía de Guanabara", "Gaspar de Lemos", "Américo Vespúcio", "Estácio de Sá", "São Sebastião do Rio de Janeiro"],
+  "visual_keywords": ["Baía de Guanabara", "mapa antigo Guanabara", "Rio de Janeiro 1502", "Estácio de Sá", "mapa colonial Rio de Janeiro"],
+  "segments": [
+    {"id":"hook","text":"O Rio de Janeiro tem um detalhe absurdo no próprio nome: ali não existe um rio chamado Janeiro.","delivery":"hook"},
+    {"id":"bay","text":"O que existe é esta entrada gigantesca do mar: a Baía de Guanabara.","delivery":"reveal"},
+    {"id":"date","text":"A origem do nome volta para primeiro de janeiro de 1502.","delivery":"curious"},
+    {"id":"expedition","text":"Uma expedição portuguesa chegou à entrada da baía enquanto explorava a costa do Brasil.","delivery":"neutral"},
+    {"id":"calendar","text":"Janeiro é a parte simples: os navegadores usavam datas e festas religiosas para batizar pontos do litoral.","delivery":"neutral"},
+    {"id":"myth","text":"Agora vem a parte famosa: dizem que eles olharam a Guanabara e acharam que aquilo era a foz de um rio enorme.","delivery":"dramatic"},
+    {"id":"twist","text":"Só que essa explicação não é tão fechada quanto parece.","delivery":"reveal"},
+    {"id":"documents","text":"A própria história oficial do Rio ressalta que faltam documentos e sobram versões sobre esse suposto engano.","delivery":"dramatic"},
+    {"id":"experienced","text":"E existe uma dúvida óbvia: navegadores experientes realmente confundiriam uma baía desse tamanho com um rio?","delivery":"curious"},
+    {"id":"term","text":"Uma hipótese é que a palavra rio pudesse ser usada de forma mais ampla para aquela entrada de água, sem significar exatamente um rio como hoje.","delivery":"curious"},
+    {"id":"vespucci","text":"Até a autoria do batismo é discutida: Américo Vespúcio aparece em versões ligadas à expedição.","delivery":"neutral"},
+    {"id":"namefirst","text":"O mais doido é que o nome Rio de Janeiro existiu antes da própria cidade.","delivery":"reveal"},
+    {"id":"city","text":"A cidade só foi fundada décadas depois, em 1565, por Estácio de Sá.","delivery":"neutral"},
+    {"id":"saosebastiao","text":"E nasceu oficialmente como São Sebastião do Rio de Janeiro.","delivery":"reveal"},
+    {"id":"maps","text":"Mapas e relatos antigos continuaram chamando aquela região de Rio, mesmo com a Guanabara bem desenhada diante deles.","delivery":"curious"},
+    {"id":"payoff","text":"Então o Janeiro é histórico. O rio, provavelmente, é uma história bem mais complicada do que a lenda escolar conta.","delivery":"payoff"},
+    {"id":"final","text":"Cinco séculos depois, a dúvida ficou presa no nome de uma das cidades mais famosas do planeta.","delivery":"payoff"},
+    {"id":"cta","text":"Manda para alguém que jurava que existia um Rio Janeiro.","delivery":"payoff"}
+  ]
+}
