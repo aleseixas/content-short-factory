@@ -1,7 +1,7 @@
 {
-  "schema_version": 1,
-  "assets": [
-    {"id":"visual_01","file":"visual_01.jpg","url":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Rio_de_Janeiro_from_Corcovado_mountain.jpg/1280px-Rio_de_Janeiro_from_Corcovado_mountain.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+  "schema_version":1,
+  "assets":[
+    {"id":"visual_01","file":"visual_01.jpeg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Baia%20de%20Guanabara%20-%20Rio%20de%20Janeiro%20-%20Brasil.jpeg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
     {"id":"visual_02","file":"visual_02.png","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Ba%C3%ADa%20de%20Guanabara.png","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
     {"id":"visual_03","file":"visual_03.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Mapa%20antigo%20da%20Baia%20de%20Guanabara.jpg","credit":"Senado Federal / Wikimedia Commons","license":"public domain","focus":{"x":0.5,"y":0.5}},
     {"id":"visual_04","file":"visual_04.png","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Map%20of%20the%20Bay%20of%20Rio%20de%20Janeiro%20WDL187.png","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
@@ -10,14 +10,14 @@
     {"id":"visual_07","file":"visual_07.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Mapa%20da%20Fran%C3%A7a%20Ant%C3%A1rtica%20%28Rio%20de%20Janeiro%29%20da%20d%C3%A9cada%20de%201660%20baseado%20nos%20relatos%20relatos%20de%20L%C3%A9ry%20da%20d%C3%A9cada%201550.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
     {"id":"visual_08","file":"visual_08.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bar%C3%A3o%20do%20Rio%20Branco%20-%20Planta%20da%20cidade%20do%20Rio%20de%20Janeiro%20e%20Ba%C3%ADa%20de%20Guanabara%2C%20mostrando%20o%20ataque%20dos%20franceses%20em%201711.jpg","credit":"Wikimedia Commons","license":"public domain","focus":{"x":0.5,"y":0.5}},
     {"id":"visual_09","file":"visual_09.jpg","url":"https://tile.loc.gov/image-services/iiif/service%3Agmd%3Agmd5%3Ag5592%3Ag5592g%3Abr000105/full/pct%3A50/0/default.jpg","credit":"Library of Congress","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_10","file":"visual_10.jpg","url":"https://www.rio-turismo.com/mapas/imagens/guanabara.jpg","credit":"Rio Turismo / mapa histórico de João Teixeira Albernaz","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_11","file":"visual_11.svg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/RiodeJaneiro%20Municip%20Niteroi.svg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_10","file":"visual_10.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Baia%20de%20Guanabara%20vista%20da%20Fortaleza%20de%20Santa%20Cruz%20da%20Barra.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_11","file":"visual_11.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Baia%20de%20Guanabara%20vista%20de%20Nieter%C3%B3i.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
     {"id":"visual_12","file":"visual_12.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Rio%20de%20Janeiro%20-%20panoramio.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_13","file":"visual_13.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Est%C3%A1cio%20de%20S%C3%A1.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_14","file":"visual_14.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Funda%C3%A7%C3%A3o%20da%20Cidade%20do%20Rio%20de%20Janeiro.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_15","file":"visual_15.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Rio%20de%20Janeiro%20-%20Mapa%20-%201575.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_16","file":"visual_16.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Guanabara%20Bay%20from%20Corcovado.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_17","file":"visual_17.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/P%C3%A3o%20de%20A%C3%A7%C3%BAcar%20e%20Ba%C3%ADa%20de%20Guanabara.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
-    {"id":"visual_18","file":"visual_18.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Rio%20de%20Janeiro%20aerial%20view.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}}
+    {"id":"visual_13","file":"visual_13.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Baia%20de%20Guanabara%20vista%20de%20Niter%C3%B3i.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_14","file":"visual_14.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Baia%20de%20Guanabara%20vista%20do%20morro%20da%20Urca%20em%202021.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_15","file":"visual_15.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Bay%20of%20Guanabara%20-%20panoramio%20%281%29.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_16","file":"visual_16.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Small%20boat%20in%20Guanabara%20Bay%2C%20Rio%20de%20Janeiro%2C%20Brazil.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_17","file":"visual_17.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Sunrise%20over%20Guanabara%20Bay.jpg","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}},
+    {"id":"visual_18","file":"visual_18.jpg","url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/View%20of%20Rio%20and%20Guanabara%20Bay.JPG","credit":"Wikimedia Commons","license":"","focus":{"x":0.5,"y":0.5}}
   ]
 }
