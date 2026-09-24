@@ -1,0 +1,24 @@
+FONTES FACTUAIS
+
+1. MultiRio — A expedição de Gaspar Lemos
+https://multirio.rio.rj.gov.br/index.php/historia-do-brasil/rio-de-janeiro/2404-a-expedicao-de-gaspar-lemos
+Uso: chegada à boca da Baía de Guanabara em 1º de janeiro de 1502; tradição da confusão com a foz de um rio; ressalva de que faltam documentos e existem versões; hipótese sobre o uso histórico do termo “rio”; atribuições discutidas envolvendo Américo Vespúcio.
+
+2. MultiRio — O Rio de Janeiro: uma cidade no entorno da Guanabara
+https://multirio.rio.rj.gov.br/index.php/historia-do-brasil/rio-de-janeiro/2388-o-rio-de-janeiro-uma-cidade-cidade-no-entorno-da-guanabara
+Uso: chegada à Guanabara em 1502 e fundação da cidade por Estácio de Sá em 1º de março de 1565.
+
+3. MultiRio — A geografia do Rio antes de ser o Rio
+https://multirio.rio.rj.gov.br/index.php/historia-do-brasil/rio-de-janeiro/2389-a-geografia-do-rio-antes-de-ser-rio-2
+Uso: nomeação do local como Rio de Janeiro e formulação cautelosa de que talvez tenham entendido existir ali a foz de um rio.
+
+4. Biblioteca Nacional Digital — Plan de la Baye et du Port de Rio-Janeiro
+https://bdlb.bn.gov.br/acervo/handle/20.500.12156.3/14106
+Uso: evidência cartográfica histórica da Baía/Porto do Rio de Janeiro.
+
+5. Wikimedia Commons — Category: Old maps of Guanabara Bay e arquivos associados
+https://commons.wikimedia.org/wiki/Category:Old_maps_of_Guanabara_Bay
+Uso: pesquisa visual e mapas históricos. Licenças/metadados devem ser respeitados conforme cada arquivo.
+
+BACKGROUND MUSIC
+Profile curado da repo: fallback_social_cinematic. Usado como fallback operacional da biblioteca já curada; sem novo binário commitado.
