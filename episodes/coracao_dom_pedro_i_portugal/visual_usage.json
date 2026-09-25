@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "episode": "coracao_dom_pedro_i_portugal",
+  "recorded_at": "2026-09-25T15:20:42Z",
+  "visual_usage": [
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "c609e55fffed91a93e9dbb938faaafa6ebfc0f5ad37b4698980b051aa194323d",
+        "url_hashes": [
+          "a1f9db9317dcdbd866af834d4538210e9836d6b1670309a570240ad7b4dc1cbb"
+        ],
+        "perceptual_hashes": [
+          "cca463f332cf84cc",
+          "8cac43f332d794cc",
+          "8cac4bb33293b749",
+          "9b2976249cca5bc9",
+          "9bab5bd2605734a4",
+          "c637581941e667e3",
+          "c7a727ce3e6d0890"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_two_names",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "470e0844404cbdfbd40f712507501450b19b3b5a056d0a2c38ea47885d02bf90",
+        "url_hashes": [
+          "efd054d323b6c78a7496a99f354da2c5a59fe64c982715eb4e672f11b5098b01"
+        ],
+        "perceptual_hashes": [
+          "d6c924d26497c7a5",
+          "d6c920da6d91c5ab",
+          "d4c824da3cd5a5ea",
+          "85d335702bce59b2",
+          "add34b95407153ae",
+          "d3e6195c36f025ca",
+          "d3ed26d9640d465a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_porto",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "16ff4e7c7caa056950f38d22a609f90b55471199dddd760cd1986f1b77d8aec1",
+        "url_hashes": [
+          "4d7d72ffad1ae9b5f384de0f33837a1299602ef39f1e3b8debd2f2b421c41be1"
+        ],
+        "perceptual_hashes": [
+          "edec1e703530713a",
+          "ebce16602dd8a93a",
+          "ebcf57e00cc98998",
+          "da9c2d233376216e",
+          "dad81cd54c2969ce",
+          "ecc052351f3d3b32",
+          "edec415a311376f0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_war",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "ba611e5a083665d93406332b2ba70200b2e29aff0156bc878e33a153c2ca28a0",
+        "url_hashes": [
+          "682d11d4979d7655c8ee25de8ba0de7d071a9160843c3a931d95350460052e56"
+        ],
+        "perceptual_hashes": [
+          "b0360dd9383e3ecc",
+          "b027c9d9193e1e4b",
+          "b427cbd1993e0751",
+          "a10e96b3391dc3e9",
+          "e16d0ece86c261af",
+          "9f40cc0e2343feb5",
+          "b73360e0dccc3595"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_death",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "dad3e806fe06494faf274bbf2e1d5dba9dc1e2659067c3923a83308559aa47c8",
+        "url_hashes": [
+          "19f87a7e70f236968421d9d860f97ca55fe21bb55a6b5175db5dcc4e5d9abe59"
+        ],
+        "perceptual_hashes": [
+          "a99a84c56d29bb66",
+          "a19a86d76489bd66",
+          "eb1a86d76899bc82",
+          "c2118a4353bd4f77",
+          "ea74398cec4d866a",
+          "a88bd0762c9b792e",
+          "ae292391f273ec26"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_wish",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d6092294fc8292e334c1137d5142fe2d0453da2554b82f442d28bd463ea0d8e4",
+        "url_hashes": [
+          "8208e55eb0928bdd8f030ad8664bbd655db5020e302cd6cc5de08271bae2f518"
+        ],
+        "perceptual_hashes": [
+          "ad68d2c6b01b27b5",
+          "af68d276bc1b2321",
+          "a968d2679c5a6372",
+          "ea97d5a0174eb198",
+          "ea6a974ce8b1989a",
+          "a4cecb968d349786",
+          "a426c969f29fc3c4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_lapa",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "aff7cc70596206a8c3fa05b4bdf17c190420b48946f7c9118557696a6236a2ad",
+        "url_hashes": [
+          "7201de37a6806cfe9ef4588ecaf09fa089a3cb41cd501bdb3eb2c0a3e8da6ee9"
+        ],
+        "perceptual_hashes": [
+          "b8ac064ab67ec6ac",
+          "baa060ca367776ac",
+          "baa061d83653366f",
+          "f121097d6cd99a9a",
+          "f1ba8ada91389a2d",
+          "afb7432130e3c4ce",
+          "ab85f6cec305c41b"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_body",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "aa9119176f7fd79043be307c11c64cd1ec1ae9211633cafd82f92c98c80e785f",
+        "url_hashes": [
+          "b8daa3b2ce4bcf13171bb85a3f6888a9313a1922d8bd7dd73dba305d9b57778f"
+        ],
+        "perceptual_hashes": [
+          "92a3e51ca626cd3e",
+          "96e3e11c2486fc3e",
+          "96e3611d25c66c9e",
+          "84e61b29ccd17e6c",
+          "85e4e452b32f9c63",
+          "98bc4e17f16fa850",
+          "d1b8f04ece3ac076"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_brazil",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d0c1a7c53097b3c368d05457f6e8139e25d60b465f57e3ebcaea380a85729556",
+        "url_hashes": [
+          "8f1e903e6b0ada6e8329f755c0b13427357cc21c969980d35e5a6e717c710f9b"
+        ],
+        "perceptual_hashes": [
+          "b57b1a74aa95c42a",
+          "b15f1f772a9804ca",
+          "ba1b157f2296029f",
+          "e73c78459189d8cb",
+          "a7529e386876f807",
+          "b40a1329c5e3aaf7",
+          "946c8a562a2cdf76"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_split",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "98bc2b4c455f4ffb4fd8e221fb4082c986dac58cdaa783e10a636fe51b6d6f74",
+        "url_hashes": [
+          "9facaa18ef2a03b325fe5ff7f90eff4d0e222ad8b3f6f70a80288af0fc6c3839"
+        ],
+        "perceptual_hashes": [
+          "f0310f921b6e4ecd",
+          "f0398535197696ce",
+          "f03aad31383796c6",
+          "e0170e374c9d5b6a",
+          "e0f34dc816d36ab2",
+          "ff2d401f63c1642e",
+          "ff3d61e00cac329c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_return",
+      "asset_id": "visual_11",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "3b4c7c2a894aaca7196e45dd88bdaa7f35e6e13624ed4c8bfd3c81915b8801d5",
+        "url_hashes": [
+          "611e5d3866bf631c664fbd74c2f9d20d27db3f81357df434330bda6b413df1fb"
+        ],
+        "perceptual_hashes": [
+          "99b9404467feb724",
+          "999866446ef6b664",
+          "999a65516796a74a",
+          "b3a0406dfdad40ed",
+          "bbb74200404ad7ff",
+          "8eb97133ab936c12",
+          "8e8f2d56746649b2"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_bicentennial",
+      "asset_id": "visual_12",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "53c43d61019af8f2a34d34597d23338be9c761cb34da652809e7ae0c07b51feb",
+        "url_hashes": [
+          "f0579c1374ad0272b091d33cc4703dff8fd45c0320473fd140ef4385fe96f025"
+        ],
+        "perceptual_hashes": [
+          "aa9a6575752a9aa2",
+          "aa9a65356d539a8a",
+          "8e90e5bf295a9c52",
+          "81d76a6a5591caea",
+          "a895e18eb86a756a",
+          "8bca75346a8bf294",
+          "ab8aead1d5345534"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_honors",
+      "asset_id": "visual_13",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "7aaaa1e469ab650d74d322842dcd6c0cc874f75ca736fad45fcb21bcaca9616e",
+        "url_hashes": [
+          "ad6671c58ca2d149fc9d4c685d2febf23d0386402ebc728aa750c115326b7e6d"
+        ],
+        "perceptual_hashes": [
+          "ab9395cc6c4ccee0",
+          "aa91919d6e0ececc",
+          "bb9191993b0ece4c",
+          "b6b69ad859c93036",
+          "b6a636a6a03636ce",
+          "ad9c866763e3151c",
+          "ad989c989e1c1cf5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_back",
+      "asset_id": "visual_14",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "35f5414f92ecc749e972397b3a1127a3cc80fd48e65bc957910a314d95da70fb",
+        "url_hashes": [
+          "ed2a0649539095a9e5310b020272dccfaec959433d3c5a99c5ed6aba85f43a6a"
+        ],
+        "perceptual_hashes": [
+          "fc87a1f079382f24",
+          "fe80a0f77b7b0920",
+          "ff80a0f2df5b1830",
+          "f88fe0f2360f08f8",
+          "f08f0f89cdc8e8d8",
+          "d3b1fc5c0e3c32a2",
+          "8283b1b2f1f3d2c5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "coracao_dom_pedro_i_portugal",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_15",
+      "recorded_at": "2026-09-25T15:20:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "d9f54d7f1e2f7d2037b02089d43869bb694cd06ad4d0c918177259fab1643664",
+        "url_hashes": [
+          "975cfff83e93d7acb1cfd99754bd0c343c1142a8309a940723f31e16e3e7191b"
+        ],
+        "perceptual_hashes": [
+          "8ca473f332cf84cc",
+          "8cac43f33293b7c8",
+          "8c2c4bb33293b759",
+          "9b6966241dc85bd9",
+          "99ab5bd360573780",
+          "c727581841e66fe3",
+          "c5a627ce3e6d4a90"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
