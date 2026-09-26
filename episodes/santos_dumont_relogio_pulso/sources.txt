@@ -1,0 +1,7 @@
+FATOS
+https://www.cartier.com/en-us/collections/watches/santos-de-cartier/ — história oficial da Cartier sobre a origem do Santos e a relação com Alberto Santos-Dumont.
+https://museudumont.sp.gov.br/ — Museu Casa de Santos Dumont; contexto histórico e biográfico do aviador brasileiro.
+https://www.britannica.com/biography/Alberto-Santos-Dumont — contexto biográfico e papel de Santos-Dumont na aviação.
+
+VISUAIS
+https://commons.wikimedia.org/wiki/Category:Alberto_Santos-Dumont — acervo histórico de fotografias de Santos-Dumont e suas aeronaves; licenças verificadas individualmente nas páginas dos arquivos usados em assets.json.
