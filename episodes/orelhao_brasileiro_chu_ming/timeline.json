@@ -1,1 +1,171 @@
-{"schema_version":1,"smart_visual_pacing":{"enabled":true},"background_music":{"profile":"uplifting_documentary","volume":0.1},"sfx_cues":[{"time_seconds":0.08,"type":"impact","volume":0.14},{"time_seconds":16,"type":"whoosh_fast","volume":0.1},{"time_seconds":34,"type":"ding","volume":0.1},{"time_seconds":49,"type":"riser_build_up","volume":0.11}],"visual_fx_cues":[{"start_seconds":0.08,"end_seconds":0.72,"type":"punch_zoom","intensity":0.45}],"text_fx_cues":[{"segment":"hook","offset_seconds":0.08,"duration_seconds":1.2,"text":"NASCEU DE\nUM OVO","accent_text":"OVO","animation":"scale_bounce","position":"center","intensity":0.6},{"segment":"nickname","offset_seconds":0.05,"duration_seconds":1.0,"text":"ORELHÃO","accent_text":"ORELHÃO","animation":"fade_pop","position":"center","intensity":0.55},{"segment":"launch","offset_seconds":0.05,"duration_seconds":1.0,"text":"1972","accent_text":"1972","animation":"pop_in","position":"center","intensity":0.58}],"overlay_cues":[],"shots":[{"id":"shot_hook","segment":"hook","asset":"visual_01","motion":"push_in","transition_out":"crossfade","highlight":"O FORMATO VEIO DE UM OVO"},{"id":"shot_creator","segment":"creator","asset":"visual_02","motion":"pull_out","transition_out":"cut","highlight":"CHU MING SILVEIRA"},{"id":"shot_problem","segment":"problem","asset":"visual_03","motion":"pan_left","transition_out":"cut","highlight":"BARULHO + SOL + CHUVA"},{"id":"shot_egg","segment":"egg","asset":"visual_04","motion":"push_in","transition_out":"crossfade","highlight":"FORMA ACÚSTICA"},{"id":"shot_acoustics","segment":"acoustics","asset":"visual_05","motion":"pan_right","transition_out":"cut","highlight":"MENOS RUÍDO"},{"id":"shot_material","segment":"material","asset":"visual_06","motion":"pull_out","transition_out":"cut","highlight":"FIBRA DE VIDRO"},{"id":"shot_names","segment":"names","asset":"visual_07","motion":"pan_left","transition_out":"cut","highlight":"CHU II"},{"id":"shot_nickname","segment":"nickname","asset":"visual_08","motion":"push_in","transition_out":"crossfade","highlight":"ORELHÃO"},{"id":"shot_launch","segment":"launch","asset":"visual_09","motion":"pan_right","transition_out":"cut","highlight":"RIO E SÃO PAULO — 1972"},{"id":"shot_impact","segment":"impact","asset":"visual_10","motion":"push_in","transition_out":"cut","highlight":"+12% DE CHAMADAS"},{"id":"shot_world","segment":"world","asset":"visual_11","motion":"pull_out","transition_out":"crossfade","highlight":"DESIGN BRASILEIRO NO MUNDO"},{"id":"shot_cta","segment":"cta","asset":"visual_12","motion":"push_in","transition_out":"cut","highlight":"UM ÍCONE DAS RUAS"}]}
+{
+  "schema_version": 1,
+  "smart_visual_pacing": {
+    "enabled": true
+  },
+  "background_music": {
+    "profile": "hiphop_groove",
+    "volume": 0.1
+  },
+  "sfx_cues": [
+    {
+      "time_seconds": 0.08,
+      "type": "impact",
+      "volume": 0.14
+    },
+    {
+      "time_seconds": 16,
+      "type": "whoosh_fast",
+      "volume": 0.1
+    },
+    {
+      "time_seconds": 34,
+      "type": "ding",
+      "volume": 0.1
+    },
+    {
+      "time_seconds": 49,
+      "type": "riser_build_up",
+      "volume": 0.11
+    }
+  ],
+  "visual_fx_cues": [
+    {
+      "start_seconds": 0.08,
+      "end_seconds": 0.72,
+      "type": "punch_zoom",
+      "intensity": 0.45
+    }
+  ],
+  "text_fx_cues": [
+    {
+      "segment": "hook",
+      "offset_seconds": 0.08,
+      "duration_seconds": 1.2,
+      "text": "NASCEU DE\nUM OVO",
+      "accent_text": "OVO",
+      "animation": "scale_bounce",
+      "position": "center",
+      "intensity": 0.6
+    },
+    {
+      "segment": "nickname",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.0,
+      "text": "ORELHÃO",
+      "accent_text": "ORELHÃO",
+      "animation": "fade_pop",
+      "position": "center",
+      "intensity": 0.55
+    },
+    {
+      "segment": "launch",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.0,
+      "text": "1972",
+      "accent_text": "1972",
+      "animation": "pop_in",
+      "position": "center",
+      "intensity": 0.58
+    }
+  ],
+  "overlay_cues": [],
+  "shots": [
+    {
+      "id": "shot_hook",
+      "segment": "hook",
+      "asset": "visual_01",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "O FORMATO VEIO DE UM OVO"
+    },
+    {
+      "id": "shot_creator",
+      "segment": "creator",
+      "asset": "visual_02",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "CHU MING SILVEIRA"
+    },
+    {
+      "id": "shot_problem",
+      "segment": "problem",
+      "asset": "visual_03",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "BARULHO + SOL + CHUVA"
+    },
+    {
+      "id": "shot_egg",
+      "segment": "egg",
+      "asset": "visual_04",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "FORMA ACÚSTICA"
+    },
+    {
+      "id": "shot_acoustics",
+      "segment": "acoustics",
+      "asset": "visual_05",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "MENOS RUÍDO"
+    },
+    {
+      "id": "shot_material",
+      "segment": "material",
+      "asset": "visual_06",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "FIBRA DE VIDRO"
+    },
+    {
+      "id": "shot_names",
+      "segment": "names",
+      "asset": "visual_07",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "CHU II"
+    },
+    {
+      "id": "shot_nickname",
+      "segment": "nickname",
+      "asset": "visual_08",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "ORELHÃO"
+    },
+    {
+      "id": "shot_launch",
+      "segment": "launch",
+      "asset": "visual_09",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "RIO E SÃO PAULO — 1972"
+    },
+    {
+      "id": "shot_impact",
+      "segment": "impact",
+      "asset": "visual_10",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "+12% DE CHAMADAS"
+    },
+    {
+      "id": "shot_world",
+      "segment": "world",
+      "asset": "visual_11",
+      "motion": "pull_out",
+      "transition_out": "crossfade",
+      "highlight": "DESIGN BRASILEIRO NO MUNDO"
+    },
+    {
+      "id": "shot_cta",
+      "segment": "cta",
+      "asset": "visual_12",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "UM ÍCONE DAS RUAS"
+    }
+  ]
+}
