@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "episode": "por_que_brasil_se_chama_brasil",
+  "recorded_at": "2026-09-27T22:23:10Z",
+  "visual_usage": [
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "0fd56ffce614c53627814a8bbf4063ba862d802e1cd77f572f023d19d30cd697",
+        "url_hashes": [
+          "ad681bee1295e289c887d1620078fbd2270c6f06707b3aedb5117e0c7e3c8eda"
+        ],
+        "perceptual_hashes": [
+          "f0d7c01f8e7d9029",
+          "f7d1c012877f9419",
+          "f7d1e212078737c8",
+          "f4c7849c9833d39c",
+          "e0f7c361835f886c",
+          "dddac180849fef81",
+          "d55eee1dda29c030"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_vera",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "8f7738e9624380f45de98284bf024954dbddca120380b76264cf525be211e85c",
+        "url_hashes": [
+          "85e6c28154de03d4f4feb6de17bc5bb531cdb7c54eaa1d0ef723ce034dcb146e"
+        ],
+        "perceptual_hashes": [
+          "efc891e0da37a40b",
+          "ebca80fa52b78d12",
+          "eac880fa52b78e56",
+          "fa9785f0ac9a270a",
+          "fa7b8f83c105e443",
+          "aecdd94b90a45ab4",
+          "a42694bcef5b90a5"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_santa",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "599b681135a642604e37578c3771f924b293e5faff2127af55add3d55b1fce69",
+        "url_hashes": [
+          "06982d5bdbf8160859db2ca97ae4289132d62e3fe1f37f4b8872bedc5356648b"
+        ],
+        "perceptual_hashes": [
+          "b5f0981f717d6c04",
+          "b5f09e1f50796d04",
+          "a3f09f97307b0d21",
+          "a2a39c7773fa01d0",
+          "ee63c39c958554f0",
+          "b4bf811f2e06f701",
+          "b43efe80c9d94989"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_tree",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "7b1e7ac91b744eef9fa1d9a56d59785e5f64c421b3e58365f9c2172a734b74cb",
+        "url_hashes": [
+          "bbaad58fb72baee40d761c9d8921794ea319a16d876ee11393496e9068c37ee2"
+        ],
+        "perceptual_hashes": [
+          "9cdc3070e1b7ccc3",
+          "8cdd307a63a6e6c1",
+          "8fcc3c7b602ec4c3",
+          "9afb60e46dca9231",
+          "9e9b1b31d2b67031",
+          "86cf397831c2dc0f",
+          "80c68f8b4e9e0dbb"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_trade",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "da22bf9eb61fb7a78e33339baffc661266fe0211bb3365be47b82ac8bc4b69e2",
+        "url_hashes": [
+          "d29adf4b994584ae46abf60c1fe622633750b3ca9a3dbb2bbe871b105d95f4bb"
+        ],
+        "perceptual_hashes": [
+          "f6bccdc85966c244",
+          "f7bdccd879425041",
+          "e7bdacd86b455041",
+          "ecfad3564e8488ac",
+          "ecac3a89907aadb4",
+          "b286c64c7adab591",
+          "b9baa6c78d259189"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_name",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "55a20dfad1619b91abe388d3bb18f7a9111f483f2d155303bf6d24edfc675938",
+        "url_hashes": [
+          "78f6e05f40f03999e1e123e2780e0ff340a08f4b4a07c92b6859b1554a181aec"
+        ],
+        "perceptual_hashes": [
+          "8b2ef34c4c678d98",
+          "8b2af34d4c67c91a",
+          "8b22b30d7e67c958",
+          "9a656a59ed9231ac",
+          "921da52e9b352cea",
+          "aa397247f18e1bb0",
+          "cc29b9388e5b32f4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_brazilian",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "9c745479d3644bd13960a85017a7f4a13384df456fdb37c980fd5a501938e3f6",
+        "url_hashes": [
+          "f61e995b4dc289720333395824591e6aff2ed20cbc68d5340c5d68d77f52edd2"
+        ],
+        "perceptual_hashes": [
+          "bf463074494e7e31",
+          "bf423464cb4d7a31",
+          "bf623436c1c57b28",
+          "bc0439d6da68b38d",
+          "be4cb02935879d66",
+          "a179134de23897ea",
+          "8d619a331ddcc378"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_red",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b7daa0064938ecad83af62ed6b2e4ed75474c695363dad02d3be7e790e8d605e",
+        "url_hashes": [
+          "f75fee080b8c1cdf8c97161fe1a77785a7872d7f407e21d9393d0ab3f0c2787b"
+        ],
+        "perceptual_hashes": [
+          "bd8856f60b14e4ce",
+          "bd0857b64b34658e",
+          "be0a37e249356497",
+          "ba16ecdd22ed9062",
+          "fb121efccd902272",
+          "872811ed16f5cb3c",
+          "95af4891e9cc1e6c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_payoff",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "b4c5037bda612b1c0f4589dac9eb648f48a019357ef0a8e008bf6e110042c891",
+        "url_hashes": [
+          "64b9297f9cd4f40375fbe8d82bba38b4c9690f236080e0efeb532fa55a016fc2"
+        ],
+        "perceptual_hashes": [
+          "f293d34bc9c88c5c",
+          "b692f343cbc88c4e",
+          "b4b0b343eb899b86",
+          "a5a584d2d89999eb",
+          "e127e1258f65867a",
+          "9ad1c84cc7c3c36e",
+          "9b13951ad879f22c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "por_que_brasil_se_chama_brasil",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-27T22:23:10Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f6e375cfab25e2a7b16cc189762fd77db58933d1ded97483b68189becf3255fd",
+        "url_hashes": [
+          "915073eb2761c5111a2e24190d5b33402ea16a6501c7a380f40ace289e18afb3"
+        ],
+        "perceptual_hashes": [
+          "921ee399e608b4f5",
+          "9e166189e70afca9",
+          "9e164b89e149ef0b",
+          "b50dd6ce08f8a5a5",
+          "b5394512efc607e4",
+          "9941ecf06217d95b",
+          "9902714cb3fc5af8"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
