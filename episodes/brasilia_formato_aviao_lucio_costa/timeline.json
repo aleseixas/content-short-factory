@@ -1,1 +1,155 @@
-{"schema_version":1,"smart_visual_pacing":{"enabled":true},"background_music":{"profile":"uplifting_documentary","volume":0.1},"sfx_cues":[{"time_seconds":0.08,"type":"impact","volume":0.14},{"time_seconds":16,"type":"whoosh_fast","volume":0.1},{"time_seconds":38,"type":"ding","volume":0.1},{"time_seconds":56,"type":"riser_build_up","volume":0.11}],"visual_fx_cues":[{"start_seconds":0.08,"end_seconds":0.72,"type":"punch_zoom","intensity":0.45}],"text_fx_cues":[{"segment":"hook","offset_seconds":0.08,"duration_seconds":1.2,"text":"NÃO ERA UM\nAVIÃO","accent_text":"AVIÃO","animation":"scale_bounce","position":"center","intensity":0.6},{"segment":"gesture","offset_seconds":0.05,"duration_seconds":1.0,"text":"DOIS EIXOS","accent_text":"EIXOS","animation":"fade_pop","position":"center","intensity":0.55},{"segment":"illusion","offset_seconds":0.05,"duration_seconds":1.0,"text":"PARECE UM AVIÃO","accent_text":"AVIÃO","animation":"pop_in","position":"center","intensity":0.58}],"overlay_cues":[],"shots":[{"id":"shot_hook","segment":"hook","asset":"visual_01","motion":"push_in","transition_out":"crossfade","highlight":"BRASÍLIA VISTA DE CIMA"},{"id":"shot_myth","segment":"myth","asset":"visual_02","motion":"pan_left","transition_out":"cut","highlight":"O DESENHO ORIGINAL"},{"id":"shot_gesture","segment":"gesture","asset":"visual_03","motion":"pull_out","transition_out":"cut","highlight":"DOIS EIXOS SE CRUZAM"},{"id":"shot_terrain","segment":"terrain","asset":"visual_04","motion":"push_in","transition_out":"crossfade","highlight":"ADAPTADO AO TERRENO"},{"id":"shot_monumental","segment":"monumental","asset":"visual_05","motion":"pan_right","transition_out":"cut","highlight":"EIXO MONUMENTAL"},{"id":"shot_road","segment":"road","asset":"visual_06","motion":"pull_out","transition_out":"cut","highlight":"ASA NORTE + ASA SUL"},{"id":"shot_illusion","segment":"illusion","asset":"visual_07","motion":"pan_left","transition_out":"cut","highlight":"A FORMA APARECE DO ALTO"},{"id":"shot_meaning","segment":"meaning","asset":"visual_08","motion":"push_in","transition_out":"crossfade","highlight":"UMA CAPITAL ORGANIZADA"},{"id":"shot_legacy","segment":"legacy","asset":"visual_09","motion":"pan_right","transition_out":"cut","highlight":"PROJETO DE 1957"},{"id":"shot_cta","segment":"cta","asset":"visual_10","motion":"push_in","transition_out":"cut","highlight":"NÃO NASCEU DE UM AVIÃO"}]}
+{
+  "schema_version": 1,
+  "smart_visual_pacing": {
+    "enabled": true
+  },
+  "background_music": {
+    "profile": "emotional_piano",
+    "volume": 0.1
+  },
+  "sfx_cues": [
+    {
+      "time_seconds": 0.08,
+      "type": "impact",
+      "volume": 0.14
+    },
+    {
+      "time_seconds": 16,
+      "type": "whoosh_fast",
+      "volume": 0.1
+    },
+    {
+      "time_seconds": 38,
+      "type": "ding",
+      "volume": 0.1
+    },
+    {
+      "time_seconds": 56,
+      "type": "riser_build_up",
+      "volume": 0.11
+    }
+  ],
+  "visual_fx_cues": [
+    {
+      "start_seconds": 0.08,
+      "end_seconds": 0.72,
+      "type": "punch_zoom",
+      "intensity": 0.45
+    }
+  ],
+  "text_fx_cues": [
+    {
+      "segment": "hook",
+      "offset_seconds": 0.08,
+      "duration_seconds": 1.2,
+      "text": "NÃO ERA UM\nAVIÃO",
+      "accent_text": "AVIÃO",
+      "animation": "scale_bounce",
+      "position": "center",
+      "intensity": 0.6
+    },
+    {
+      "segment": "gesture",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.0,
+      "text": "DOIS EIXOS",
+      "accent_text": "EIXOS",
+      "animation": "fade_pop",
+      "position": "center",
+      "intensity": 0.55
+    },
+    {
+      "segment": "illusion",
+      "offset_seconds": 0.05,
+      "duration_seconds": 1.0,
+      "text": "PARECE UM AVIÃO",
+      "accent_text": "AVIÃO",
+      "animation": "pop_in",
+      "position": "center",
+      "intensity": 0.58
+    }
+  ],
+  "overlay_cues": [],
+  "shots": [
+    {
+      "id": "shot_hook",
+      "segment": "hook",
+      "asset": "visual_01",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "BRASÍLIA VISTA DE CIMA"
+    },
+    {
+      "id": "shot_myth",
+      "segment": "myth",
+      "asset": "visual_02",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "O DESENHO ORIGINAL"
+    },
+    {
+      "id": "shot_gesture",
+      "segment": "gesture",
+      "asset": "visual_03",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "DOIS EIXOS SE CRUZAM"
+    },
+    {
+      "id": "shot_terrain",
+      "segment": "terrain",
+      "asset": "visual_04",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "ADAPTADO AO TERRENO"
+    },
+    {
+      "id": "shot_monumental",
+      "segment": "monumental",
+      "asset": "visual_05",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "EIXO MONUMENTAL"
+    },
+    {
+      "id": "shot_road",
+      "segment": "road",
+      "asset": "visual_06",
+      "motion": "pull_out",
+      "transition_out": "cut",
+      "highlight": "ASA NORTE + ASA SUL"
+    },
+    {
+      "id": "shot_illusion",
+      "segment": "illusion",
+      "asset": "visual_07",
+      "motion": "pan_left",
+      "transition_out": "cut",
+      "highlight": "A FORMA APARECE DO ALTO"
+    },
+    {
+      "id": "shot_meaning",
+      "segment": "meaning",
+      "asset": "visual_08",
+      "motion": "push_in",
+      "transition_out": "crossfade",
+      "highlight": "UMA CAPITAL ORGANIZADA"
+    },
+    {
+      "id": "shot_legacy",
+      "segment": "legacy",
+      "asset": "visual_09",
+      "motion": "pan_right",
+      "transition_out": "cut",
+      "highlight": "PROJETO DE 1957"
+    },
+    {
+      "id": "shot_cta",
+      "segment": "cta",
+      "asset": "visual_10",
+      "motion": "push_in",
+      "transition_out": "cut",
+      "highlight": "NÃO NASCEU DE UM AVIÃO"
+    }
+  ]
+}
