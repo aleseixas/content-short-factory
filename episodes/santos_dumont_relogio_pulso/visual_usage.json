@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "episode": "santos_dumont_relogio_pulso",
+  "recorded_at": "2026-09-27T01:12:42Z",
+  "visual_usage": [
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "92a00729b2d7783beefc6bfe85a8c38e9346a301fdf9198dae95d3dfd5c569fe",
+        "url_hashes": [
+          "1ee35011ab195bb6c2da62aecd8b35ba40d824b50823f1a9274c8654a47ef555"
+        ],
+        "perceptual_hashes": [
+          "ce8e8ef1311df023",
+          "ce8e8ff1109ef403",
+          "ce8e87f10c8ecc0f",
+          "d998e72339e226e2",
+          "d8989cee6606fec0",
+          "c3c13c3e077f183c",
+          "e3c3c1f4781808ff"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_problem",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2d28fda77dd8cb1efdb71badd61ca59487c9294e676c25812d7f4614cbb94416",
+        "url_hashes": [
+          "84e92d327110bdf8daafed00519a1ecbc54bba2ee5fa712c2992c5d73c07a0eb"
+        ],
+        "perceptual_hashes": [
+          "cc8cb2bb8942e71e",
+          "cc84b6b998c27b1e",
+          "cd8cb4ba98e0790f",
+          "cba92592c4f81fc6",
+          "cb8aa965fb1986e0",
+          "e693998cf07a80fc",
+          "e6e693338583f09c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_friend",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "5c3f771a49bcad1b868f5275cfe045368611c084aaa3c1bc46326c58dd88806d",
+        "url_hashes": [
+          "a4329ac044f3a280d7c8b9a93ed6bf2c58b741a3f95f8bafc6d9b7070588c32f"
+        ],
+        "perceptual_hashes": [
+          "f299cf832c3498ce",
+          "f299cb836c3438ce",
+          "f299c3c36f3030c7",
+          "e592946b6b939893",
+          "e57398849e8c9a73",
+          "b9ccc02637c7c18f",
+          "bb3ec5c8c4c0c63e"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_solution",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "08d0ce90a5d6ac61b2ba307ad17b2a53d50426af4cb002c84c008beb8ae7eca5",
+        "url_hashes": [
+          "52be76397904058097c504b836ae0de0d4217d25653f7c5b61270a11e0e2d9e8"
+        ],
+        "perceptual_hashes": [
+          "ace31b9a64b8c92e",
+          "acc1139e649fc13e",
+          "ace113d6269b498f",
+          "e9c7946912d638c7",
+          "e8cb16944f2db447",
+          "a27cd9330ecc03f9",
+          "a6e65c887333917c"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_design",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "dc9d0b4d7d03072d321a49366186f55938a3c9d9b5a55cd9518855b6a5ed8f8f",
+        "url_hashes": [
+          "1024b0c7ec7df82d231c91aeb97eced96d9f4a66d8fb796ac5e1e0f27a23875f"
+        ],
+        "perceptual_hashes": [
+          "80fbb15f4d8c6664",
+          "93ffb059498c66a4",
+          "9bb3b031598967a5",
+          "94e0e75b986caa53",
+          "80f8e0e773939355",
+          "88bcbe4fc031a64f",
+          "8180b1ba3e8fce4f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_public",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "23f359d2e473e9fc2480bb7ca4225fefc943ddfaa8f59c511b0742643537eb2b",
+        "url_hashes": [
+          "4cc3b26dec31c7b5a688f87d1df517074d536278c5ce1a274eab369869a2de94"
+        ],
+        "perceptual_hashes": [
+          "a3db9e36cb1c4948",
+          "a3c29436d234dbda",
+          "a3d09463d335d3d2",
+          "a6d7abe49150954b",
+          "8e56932bc68d6b1a",
+          "b8cab278c745c527",
+          "a44ccf37e8a336a4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_commercial",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "272cdf74452f5960868830954c46be7596767eae3b2b4a1e0da4e8fbcac7ff9a",
+        "url_hashes": [
+          "d99109f7ef50f28e4fec5e453ba99cd8b2eba8fb83e19bc531b2159c1f6d9a09"
+        ],
+        "perceptual_hashes": [
+          "d6e19c2d2862e66d",
+          "d6f09d0d3862666d",
+          "c6f28d091cf66761",
+          "c5e0ba33c5ce3a91",
+          "ddc5c09e3a3391b1",
+          "d9d4862e79700e8f",
+          "d9f9d386848e8993"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_myth",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "79a12952d27b27db756d676023ca1b7f532d60a35cf106491367bb94951c1e01",
+        "url_hashes": [
+          "26160f5c9a696114074517f78d8497ac446e7c5bb347dd202f2df8f556144c33"
+        ],
+        "perceptual_hashes": [
+          "ec8e33703933c669",
+          "cc86337839b36273",
+          "cf84735c38b77031",
+          "d887713364cf9299",
+          "d88f3ec81b73980d",
+          "e3981d3f38f08cc3",
+          "e6e258e0c70ec1f3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_legacy",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "8160bdb155fb4f86bdc547a9d53e38171449e217b7864de21daad13352bb169c",
+        "url_hashes": [
+          "ec839317c3c37a46994eca48d8e098724ad3f54d4d663f42904e8918e0f2da4e"
+        ],
+        "perceptual_hashes": [
+          "c9b71669c9b61469",
+          "caa73448cbb73469",
+          "daa63558caa66559",
+          "d3ac28d3ac6bd605",
+          "d3f5ac2b53d41429",
+          "ed9212ed91566d91",
+          "cda992126eed8993"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "santos_dumont_relogio_pulso",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-27T01:12:42Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "fd8ae95bd30081a718ff3ad8b40e30fbe9918bfc5e6415384ea10a5d38b1bf7d",
+        "url_hashes": [
+          "040a91fb0accc364a0833ca2af36886d2a4d52ef16263b8772326792a92b79bc"
+        ],
+        "perceptual_hashes": [
+          "e387c879c3849d59",
+          "f082dc79c3849d5d",
+          "f0c0dd7a43a48f47",
+          "e78bf0c489b07a71",
+          "f70f8b3354666590",
+          "fee24ee9d284281d",
+          "beb1c20e0d7a39cc"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
