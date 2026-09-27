@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "episode": "brasilia_formato_aviao_lucio_costa",
+  "recorded_at": "2026-09-27T15:15:45Z",
+  "visual_usage": [
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_hook",
+      "asset_id": "visual_01",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "5aa2be71868bb3022669a02f51980f8abae4275082a8b30fab7f411a6ee09e38",
+        "url_hashes": [
+          "8d83812b620e59395a1f35af0a7241f452af1a9f9f96548f1988e620af539070"
+        ],
+        "perceptual_hashes": [
+          "d691496426e7297e",
+          "d691496d26e9696c",
+          "d6914b6d27e9492c",
+          "c5925a69e65369e4",
+          "cda5965a016da5dc",
+          "d3886e33bc2e13d1",
+          "d39bcc4e135399c8"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_myth",
+      "asset_id": "visual_02",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "e2566edbd00f39f6640d9b41ae855556e2a112089cef6597c08cb2b7cd37184a",
+        "url_hashes": [
+          "991041e1d098680c61d396a664b48731b93d9895213e0cc0413f42d83263242f"
+        ],
+        "perceptual_hashes": [
+          "d2f52bd021f730d4",
+          "d5f52ac013f332f0",
+          "d5f10ac8c3b333b2",
+          "e4f715806e6179d8",
+          "c0e47fd119995a9a",
+          "d29c4dda383f0746",
+          "d2d62dc727c726c0"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_gesture",
+      "asset_id": "visual_03",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "9ebecb4975e0e1d8272f36eb054da0e2537d27d419e1631b94aea3e8d9ee7b80",
+        "url_hashes": [
+          "1e2668e323728b0c59223e9932b0a9babe745e5d4475568544f1b730be2f52cc"
+        ],
+        "perceptual_hashes": [
+          "d89d3c614fcf9085",
+          "d89f3c70434f9c98",
+          "d0973e70434f0f9c",
+          "d79861479e9b83c4",
+          "d79fb8e16342464c",
+          "de813f68c087b770",
+          "e1c0831f3f7d7860"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_terrain",
+      "asset_id": "visual_04",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "98da711f43a0b262934d53163457192b21408b2c8c33a182819a391ff23da9d7",
+        "url_hashes": [
+          "5dac2a8c0bf6fccb46da3145380adcb47560f3ec672b025f713f334c29747fc3"
+        ],
+        "perceptual_hashes": [
+          "c9b7bc490738c2d5",
+          "d8a7bc49143bc077",
+          "d8a6bdc9343b413a",
+          "d3acda053ac4bdc2",
+          "d3aca9f2c4353ac1",
+          "ceb186512af0b1f6",
+          "cfb093cee1152ad4"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_monumental",
+      "asset_id": "visual_05",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "2c2d9d85eb893ddbfec5b9007210f2be091cbaa4b4e637fcb5918a6b27e7a559",
+        "url_hashes": [
+          "919271e709445e711324e23c34754929be0a09b011e7c5ec077f7a60f9d6c5ed"
+        ],
+        "perceptual_hashes": [
+          "c0b5b0cbbecab18c",
+          "c1b588c3b6c2dde4",
+          "c8b5c8c1a6d2c6f5",
+          "c2a0d7dde590a897",
+          "c3aaa092aa89e79f",
+          "e694cdc9a9c4b68c",
+          "c6b496e494a3bcc3"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_road",
+      "asset_id": "visual_06",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "df41a557744c69e3ce4caf41be901e36f706bb2c3ce0a9c94a121e8a92e1c85d",
+        "url_hashes": [
+          "0856c55e73c60ebf6421dcfa4f71166179dea8b7fee3a3007a56110ab387bb0e"
+        ],
+        "perceptual_hashes": [
+          "c9cdbc3292e66607",
+          "cbc9b8b296f46614",
+          "cac939b392f4263c",
+          "d6da2cb5c94f0686",
+          "d4dafb6a36368284",
+          "cda5989be26254dc",
+          "cde4a6341c9cdca9"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_illusion",
+      "asset_id": "visual_07",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "bd7ba3e3e5acadb3da9808afe9cb15b0a55532b448d5ca63b1f7ef98cd1705b4",
+        "url_hashes": [
+          "c9a1d932a29614c7206688728007c8965056d2f07abff81ae7153d4106c79831"
+        ],
+        "perceptual_hashes": [
+          "c1d09fcc7373484e",
+          "e1f09fcc726b5144",
+          "e0f09f8f247b700d",
+          "c2b7984f670399d4",
+          "c6c1b49898aff8a6",
+          "fd9a84733c4cc2c9",
+          "fdfb9a80c282a9d8"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_meaning",
+      "asset_id": "visual_08",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f0979b24b20b25bb9086fb465f55f3a223bdbe0906a821824c72fcdcf3d8950c",
+        "url_hashes": [
+          "db4dbd0f2c64ff52433c8883a6c1ef89cb67e7bebcda2fb9dfb28dc76addaf53"
+        ],
+        "perceptual_hashes": [
+          "c895f32c5c49e5b1",
+          "c892f12d5cc9e4e5",
+          "ca92f1255ecae2e1",
+          "91a6ea3893ea6e19",
+          "9195e6ea6c761d11",
+          "c1dcb605c5b43e4b",
+          "c18ddcb6321e434f"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_legacy",
+      "asset_id": "visual_09",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "995c07312a97c550be49ae26b169a48aa470ed9fb9de9c174a91380c2f8a60ca",
+        "url_hashes": [
+          "5e25e026d85fda4a351d13ef43128f50b08c3fc57b9032af3741d9b650664bdd"
+        ],
+        "perceptual_hashes": [
+          "87dce06f148f4ed0",
+          "838cf06f902fc2fc",
+          "839cfb6ebc03c225",
+          "9fc144398edd6364",
+          "8f9fc04e61b32c95",
+          "e0d76817a0c33f39",
+          "8887dc68579f20cf"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    },
+    {
+      "episode": "brasilia_formato_aviao_lucio_costa",
+      "shot_id": "shot_cta",
+      "asset_id": "visual_10",
+      "recorded_at": "2026-09-27T15:15:45Z",
+      "fingerprint": {
+        "kind": "image",
+        "sha256": "f9bd9f26fbc6d24ca73a7e20c99c5cea9174a44ceda8b4606f9870b780e6d36b",
+        "url_hashes": [
+          "5382d709facb6494257792d908d950a27df3b99d23d4b62bb7c5670cd257af1a"
+        ],
+        "perceptual_hashes": [
+          "f981450aa6bad2fa",
+          "f9804d09ac96d0ff",
+          "f9c94d492d058caf",
+          "d2804a8db5f5f474",
+          "f780f756407a4e51",
+          "fdc560a199d99949",
+          "ffdd5448652e604a"
+        ],
+        "video_frame_hashes": [],
+        "source_start_seconds": 0.0,
+        "source_duration_seconds": null
+      }
+    }
+  ]
+}
