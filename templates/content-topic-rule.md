@@ -1,5 +1,9 @@
 # Regra obrigatória — seleção genérica de conteúdo
 
+<!-- pipeline-contract: config/pipeline-contract.json -->
+
+Contrato técnico obrigatório: [`docs/pipeline-contract.md`](../docs/pipeline-contract.md), baseado em [`config/pipeline-contract.json`](../config/pipeline-contract.json). Use o estado persistido e os triggers reais antes de decidir continuidade.
+
 Esta é a regra editorial de entrada do **Content Short Factory**. Ela serve a qualquer nicho, inclusive música, e prevalece sobre instruções antigas que tornem `artist`, `band`, `song`, `album` ou `related_song` obrigatórios.
 
 ## Contrato de entrada

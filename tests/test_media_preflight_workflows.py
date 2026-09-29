@@ -69,6 +69,16 @@ class MediaPreflightWorkflowTests(unittest.TestCase):
             workflow,
         )
 
+    def test_render_reconciles_before_applying_visual_handoff(self):
+        workflow = (WORKFLOWS / "episode-media-preflight.yml").read_text(encoding="utf-8")
+        render = workflow.split("  render-preflight:", 1)[1].split("  queue-publication:", 1)[0]
+        reconcile = render.index("- name: Reconcile authoritative reservation")
+        apply = render.index("- name: Apply resolved visual handoff")
+        validate = render.index("- name: Revalidate final media after visual resolution")
+        self.assertLess(reconcile, apply)
+        self.assertLess(apply, validate)
+        self.assertNotIn("pipeline_workflow.py reconcile", render[apply:validate])
+
     def test_publish_consumes_exact_preflight_bundle_without_rendering(self):
         workflow = (WORKFLOWS / "publish-episode.yml").read_text(encoding="utf-8")
         self.assertIn("source_run_id:", workflow)
@@ -80,7 +90,9 @@ class MediaPreflightWorkflowTests(unittest.TestCase):
         self.assertIn('source_branch" != "main', provenance)
         self.assertIn("run-id: ${{ needs.prepare.outputs.source_run_id }}", workflow)
         self.assertIn("name: publish-ready-${{ needs.prepare.outputs.episode }}", workflow)
-        self.assertIn("publish_ready_bundle.py restore", workflow)
+        self.assertNotIn("publish_ready_bundle.py restore", workflow)
+        self.assertIn('python publish.py "$EPISODE" --platform all --dry-run', workflow)
+        self.assertIn("Verify immutable preflight snapshot", workflow)
         self.assertNotIn("generate.py", workflow)
         self.assertNotIn("prepare_post.py", workflow)
         self.assertNotIn("resolve_visual_candidates", workflow)

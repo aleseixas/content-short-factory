@@ -1,5 +1,7 @@
 # Content Short Factory
 
+O fluxo de continuidade, validação local, triggers e publicação está no [contrato operacional](docs/pipeline-contract.md), com [taxonomia dos erros](docs/media-preflight-errors.md). A fonte machine-readable é [`config/pipeline-contract.json`](config/pipeline-contract.json).
+
 Fábrica automatizada de conteúdo short-form com IA, capaz de produzir vídeos verticais sobre praticamente qualquer tema ou nicho para TikTok, Instagram Reels e YouTube Shorts. Um agente editorial externo escolhe ou recebe o tópico, pesquisa, escreve e planeja; Python/FFmpeg executam de forma determinística as decisões registradas no episódio.
 
 > A `main` é a fonte de verdade para schemas, enums, renderer, catálogos, validações e publishers.
@@ -370,7 +372,8 @@ Copie `.env.example` para `.env` se esse arquivo existir na versão atual e conf
 ## Validação e testes
 
 ```bash
-python -m unittest discover -s tests -v
+python -m pip install -r requirements-dev.txt
+python -m pytest tests -q
 ```
 
 O pipeline valida schema, slug, segmentos/shots, assets, mídia remota, enums, trims, timings, áudio e compatibilidade com FFmpeg/ffprobe. Warnings editoriais pedem revisão, mas não viram hard errors sem suporte no código.

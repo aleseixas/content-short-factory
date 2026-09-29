@@ -13,6 +13,7 @@ from engine.config import load_project_config
 from engine.episode import load_episode
 from engine.models import AssetSpec, BackgroundMusicSpec, Episode
 from engine.music import MUSIC_ROOT, background_music_candidates, resolve_background_music
+from engine.youtube import canonical_youtube_url, extract_youtube_video_id
 
 
 RECENT_BACKGROUND_TRACK_WINDOW = 20
@@ -28,6 +29,22 @@ def _classify_preflight_failure(exc: Exception, slug: str) -> tuple[str, bool, s
     detail = _single_line(exc)
     folded = detail.casefold()
     episode_root = f"episodes/{slug}" if slug else "episodes/<slug>"
+
+    if any(token in folded for token in ("source_start_seconds", "source_end_seconds", "trecho de video insuficiente", "unsafe_trim")):
+        return ("VIDEO_SOURCE_WINDOW_INVALID", True, f"{episode_root}/timeline.json",
+                "Select a sufficiently long source and a valid trim for this shot, then validate again; do not blindly retry.")
+
+    if "asset desconhecido no plano" in folded or "asset de overlay desconhecido" in folded:
+        return ("SHOT_REFERENCES_MISSING_ASSET", True, f"{episode_root}/timeline.json + {episode_root}/assets.json",
+                "Resolve the named reference to a verified candidate for the same shot.")
+
+    if any(token in folded for token in ("timed out", "timeout", "connection reset", "temporarily unavailable")):
+        return ("REMOTE_MEDIA_TEMPORARY_FAILURE", False, "remote media provider",
+                "Keep the same episode and use bounded backoff after the external provider recovers.")
+
+    if any(token in folded for token in ("ffprobe nao encontrado", "ffprobe_binary nao aponta", "dependencia imageio-ffmpeg ausente")):
+        return ("MEDIA_TOOLCHAIN_UNAVAILABLE", False, "runtime dependencies",
+                "Install/configure the required media toolchain; changing episode assets cannot fix this error.")
 
     if "intra_episode_visual_reuse_blocked" in folded:
         return (
@@ -239,6 +256,9 @@ def _recent_episode_slugs(
 
 
 def _normalize_url_identity(value: str) -> str:
+    youtube = canonical_youtube_url(value)
+    if youtube:
+        return youtube
     parsed = urlsplit(value.strip())
     return urlunsplit(
         (
@@ -252,51 +272,25 @@ def _normalize_url_identity(value: str) -> str:
 
 
 def _visual_aliases(asset: AssetSpec) -> tuple[tuple[str, str], ...]:
+    video_id = extract_youtube_video_id(asset.url) if asset.url else None
     aliases: list[tuple[str, str]] = [
         ("asset_id", asset.id.casefold()),
-        ("file", asset.file.casefold()),
+        # YouTube IDs are case-sensitive, including when embedded in filenames.
+        # Preserve their identity on the Linux runner; legacy assets keep the
+        # historical case-insensitive filename comparison.
+        ("file", asset.file if video_id else asset.file.casefold()),
     ]
     if asset.url:
-        aliases.append(("url", _normalize_url_identity(asset.url)))
+        aliases.append(("youtube", video_id) if video_id else ("url", _normalize_url_identity(asset.url)))
     return tuple(aliases)
 
 
 def _assert_intra_episode_visuals_unique(episode: Episode) -> None:
-    """Block reuse of the same main visual across shots in one episode."""
-
-    seen: dict[tuple[str, str], tuple[str, str]] = {}
-
-    for shot in episode.shots:
-        asset = episode.assets.get(shot.asset_id)
-        if asset is None:
-            raise RuntimeError(
-                f"Shot {shot.id!r} referencia asset inexistente {shot.asset_id!r}."
-            )
-
-        aliases = _visual_aliases(asset)
-        for identity in aliases:
-            previous = seen.get(identity)
-            if previous is None:
-                continue
-
-            previous_shot, previous_asset = previous
-            identity_kind, identity_value = identity
-            raise RuntimeError(
-                "INTRA_EPISODE_VISUAL_REUSE_BLOCKED: o mesmo visual foi usado "
-                "mais de uma vez dentro do episodio. "
-                f"Shot {shot.id!r} (asset={asset.id!r}) repete o visual de "
-                f"{previous_shot!r} (asset={previous_asset!r}); "
-                f"identidade={identity_kind}:{identity_value}. "
-                "Cada shot principal deve usar uma imagem ou video diferente."
-            )
-
-        for identity in aliases:
-            seen[identity] = (shot.id, asset.id)
-
-    print(
-        "[preflight] intra-episode visual uniqueness OK: "
-        f"{len(episode.shots)} shot(s) sem reutilizacao"
-    )
+    """Compatibility entrypoint for the same strict validator used by both CLIs."""
+    from check_episode_media_batch import _collect_visual_structure_errors
+    errors = _collect_visual_structure_errors(episode, getattr(episode, "name", "UNKNOWN"))
+    if errors:
+        raise RuntimeError(str(errors[0]["detail"]))
 
 
 def _candidate_aliases(entry: AudioCatalogEntry) -> set[str]:
@@ -422,67 +416,10 @@ def _assert_background_is_fresh(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate episode media before publish queue.")
-    parser.add_argument("episode", help="Episode slug")
-    args = parser.parse_args()
-
-    root = Path(__file__).resolve().parent
-    config = load_project_config(root / "config" / "config.json")
-    episodes_dir = Path(config.paths.episodes_dir)
-    cache_dir = Path(config.paths.cache_dir)
-    if not cache_dir.is_absolute():
-        cache_dir = root / cache_dir
-    episode = load_episode(root, config.paths.episodes_dir, args.episode)
-
-    work_dir = root / config.paths.work_dir / ".media-preflight" / episode.name
-    video_cache = cache_dir / "video"
-    manager = AssetManager(
-        assets_dir=episode.assets_dir,
-        work_dir=work_dir,
-        width=config.render.width,
-        height=config.render.height,
-        scale=1,
-        allowed_assets_root=episode.directory,
-        video_cache_dir=video_cache,
-    )
-
-    print("[preflight] validating intra-episode visual uniqueness...")
-    _assert_intra_episode_visuals_unique(episode)
-
-    print(f"[preflight] validating {len(episode.assets)} episode assets...")
-    manager.ensure_all(tuple(episode.assets.values()))
-    print("[preflight] assets OK")
-
-    resolved_music = resolve_background_music(
-        root,
-        episode.background_music,
-        episode.name,
-        cache_root=cache_dir,
-    )
-    if resolved_music is None:
-        print("[preflight] background music: none")
-    else:
-        print(
-            f"[preflight] background music OK: profile={resolved_music.profile} "
-            f"file={resolved_music.path}"
-        )
-        if episode.background_music is not None:
-            _assert_background_is_fresh(
-                root,
-                episodes_dir,
-                cache_dir,
-                episode.name,
-                episode.background_music,
-                resolved_music.path,
-            )
-
-    print("MEDIA_PREFLIGHT_RESULT=PASS")
-    return 0
+    # Local validation and the Action execute exactly the same independent checks.
+    from check_episode_media_batch import main as batch_main
+    return batch_main()
 
 
 if __name__ == "__main__":
-    try:
-        raise SystemExit(main())
-    except Exception as exc:
-        _emit_structured_failure(exc)
-        raise
+    raise SystemExit(main())

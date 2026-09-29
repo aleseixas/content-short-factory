@@ -1,5 +1,9 @@
 # Regra obrigatória — linguagem de alta retenção + ritmo visual contextual
 
+<!-- pipeline-contract: config/pipeline-contract.json -->
+
+Contrato técnico obrigatório: [`docs/pipeline-contract.md`](../docs/pipeline-contract.md), baseado em [`config/pipeline-contract.json`](../config/pipeline-contract.json). Use o estado persistido e os triggers reais antes de decidir continuidade.
+
 Esta regra complementa `templates/editorial-direction-prompt.md` e deve ser aplicada na autoria de novos episódios enquanto a `main` continuar compatível com os contratos abaixo.
 
 ## 1) Objetivo editorial
@@ -232,21 +236,22 @@ Antes da PRIMEIRA escrita em `episodes/<slug>/`, a candidata deve passar pelo pr
 
 Fluxo obrigatório para o agente via GitHub:
 
-1. consulte `episodes/`, `.publish-queue/` e `.publish-retry/` semanticamente;
+1. consulte o estado persistido; pesquise duplicidade por consultas específicas e pelo duplicate preflight;
 2. depois de definir o topic final e slug, crie exatamente UM `.duplicate-check/<slug>-<nonce>.json`:
 
 ```json
 {
   "topic": "Tema específico final",
   "content_profile": "perfil livre opcional",
-  "slug": "slug_normalizado"
+  "slug": "slug_normalizado",
+  "request_id": "pedido_unico"
 }
 ```
 
-3. localize a execução `Duplicate candidate preflight` associada ao commit exato;
+3. o commit/push dispara o workflow; localize `Duplicate candidate preflight` pelo request_id, slug, commit SHA e workflow;
 4. só `PREFLIGHT_RESULT=UNIQUE_CANDIDATE` autoriza iniciar o episódio;
 5. `PREFLIGHT_RESULT=DUPLICATE_CANDIDATE` descarta somente a candidata; no Profile Mode, avance no pool;
-6. falha de infraestrutura, request inválido ou ausência de marker deixa a candidata `BLOQUEADA`;
+6. request inválido exige correção; ausência temporária de run/marker exige polling com backoff. Só diagnóstico concreto terminal permite reportar bloqueio;
 7. busca vazia e ausência do slug exato não substituem o gate;
 8. o request não conta como episódio ou queue;
 9. use nonce novo por candidata;
@@ -254,26 +259,21 @@ Fluxo obrigatório para o agente via GitHub:
 
 `song` e `artist` podem ser aceitos por compatibilidade legada, mas novos requests usam `topic`. Profile Mode precisa resolver o tópico antes do preflight.
 
-## 11) HARD GATE técnico — media preflight antes da publish queue
+## 11) HARD GATE técnico — validação local antes do request externo
 
-Depois que o episódio estiver completamente autorado e imediatamente ANTES de criar `.publish-queue/<slug>.txt`, execute obrigatoriamente o preflight técnico real de mídia.
+Siga o [contrato operacional](../docs/pipeline-contract.md). Depois de concluir a
+autoria, use `python scripts/pipeline_control.py prepare <slug> --request-id <id>`:
+validação local com as mesmas regras batch da Action, reparo de todos os erros
+recuperáveis e nova validação antes de criar `.episode-check`.
 
-Fluxo obrigatório:
+Somente PASS local permite entregar o request via commit/push. O request conserva
+`slug` e `request_id`; acompanhe `request_id + slug + commit SHA + workflow` com
+polling/backoff. Não exija `workflow_dispatch`, não use o último run e não considere
+demora para aparecer como bloqueio.
 
-1. crie exatamente UM arquivo novo `.episode-check/<slug>-<nonce>.json` com:
-
-```json
-{
-  "slug": "slug_normalizado"
-}
-```
-
-2. essa escrita dispara `.github/workflows/episode-media-preflight.yml`;
-3. localize a Action `Episode media preflight` associada ao commit exato do request e leia o job/log;
-4. o preflight usa `check_episode_media.py`, que carrega o episódio com os parsers reais do engine, baixa/valida todos os assets com o mesmo `AssetManager` usado no render e resolve o background music com o mesmo `resolve_background_music` usado no pipeline;
-5. só `MEDIA_PREFLIGHT_RESULT=PASS` autoriza criar `.publish-queue/<slug>.txt`;
-6. HTTP 403, 404, 429, 5xx/525, payload inválido, imagem que o Pillow não reconhece, vídeo inválido no ffprobe, profile de música sem faixa resolvível ou qualquer outra falha de mídia = NÃO criar queue ainda;
-7. quando o preflight falhar, corrija apenas os assets/background do mesmo episódio e rode um NOVO `.episode-check/<slug>-<nonce>.json`; isso não conta como queue nem retry de publicação;
-8. nunca crie `.publish-queue` por suposição, mesmo que as URLs pareçam válidas no navegador;
-9. após um PASS, não altere `assets.json`, `timeline.json` ou o background antes da queue; se alterar, rode o media preflight novamente;
-10. objetivo: erros de download/mídia devem ser descobertos antes da primeira tentativa de publicação, preservando queue/retry para falhas reais posteriores.
+A Action valida novamente, resolve/renderiza e aprova o bundle final antes de
+criar `.publish-queue/<slug>.txt` com slug e `source_run_id`. Um erro determinístico
+exige reparo antes de retry; todos os reparos permanecem no mesmo episódio.
+Nenhuma URL aparentemente válida, aprovação editorial ou listagem vazia substitui
+esses gates. Não altere bytes após PASS sem gerar um novo bundle validado, e
+respeite a reserva que proíbe mutação/republicação depois do início do publisher.
