@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from dataclasses import replace
 from contextlib import redirect_stderr, redirect_stdout
 from datetime import datetime, timezone
 import io
@@ -1075,7 +1076,11 @@ class CredentialAndPublisherTests(unittest.TestCase):
     def test_tiktok_official_flow_queries_creator_uploads_and_fetches_status(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            context = local_context(root, "tiktok")
+            original = local_context(root, "tiktok")
+            context = replace(
+                original,
+                metadata={**original.metadata, "post_mode": "direct"},
+            )
             session = QueueSession(
                 [
                     JsonResponse(
@@ -1096,7 +1101,7 @@ class CredentialAndPublisherTests(unittest.TestCase):
                     JsonResponse(status_code=204),
                     JsonResponse(
                         {
-                            "data": {"status": "PROCESSING_UPLOAD"},
+                            "data": {"status": "PUBLISH_COMPLETE"},
                             "error": {"code": "ok", "message": ""},
                         }
                     ),
@@ -1117,7 +1122,7 @@ class CredentialAndPublisherTests(unittest.TestCase):
             result = publisher.publish(context, uploaded)
 
         self.assertEqual(uploaded["publish_id"], "tt-123")
-        self.assertEqual(result.status, "processing_upload")
+        self.assertEqual(result.status, "publish_complete")
         self.assertEqual([call[0] for call in session.calls], ["POST", "POST", "PUT", "POST"])
         self.assertIn("creator_info/query", session.calls[0][1])
         self.assertIn("status/fetch", session.calls[3][1])

@@ -165,20 +165,20 @@ class RemoteMediaCacheTests(unittest.TestCase):
                 self.assertFalse((cache / "track.mp3").exists())
                 self.assertFalse((cache / "track.mp3.part").exists())
 
-    def test_url_must_point_directly_to_the_expected_file_type(self):
+    def test_opaque_media_url_can_be_downloaded_for_content_validation(self):
         with tempfile.TemporaryDirectory() as directory:
-            with (
-                patch("engine.media_cache.requests.get") as get,
-                self.assertRaisesRegex(RuntimeError, "URL invalida"),
-            ):
-                download_to_cache(
+            response = FakeResponse((b"remote-video",))
+            with patch("engine.media_cache.requests.get", return_value=response) as get:
+                cached = download_to_cache(
                     "https://cdn.example.test/download?id=42",
                     Path(directory) / "cache" / "video",
                     "scene.webm",
                     "video remoto",
                     attempts=1,
                 )
-            get.assert_not_called()
+            get.assert_called_once()
+            self.assertEqual(cached.read_bytes(), b"remote-video")
+            self.assertTrue(response.closed)
 
     def test_external_download_rejects_redirect_outside_allowlist(self):
         response = FakeResponse(
@@ -443,7 +443,7 @@ class RemoteAudioCatalogTests(unittest.TestCase):
                 ),
                 self.assertRaisesRegex(
                     RuntimeError,
-                    "Background music remota invalida.*duracao invalida",
+                    r"Nenhuma faixa.*broken\.mp3: audio remoto invalido: duracao invalida",
                 ),
             ):
                 resolve_background_music(

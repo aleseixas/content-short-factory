@@ -7,6 +7,7 @@ import unittest
 from engine.audio_library import (
     AudioCatalogEntry,
     MAX_EXTERNAL_SFX_BYTES,
+    MYINSTANTS_HOSTS,
     _resolve_myinstants_audio_url,
     materialize_audio_catalog_entry,
 )
@@ -111,6 +112,7 @@ class ManualSfxTests(unittest.TestCase):
             "SFX 'external/manual/impacts/demo.mp3'",
             require_https=True,
             max_bytes=MAX_EXTERNAL_SFX_BYTES,
+            allowed_hosts=MYINSTANTS_HOSTS,
         )
 
     def test_brazilian_meme_must_play_in_full(self):
